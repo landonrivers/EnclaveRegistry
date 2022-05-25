@@ -1,0 +1,3837 @@
+*template_weapon_melee
+{
+	*rpgclass melee
+	
+	*itemtype 0
+
+	*impactforce 10
+	*minhitdelay 1
+	*damage 70, slash+blockable
+
+	*linkeditemtypes 0x101
+
+	*sound_hitworld IMP_GRND02
+	*sound_hitchar IMP_FSH
+	*sound_anim1 mel_swing05
+
+	*spawn_hit hiteffect_std
+	*spawn_hitplayer hiteffect_std_enemy
+	*spawn_special hiteffect_std_special
+
+	*attachrottrack 15
+
+	*range 256
+
+	*animtimescale 1.0
+	*flags keepaftermission
+
+	*melee_combo_surface GUI_HUDARMOUR01_01
+
+	*melee_combomultiplier0 1.0
+	*melee_combomultiplier1 1.5
+	*melee_combomultiplier2 2.0
+	*melee_combotimegap 0.5
+
+	*melee_stunduration 0.5
+
+	*ai_type MELEE
+}
+
+*template_weapon_dagger
+{
+	*classname template_weapon_melee
+
+	*sound_hitworld IMP_GRND02
+	*sound_hitchar IMP_FSH
+	*sound_equip EQ_DAGGER1
+	*sound_unequip EQ_DAGGER2
+	*sound_anim1 mel_swing06
+	*sound_pickup eq_misc5
+	*itemtype 9
+
+	*linkeditemtypes
+	
+	*skill dagger
+	*damagetype stab+blockable
+
+	*anim_stance animlist:28
+	*anim_equip animlist:231
+	*melee_numbasic 1
+
+	*impactforce 0
+	*melee_stunduration 1.0
+	
+	*attachrottrack 15
+
+	*melee_numbasic 7
+	*melee_numfwd 0
+	*melee_numcombos 3 // Inclusive first swing (mayby we should change this to only count succeeding combo swings)
+
+	*melee_attack0 animlist:48,7
+	*melee_attack1 animlist:40,8
+	*melee_attack2 animlist:51
+	*melee_attack3 animlist:52
+	*melee_attack4 animlist:53
+	*melee_attack5 animlist:54
+	*melee_attack6 animlist:55
+
+	*melee_attack7 animlist:49,9
+	*melee_attack8 animlist:41,10
+	*melee_attack9 animlist:50
+	*melee_attack10 animlist:42
+	
+	*ai_type MELEE_DAGGER
+}
+
+*template_weapon_sword
+{
+	*classname template_weapon_melee
+	
+	*sound_hitworld IMP_GRND02
+	*sound_hitchar IMP_FSH
+	*sound_equip EQ_SWORD1
+	*sound_unequip EQ_SWORD2
+	*sound_anim1 mel_swing02
+	*sound_pickup eq_misc5
+
+	*skill sword
+	*damagetype slash+blockable
+		
+	*anim_stance animlist:56
+	*anim_equip animlist:231
+
+	*melee_numbasic 7
+	*melee_numfwd 0
+	*melee_numcombos 3 // Inclusive first swing (mayby we should change this to only count succeeding combo swings)
+
+	*animtimescale 0.9
+
+//	*attachmodel0 "Particles:MP=500,CO=0x10C06020,DU=0.5,DUN=0.4,FI=0.0,AX=0 0 100,AXN=0 0 40,OF=22,OFN=25,MV0=-1,MV1=1,MV2=-2,MV3=2,MV4=1,SZ0=5,SZ2=5,,SZ4=3,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPA=0,SPB=0,OFB=0.25,TC=0.005,PP=6,FL=quads+spline+ctime+early"
+//	*attachmodel1 "Particles:MP=500,CO=0x40C06020,DU=0.5,DUN=0.4,FI=0.0,AX=0 0 100,AXN=0 0 40,OF=22,OFN=25,MV0=-1,MV1=1,MV2=-2,MV3=2,MV4=1,SZ0=5,SZ2=5,,SZ4=3,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPA=0,SPB=0,OFB=0.25,TC=0.005,PP=6,FL=quads+spline+ctime+early"
+//	*attachmodel2 "Particles:MP=500,CO=0x80C06020,DU=0.5,DUN=0.4,FI=0.0,AX=0 0 100,AXN=0 0 40,OF=22,OFN=25,MV0=-1,MV1=1,MV2=-2,MV3=2,MV4=1,SZ0=5,SZ2=5,,SZ4=3,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPA=0,SPB=0,OFB=0.25,TC=0.005,PP=6,FL=quads+spline+ctime+early"
+//	*attachangles 0,0.24,0.92
+
+	*melee_attack0 animlist:76,7
+	*melee_attack1 animlist:68,8
+	*melee_attack2 animlist:79
+	*melee_attack3 animlist:80
+	*melee_attack4 animlist:81
+	*melee_attack5 animlist:82
+	*melee_attack6 animlist:83
+
+	*melee_attack7 animlist:77,9
+	*melee_attack8 animlist:69,10
+	*melee_attack9 animlist:78
+	*melee_attack10 animlist:70
+	
+	*ai_type MELEE_SWORD
+}
+
+*template_weapon_hammer
+{
+	*classname template_weapon_melee
+
+	*sound_hitworld IMP_GRND02
+	*sound_hitchar IMP_FSH
+	*sound_equip EQ_SWORD1
+	*sound_unequip EQ_SWORD2
+	*sound_anim1 mel_swing04
+	*sound_pickup eq_misc5
+
+	*skill hammer
+	*damagetype crush+blockable
+
+	*animtimescale 0.85
+	*anim_stance animlist:112
+	*anim_equip animlist:231
+
+	*melee_numbasic 7
+	*melee_numfwd 0
+	*melee_numcombos 3
+
+	*melee_attack0 animlist:132,7
+	*melee_attack1 animlist:124,8
+	*melee_attack2 animlist:135
+	*melee_attack3 animlist:136
+	*melee_attack4 animlist:137
+	*melee_attack5 animlist:138
+	*melee_attack6 animlist:139
+
+	*melee_attack7 animlist:133,9
+	*melee_attack8 animlist:125,10
+	*melee_attack9 animlist:134
+	*melee_attack10 animlist:126
+
+	*ai_type MELEE_HAMMER
+}
+
+*template_weapon_axe
+{
+	*classname template_weapon_melee
+
+	*sound_hitworld IMP_GRND02
+	*sound_hitchar IMP_FSH
+	*sound_equip EQ_SWORD1
+	*sound_unequip EQ_SWORD2
+	*sound_anim1 mel_swing04
+	*sound_pickup eq_misc5
+
+	*skill axe
+	*damagetype hack+blockable
+
+	*animtimescale 0.88
+	*anim_stance animlist:84
+	*anim_equip animlist:231
+
+	*melee_numbasic 7
+	*melee_numfwd 0
+	*melee_numcombos 3
+
+	*melee_attack0 animlist:104,7
+	*melee_attack1 animlist:96,8
+	*melee_attack2 animlist:107
+	*melee_attack3 animlist:108
+	*melee_attack4 animlist:109
+	*melee_attack5 animlist:110
+	*melee_attack6 animlist:111
+
+	*melee_attack7 animlist:105,9
+	*melee_attack8 animlist:97,10
+	*melee_attack9 animlist:106
+	*melee_attack10 animlist:98
+
+	*ai_type MELEE_AXE
+}
+
+*template_weapon_crossbow
+{
+	*rpgclass summon
+
+	*skill crossbow
+	*damagetype pierce+blockable
+
+	*flags aiming+autoaim+needammo+autoreload+keepaftermission
+	*itemtype 0x21
+
+	*range 1024
+
+	*linkeditemtypes 0x110,0x111,0x112
+	
+	*sound_pickup eq_misc4
+	*sound_cast cbw_cross02
+	*sound_reload cbw_tighten01
+	*sound_equip EQ_CROSS1
+	*sound_unequip EQ_CROSS2
+
+	*attachrottrack 15
+
+	*anim_equip animlist:231
+	*anim_stance animlist:168
+	
+	*anim_attack animlist:182
+	*anim_attack_crouch animlist:183
+	*anim_attack_walkfwd animlist:184
+	*anim_attack_walkbwd animlist:185
+	*anim_attack_runfwd animlist:186
+	*anim_attack_runbwd animlist:187
+	*anim_attack_crouchfwd animlist:188
+	*anim_attack_crouchbwd animlist:189
+
+	*anim_reload animlist:190
+	*anim_reload_crouch animlist:191
+	*anim_reload_crouchfwd animlist:192
+
+	*ai_type RANGED_CROSSBOW
+}
+
+*template_weapon_magic
+{
+	*anim_equip animlist:231
+	*anim_stance animlist:196
+	*anim_attack animlist:218
+	*flags needammo
+
+	*attachrottrack 15
+	*ai_type RANGED_MAGIC
+}
+
+//----------------------------------------------------------------------
+//- DAGGER -------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*weapon_dagger_short
+{
+	*classname template_weapon_dagger
+	*price 15
+	*damage 10
+
+	*impactforce 0
+	*animtimescale 1.0
+	*melee_stunduration 0.6
+
+	*model "weapons\\Dagger1"
+	*iconsurface gui_icon_dagger
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+
+	*spawn_hit hiteffect_shortdagger
+	*spawn_special hiteffect_shortdagger_special
+}
+
+*weapon_dagger_long
+{
+	*classname template_weapon_dagger
+	*price 50
+	*damage 20
+
+	*impactforce 0
+	*animtimescale 1.025
+	*melee_stunduration 0.7
+
+	*model "weapons\\longdagger"
+	*iconsurface gui_icon_longdagger
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.7
+
+	*spawn_hit hiteffect_longdagger
+	*spawn_special hiteffect_longdagger_special
+}
+
+*weapon_dagger_curved
+{
+	*classname template_weapon_dagger
+	*price 150
+	*damage 30
+
+	*impactforce 0
+	*animtimescale 1.05
+	*melee_stunduration 0.8
+
+	*model "weapons\\WaveDagger"
+	*iconsurface gui_icon_wavedagger
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.75
+	//*melee_combomultiplier2 2.5
+	//*melee_combotimegap 0.6
+	
+	*spawn_hit hiteffect_curvedagger
+	*spawn_special hiteffect_curvedagger_special
+}
+
+*weapon_dagger_sacrifice
+{
+	*classname template_weapon_dagger
+	*price 300
+	*damage 40
+
+	*impactforce 0
+	*animtimescale 1.075
+	*melee_stunduration 0.9
+
+	*model "weapons\\DarkDagger01"
+	*iconsurface gui_icon_ceremonialdagg
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 3.0
+	//*melee_combotimegap 0.45
+
+	*spawn_hit hiteffect_ceremonial
+	*spawn_special hiteffect_ceremonial_special
+}
+
+*weapon_dagger_poison
+{
+	*classname template_weapon_dagger
+	*price 600
+	*damage 50, poison+blockable
+
+	*impactforce 0
+	*animtimescale 1.1
+	*melee_stunduration 1.0
+
+	*model "weapons\\PoisonDagger"
+	*iconsurface gui_icon_poisondagger
+	*attachmodel "DoubleTrail:Trail_Sword04,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 3.0
+	//*melee_combotimegap 0.3
+
+	*spawn_hit hiteffect_poisondagger
+	*spawn_special hiteffect_poisondagger_special
+	*damage_effect attach_poison
+}
+
+*weapon_dagger_ancient
+{
+	*classname template_weapon_dagger
+	*price 50
+	*damage 20
+
+	*impactforce 0
+	*melee_stunduration 1.6
+
+	*model "weapons\\ancientdagger"
+	*iconsurface gui_icon_ancientdagger
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+
+	*spawn_hit hiteffect_shortdagger
+	*spawn_special hiteffect_shortdagger_special
+}
+
+*weapon_special_vine
+{
+	*classname template_weapon_dagger
+	*price 50000
+	*damage 5
+
+	*model "world\\stuff\\bigbottle"
+	*iconsurface gui_icon_molotov
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+}
+
+//----------------------------------------------------------------------
+//- SWORD -------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*weapon_sword_short
+{
+	*classname template_weapon_sword
+	*price 50
+	*damage 20
+	*impactforce 5
+	
+	*animtimescale 0.9
+
+	*model "weapons\\ShortSword"
+	*iconsurface gui_icon_shortsword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+
+	*spawn_hit hiteffect_shortsword
+	*spawn_special hiteffect_shortsword_special
+}
+
+*weapon_sword_lightshort
+{
+	*classname template_weapon_sword
+	*price 50
+	*damage 20
+	*impactforce 5
+
+	*animtimescale 0.91
+
+	*model "weapons\\LightShortSword"
+	*iconsurface gui_icon_lightshsword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+
+	*spawn_hit hiteffect_shortsword
+	*spawn_special hiteffect_shortsword_special
+}
+
+*weapon_sword_broad
+{
+	*classname template_weapon_sword
+	*price 100
+	*damage 30
+	*impactforce 6
+
+	*animtimescale 0.92
+
+	*model "weapons\\BroadSword"
+	*iconsurface gui_icon_broadsword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.75
+
+	*spawn_hit hiteffect_broadsword
+	*spawn_special hiteffect_broadsword_special
+}
+
+*weapon_sword_long
+{
+	*classname template_weapon_sword
+	*price 200
+	*damage 40
+	*impactforce 7
+
+	*animtimescale 0.93
+
+	*model "weapons\\IronSword"
+	*iconsurface gui_icon_ironsword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.7
+
+	*spawn_hit hiteffect_longsword
+	*spawn_special hiteffect_longsword_special
+}
+
+*weapon_sword_scimitar
+{
+	*classname template_weapon_sword
+	*price 300
+	*damage 60
+	*impactforce 8
+
+	*animtimescale 0.94
+
+	*model "weapons\\Scimitar"
+	*iconsurface gui_icon_scimitar
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.7
+
+	*spawn_hit hiteffect_scimitar
+	*spawn_special hiteffect_scimitar_special
+}
+
+*weapon_sword_dwarven
+{
+	*classname template_weapon_sword
+	*price 400
+	*damage 70
+	*impactforce 9
+
+	*animtimescale 0.95
+
+	*model "weapons\\LightSword"
+	*iconsurface gui_icon_lightsword
+	*attachmodel "DoubleTrail:TRAIL_DWARVENSWORD,2,3"
+	*attachangles 0,0.24,0.92
+	
+	*sound_cast MEL_SWING01
+	*sound_hitworld IMP_GRND01
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.65
+
+	*spawn_hit hiteffect_dwarvensword
+	*spawn_special hiteffect_dwarvensword_special
+}
+
+*weapon_sword_sabre
+{
+	*classname template_weapon_sword
+	*price 500
+	*damage 80
+	*impactforce 11
+
+	*animtimescale 0.96
+
+	*model "weapons\\Sabre"
+	*iconsurface gui_icon_Sabre
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.6
+
+	*spawn_hit hiteffect_sabre
+	*spawn_special hiteffect_sabre_special
+}
+
+*weapon_sword_falchion
+{
+	*classname template_weapon_sword
+	*price 650
+	*damage 90
+	*impactforce 12
+
+	*animtimescale 0.97
+
+	*model "weapons\\Falchion"
+	*iconsurface gui_icon_falchion
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.6
+
+	*spawn_hit hiteffect_falchion
+	*spawn_special hiteffect_falchion_special
+}
+
+*weapon_sword_bastard
+{
+	*classname template_weapon_sword
+	*price 750
+	*damage 140
+	*impactforce 13
+
+	*animtimescale 0.98
+
+	*model "weapons\\BastardSword"
+	*iconsurface gui_icon_bastardsword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.75
+	//*melee_combomultiplier2 2.5
+	//*melee_combotimegap 0.55
+
+	*spawn_hit hiteffect_bastard
+	*spawn_special hiteffect_bastard_special
+}
+
+*weapon_sword_warrior
+{
+	*classname template_weapon_sword
+	*price 900
+	*damage 200
+	*impactforce 14
+
+	*animtimescale 0.99
+		
+	*model "weapons\\warriorblade"
+	*iconsurface gui_icon_warriorblade
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 3.0
+	//*melee_combotimegap 0.55
+
+	*spawn_hit hiteffect_ehrick
+	*spawn_special hiteffect_ehrick_special
+}
+
+*weapon_sword_fire
+{
+	*classname template_weapon_sword
+	*price 1500
+	*damage 300
+	*damagetype fire+blockable
+	*impactforce 15
+	
+	*animtimescale 1.0
+
+	*sound_anim1 mel_fire01
+	*sound_hitchar imp_fire
+
+	*iconsurface gui_icon_firesword
+	*model "weapons\\FireSword"
+
+	*attachmodel0 "Particles:MP=500,CO=0x60C06020,DU=0.2,DUN=0.3,FI=0.05,AX=0 0 80,AXN=0 0 80,OF=34,OFN=50,MV0=-1,MV1=1,MV2=-2,MV3=2,MV4=1,SZ0=5,SZ2=5,,SZ4=3,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPA=0,SPB=0,OFB=0.25,TC=0.005,PP=10,FL=quads+ctime+early"
+	*attachangles 0,0.24,0.92
+
+	*damage_effect attach_firesword
+	*spawn_hit hiteffect_firesword
+	*spawn_special hiteffect_firesword_special
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.5
+}
+
+*weapon_sword_frost
+{
+	*classname template_weapon_sword
+	*price 1200
+	*damage 60
+	*damagetype cold+blockable
+	*impactforce 15
+
+	*animtimescale 1.0
+
+	*itemtype 0x12
+	*flags none
+
+	*sound_anim1 mel_frost01
+	*sound_hitchar imp_frost
+
+	*model "weapons\\FrostSword"
+	*iconsurface gui_icon_frostsword
+
+	*attachmodel0 "Particles:SU=CloudBall,MP=250,CO=0x10A0C0F0,DU=0.4,DUN=0.1,FI=0.05,OF=34,OFN=50,MV0=-2,MV1=2,MV2=-2,MV3=2,MV4=1,SZ0=10,SZ1=10,SZ2=15,SZ3=15,SZ4=3,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPA=0,SPB=0,OFB=0.25,TC=0.005,PP=4,FS=0.35,FL=qd+ct+erl"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.5
+
+	*spawn_hit hiteffect_frostsword
+	*spawn_special hiteffect_frostsword_special
+}
+
+*weapon_sword_frost2
+{
+	*classname weapon_sword_frost
+
+	*itemtype 0
+}
+
+*weapon_sword_shortancient
+{
+	*classname template_weapon_sword
+	*price 250
+	*damage 20
+	*impactforce 5
+
+	*model "weapons\\AncientShortSword"
+	*iconsurface gui_icon_ancientshortsw
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+	
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.3
+	
+	*spawn_hit hiteffect_shortsword
+	*spawn_special hiteffect_shortsword_special
+}
+
+*weapon_sword_ancient
+{
+	*classname template_weapon_sword
+	*price 800
+	*damage 30
+	*impactforce 7
+
+	*model "weapons\\AncientSword"
+	*iconsurface gui_icon_ancientsword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.3
+	
+	*spawn_hit hiteffect_longsword
+	*spawn_special hiteffect_longsword_special
+}
+
+*weapon_sword_mordessa
+{
+	*classname template_weapon_sword
+	*price 1200
+	*damage 100
+	*impactforce 8
+
+	*animtimescale 1.2
+
+	*model "weapons\\MordSword"
+	*iconsurface gui_icon_mordessasword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.5
+	
+	*spawn_hit hiteffect_mordessa
+	*spawn_special hiteffect_mordessa_special
+}
+
+*weapon_sword_assembly
+{
+	*classname template_weapon_sword
+	*price 1200
+	*damage 50
+	*impactforce 9
+
+	*animtimescale 1.1
+
+	*model "weapons\\AssemblySword"
+	*iconsurface gui_icon_AssemblySword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 3.0
+	//*melee_combotimegap 0.5
+	
+	*spawn_hit hiteffect_assembly
+	*spawn_special hiteffect_assembly_special
+}
+
+//----------------------------------------------------------------------
+//- AXE ----------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*weapon_axe_bearded
+{
+	*classname template_weapon_axe
+	*price 50
+	*damage 30
+	*impactforce 6
+
+	*animtimescale 0.88
+
+	*model "weapons\\BeardedAxe"
+	*iconsurface gui_icon_beardedaxe
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+
+	*spawn_hit hiteffect_beardedaxe
+	*spawn_special hiteffect_beardedaxe_special
+}
+
+*weapon_axe_kama
+{
+	*classname template_weapon_axe
+	*price 100
+	*damage 40
+	*impactforce 7
+
+	*animtimescale 0.885
+
+	*model "weapons\\Kama"
+	*iconsurface gui_icon_kama
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.7
+
+	*spawn_hit hiteffect_kama
+	*spawn_special hiteffect_kama_special
+}
+
+*weapon_axe_short
+{
+	*classname template_weapon_axe
+	*price 200
+	*damage 50
+	*impactforce 8
+
+	*animtimescale 0.89
+
+	*model "weapons\\Axe"
+	*iconsurface gui_icon_smallaxe
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.65
+
+	*spawn_hit hiteffect_shortaxe
+	*spawn_special hiteffect_shortaxe_special
+}
+
+*weapon_axe_pike
+{
+	*classname template_weapon_axe
+	*price 300
+	*damage 60
+	*impactforce 9
+
+	*animtimescale 0.895
+
+	*model "weapons\\metalaxe"
+	*iconsurface gui_icon_metalaxe
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.6
+
+	*spawn_hit hiteffect_pikeaxe
+	*spawn_special hiteffect_pikeaxe_special
+}
+
+*weapon_axe_brute
+{
+	*classname template_weapon_axe
+	*price 400
+	*damage 70
+	*impactforce 10
+
+	*animtimescale 0.9
+
+	*model "weapons\\bruteaxe"
+	*iconsurface gui_icon_bruteaxe
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.55
+
+	*spawn_hit hiteffect_bruteaxe
+	*spawn_special hiteffect_bruteaxe_special
+}
+
+*weapon_axe_battle
+{
+	*classname template_weapon_axe
+	*price 500
+	*damage 90
+	*impactforce 11
+	
+	*animtimescale 0.905
+
+	*model "weapons\\RamAxe"
+	*iconsurface gui_icon_ramaxe
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.5
+
+	*spawn_hit hiteffect_battleaxe
+	*spawn_special hiteffect_battleaxe_special
+}
+
+*weapon_axe_war
+{
+	*classname template_weapon_axe
+	*price 650
+	*damage 100
+	*impactforce 12
+
+	*animtimescale 0.91
+
+	*model "weapons\\WarAxe"
+	*iconsurface gui_icon_waraxe
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.75
+	//*melee_combomultiplier2 2.5
+	//*melee_combotimegap 0.45
+
+	*spawn_hit hiteffect_waraxe
+	*spawn_special hiteffect_waraxe_special
+}
+
+*weapon_axe_great
+{
+	*classname template_weapon_axe
+
+	*price 750
+	*damage 150
+	*impactforce 13
+	
+	*animtimescale 0.915
+	
+	*model "weapons\\GreatAxe"
+	*iconsurface gui_icon_greataxe
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 3.0
+	//*melee_combotimegap 0.4
+
+	*spawn_hit hiteffect_GreatAxe
+	*spawn_special hiteffect_GreatAxe_special
+}
+
+*weapon_axe_shatter
+{
+	*classname template_weapon_axe
+	
+	*price 900
+	*damage 210
+	*impactforce 14
+
+	*animtimescale 0.92
+
+	*model "weapons\\ShatterAxe"
+	*iconsurface gui_icon_shatteraxe
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+	
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 3.0
+	//*melee_combotimegap 0.35
+	
+	*spawn_hit hiteffect_shatteraxe
+	*spawn_special hiteffect_shatteraxe_special
+}
+
+*weapon_axe_magic
+{
+	*classname template_weapon_axe
+	*price 1500
+	*damage 360, magic+blockable
+	*impactforce 15
+
+	*animtimescale 0.95
+
+	*sound_anim1 mel_magic01
+	*sound_hitchar imp_magic
+
+	*model "weapons\\MagicAxe"
+	*iconsurface gui_icon_magicaxe
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 2.0
+	//*melee_combomultiplier2 4.0
+	//*melee_combotimegap 0.3
+
+	*spawn_hit hiteffect_slaying
+	*spawn_special hiteffect_slaying_special
+}
+
+*weapon_axe_polearm
+{
+	*classname template_weapon_axe
+	*damage 40, pierce+blockable
+	*impactforce 1
+
+	*animtimescale 0.95
+
+	*model "weapons\\Polearm"
+	*iconsurface gui_icon_polearm
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	*maxnumbasic 1
+	*maxnumcombox 1
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+}
+
+*weapon_axe_trident
+{
+	*classname template_weapon_axe
+	*damage 80, pierce+blockable
+	*impactforce 6		
+
+	*animtimescale 1.0
+
+	*model "weapons\\Trident"
+	*iconsurface gui_icon_trident
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+	
+	*maxnumbasic 1
+	*maxnumcombox 1
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.75
+	//*melee_combomultiplier2 2.5
+	//*melee_combotimegap 0.5
+}
+
+//----------------------------------------------------------------------
+//- HAMMER -------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*weapon_hammer_spiked
+{
+	*classname template_weapon_hammer
+	*price 50
+	*damage 40
+	*impactforce 7
+	
+	*animtimescale 0.85
+
+	*model "weapons\\SpikeClub"
+	*iconsurface gui_icon_spikeclub
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+
+	*spawn_hit hiteffect_spikeclub
+	*spawn_special hiteffect_spikeclub_special
+}
+
+*weapon_hammer_war
+{
+	*classname template_weapon_hammer
+	*price 100
+	*damage 50
+	*impactforce 8
+
+	*animtimescale 0.845
+
+	*model "weapons\\WarHammer"
+	*iconsurface gui_icon_warhammer
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.7
+
+	*spawn_hit hiteffect_warhammer
+	*spawn_special hiteffect_warhammer_special
+}
+
+*weapon_hammer_light
+{
+	*classname template_weapon_hammer
+	*price 100
+	*damage 50
+	*impactforce 8
+
+	*animtimescale 0.845
+
+	*model "weapons\\LightHammer"
+	*iconsurface gui_icon_lighthammer
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.7
+
+	*spawn_hit hiteffect_warhammer
+	*spawn_special hiteffect_warhammer_special
+}
+
+*weapon_hammer_morningstar
+{
+	*classname template_weapon_hammer
+	*price 200
+	*damage 60
+	*impactforce 9
+
+	*animtimescale 0.84
+
+	*model "weapons\\MorningStar"
+	*iconsurface gui_icon_morningstar
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.65
+
+	*spawn_hit hiteffect_morningstar
+	*spawn_special hiteffect_morningstar_special
+}
+
+*weapon_hammer_heavyclub
+{
+	*classname template_weapon_hammer
+	*price 300
+	*damage 70
+	*impactforce 10
+
+	*animtimescale 0.835
+
+	*model "weapons\\HeavyClub"
+	*iconsurface gui_icon_heavyclub
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.6
+
+	*spawn_hit hiteffect_heavyclub
+	*spawn_special hiteffect_heavyclub_special
+}
+
+*weapon_hammer_mace
+{
+	*classname template_weapon_hammer
+	*price 400
+	*damage 80
+	*impactforce 11
+
+	*animtimescale 0.83
+
+	*model "weapons\\Mace"
+	*iconsurface gui_icon_mace
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.55
+
+	*spawn_hit hiteffect_mace
+	*spawn_special hiteffect_mace_special
+}
+
+*weapon_hammer_maul
+{
+	*classname template_weapon_hammer
+	*price 500
+	*damage 90
+	*impactforce 12
+
+	*animtimescale 0.825
+	
+	*model "weapons\\Maul"
+	*iconsurface gui_icon_maul
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.5
+
+	*spawn_hit hiteffect_maul
+	*spawn_special hiteffect_maul_special
+}
+
+*weapon_hammer_battle
+{
+	*classname template_weapon_hammer
+	*price 650
+	*damage 100
+	*impactforce 13
+
+	*animtimescale 0.82
+
+	*model "weapons\\BattleHammer"
+	*iconsurface gui_icon_battlehammer
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	//*attachmodel "Particles:MP=20,SU=Glimmer1,CO=0xFFC0C0FF,DU=0.5,FI=0.5,LO=-5 0 40,DI=cube,DIS=1 1 6,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=0.2,SZ0=1,SZ1=5,SZ2=3,SZ3=15,SZ4=2,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.2,TC=0.2,FL=qd+ct+erl+fs"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.75
+	//*melee_combomultiplier2 2.5
+	//*melee_combotimegap 0.45
+
+	*spawn_hit hiteffect_battlehammer
+	*spawn_special hiteffect_battlehammer_special
+}
+
+*weapon_hammer_chaos
+{
+	*classname template_weapon_hammer
+	*price 750
+	*damage 160
+	*impactforce 14	
+
+	*animtimescale 0.815
+
+	*model "weapons\\Chaoshammer"
+	*iconsurface gui_icon_chaoshammer
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	//*attachmodel "Particles:MP=350,SU=smb1,CO=0x1620FF20,DU=0.6,FI=0.3,VE=5,VEN=5,LO=0 0 30,AX=0 0 20,DI=cube,DIS=1.2 1.2 1.2,HO=1,OF=5,OFN=1,SZ0=3,SZ1=8,SZ2=3,SZ3=4,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.2,SPA=0,SPB=0.1,OFB=-0.1,PP=4,FL=la+qd+ct"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 3.0
+	//*melee_combotimegap 0.4
+
+	*spawn_hit hiteffect_chaos
+	*spawn_special hiteffect_chaos_special
+}
+
+*weapon_hammer_heavymorningstar
+{
+	*classname template_weapon_hammer
+	*price 900
+	*damage 220
+	*impactforce 15
+
+	*animtimescale 0.81
+
+	*model "weapons\\HeavyMorningStar"
+	*iconsurface gui_icon_heavymorningst
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	//*attachmodel "Particles:CO=0x60C06020,DU=0.2,DUN=0.3,FI=0.05,AX=0 0 80,AXN=0 0 80,DI=cube,DIS=1 1 2,OF=34,MV0=-1,MV1=1,MV2=-2,MV3=2,MV4=1,SZ0=5,SZ2=5,SZ4=3,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPA=0,SPB=0,OFB=0.25,TC=0.005,PP=10,FL=la+qd+ct"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 3.0
+	//*melee_combotimegap 0.3
+
+	*spawn_hit hiteffect_heavymorningstar
+	*spawn_special hiteffect_heavymorningstar_special
+}
+
+*weapon_hammer_magic
+{
+	*classname template_weapon_hammer
+	*price 1500
+	*damage 370, magic+blockable
+	*impactforce 16
+	
+	*animtimescale 0.89
+
+	*sound_anim1 mel_magic01
+	*sound_hitchar imp_magic
+
+	*model "weapons\\HammerOfLightning"
+	*iconsurface gui_icon_hammeroflightn
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 2.0
+	//*melee_combomultiplier2 4.0
+	//*melee_combotimegap 0.3
+
+	*spawn_hit hiteffect_hammeroflightning
+	*spawn_special hiteffect_hammeroflightning_special
+}
+
+*weapon_hammer_shadowstar
+{
+	*classname template_weapon_hammer
+	*damage 70
+	*impactforce 25
+
+	*no_shadow 1
+	
+	*model "weapons\\MorningStar_shadow"
+	*iconsurface gui_icon_morningstar
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+}
+
+*weapon_hammer_golem
+{
+	*classname template_weapon_hammer
+	*damage 70
+	*impactforce 25
+
+	*no_shadow 1
+	
+	*animtimescale 1.15
+
+	*sound_anim1 gol_atksml01
+	*sound_hitchar imp_magic
+	
+	*model "weapons\\GolemHammer"
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+}
+
+*weapon_hammer_golem2
+{
+	*classname template_weapon_hammer
+	*damage 250
+	*impactforce 40
+
+	*no_shadow 1
+	
+	*animtimescale 1.3
+
+	*sound_anim1 gol_atksml01
+	*sound_hitchar imp_magic
+	
+	*model "weapons\\GolemHammer"
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+}
+
+*weapon_hammer_ancient
+{
+	*classname template_weapon_hammer
+	*price 900
+	*damage 50
+	*impactforce 17
+
+	*model "weapons\\HellPike"
+	*iconsurface gui_icon_hellpike
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+}
+
+//----------------------------------------------------------------------
+//- BOW ----------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*template_weapon_bow
+{
+	*rpgclass bow
+
+	*skill bow
+	*damagetype pierce+blockable
+
+	*itemtype 0x20
+	*linkeditemtypes 0x120,0x121,0x122,0x123,0x124
+
+	*ai_type RANGED_BOW
+	*anim_stance animlist:140
+	*sound_pickup eq_misc4
+
+*BurstBowKeys
+	*burst_flags aiming+needammo+unloadonunequip+keepaftermission+twohanded
+//	*burst_spawn projectile_burstarrow
+	*burst_reloadtime 1.5
+	*burst_damage 10, pierce+blockable
+
+	*maxloadedarrows 10
+	*yoffset 0.00 //0.05 before but then the aiming ways off
+	*xspread 0.20
+	*yspread 0.02
+	*spreadunity 0.5
+	*columnspread 5.0
+	*velocityspread 0.1
+
+	*range 1024
+	
+	*burst_sound_charge bow_burst02
+	*burst_sound_release bow_burst01
+	*burst_sound_reload bow_burst03
+	*burst_sound_equip 
+	*burst_sound_unequip 
+
+	*burst_anim_equip animlist:227
+	*burst_anim_reload animlist:152
+	*burst_anim_charge animlist:153
+	*burst_anim_release animlist:154
+
+	*burst_anim_reload_crouch animlist:152
+	*burst_anim_charge_crouch animlist:153
+	*burst_anim_release_crouch animlist:154
+
+	*subchargeanimstart 0.66
+	*subchargeanimhold 3.28
+	*subchargeanimend 5.50
+
+	*quickshot_releasetime 0.7
+	*quickshot_velocityfraction 0.3
+
+*SniperBowKeys
+	*sniper_flags aiming+needammo+keepaftermission+twohanded
+//	*sniper_spawn projectile_sniperarrow
+	*sniper_reloadtime 1
+	*sniper_damage 40, sniper+blockable
+
+	*zoom1 5
+	*zoom2 20
+
+	*range 8192
+	*moveback 3
+
+	*range 1024
+
+	*sniper_sound_charge bow_snipe02
+	*sniper_sound_release bow_snipe01
+	*sniper_sound_reload bow_snipe03
+	*sniper_sound_equip 
+	*sniper_sound_unequip 
+
+	*sniper_anim_equip animlist:227
+	*sniper_anim_reload_stand animlist:155
+	*sniper_anim_raisecharge_stand animlist:156
+	*sniper_anim_chargeloop_stand animlist:157
+	*sniper_anim_releaselowerreload_stand animlist:158
+	*sniper_anim_releaselower_stand animlist:159
+
+	*sniper_anim_reload_crouch animlist:155
+	*sniper_anim_raisecharge_crouch animlist:156
+	*sniper_anim_chargeloop_crouch animlist:157
+	*sniper_anim_releaselowerreload_crouch animlist:158
+	*sniper_anim_releaselower_crouch animlist:159
+}
+
+//----------------------------------------------------------------------
+
+*weapon_bow_short
+{
+*SharedBowKeys
+	*classname template_weapon_bow
+	*price 25	
+
+	*model "weapons\\ShortBow"
+	*iconsurface gui_icon_shortbow
+
+	*attachangles 0,0.25,0.60
+	*attachpoint 1
+	*attachrottrack 19
+	*muzzleattachpoint 0
+
+*BurstBowKeys
+	*burst_reloadtime 0.25
+	*burst_damage 50, pierce+blockable
+
+	*maxloadedarrows 10
+	*xspread 0.2
+	*yspread 0.02
+	*spreadunity 0.7
+	*columnspread 5.0
+	*velocityspread 0.1
+
+*SniperBowKeys
+	*sniper_reloadtime 1
+	*sniper_damage 50, sniper+blockable
+
+	*zoom1 2
+	*zoom2 8
+	
+	*moveback 3
+}
+
+//----------------------------------------------------------------------
+
+*weapon_bow_long
+{
+*SharedBowKeys
+	*classname template_weapon_bow
+	*price 150
+
+	*iconsurface gui_icon_tribalbow
+
+	*model "weapons\\WoodenBow"
+	*attachangles 0,0.25,0.60
+	*attachpoint 1
+	*attachrottrack 19
+	*muzzleattachpoint 0
+
+*BurstBowKeys
+	*burst_reloadtime 0.2
+	*burst_damage 70, pierce+blockable
+
+	*maxloadedarrows 10
+	*xspread 0.1
+	*yspread 0.02
+	*spreadunity 0.7
+	*columnspread 5.0
+	*velocityspread 0.1
+
+*SniperBowKeys
+	*sniper_reloadtime 0.9
+	*sniper_damage 70, sniper+blockable
+
+	*zoom1 4
+	*zoom2 12
+
+	*moveback 3
+}
+
+//----------------------------------------------------------------------
+
+*weapon_bow_burst
+{
+*SharedBowKeys
+	*classname template_weapon_bow
+	*price 300
+
+	*iconsurface gui_icon_burstbow
+
+	*model "weapons\\BurstBow"
+	*attachangles 0,0.25,0.60
+	*attachpoint 1
+	*attachrottrack 19
+	*muzzleattachpoint 0
+
+*BurstBowKeys
+	*burst_reloadtime 0.15
+	*burst_damage 100, pierce+blockable
+
+	*maxloadedarrows 10
+	*xspread 0.1
+	*yspread 0.02
+	*spreadunity 0.7
+	*columnspread 5.0
+	*velocityspread 0.1
+
+*SniperBowKeys
+	*sniper_reloadtime 0.85
+	*sniper_damage 100, sniper+blockable
+
+	*zoom1 4
+	*zoom2 16
+
+	*moveback 3
+}
+
+//----------------------------------------------------------------------
+
+*weapon_bow_sniper
+{
+*SharedBowKeys
+	*classname template_weapon_bow
+	*price 550
+
+	*iconsurface gui_icon_sniperbow
+
+	*model "weapons\\SniperBow"
+	*attachangles 0,0.25,0.60
+	*attachpoint 1
+	*attachrottrack 19
+	*muzzleattachpoint 0
+
+*BurstBowKeys
+	*burst_reloadtime 0.1
+	*burst_damage 150, pierce+blockable
+
+	*maxloadedarrows 10
+	*xspread 0.1
+	*yspread 0.02
+	*spreadunity 0.7
+	*columnspread 5.0
+	*velocityspread 0.1
+
+*SniperBowKeys
+	*sniper_reloadtime 0.7
+	*sniper_damage 150, sniper+blockable
+
+	*moveback 3
+}
+
+//----------------------------------------------------------------------
+
+*weapon_bow_magic
+{
+	*SharedBowKeys
+	*classname template_weapon_bow
+	*price 1000
+
+	*iconsurface gui_icon_MagicBow
+
+	*model "weapons\\MagicBow"
+	*attachangles 0,0.25,0.60
+	*attachpoint 1
+	*attachrottrack 19
+	*muzzleattachpoint 0
+
+	*BurstBowKeys
+	*burst_reloadtime 1
+	*burst_damage 200, magic+blockable
+
+	*maxloadedarrows 10
+	*xspread 0.1
+	*yspread 0.02
+	*spreadunity 0.7
+	*columnspread 5.0
+	*velocityspread 0.1
+
+	*SniperBowKeys
+	*sniper_reloadtime 1
+	*sniper_damage 200, sniper+blockable
+
+	*moveback 3
+}
+
+//----------------------------------------------------------------------
+//- CROSSBOW -----------------------------------------------------------
+//----------------------------------------------------------------------
+
+*weapon_crossbow_light
+{
+	*classname template_weapon_crossbow
+	*price 50
+
+	*model weapons\LightCrossbow
+	*iconsurface gui_icon_lightcrossbow
+	*attachangles 0,0.25,-0.10
+	*sound_cast cbw_cross02
+	//*sound_hitworld IMP_ARROW
+	//*sound_lrp LRP01
+	
+	*range 1024
+
+	*scatter 0.005
+	*reloadtime 1.25
+	*damage 35, pierce+blockable
+	*magazinesize 1
+	*impactforce 10
+}
+
+*weapon_crossbow_dwarven
+{
+	*classname template_weapon_crossbow
+	*price 150
+
+	*model weapons\Crossbow2
+	*iconsurface gui_icon_dwarvencrossbo
+	*attachangles 0,0.25,-0.10
+	*sound_cast cbw_cross04
+	//*sound_hitworld IMP_ARROW
+	//*sound_lrp LRP01
+
+	*range 1024
+
+	*scatter 0.01
+	*reloadtime 0.7
+	*damage 40, pierce+blockable
+	*magazinesize 2
+	*impactforce 12
+}
+
+*weapon_crossbow_heavy
+{
+	*classname template_weapon_crossbow
+	*price 350
+
+	*model weapons\HeavyCrossbow
+	*iconsurface gui_icon_heavycrossbow
+	*attachangles 0,0.25,-0.10
+	*sound_cast cbw_cross03
+	//*sound_hitworld IMP_ARROW2
+	//*sound_lrp LRP02
+
+	*range 2048
+
+	*scatter 0.01
+	*reloadtime 0.8
+	*damage 65, pierce+blockable
+	*magazinesize 1
+	*impactforce 20
+}
+
+*weapon_crossbow_repeating
+{
+	*classname template_weapon_crossbow
+	*price 750
+
+	*model weapons\RepeatingCrossbow
+	*iconsurface gui_icon_repeatingcross
+	*attachangles 0,0.25,-0.10
+	*sound_cast cbw_cross05
+	//*sound_hitworld IMP_ARROW3
+	//*sound_lrp LRP03
+
+	*range 512
+
+	*scatter 0.02
+	*reloadtime 0.5
+	*damage 55, pierce+blockable
+	*magazinesize 8
+	*impactforce 5
+}
+
+*weapon_crossbow_magic
+{
+	*classname template_weapon_crossbow
+	*price 900
+
+	*model weapons\MagicCrossBow
+	*iconsurface gui_icon_magiccrossbow
+	*attachangles 0,0.25,-0.10
+
+	*range 4096
+
+	*scatter 0.01
+	*reloadtime 0.8
+	*damage 80, pierce+blockable
+	*magazinesize 240
+	*impactforce 20
+}
+
+*weapon_crossbow_special
+{
+	*classname template_weapon_crossbow
+	*price 50
+	
+	*range 4096
+
+	*model weapons\LightCrossbow
+	*iconsurface gui_icon_lightcrossbow
+	*attachangles 0,0.25,-0.10
+	*sound_cast cbw_cross02
+	//*sound_hitworld IMP_ARROW
+	//*sound_lrp LRP01
+	
+	*scatter 0.0
+	*reloadtime 3
+	*damage 40, pierce+blockable
+	*magazinesize 1000
+	*impactforce 12
+}
+
+*weapon_rocketlauncher
+{
+	*classname template_weapon_crossbow
+
+	*itemtype 0x17
+
+	*damagetype explosive
+	*flags aiming+autoreload+keepaftermission
+
+	*linkeditemtypes 0x130
+
+	*spawn projectile_rocket
+	*sound_cast dem_expl18c
+
+	*model weapons\RocketLauncher
+	*iconsurface gui_icon_rocketlauncher
+	*attachangles 0,0.25,-0.10
+
+	*range 512
+
+	*velocity 400
+
+	*scatter 0.00
+	*reloadtime 0.8
+	*damage 100, pierce+blockable
+	*impactforce 50
+}
+
+//----------------------------------------------------------------------
+//- STAFF --------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*template_staff
+{
+//	*classname template_weapon_magic
+
+	*skill magic
+	*damagetype magic+blockable
+
+	*attachangles 0,0.25,0
+
+	*flags aiming+rpgmodelflags
+
+	*range 2048
+
+	*linkeditemtypes 0x109
+
+	*attachrottrack 15
+
+	*anim_stance animlist:196
+	*anim_raise animlist:208
+	*anim_cast animlist:209
+	*anim_lower animlist:210
+	*anim_summon animlist:211
+	*anim_shield animlist:217
+	*anim_shockwave animlist:216
+	*anim_equip animlist:231
+
+	*sound_attack 
+	*sound_summon forc_magicc04b
+	*sound_shieldstart 
+	*sound_shieldloop 
+	*sound_shieldend 
+	*sound_shieldimpact 
+	*sound_shockwave 
+	*sound_outofmana eq_misc8
+	*sound_pickup eq_misc5
+
+	*outofmana_sounddelay 2
+	*outofmana_barflashdelay 1
+
+	*manareg_amount 4
+	*manareg_rate 0.1
+	*manareg_delay 3.0
+
+	*attack_manacost 0
+	*shield_manacost 4
+	*shield_manadrawdelay 0.2
+	*shockwave_manacost 150
+
+	*attack_reloadtime 1.0
+	*shield_duration 0
+	*shockwave_reloadtime 5.0
+	*shockwave_stalltime 1.5
+	*shockwave_delay 0.7
+
+	*attack_camerashake 0, 0, 0
+	*shockwave_camerashake 12, 3, 6
+
+	*attack_posspread 0
+	*attack_dirspread 0
+
+	*attack 
+	*attackeffect 
+	*shield 
+	*shieldimpact 
+	*shockwave
+
+	*shield_model "Particles:MP=10,CO=0,TC=10,FL=nh+hf+ct"
+
+	*shieldattachbone 0
+
+	*magiclight_fadeduration 2
+	*attachmodel "DynLight"
+
+	*ai_type RANGED_MAGICSTAFF
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_cold
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*itemtype 0x10
+	*price 500
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*model "weapons\\ColdStaff"
+	*iconsurface gui_icon_coldstaff
+	*shield_iconsurface gui_icon_shieldcold
+	*shield_attachmodel
+	
+	*attachmodel "DynLight:LO=0 0 50,C0=0xFFA0A0F0,C1=0xFF80A0F0,CFS=1,R0=200,R1=300,RFS=2"
+
+	*sound_attack Stave_Cold01
+	*sound_shieldstart Stave_Cold06
+	*sound_shieldloop Stave_Cold04
+	*sound_shieldend Stave_Cold06
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_Cold07
+
+	*attack_damage 15, cold+blockable
+	*attack_manacost 5
+	*attack_reloadtime 0.2
+
+	*shockwave_manacost 25
+	*shockwave_reloadtime 1.5
+	
+	*attack_camerashake 1, 1, 10
+
+	*attack_posspread 4
+	*attack_dirspread 2
+
+	*attack IceBolt
+//	*attackeffect IceBoltRelease // This is to expensive due to the hi firerate
+	*shield IceShield
+	*shieldimpact IceShieldFlash
+	*shockwave IceNova
+
+	*ai_type RANGED_MAGICSTAFF_COLD
+}
+
+*weapon_staff_cold2
+{
+	*classname weapon_staff_cold
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_poison
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*itemtype 0x10
+	*price 750
+
+	*flags aiming+rpgmodelflags
+
+	*model "weapons\\PoisonStaff"
+	*iconsurface gui_icon_poisonstaff
+	*shield_iconsurface gui_icon_shieldacid
+
+//	*attachmodel "Particles:,,SU=wraith_particle2,,,DUN=4,FI=1,VE=2,VEN=2,AX=0 0 1,AXN=0 0 1,DI=cylinder,,,,,OFN=1,MV0=-2,MV1=2,MV2=-2,MV3=2,MV4=0.2,SZ0=2,SZ1=4,SZ2=0.7,SZ3=1,SZ4=6,RT0=-1,RT1=1,RT2=-1,RT3=1,RT4=0.1,AL0=0.4,,SPA=90,SPB=0,,,,,,,,,,,FS=1"
+//	*attachmodel "Particles:SU=wraith_particle2,MP=100,CO=0x8080F080,DU=2,DUN=1,FI=0.2,AX=0 0 10,OF=50,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=1,SZ0=3,SZ1=5,SZ2=5,SZ3=7,SZ4=6,RT0=-1,RT1=1,RT2=-1,RT3=1,RT4=0.1,SPA=0,SPB=0,OFB=0.25,TC=0.05,PP=1,FL=quads+ctime"
+//	*attachmodel "Particles:MP=400,SU=wraith_particle2,TS=1,DU=2,DUN=3,FI=0.2,AX=0 0 6,AXN=0 0 2,OF=50,MV0=-3,MV1=3,MV2=-15,MV3=15,MV4=0.3,SZ0=2,SZ1=4,SZ2=5,SZ3=7,SZ4=6,RT0=-1,RT1=1,RT2=-1,RT3=1,RT4=0.1,AL0=0.2,SPA=0,SPB=0,OFB=0.25,PP=2,FS=1,FL=ctime+early"
+	*attachmodel "Particles:MP=200,SU=wraith_particle2,DU=2,DUN=3,FI=0.2,AL0=0.3,LO=0 0 50,AX=0 0 6,AXN=0 0 2,MV0=-3,MV1=3,MV2=-15,MV3=15,MV4=0.3,SZ0=3,SZ1=5,SZ2=5,SPA=0,SPB=0,TC=0.02,FL=ctime"
+	*attachmodel "DynLight:LO=0 0 50,C0=0xFF40F040,C1=0xFF60F060,CFS=2,R0=200,R1=300,RFS=2"
+	
+	*sound_attack Stave_poison01
+
+	*sound_shieldstart Stave_poison06
+	*sound_shieldloop Stave_poison04
+	*sound_shieldend Stave_poison06
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_poison07
+
+	*attack_damage 25, poison+blockable
+	*attack_manacost 15
+	*attack_reloadtime 0.3
+
+	*shockwave_manacost 150
+
+	*attack_camerashake 2, 0.5, 2
+
+	*attack AcidBolt
+	*attackeffect AcidBoltRelease
+	*shield PoisonCloud
+	*shieldimpact 
+	*shockwave AcidWave
+
+	*ai_type RANGED_MAGICSTAFF_POISON
+}
+
+*weapon_staff_poison2
+{
+	*classname weapon_staff_poison
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_lightning
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*itemtype 0x10
+	*price 1000
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*model "weapons\\LightStaff"
+	*iconsurface gui_icon_lightstaff
+	*shield_iconsurface gui_icon_shieldlight
+	
+	*attachmodel "DynLight:LO=0 0 18,C0=0xFFA0C0F0,C1=0xFF4060F0,CFS=2,R0=200,R1=300,RFS=2"
+
+	*sound_attack Stave_light01
+
+	*sound_shieldstart Stave_light06
+	*sound_shieldloop Stave_light04
+	*sound_shieldend Stave_light06
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_light07
+
+	*attack_damage 40, magic+blockable
+	*attack_manacost 30
+	*attack_reloadtime 0.8
+
+	*shockwave_manacost 150
+
+//	*attack_camerashake 10, 1, 6
+
+	*attack LightningStrike
+	*attackeffect LightningStrikeRelease
+	*shield ElectricShield
+	*shieldimpact ElectricImpact
+	*shockwave ElectricShockwave
+
+	*ai_type RANGED_MAGICSTAFF_LIGHTNING
+}
+
+*weapon_staff_lightning2
+{
+	*classname weapon_staff_lightning
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_darkness
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*price 1500
+	*itemtype 0x10
+
+	*model "weapons\\DoomStaff"
+	*iconsurface gui_icon_doomstaff
+	*shield_iconsurface gui_icon_shielddark
+	
+	*attachmodel "DynLight:LO=0 0 25,C0=0xFFF04040,C1=0xFFF08080,CFS=2,R0=200,R1=300,RFS=2"
+
+	*sound_attack Stave_dark01a
+
+	*sound_shieldstart Stave_dark05
+	*sound_shieldloop Stave_dark04
+	*sound_shieldend Stave_dark05
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_dark07
+
+	*attack_damage 45, magic+blockable
+	*attack_manacost 30
+	*attack_reloadtime 0.7
+
+	*shockwave_manacost 150
+
+	*attack_camerashake 1, 0.5, 1
+
+	*attack DarknessBlast
+	*attackeffect DarknessRelease
+	*shield DarknessShield
+	*shieldimpact DarknessShieldImpact
+	*shockwave DarknessWave
+
+	*ai_type RANGED_MAGICSTAFF_DARKNESS
+}
+
+*weapon_staff_darkness2
+{
+	*classname weapon_staff_darkness
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_mind
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*price 2000
+	*itemtype 0x10
+
+	*model "weapons\\MindStaff"
+	*iconsurface gui_icon_Mindstaff
+	*shield_iconsurface gui_icon_shieldmind
+	
+	*attachmodel "DynLight:LO=0 0 50,C0=0xFFC080F0,C1=0xFFC080F0,CFS=2,R0=200,R1=250,RFS=1"
+
+	*sound_attack Stave_mind01a
+
+	*sound_shieldstart Stave_mind05
+	*sound_shieldloop Stave_mind04
+	*sound_shieldend Stave_mind05
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_mind07
+
+	*attack_damage 55, magic+blockable
+	*attack_manacost 50
+	*attack_reloadtime 0.4
+
+	*shockwave_manacost 175
+
+	*attack_camerashake 1.5, 0.3, 1.5
+
+	*attack MindBlast
+	*attackeffect MindRelease
+	*shield MindShield
+	*shieldimpact MindShieldImpact
+	*shockwave MindWave
+
+	*ai_type RANGED_MAGICSTAFF_MIND
+}
+
+*weapon_staff_mind2
+{
+	*classname weapon_staff_mind
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_fire
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+rpgmodelflags	
+
+	*price 3000
+	*itemtype 0x10
+
+	*model "weapons\\SunStaff"
+	*iconsurface gui_icon_sunstaff
+	*shield_iconsurface gui_icon_shieldfire
+	
+	*attachmodel "DynLight:LO=0 0 50,C0=0xFFF08040,C1=0xFFF0A040,CFS=4,R0=200,R1=300,RFS=4"
+
+	*sound_attack Stave_Fire01
+
+	*sound_shieldstart Stave_Fire06
+	*sound_shieldloop Stave_Fire04
+	*sound_shieldend Stave_Fire06
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave 
+
+	*attack_damage 65, fire+blockable
+	*attack_manacost 30
+	*attack_reloadtime 1.0
+
+	*shockwave_manacost 200
+
+	*attack_camerashake 2, 2, 4
+
+	*attack FireBall
+	*attackeffect FireBallRelease
+	*shield FireAura
+	*shieldimpact FireAuraFlash
+	*shockwave FireWave
+
+	*ai_type RANGED_MAGICSTAFF_FIRE
+}
+
+*weapon_staff_fire2
+{
+	*classname weapon_staff_fire
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_spirit
+{
+	*classname template_staff
+	*rpgclass StaffSummon
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*price 300
+	*itemtype 0x10
+
+	*skill summon
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+	*shield_iconsurface gui_icon_shielddruid
+	
+	*attachmodel "DynLight:LO=0 0 20,C0=0xFF80C0F0,C1=0xFFF0F000,CFS=1,R0=200,R1=300,RFS=1"
+
+	*sound_attack stave_spirit01a
+	*sound_summonfail 
+	*sound_shieldstart stave_spirit05
+	*sound_shieldloop stave_spirit04
+	*sound_shieldend stave_spirit05
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave stave_spirit07
+
+	*attack_manacost 50
+	*attack_reloadtime 0.3
+
+	*shockwave_manacost 50
+	*shockwave_reloadtime 1.5
+
+	*summon_maxcompisar 1
+	*summon_compisduration 20
+
+	*summon_threshold 0.6 // 
+	*summon_manacost 150
+	*summon_reloadtime 2.0
+	*summon_stalltime 3.5
+	*summon_delay 3.5 // Sync with animation
+	*summon_minrange 50 // Minimum distance away from caster where companion can be spawned.
+	*summon_maxrange 150 // Maximum distance away from caster where companion can be spawned.
+	*summon_margin 30 // Margin distance away from any nearby wall that the companion needs.
+
+	*attack_camerashake 2, 1, 6
+	*summon_camerashake 4, 1, 6
+
+	*attack VultureSpirit
+	*attackeffect VultureRelease
+	*summon AI_Golem_Summon
+	*summoneffect SpiritSummonStream
+	*summonfail hiteffect_electric
+//	*shield SpiritShield
+//	*shieldimpact SpiritShieldImpact
+//	*shockwave SpiritShockwave
+
+	*shield LeafShield
+	*shockwave DivineStrike
+
+	*shield_model "Particles:MP=200,CO=0xF08080F0,CON=0x00202020,DU=0.8,DUN=0.8,FI=0.1,VE=1,VEN=2,MV0=-2,MV1=2,MV2=-5,MV3=5,MV4=0.5,SZ0=2,SZ1=7,SZ2=2,SZ3=7,SZ4=3,TC=0.02,FL=hf+ct+sof"
+
+//	*shieldattachbone 8
+
+	*ai_type RANGED_MAGICSTAFF_SPIRIT
+}
+
+*weapon_staff_spirit2
+{
+	*classname weapon_staff_spirit
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_doom
+{
+	*classname template_staff
+	*rpgclass StaffSummon
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*price 400
+	*itemtype 0x10
+
+	*skill summon
+
+	*model "weapons\\StaffofDoom"
+	*iconsurface gui_icon_staffofdoom
+	*shield_iconsurface gui_icon_shielddoom
+
+	*attachmodel "DynLight:LO=0 0 50,C0=0xFFF04040,C1=0xFFF08080,CFS=2,R0=200,R1=300,RFS=2"
+
+	*sound_attack stave_doom01a
+	*sound_summonfail
+	*sound_shieldstart stave_doom05
+	*sound_shieldloop stave_doom04
+	*sound_shieldend stave_doom05
+	*sound_shieldimpact Forc_fire206 
+	*sound_shockwave stave_doom07
+
+	*attack_manacost 50
+	*attack_reloadtime 0.3
+
+	*shockwave_manacost 50
+	*shockwave_reloadtime 1.5
+
+	*summon_maxcompisar 1
+	*summon_compisduration 20
+
+	*summon_threshold 0.6
+	*summon_manacost 150
+	*summon_reloadtime 2.0
+	*summon_stalltime 3.5
+	*summon_delay 3.5 // Sync with animation
+	*summon_minrange 50 // Minimum distance away from caster where companion can be spawned.
+	*summon_maxrange 150 // Maximum distance away from caster where companion can be spawned.
+	*summon_margin 30 // Margin distance away from any nearby wall that the companion needs.
+
+	*attack_camerashake 4, 1.0, 6
+	*summon_camerashake 6, 2.5, 8
+
+	*attack WraithSpirit
+	*attackeffect WraithRelease
+	*summon AI_Skeleton_Summon
+	*summoneffect DoomSummonStream
+	*summonfail DoomShieldImpact
+	*shield DoomShield
+	*shieldimpact DoomShieldImpact
+	*shockwave DoomShockwave
+	*shield_model "Particles:SU=CloudBall,MP=200,CO=0x80000000,CON=0x00202020,DU=0.8,DUN=0.8,FI=0.1,VE=1,VEN=2,MV0=-2,MV1=2,MV2=-5,MV3=5,MV4=0.5,SZ0=2,SZ1=7,SZ2=2,SZ3=7,SZ4=3,TC=0.02,FL=hf+ct+sof"
+				
+	*ai_type RANGED_MAGICSTAFF_SPIRIT
+}
+
+*weapon_staff_doom2
+{
+	*classname weapon_staff_doom
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_assembly
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*model "weapons\\AssemblyStaff"
+	*iconsurface gui_icon_AssemblyStaff
+	*shield_iconsurface gui_icon_shieldassembly
+	
+	*sound_attack Stave_mag101a
+
+	*sound_shieldstart Stave_mag105
+	*sound_shieldloop Stave_mag104
+	*sound_shieldend Stave_mag105
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_mag107
+
+	*attack_damage 40, magic+blockable
+	*attack_manacost 10
+	*attack_reloadtime 1.0
+
+	*attack_camerashake 2, 0.5, 2
+
+	*attack AssemblyBlast
+	*attackeffect AssemblyRelease
+	*shield AssemblyShield
+	*shieldimpact AssemblyShieldImpact
+	*shockwave AssemblyWave
+
+	*ai_type RANGED_MAGICSTAFF_ASSEMBLY
+}
+
+
+//----------------------------------------------------------------------
+
+*weapon_staff_queen
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*model "weapons\\Sceptre"
+	*iconsurface gui_icon_QueenStaff
+	*shield_iconsurface gui_icon_shieldqueen
+	
+	*sound_attack Stave_mag101a
+
+	*sound_shieldstart Stave_mag105
+	*sound_shieldloop Stave_mag104
+	*sound_shieldend Stave_mag105
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_mag107
+
+	*attack_damage 100, magic+blockable
+	*attack_manacost 10
+	*attack_reloadtime 1.0
+
+	*attack_camerashake 2, 0.5, 2
+
+	*attack QueenBlast
+	*attackeffect QueenRelease
+	*shield QueenShield
+	*shieldimpact QueenShieldImpact
+	*shockwave QueenWave
+
+	*ai_type RANGED_MAGICSTAFF_QUEEN
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_mordessa
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*itemtype 0x11
+
+	*model "weapons\\MordessaStaff"
+	*iconsurface gui_icon_MordessaStaff
+	*shield_iconsurface gui_icon_shieldfire
+	
+	*sound_attack Stave_mag201a
+
+	*sound_shieldstart Stave_mag205
+	*sound_shieldloop Stave_mag204
+	*sound_shieldend Stave_mag205
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_mag207
+
+	*attack_damage 45, magic+blockable
+	*attack_manacost 45
+	*attack_reloadtime 1.5
+
+	*attack_camerashake 2, 2, 4
+
+	*attack mordessa_ball
+	*attackeffect mordessa_ball_release
+	*shield mordessa_aura
+	*shieldimpact mordessa_aura_flash
+	*shockwave mordessa_wave
+
+	*ai_type RANGED_MAGICSTAFF_MORDESSA
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_earthspirit
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+rpgmodelflags
+
+	*itemtype 0x16
+
+	*model "weapons\\earthspirit"
+	*iconsurface gui_icon_earthspirit
+	*shield_iconsurface gui_icon_shieldzale
+		
+	*sound_attack Stave_mag209
+	
+	*sound_shieldstart Stave_mag205
+	*sound_shieldloop Stave_mag204
+	*sound_shieldend Stave_mag205
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_mag207
+
+	*attack_camerashake 2, 2, 4
+
+	*attack_damage 75, magic+special+blockable
+	*attack_manacost 20
+	*attack_reloadtime 1.25
+
+	*attack zale_projectile
+	*attackeffect zale_release
+	*shield zale_shield
+	*shieldimpact zale_shieldimpact
+	*shockwave zale_shockwave
+
+	*ai_type RANGED_MAGICSTAFF_ZALE
+}
+
+//----------------------------------------------------------------------
+//- BOMB ---------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*template_weapon_bomb
+{
+	*rpgclass thresholdsummon
+	*spawn projectile_bomb_normal
+	
+	*damagetype explosive
+	*skill bomb
+
+	*range 512
+
+	*itemtype 3
+	*linkeditemtypes 0x101
+
+	*flags renderquantity+autopickup+needammo+consume
+	*model weapons\dabomb
+	*iconsurface gui_icon_bomb
+
+	*attachrottrack 15
+	*attachangles 0,0.24,0.92
+
+	*sound_equip EQ_MISC1
+	*sound_unequip EQ_MISC2
+	*sound_pickup eq_misc2
+	
+	*anim_stance animlist:56
+	*anim_equip animlist:231
+
+	*anim_charge animlist:230
+	*anim_throw animlist:226
+	*anim_shortthrow animlist:243
+	*anim_reload animlist:231
+
+	*longthrowthreshold 0.2
+
+	*summondelay 0.64
+	*quicksummondelay 0.4
+
+	*startoffset 20
+
+	*ai_type RANGED_BOMB
+}
+
+*weapon_bomb_elm5gob
+{
+	*classname template_weapon_bomb
+
+	*magazinesize 1
+	*numitems 150
+}
+
+*weapon_bomb_normal
+{
+	*classname template_weapon_bomb
+	*numitems 10
+}
+
+*weapon_bomb_2
+{
+	*classname template_weapon_bomb
+	*numitems 2
+	*price 50
+}
+
+*weapon_bomb_4
+{
+	*classname template_weapon_bomb
+	*numitems 4
+	*price 100
+}
+
+*weapon_bomb_6
+{
+	*classname template_weapon_bomb
+	*numitems 6
+	*price 150
+}
+
+*weapon_bomb_8
+{
+	*classname template_weapon_bomb
+	*numitems 8
+	*price 200
+}
+
+*weapon_bomb_16
+{
+	*classname template_weapon_bomb
+	*numitems 16
+	*price 400
+}
+
+//----------------------------------------------------------------------
+
+*template_weapon_hebomb
+{
+	*rpgclass thresholdsummon
+	*spawn projectile_bomb_heavy
+	
+	*damagetype explosive
+	*skill bomb
+
+	*range 512
+
+	*itemtype 3
+	*linkeditemtypes 0x101
+
+	*flags renderquantity+autopickup+needammo+consume
+	*model weapons\hebomb
+	*iconsurface gui_icon_hebomb
+
+	*attachrottrack 15
+	*attachangles 0,0.24,0.92
+
+	*sound_equip EQ_MISC1
+	*sound_unequip EQ_MISC2
+	*sound_pickup eq_misc2
+	
+	*anim_stance animlist:56
+	*anim_equip animlist:231
+
+	*anim_charge animlist:230
+	*anim_throw animlist:226
+	*anim_shortthrow animlist:243
+	*anim_reload animlist:231
+
+	*longthrowthreshold 0.2
+
+	*summondelay 0.64
+	*quicksummondelay 0.4
+
+	*startoffset 20
+
+	*ai_type RANGED_BOMB
+}
+
+*weapon_hebomb_normal
+{
+	*classname template_weapon_hebomb
+	*numitems 10
+}
+
+*weapon_hebomb_2
+{
+	*classname template_weapon_hebomb
+	*numitems 2
+	*price 200
+}
+
+*weapon_hebomb_4
+{
+	*classname template_weapon_hebomb
+	*numitems 4
+	*price 400
+}
+
+*weapon_hebomb_6
+{
+	*classname template_weapon_hebomb
+	*numitems 6
+	*price 600
+}
+
+*weapon_hebomb_8
+{
+	*classname template_weapon_hebomb
+	*numitems 8
+	*price 800
+}
+
+*weapon_hebomb_16
+{
+	*classname template_weapon_hebomb
+	*numitems 16
+	*price 1600
+}
+
+//----------------------------------------------------------------------
+
+*template_weapon_firebottle
+{
+	*rpgclass thresholdsummon
+	
+	*skill bomb
+	*damagetype fire
+
+	*range 512
+
+	*itemtype 4
+	*linkeditemtypes 0x101
+
+	*flags renderquantity+autopickup+needammo+consume
+
+	*model "world\\stuff\\bigbottle"
+	*iconsurface gui_icon_molotov
+
+	*attachrottrack 15
+	*attachangles 0,0.24,0.92
+//	*attachmodel "Particles"
+
+	*magazinesize 1
+	*numitems 100
+	*spawn projectile_firebottle
+
+	*summondelay 0.1
+
+	*sound_equip EQ_MISC1
+	*sound_unequip EQ_MISC
+	*sound_pickup bottle01
+	
+	*anim_stance animlist:56
+	*anim_equip animlist:231
+
+	*anim_charge animlist:230
+	*anim_throw animlist:226
+	*anim_shortthrow animlist:243
+	*anim_reload animlist:231
+
+	*longthrowthreshold 0.2
+
+	*summondelay 0.64
+	*quicksummondelay 0.4
+
+	*startoffset 20
+
+	*ai_type RANGED_MOLOTOV
+}
+
+*weapon_firebottle_2
+{
+	*classname template_weapon_firebottle
+	*numitems 2
+	*price 50
+}
+
+*weapon_firebottle_4
+{
+	*classname template_weapon_firebottle
+	*numitems 4
+	*price 100
+}
+
+*weapon_firebottle_6
+{
+	*classname template_weapon_firebottle
+	*numitems 6
+	*price 150
+}
+
+*weapon_firebottle_8
+{
+	*classname template_weapon_firebottle
+	*numitems 8
+	*price 200
+}
+
+*weapon_firebottle_16
+{
+	*classname template_weapon_firebottle
+	*numitems 16
+	*price 400
+}
+
+//----------------------------------------------------------------------
+
+*template_weapon_hefirebottle
+{
+	*rpgclass thresholdsummon
+
+	*damagetype fire
+	*skill bomb
+
+	*range 512
+
+	*itemtype 4
+	*linkeditemtypes 0x101
+
+	*flags renderquantity+autopickup+needammo+consume
+
+	*spawn projectile_hefirebottle
+	*model "world\\stuff\\hefirebottle"
+	*iconsurface gui_icon_hefirebottle
+
+	*attachrottrack 15
+	*attachangles 0,0.24,0.92
+//	*attachmodel "Particles"
+
+	*magazinesize 1
+	*numitems 100
+
+	*summondelay 0.1
+
+	*sound_equip EQ_MISC1
+	*sound_unequip EQ_MISC
+	*sound_pickup bottle01
+	
+	*anim_stance animlist:56
+	*anim_equip animlist:231
+
+	*anim_charge animlist:230
+	*anim_throw animlist:226
+	*anim_shortthrow animlist:243
+	*anim_reload animlist:231
+
+	*longthrowthreshold 0.2
+
+	*summondelay 0.64
+	*quicksummondelay 0.4
+
+	*startoffset 20
+
+	*ai_type RANGED_MOLOTOV
+}
+
+*weapon_hefirebottle_2
+{
+	*classname template_weapon_hefirebottle
+	*numitems 2
+	*price 200
+}
+
+*weapon_hefirebottle_4
+{
+	*classname template_weapon_hefirebottle
+	*numitems 4
+	*price 400
+}
+
+*weapon_hefirebottle_6
+{
+	*classname template_weapon_hefirebottle
+	*numitems 6
+	*price 600
+}
+
+*weapon_hefirebottle_8
+{
+	*classname template_weapon_hefirebottle
+	*numitems 8
+	*price 800
+}
+
+*weapon_hefirebottle_16
+{
+	*classname template_weapon_hefirebottle
+	*numitems 16
+	*price 1600
+}
+
+//----------------------------------------------------------------------
+
+*weapon_bomb_celenheim
+{
+	*rpgclass thresholdsummon
+	*spawn bomb_celenheim
+	
+	*damagetype explosive
+
+	*sound_cast firebolt1
+	
+	*longthrowthreshold 0.2
+
+	*summondelay 0.64
+	*quicksummondelay 0.4
+
+	*startoffset 20
+
+	*ai_type RANGED_BOMB
+}
+
+//----------------------------------------------------------------------
+//- UNARMED ------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*template_unarmed
+{
+	*rpgclass unarmed
+	
+	*itemtype 0
+
+	*range 256
+
+	*impactforce 10
+	*minhitdelay 1
+	*attachangles 0,0.5,0
+	*attachrottrack 15
+	
+	*sound_hitworld IMP_GRND02
+	*sound_hitchar IMP_FSH
+	*sound_anim1 mel_swing05
+	
+	*damagetype unarmed+blockable
+	*skill unarmed
+	*model "weapons\\Invisible"
+
+	*anim_stance animlist:0
+		
+	*melee_attack0 animlist:51
+
+	*ai_type MELEE_UNARMED
+}
+
+*weapon_unarmed
+{
+	*classname unarmed
+
+	*ai_type MELEE_UNARMED
+}
+
+*weapon_unarmed_big
+{
+	*classname template_unarmed
+	*hitradius 25
+	*damage 50
+
+	*ai_type MELEE_UNARMED
+}
+
+*weapon_unarmed_small
+{
+	*classname template_unarmed
+	*hitradius 8
+	*damage 25
+
+	*ai_type MELEE_UNARMED_SMALL
+}
+
+*weapon_unarmed_tiny
+{
+	*classname template_unarmed
+	*hitradius 8
+	*damage 10
+
+	*ai_type MELEE_UNARMED_SMALL
+}
+
+*weapon_unarmed_smallnightcrawler
+{
+	*classname template_unarmed
+	*hitradius 8
+	*damage 10
+
+	*sound_hitworld IMP_GRND02
+	*sound_hitchar IMP_FSH
+	*sound_anim1 mel_swing04
+
+	*damage_effect attach_hit_clawburn
+
+	*ai_type MELEE_UNARMED_SMALL
+}
+
+*weapon_unarmed_nightcrawler
+{
+	*classname template_unarmed
+	*hitradius 8
+	*damage 25
+	
+	*sound_hitworld IMP_GRND02
+	*sound_hitchar IMP_FSH
+	*sound_anim1 mel_swing04
+
+	*damage_effect attach_hit_clawburn
+
+	*ai_type MELEE_UNARMED_SMALL
+}
+
+*weapon_unarmed_stonegnome
+{
+	*classname template_unarmed
+	*hitradius 8
+	*damage 35
+
+	*damage_effect attach_hit_fireburn
+	
+	*sound_hitworld imp_fire
+	*sound_hitchar imp_fire
+	*sound_anim1 mel_fire01
+
+	*ai_type MELEE_UNARMED_SMALL
+}
+
+*weapon_unarmed_stonegnome2
+{
+	*classname template_unarmed
+	*hitradius 16
+	*damage 250
+
+	*impactforce 40
+
+	*damage_effect attach_hit_fireburn
+	
+	*sound_hitworld imp_fire
+	*sound_hitchar imp_fire
+	*sound_anim1 mel_fire01
+
+	*ai_type MELEE_UNARMED_SMALL
+}
+
+*weapon_unarmed_queen
+{
+	*classname template_unarmed
+	*hitradius 8
+	*damage 50
+
+	*animtimescale 1.5
+
+	*sound_hitworld IMP_GRND02
+	*sound_hitchar IMP_FSH
+	*sound_anim1 mel_swing04
+
+	*ai_type MELEE_UNARMED_SMALL
+}
+
+*template_weapon_claw
+{
+	*classname template_weapon_sword
+	
+	*skill unarmed
+	*damagetype special+blockable
+	*flags none
+	
+	*iconsurface gui_icon_zuclaw
+
+	*sound_hitworld IMP_GRND02
+	*sound_hitchar IMP_FSH
+	*sound_equip EQ_SWORD1
+	*sound_unequip EQ_SWORD2
+	*sound_anim1 mel_swing04
+
+
+	*ai_type MELEE_UNARMED
+}
+
+*weapon_claw_ZuranasHighSwat
+{
+	*classname template_weapon_claw
+	*damage 100
+	*itemtype 1
+
+	*range 2048
+
+	*skill unarmed
+	*damagetype unarmed+blockable
+	
+	*iconsurface gui_icon_zuclaw
+	*model "weapons\\zuranasclaw"
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0,0
+	*melee_numbasic 1
+	*melee_numfwd 0
+	*melee_numcombos 2 // Inclusive first swing (mayby we should change this to only count succeeding combo swings)
+	*melee_attack0 animlist:76,1
+	*melee_attack1 animlist:77
+	*melee_combomultiplier0 1.0
+	*melee_combomultiplier1 2.0
+
+	*spawn_hit hiteffect_zurana
+	*spawn_special hiteffect_zurana_special
+
+	*ai_type MELEE_UNARMED_HUGE
+}
+
+*weapon_claw_ZuranasLowSwat
+{
+	*classname weapon_claw_ZuranasHighSwat
+	*itemtype 2
+	*iconsurface gui_icon_zuclaw
+	
+	*range 2048
+
+	//*sound_hitworld IMP_Magic2
+	//*sound_hitchar IMP_Magic2
+	//*sound_hit IMP_Magic2
+	//*sound_anim1 mel_magic02
+
+	*skill unarmed
+	*damagetype unarmed+blockable
+
+	*melee_numbasic 1
+	*melee_numcombos 1 // Inclusive first swing (mayby we should change this to only count succeeding combo swings)
+	*melee_attack0 animlist:34
+}
+
+//----------------------------------------------------------------------
+//- JUNK? -------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*weapon_sword_particles
+{
+	*classname template_weapon_sword
+	*price 5200
+	*damage 150
+
+	*model "weapons\\FrostSword"
+	*iconsurface gui_icon_frostsword
+
+	*attachmodel "Particles:SU=Glimmer1,MP=500,DU=0.3,FI=0.0,OF=22,OFN=25,MV0=-1,MV1=1,MV2=-2,MV3=2,MV4=1,SZ0=3,SZ1=5,SZ2=3,SZ3=5,SZ4=3,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPA=0,SPB=0,OFB=0.25,TC=0.01,PP=1,FL=spline+ctime+early"
+	*attachangles 0,0.24,0.92	
+}
+
+//----------------------------------------------------------------------
+
+*weapon_dragonbreath
+{
+//	*classname template_weapon_magic
+	*rpgclass summon
+
+	*itemtype 0
+
+	*skill magic
+	*damagetype magic+fire+blockable
+
+	*spawn projectile_dragonbreathflame
+	*damage 20, fire, 0.1
+	*reloadtime 0.1
+
+	*sound_cast firebolt1
+
+	*model "weapons\\Invisible"
+	*attachpoint 5
+	*attachrottrack 12
+	*muzzleattachpoint 0
+	*anim_stance animlist:196
+	*anim_attack animlist:218
+
+	*ai_type RANGED_DRAGONBREATH
+}
+
+*weapon_dragonball
+{
+//	*classname template_weapon_magic
+	*rpgclass summon
+
+	*itemtype 1
+
+	*skill magic
+	*damagetype explosive+fire+blockable
+
+	*spawn projectile_dragonball
+	*damage 100, fire+explosive
+
+	*reloadtime 1.0
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_DRAGONBALL
+	*anim_stance animlist:196
+	*anim_attack animlist:218
+
+	*model "weapons\\Invisible"
+	*attachpoint 5
+	*attachrottrack 12
+	*muzzleattachpoint 0
+}
+
+//----------------------------------------------------------------------
+
+*weapon_lavaball
+{
+	*anim_stance animlist:112
+	*anim_attack animlist:134
+	
+	*rpgclass summon
+	*spawn lavaball
+
+	*damagetype explosive+fire
+	*skill magic
+
+	*flags aiming
+
+	*price 2000
+	*itemtype 1
+	*attachpoint 0
+	*attachrottrack 15
+	*muzzleattachpoint 2
+	*model "weapons\\Invisible"
+
+	*attachangles 0,0.25,0
+		
+	*reloadtime 3
+	*summondelay 1.05
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_MAGICBALL
+}
+
+*weapon_lavaball_spawn
+{
+	*classname weapon_lavaball
+	*itemtype 0
+	*spawn lavaball_spawn
+	*ai_type RANGED_SPAWNBALL
+}
+
+
+*weapon_quakefist
+{
+	*anim_stance animlist:112
+	*anim_attack animlist:137
+
+	*rpgclass summon
+	*spawn quakestrike
+
+	*skill unarmed
+
+	*sound_hitworld IMP_Magic2
+	*sound_hitchar IMP_Magic2
+	*sound_anim1 mel_magic02
+
+	*damagetype explosive+fire
+
+	*price 2000
+	*itemtype 2
+
+	*attachangles 0,0.25,0
+	
+	*reloadtime 4
+	*summondelay 1.7
+
+	*ai_type MELEE_QUAKEFIST
+}
+
+// --------------------------------------------------------------------------
+
+*weapon_vatarprojectile
+{
+
+	*rpgclass summon
+	*spawn vatarprojectile
+	*model "weapons\\Invisible"
+
+	*damagetype explosive+fire
+	*skill magic
+
+	*flags aiming
+
+	*itemtype 2
+
+	*attachangles 0,0.25,0
+	
+	*reloadtime 1.5
+	*summondelay 0.8
+	*attachpoint 0
+	*attachrottrack 15
+	*muzzleattachpoint 2
+
+
+	*anim_stance animlist:112
+	*anim_attack animlist:134
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_MAGICBALL
+}
+
+*weapon_vatarhoming
+{
+
+	*rpgclass summon
+	*spawn vatarhoming
+	*model "weapons\\Invisible"
+
+	*damagetype explosive+fire
+	*skill magic
+
+	*flags aiming
+
+	*itemtype 1
+
+	*attachangles 0,0.25,0
+	
+	*reloadtime 1.5
+	*summondelay 0.8
+	*attachpoint 0
+	*attachrottrack 15
+	*muzzleattachpoint 2
+
+
+	*anim_stance animlist:112
+	*anim_attack animlist:134
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_MAGICBALL
+}
+
+
+*weapon_vatarstomp
+{
+
+	*rpgclass summon
+	*spawn vatarstomp
+
+	*damagetype explosive+fire
+	*skill magic
+
+	*itemtype 4
+	*attachpoint 1
+	*attachrottrack 19
+
+	*attachangles 0,0.25,0
+	
+	*reloadtime 1
+	
+	*anim_stance animlist:112
+	*anim_attack animlist:137
+
+	*summondelay 0.8
+
+	*ai_type MELEE_VATARSTOMP
+}
+
+*weapon_vatarbomb
+{
+	*rpgclass releasesummon
+	*spawn vatarbomb
+	
+	*damagetype explosive
+	*skill magic
+
+	*model1 "Particles:MP=200,SU=FireBallFire,CO=0x30009000,DU=0.5,FI=0.1,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-4,MV1=4,MV2=-10,MV3=10,MV4=2,SZ0=20,SZ1=30,SZ2=30,SZ3=40,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,PP=2,FS=0.01,FL=quads+fadestill"
+	*model0 "Particles:MP=100,SU=FireBallSmoke,CO=0xFF009000,DU=1,FI=0.5,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-10,MV1=10,MV2=-10,MV3=10,MV4=2,SZ0=20,SZ1=30,SZ2=60,SZ3=80,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,FS=0.01,FL=quads+fadestill"
+
+	*attachangles 0,0.24,0.92
+
+	*chargetime 1
+	*reloadtime 1
+
+	*itemtype 3
+
+	*flags aiming
+
+	*attachangles 0,0.25,0
+	
+	*reloadtime 3
+	*summondelay 0.5
+	*attachpoint 0
+	*attachrottrack 15
+	*muzzleattachpoint 2
+
+	*anim_stance animlist:112
+	*anim_attack animlist:134
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_BOMB
+
+}
+
+//--------------------------------------------------------
+
+*weapon_fire_bolt
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*spawn projectile_firebolt
+
+	*flags autoaim
+
+	*price 2000
+	*itemtype 1
+
+	*model "weapons\\SunStaff"
+	*iconsurface gui_icon_sunstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 1.5
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_MAGICBOLT
+}
+
+*weapon_fire_ball
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*spawn projectile_rocketlauncher
+
+	*flags autoaim
+
+	*price 2500
+	*itemtype 0
+
+	*reloadtime 3
+
+	*model "weapons\\SunStaff"
+	*iconsurface gui_icon_sunstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_MAGICBALL
+}
+
+*weapon_fire_wall
+{
+	*classname template_weapon_magic
+	*rpgclass targetsummon
+	*spawn circle_fire
+
+	*price 3000
+	*itemtype 1
+
+	*effect effect_fireray
+	*range 512
+	*time 40
+
+	*model "weapons\\SunStaff"
+	*iconsurface gui_icon_sunstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*sound_cast firewall1
+
+	*ai_type RANGED_MAGICWALL
+}
+
+*weapon_MordessaStaff2
+{
+	*classname template_weapon_magic
+	*rpgclass multiraysummon
+	*spawn ZapperExplosion
+	*effect ray_zapper
+
+	*flags autoaim
+
+	*price 2500
+	*itemtype 1
+
+	*model "weapons\\Mordessastaff"
+	*iconsurface gui_icon_mordessastaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*rays 1
+	*damage 80
+	*scatter 0
+	*impactforce 10
+	*range 4096
+	*reloadtime 2
+	*spawntype 1
+
+	*sound_cast Zapp1
+
+	*ai_type RANGED_MAGICZAP
+}
+
+*weapon_lightning_strike
+{
+	*classname template_weapon_magic
+	*rpgclass multiraysummon
+	*spawn ZapperExplosion
+	*effect ray_zapper
+
+	*flags autoaim
+
+	*price 2500
+	*itemtype 0
+
+	*model "weapons\\DoomStaff"
+	*iconsurface gui_icon_doomstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*rays 1
+	*damage 40
+	*scatter 0
+	*impactforce 10
+	*range 4096
+	*reloadtime 2
+	*spawntype 1
+
+	*sound_cast Zapp1
+
+	*ai_type RANGED_MAGICZAP
+}
+
+*weapon_lightning_strike_wizard
+{
+	*classname template_weapon_magic
+	*rpgclass multiraysummon
+	*spawn ZapperExplosion
+	*effect ray_zapper
+
+	*flags autoaim
+
+	*price 2500
+	*itemtype 0
+
+	*model "weapons\\LightStaff"
+	*iconsurface gui_icon_lightstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*rays 1
+	*damage 80
+	*scatter 0
+	*impactforce 25
+	*range 4096
+	*reloadtime 1.5
+	*spawntype 1
+
+	*sound_cast Zapp1
+
+	*ai_type RANGED_MAGICZAP
+}
+
+*weapon_lightning_strike_zale
+{
+	*classname template_weapon_magic
+	*rpgclass multiraysummon
+	*spawn ZapperExplosion_zale
+	*effect ray_zapper_zale
+
+	*flags autoaim
+
+	*price 2500
+	*itemtype 0
+
+	*model "weapons\\sunstaff"
+	*iconsurface gui_icon_sunstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*rays 1
+	*damage 180
+	*scatter 0
+	*impactforce 25
+	*range 4096
+	*reloadtime 2
+	*spawntype 1
+
+	*sound_cast Zapp1
+
+	*ai_type RANGED_MAGICZAP
+}
+
+*weapon_lightning_strike_zaleboss
+{
+	*classname template_weapon_magic
+	*rpgclass multiraysummon
+	*spawn ZapperExplosion_zale
+	*effect ray_zapper_zale
+
+	*flags autoaim
+
+	*price 2500
+	*itemtype 0
+
+	*model "weapons\\poisonstaff"
+	*iconsurface gui_icon_sunstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*rays 1
+	*damage 50
+	*scatter 0
+	*impactforce 25
+	*range 4096
+	*reloadtime 2
+	*spawntype 1
+
+	*sound_cast Zapp1
+
+	*ai_type RANGED_MAGICZAP
+}
+
+*weapon_mind_daggers
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*spawn projectile_minddagger
+
+	*flags autoaim
+
+	*model "weapons\\LightStaff"
+	*iconsurface gui_icon_lightstaff
+	*attachangles 0,0.25,0
+	*itemtype 3
+
+	*reloadtime 0.2
+
+	*ai_type RANGED_MAGICBOLT
+}
+
+*weapon_cold_storm
+{
+	*classname template_weapon_magic
+	*rpgclass targetsummon
+	*spawn circle_blizzard
+	*effect effect_iceray
+
+	*price 3000
+	*itemtype 1
+
+	*model "weapons\\DoomStaff"
+	*iconsurface gui_icon_doomstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	*reloadtime 1.5
+
+	*range 512
+	*time 40
+
+	*sound_cast IceRain1
+
+	*ai_type RANGED_MAGICWALL
+}
+
+*weapon_test_dustcloud
+{
+	*classname template_weapon_magic
+	*rpgclass targetsummon
+	*range 512
+	*spawn test_dustcloud
+
+	*price 2000
+	*itemtype 5
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.2
+}
+
+*weapon_test_glimmer
+{
+	*classname template_weapon_magic
+	*rpgclass targetsummon
+	*range 512
+	*spawn test_glimmer
+
+	*price 2000
+	*itemtype 6
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.2
+}
+
+*weapon_test_electric
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*range 512
+	*spawn test_electric
+
+	*price 2000
+	*itemtype 2
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.2
+}
+
+*weapon_test_teleportsuck
+{
+	*classname template_weapon_magic
+	*rpgclass targetsummon
+	*range 512
+	*spawn test_teleportsuck
+
+	*price 2000
+	*itemtype 3
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.2
+}
+
+*weapon_test_leafdripper
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*range 512
+	*spawn leafdripper
+
+	*price 2000
+	*itemtype 4
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.2
+}
+
+*weapon_sword_test
+{
+	*classname weapon_sword_long
+	*attachmodel0 "Particles:DU=1,CO=0xFFFF0000,VE=5,FL=ct"
+	*attachmodel1 "Particles:DU=1,CO=0xFF00FF00,VE=10,FL=ct"
+	*attachmodel2 "FireTorch:100,0,1"
+}
+
+*weapon_test_fire
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*range 512
+	*spawn test_fire
+
+	*price 2000
+	*itemtype 1
+
+	*model "weapons\\SunStaff"
+	*iconsurface gui_icon_sunstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 1.0
+}
+
+*weapon_shockwave
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*range 512
+//	*spawn shockwave
+	*spawn butterfly
+
+	*price 2000
+	*itemtype 0
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.05
+}
+
+*weapon_test_explosion
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*range 4096
+	*spawn instant_explosion
+
+	*price 2000
+	*itemtype 0
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.2
+}
+
+*weapon_wraith
+{
+	*rpgclass spheredamage
+
+	*damagetype magic
+	
+	*sound_hitchar Wra_atksml01
+
+	*damage 10
+	*force 5
+	*hitradius 8
+	*itemtype 0
+	*reloadtime 1
+
+	*ai_type MELEE_WRAITH
+}

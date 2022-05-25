@@ -1,0 +1,539 @@
+//----------------------------------------------------------------------
+//- FIREWALLS ----------------------------------------------------------
+//----------------------------------------------------------------------
+// These are PainBoxes, not Explosions.
+
+*firewall_small
+{
+	*classname Firewall
+	*physprim0 box, 20,20,18, 0,0,18, offset, projectile+trigger, 0, excludeowner
+	*intersectnotify character+projectile
+
+	*model fire
+	*sound_loop0 cocktail03b
+
+
+	*duration 20-30
+	*duration_movingspawn 0.8
+
+	*damage 30, fire, 1
+
+	*animattr0 5
+	*animattr1 1
+	*anim0 0x1A1A
+	*anim1 0x0C00
+	*colors0 0xC0ffafaf
+	*colors1 0xC0ffafaf
+	*colors2 0xC0ff3f3f
+	*colors3 0x0000180A
+}
+
+*firewall_medium
+{
+	*classname Firewall
+	*physprim0 box, 40,40,18, 0,0,18, offset, projectile+trigger, 0, excludeowner
+	*intersectnotify character+projectile
+
+	*model fire
+	*sound_loop0 cocktail03
+
+	*duration 20-30
+	*duration_movingspawn 0.8
+
+	*damage 45, fire, 1
+
+	*animattr0 20
+	*animattr1 1
+	*anim0 0x4040
+	*anim1 0x1000
+	*colors0 0x80ffafaf
+	*colors1 0x80ffafaf
+	*colors2 0x80ff3f3f
+	*colors3 0x00001808
+}
+
+*firewall_large
+{
+	*classname Firewall
+	*physprim0 box, 60,60,18, 0,0,18, offset, projectile+trigger, 0, excludeowner
+	*intersectnotify character+projectile
+
+	*model fire
+	*sound_loop0 cocktail03
+
+	*duration 20-30
+	*duration_movingspawn 0.8
+
+	*damage 60, fire, 1
+
+	*animattr0 30
+	*animattr1 1
+	*anim0 0x4040
+	*anim1 0x1000
+	*colors0 0x80ffafaf
+	*colors1 0x80ffafaf
+	*colors2 0x80ff3f3f
+	*colors3 0x00001808
+}
+
+
+//----------------------------------------------------------------------
+
+*firewall_firearrow
+{
+	*classname Firewall
+	*physprim0 box, 20,20,18, 0,0,18, offset, projectile+trigger, 0, excludeowner
+	*intersectnotify character+projectile
+
+	*model fire
+	*sound_loop0 cocktail03b
+
+	*duration 10-20
+	*duration_movingspawn 0.8
+
+	*damage 5, fire, 1
+
+	*animattr0 5
+	*animattr1 1
+	*anim0 0x1A1A
+	*anim1 0x0C00
+	*colors0 0xC0ffafaf
+	*colors1 0xC0ffafaf
+	*colors2 0xC0ff3f3f
+	*colors3 0x0000180A
+}
+
+*firewall_lafirearrow
+{
+	*classname Firewall
+	*physprim0 box, 40,40,18, 0,0,18, offset, projectile+trigger, 0, excludeowner
+	*intersectnotify character+projectile
+
+	*model fire
+	*sound_loop0 cocktail03b
+
+	*duration 20-30
+	*duration_movingspawn 0.8
+
+	*damage 10, fire, 1
+
+	*animattr0 20
+	*animattr1 1
+	*anim0 0x4040
+	*anim1 0x1000
+	*colors0 0x80ffafaf
+	*colors1 0x80ffafaf
+	*colors2 0x80ff3f3f
+	*colors3 0x00001808
+}
+
+//----------------------------------------------------------------------
+
+*explosion_burstarrow_grenade
+{
+	*classname explosion
+	*model0 "Particles:,MP=2,,,,DU=1,,FI=0.01,,,,,,,,,,,,,,,,SZ0=80,SZ1=80,SZ2=80,SZ3=80,,,,,,,,,,,,,,,TC=0.02,TCS=0,,,ES=0.03,,,FL=quads+nohistory"
+	*model1 "Particles:,MP=100,SU=FireBall01,CO=0x40F0C0A0,,DU=1.5,DUN=2.5,FI=0.1,VE=10,,,,,,,,OF=20,,,,,,,SZ0=25,SZ1=40,SZ2=50,SZ3=65,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.2,,,,,,,,,,,PP=4,,ES=0.1,,,FL=quads+nohistory"
+	*model2 "Particles:MP=110,SU=p_fireblob04,CO=0xFFF0A080,DU=1,VE=99,VEN=198,AX=0 0 -75,OF=10,SZ0=4,SZ1=4,SZ2=4,SZ3=4,PP=109,ES=0.01,FL=asq"
+	*duration 4
+
+	*shockwave 80, 40, 100, explosive
+
+	*sound_spawn dem_expl19d
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+*explosion_burstarrow_hegrenade
+{
+	*classname explosion
+	*model0 "Particles:,MP=2,,,,DU=1,,FI=0.01,,,,,,,,,,,,,,,,SZ0=180,SZ1=180,SZ2=180,SZ3=180,,,,,,,,,,,,,,,TC=0.02,TCS=0,,,ES=0.03,,,FL=quads+nohistory"
+	*model1 "Particles:,MP=100,SU=FireBall01,CO=0x40F0C0A0,,DU=1.5,DUN=2.5,FI=0.1,VE=10,,,,,,,,OF=20,,,,,,,SZ0=50,SZ1=80,SZ2=100,SZ3=130,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.2,,,,,,,,,,,PP=4,,ES=0.1,,,FL=quads+nohistory"
+	*model2 "Particles:MP=110,SU=p_fireblob04,CO=0xFFF0A080,DU=1,VE=99,VEN=198,AX=0 0 -75,OF=10,SZ0=4,SZ1=4,SZ2=4,SZ3=4,PP=109,ES=0.01,FL=asq"
+	*duration 4
+
+	*shockwave 100, 60, 200, explosive
+
+	*sound_spawn dem_expl19d
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+*explosion_challenge_grenade
+{
+	*classname explosion_burstarrow_grenade
+	*shockwave 64, 10, 160, explosive
+}
+
+
+//----------------------------------------------------------------------
+
+*explosion_bomb_normal
+{
+	*classname explosion
+	*model explosion
+	*duration 3
+	*anim1 200
+	*randanim0
+	*sound_spawn dem_expl14c
+
+	*shockwave 196, 50, 100, explosive
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+//----------------------------------------------------------------------
+
+*explosion_bomb_dabomb
+{
+	*classname explosion
+	*model explosion
+	*duration 3
+	*anim1 200
+	*randanim0
+	*sound_spawn dem_expl14c
+
+	*shockwave 196, 50, 50, explosive
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+// Expired name, don't use anymore!
+*bombexplosion
+{
+	*classname explosion_bomb_dabomb
+}
+
+//----------------------------------------------------------------------
+
+*explosion_bomb_celenheim
+{
+	*classname explosion
+	*model0 "particles:,MP=30,CO=0x90602010,CON=0x90501020,TS=2,DU=1,FI=0.2,AL1=1,VE=22,VEN=1,SZ0=20,SZ1=50,SZ2=100,SZ3=200,ES=0.3,SMT=1,LS=12,FL=al+wr"
+	*model1 "ExpandSphere:SU=SphereMap03,SEG=20,SID=15,DU=0.9,RA0=0,RA1=200,SCL=1 1 0.6,CO0=0x90602010"
+	*model2 "Particles:,MP=100,CO=0x90602010,TS=5,DUN=2,FI=0.1,VE=50,VEN=40,OF=20,SZ0=5,SZ2=30,SZ3=50,SPB=0,TC=0.001,PP=4,ES=0.5,LS=8,FL=al+qd"
+	*duration 3
+	*anim1 200
+	*randanim0
+	*sound_spawn dem_expl14c
+
+	*shockwave 128, 50, 50, magic
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+//----------------------------------------------------------------------
+
+// Expired name, don't use anymore!
+*bombexplosion
+{
+	*classname explosion_bomb_normal
+}
+
+//----------------------------------------------------------------------
+
+*explosion_bomb_heavy
+{
+	*classname explosion
+	*model explosion
+	*duration 3
+	*anim1 200
+	*randanim0
+	*sound_spawn dem_expl01a
+
+	*shockwave 256, 75, 200, explosive
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+//----------------------------------------------------------------------
+// Mondelore: Don't use! Not completed!
+*explosion_firebottle
+{
+	*classname explosion
+
+//	*model0
+//	*model1
+
+	*duration 0
+	*destroydelay 2
+
+//	*timeout_effect firewall_medium
+}
+
+//----------------------------------------------------------------------
+
+// RENAME: explosion_instant
+*instant_explosion
+{
+	*classname bomb
+	*physprim0 sphere, 3,0,0,0,0,0, physmovement, projectile, world+physmodel+physobject, excludeowner
+	*model0 weapons\dabomb
+	*explosion test_explosion
+	*explosiontype 1
+	*shockwave 128, 50, 100, explosive
+	*impactforce 15
+	*flags nodestroy+noattach+nodamageonimpact+explodeontimeout
+	*bounce_elasticity 0.0
+	*velocity 0
+	*duration 0.05
+}
+
+//----------------------------------------------------------------------
+
+// RENAME: explosion_instant_large
+*big_instant_explosion
+{
+	*classname bomb
+	*physprim0 sphere, 3,0,0,0,0,0, physmovement, projectile, world+physmodel+physobject, excludeowner
+	*model0 weapons\dabomb
+	*explosion big_explosion
+	*explosiontype 1
+	*shockwave 196, 50, 150, explosive
+	*impactforce 15
+	*flags nodestroy+noattach+nodamageonimpact+explodeontimeout
+	*bounce_elasticity 0.0
+	*velocity 0
+	*duration 0.05
+}
+
+*durzu_death_explosion
+{
+	*classname big_instant_explosion
+	*shockwave 196, 5, 0, explosive
+	*impactforce 5
+}
+
+
+//----------------------------------------------------------------------
+
+*test_explosion
+{
+	*classname explosion
+	*model explosion
+	*shockwave 128, 150, 100, explosive
+	*duration 3
+	*anim1 200
+	*randanim0
+	*sound_spawn dem_expl17c
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+*explosion_stonegnome
+{
+	*classname explosion
+//	*model0 "Particles:,MP=2,,,,DU=1,,FI=0.01,,,,,,,,,,,,,,,,SZ0=180,SZ1=180,SZ2=180,SZ3=180,,,,,,,,,,,,,,,TC=0.02,TCS=0,,,ES=0.03,,,FL=quads+nohistory"
+//	*model1 "Particles:,MP=100,SU=FireBall01,CO=0x40F0C0A0,,DU=1.5,DUN=2.5,FI=0.1,VE=10,,,,,,,,OF=20,,,,,,,SZ0=50,SZ1=80,SZ2=100,SZ3=130,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.2,,,,,,,,,,,PP=4,,ES=0.1,,,FL=quads+nohistory"
+//	*model2 "Particles:MP=110,SU=p_fireblob04,CO=0xFFF0A080,DU=1,VE=99,VEN=198,AX=0 0 -75,OF=10,SZ0=4,SZ1=4,SZ2=4,SZ3=4,PP=109,ES=0.01,FL=asq"
+	*model0 "Particles:MP=2,CO=0xFF9C93D0,DU=1,FI=0.01,SZ0=180,SZ1=180,SZ2=180,SZ3=180,TC=0.02,TCS=0,ES=0.03,FL=qd+nh"
+	*model1 "Particles:MP=100,SU=cloudball,CO=0x309C93D0,DU=1.5,DUN=1,FI=0.1,AL0=0.5,VE=10,AX=0 0 25,OF=20,SZ0=50,SZ1=80,SZ2=100,SZ3=130,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.2,PP=4,ES=0.1,FL=qd+nh"
+	*model2 "Particles:MP=110,CO=0x999C93D0,DU=1,VE=99,VEN=198,AX=0 0 -75,OF=10,SZ0=4,SZ1=4,SZ2=4,SZ3=4,PP=109,ES=0.01,FL=asq"
+
+	*duration 4
+	*shockwave 128, 50, 100, explosive
+	*anim1 200
+	*randanim0
+	*sound_spawn dem_expl17c
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+//----------------------------------------------------------------------
+
+*explosion_stonegnome_nospawn
+{
+	*classname Explosion_Spawn
+	*model explosion
+	*duration 3
+	*anim1 200
+	*randanim0
+	*sound_spawn dem_expl14c
+
+	*spawn AI_StoneGnome_DurzuSpawn
+	*maxspawn 0
+	*minspawn 0
+	*maxspeed 30
+	*minspeed 10
+	*spawndelay 0
+	*resetchardelay 0.5
+
+	*shockwave 196, 30, 100, explosive
+	*radius 256
+}
+
+*explosion_stonegnome_spawn
+{
+	*classname Explosion_Spawn
+	*model explosion
+	*duration 3
+	*anim1 200
+	*randanim0
+	*sound_spawn dem_expl14c
+
+	*spawn AI_StoneGnome_DurzuSpawn
+	*maxspawn 1
+	*minspawn 1
+	*maxspeed 30
+	*minspeed 10
+	*spawndelay 0
+	*resetchardelay 0.5
+
+	*shockwave 196, 30, 100, explosive
+	*radius 256
+}
+
+//----------------------------------------------------------------------
+
+// explosion_large
+*big_explosion
+{
+	*classname explosion
+	*model explosion
+
+	*duration 3
+	*anim1 300
+	*randanim0
+	*sound_spawn dem_expl17c
+	*shockwave 196, 80 , 100, explosive
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+//----------------------------------------------------------------------
+
+*explosion_catapultfireball
+{
+	*classname explosion
+	*model explosion
+	*duration 3
+	*anim1 500
+	*randanim0
+	*sound_spawn dem_expl19c
+	*shockwave 256, 75, 500, explosive
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+//----------------------------------------------------------------------
+
+*explosion_AAShell
+{
+	*shockwave 392, 250, 250, explosive
+}
+
+//----------------------------------------------------------------------
+
+*explosion_bomb_vatar
+{
+	*classname ExplosionWL
+	*model explosion
+	*duration 3
+	*anim1 200
+	*randanim0
+	*sound_spawn dem_expl01a
+
+	*shockwave 350, 75, 150, explosive
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+//----------------------------------------------------------------------
+
+*explosion_ballista_poison
+{
+	*classname explosion
+	*model0 "Particles:,MP=150,SU=CloudBall,CO=0x60208010,CON=0xFF301010,TS=5,FI=0.9,VE=25,DI=sphere,,DR=0,,OF=50,OFN=100,SZ0=80,SZ1=60,SZ2=40,SZ3=50,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,SPB=0,DOFA=1,DOFB=1,TCS=0,ES=2,FL=qd+wr"
+	*model1	"Particles:,MP=150,SU=CloudBall,CO=0x60208010,CON=0x90102010,TS=5,FI=0.9,VE=25,DI=sphere,,DR=0,,OF=50,OFN=100,,,,,,SZ0=80,SZ1=60,SZ2=40,SZ3=50,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,,,,SPB=0,,,DOFA=1,DOFB=1,,TCS=0,ES=2,LS=12,FL=qd+wr+al"
+	*duration 3
+	*anim1 200
+	*randanim0
+
+	*shockwave 128
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+//----------------------------------------------------------------------
+
+*explosion_ballista_magic
+{
+	*classname explosion
+	*model0 "Particles:MP=50,SU=shockwave4,CO=0x406655ff,TS=2.5,DU=2,DUN=1,FI=0.2,VE=40,VEN=10,AX=0 0,AXN=0 0,OF=3,OFN=6,SZ1=15,SZ2=15,SZ3=20,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,TC=0.03,PP=3,ES=0.5,LS=30,FL=al+nl"
+	*model1 "ExpandSphere:SU=Electric1,SEG=11,SID=11,DU=0.5,RA1=90,RO0=3 4 5,RO1=1 1 1,RO2=1,SCL=0.3 1 1,TX1=2 1,TX2=10 10,TX3=2 2,CO0=0xFFaa00bb,CO1=0xffff00ff,CO2=10,CO3=1,FLG=clampcolors+fadepoles+postscale+fadeedges"
+	*sound_spawn imp_fx02
+
+	*duration 3
+	*anim1 200
+	*randanim0
+
+	*shockwave 128
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+//----------------------------------------------------------------------
+
+*explosion_ballista_vatar
+{
+	*classname explosion
+	*model0 "Particles:MP=50,SU=shockwave4,CO=0xddAE4B2B,CON=0x00202020,TS=2.5,DU=2,DUN=1,FI=0.2,VE=40,VEN=10,AX=0 0,AXN=0 0,OF=3,OFN=6,SZ1=15,SZ2=15,SZ3=20,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,TC=0.03,PP=3,ES=0.5,LS=30,FL=al+nl"
+	*model1 "ExpandSphere:SU=Electric1,SEG=11,SID=11,DU=0.5,RA1=90,RO0=3 4 5,RO1=1 1 1,RO2=1,SCL=0.3 1 1,TX1=2 1,TX2=10 10,TX3=2 2,CO0=0xddAE4B2B,CO1=0x00202020,CO2=10,CO3=1,FLG=clampcolors+fadepoles+postscale+fadeedges"
+	*sound_spawn imp_fx02
+	*duration 3
+	*anim1 200
+	*randanim0
+
+	*shockwave 128, 10, 25, magic
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+//----------------------------------------------------------------------
+
+*explosion_rocket
+{
+	*classname explosion
+	*model0 "Particles:,MP=2,,,,DU=1,,FI=0.01,,,,,,,,,,,,,,,,SZ0=80,SZ1=80,SZ2=80,SZ3=80,,,,,,,,,,,,,,,TC=0.02,TCS=0,,,ES=0.03,,,FL=quads+nohistory"
+	*model1 "Particles:,MP=100,SU=FireBall01,CO=0x40F0C0A0,,DU=1.5,DUN=2.5,FI=0.1,VE=10,,,,,,,,OF=20,,,,,,,SZ0=25,SZ1=40,SZ2=50,SZ3=65,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.2,,,,,,,,,,,PP=4,,ES=0.1,,,FL=quads+nohistory"
+	*model2 "Particles:MP=110,SU=p_fireblob04,CO=0xFFF0A080,DU=1,VE=99,VEN=198,AX=0 0 -75,OF=10,SZ0=4,SZ1=4,SZ2=4,SZ3=4,PP=109,ES=0.01,FL=asq"
+	*duration 4
+
+	*shockwave 80, 40, 500, explosive
+
+	*sound_spawn dem_expl19c
+
+	*radius 256
+	*lightcolor 0xFF08020
+	*wallmark s_dropshadow
+}
+
+//----------------------------------------------------------------------

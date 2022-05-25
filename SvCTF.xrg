@@ -1,0 +1,14 @@
+*cheats 1
+*alwayscheats 1
+*spawnmask -1
+*gameclass TP3CTF
+*gamename "Capture the Flag"
+*autoactivate 1
+*rotatepickups 1
+*fixedteams 1
+*numfixedteams 2
+*infoteamspawn 1
+*friendlyfire 0
+*selffire 1
+*defaultrespawntime 10
+*autoequip 1

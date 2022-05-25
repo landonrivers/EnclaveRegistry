@@ -1,0 +1,6 @@
+*item_grappler
+{
+	*rpgclass grappler
+	*spellname Grappling Hook
+	*spawn projectile_grappler
+}

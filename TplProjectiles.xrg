@@ -1,0 +1,895 @@
+//----------------------------------------------------------------------
+//- ARROWS -------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*projectile_burstarrow_normal
+{
+	*classname burstarrow
+	*model0 weapons\longarrow
+	*model1 "speedtrail:surface=arrowtrail01, duration=2.0, width=5.0, flags=tailfade+texfit"
+
+	*removeattachedmodel model0
+
+	*sound_loop0 lrp_bu01
+	*sound_hitworld imp_arrow3b
+	*sound_hitchar imp_fsh
+
+	*velocity 100-200
+	*gravity 0
+
+	*impactforce 5
+	*damage 10, pierce+blockable
+
+	*duration 10
+	*destroydelay 2.0
+
+	*attachclass attach_burstarrow
+	*attachaligned 0
+	*attachonobjects all
+}
+
+// Expired name, don't use anymore!
+*projectile_burstarrow
+{
+	*classname projectile_burstarrow_normal
+}
+
+//----------------------------------------------------------------------
+
+*projectile_burstarrow_fire
+{
+	*classname burstarrow
+
+//	*model0 weapons\FireArrow
+//	*model1 "particles:,MP=30,SU=afire01,CO=0xbbCEAF71,DU=0.3,FI=0.15,AX=0 0 90,AXN=0 0 70,DI=sphere,DIS=0.3,SZ0=6,SZ2=8,RT0=5,RT1=-1,RT2=5,RT3=-5,RT4=1"
+//	*model2 "particles:,MP=40,SU=p_smokeblob01,CO=0x55222222,DU=0.8,,FI=0.2,AX=0 0 20,AXN=0 0 25,DI=sphere,DIS=1,SZ1=15,SZ2=25,SZ3=30,RT0=-2,RT1=3,RT2=1,RT3=-2"
+
+	*model0 "speedtrail:surface=bombtrail01, duration=2.0, width=20.0, flags=alignfade+tailfade+texfit"
+	*model1 "Particles:MP=80,SU=FireBallFire#-1,CO=0x80C06020,DU=0.5,FI=0.1,VE=1,VEN=2,AX=0 0 30,AXN=0 0 30,MV0=-4,MV1=4,MV2=-10,MV3=10,MV4=1,SZ0=10,SZ1=20,SZ2=20,SZ3=30,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,FS=0.01,FL=quads+fadestill"
+	*model2 "Particles:MP=80,SU=FireBallSmoke#-2,CO=0xFF000000,DU=1.0,FI=0.5,VE=0,VEN=0,AX=0 0 30,AXN=0 0 30,MV0=-10,MV1=10,MV2=-10,MV3=10,MV4=1,SZ0=10,SZ1=20,SZ2=25,SZ3=40,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,TC=0.02,FS=0.01,FL=quads+fadestill"
+
+//	*removeattachedmodel model0
+
+	*sound_loop0 Stave_Fire02b
+	*sound_hitworld cocktail01b
+	*sound_hitchar cocktail01b
+
+	*velocity 80-150
+	*gravity 1.2
+
+	*attachclass attach_firearrow
+	*attachaligned 1
+	*attachalignedaxis 2
+	*attachonobjects characters
+
+	*explosion firewall_firearrow
+	*explosiontype aligned
+	*shockwave 64, 5, 5, fire+explosive
+
+	*impactforce 2
+	*damage 5, fire+blockable
+
+	*duration 10
+	*destroydelay 2.0
+}
+
+//----------------------------------------------------------------------
+
+*projectile_burstarrow_lafire
+{
+	*classname burstarrow
+//	*model0 weapons\FireArrow
+//	*model1 "particles:,MP=30,SU=afire01,CO=0x50CEAF71,DU=0.3,FI=0.15,AX=0 0 90,AXN=0 0 70,DI=sphere,DIS=1.5,SZ0=22,SZ1=28,SZ2=12,RT0=3,RT1=-2,RT2=-3,RT3=1,LS=4,FL=asq"
+//	*model2 "particles:,MP=40,SU=p_smokeblob04,CO=0xdd222222,DU=2,FI=1.8,AX=0 0 20,AXN=0 0 25,DI=sphere,DIS=1,SZ0=15,SZ1=25,SZ2=50,SZ3=45,RT0=-2,RT1=3,RT2=1,RT3=-2,TC=0.05"
+	*model0 "speedtrail:surface=bombtrail01, duration=2.0, width=20.0, flags=alignfade+tailfade+texfit"
+	*model1 "Particles:MP=80,SU=FireBallFire#-1,CO=0x80C06020,DU=0.5,FI=0.1,VE=1,VEN=2,AX=0 0 30,AXN=0 0 30,MV0=-4,MV1=4,MV2=-10,MV3=10,MV4=1,SZ0=10,SZ1=20,SZ2=20,SZ3=30,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,FS=0.01,FL=quads+fadestill"
+	*model2 "Particles:MP=80,SU=FireBallSmoke#-2,CO=0xFF000000,DU=1.0,FI=0.5,VE=0,VEN=0,AX=0 0 30,AXN=0 0 30,MV0=-10,MV1=10,MV2=-10,MV3=10,MV4=1,SZ0=10,SZ1=20,SZ2=25,SZ3=40,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,TC=0.02,FS=0.01,FL=quads+fadestill"
+
+//	*removeattachedmodel model0
+
+	*sound_loop0 Stave_Fire02b
+	*sound_hitworld cocktail01b
+	*sound_hitchar cocktail01b
+
+	*velocity 50-100
+	*gravity 1.2
+
+	*attachclass attach_lafirearrow
+	*attachaligned 1
+	*attachalignedaxis 2
+	*attachonobjects characters
+
+	*explosion firewall_lafirearrow
+	*explosiontype aligned
+	*shockwave 128, 5, 10, fire+explosive
+
+	*impactforce 10
+	*damage 10, fire+blockable
+
+	*duration 10
+	*destroydelay 2.0
+}
+
+//----------------------------------------------------------------------
+
+*projectile_burstarrow_grenade
+{
+	*classname burstarrow
+	*model0 weapons\ExplosiveArrow
+	*model1 "speedtrail:surface=arrowtrail01, duration=2.0, width=5.0, flags=tailfade+texfit"
+
+	*removeattachedmodel model0
+
+	*sound_loop0 Stave_Fire02c
+	*sound_hitworld 
+	*sound_hitchar 
+
+	*velocity 60-120
+	*gravity 1.5
+
+	*explosion explosion_burstarrow_grenade
+	*explosiontype aligned
+
+	*impactforce 25
+	*damage 10, explosive+blockable
+
+	*duration 10
+	*destroydelay 2.0
+}
+
+// Expired name, don't use anymore!
+*projectile_burstarrow_granate
+{
+	*classname projectile_burstarrow_grenade
+}
+
+//----------------------------------------------------------------------
+
+*projectile_burstarrow_hegrenade
+{
+	*classname burstarrow
+	*model0 weapons\ExplosiveArrow
+	*model1 "speedtrail:surface=arrowtrail01, duration=2.0, width=5.0, flags=tailfade+texfit"
+
+	*removeattachedmodel model0
+
+	*sound_loop0 Stave_Fire02c
+	*sound_hitworld 
+	*sound_hitchar 
+
+	*velocity 60-120
+	*gravity 1.5
+
+	*explosion explosion_burstarrow_hegrenade
+	*explosiontype aligned
+
+	*impactforce 25
+	*damage 25, explosive+blockable
+
+	*duration 10
+	*destroydelay 2.0
+}
+
+//----------------------------------------------------------------------
+
+*projectile_challenge_grenade
+{
+	*classname burstarrow
+	*model0 weapons\ExplosiveArrow
+	*model1 "speedtrail:surface=arrowtrail01, duration=2.0, width=5.0, flags=tailfade+texfit"
+
+	*removeattachedmodel model0
+
+	*sound_loop0 Stave_Fire02c
+	*sound_hitworld 
+	*sound_hitchar 
+
+	*velocity 20-60
+	*gravity 1.5
+
+	*explosion explosion_burstarrow_grenade
+	*explosiontype aligned
+	*shockwave 64, 10, 160
+
+	*impactforce 10
+	*damage 150, explosive+blockable
+
+	*duration 10
+	*destroydelay 2.0
+}
+
+//----------------------------------------------------------------------
+
+*projectile_sniperarrow_normal
+{
+	*classname projectile_instant
+
+	*model0 "InstantTrail:Surface=SniperArrowTrail, Width=3, SegLen=50, Duration=1.0, FadeInTime=0.0, FadeOutTime=0.5, Flags=FadeEdges"
+
+	*flags noattach
+	*destroydelay 20.0
+	*duration 20.0
+
+	*moveout 1.0
+	*startoffset 0
+	*velocityoffsetfactor 9
+
+	*attachclass attach_sniperarrow
+	*attachaligned 0
+	*attachonobjects all
+
+	*sound_lrp LRP01
+	*sound_hitworld IMP_ARROW
+	*sound_hitchar IMP_FSHAR
+
+	*damage 25, sniper+blockable
+	*impactforce 15
+}
+
+// Expired name, don't use anymore!
+*projectile_sniperarrow
+{
+	*classname projectile_sniperarrow_normal
+}
+
+//----------------------------------------------------------------------
+
+*projectile_sniperarrow_magic
+{
+	*classname projectile_instant
+
+	*model0 "InstantTrail:Surface=MagicArrowTrail, Width=3, SegLen=50, Duration=1.0, FadeInTime=0.0, FadeOutTime=0.5, Flags=FadeEdges"
+
+	*flags noattach
+	*destroydelay 20.0
+	*duration 20.0
+
+	*moveout 1.0
+	*startoffset 0
+	*velocityoffsetfactor 9
+
+	*attachclass attach_magicarrow
+	*attachaligned 0
+	*attachonobjects all
+
+	*sound_lrp LRP01
+	*sound_hitworld IMP_ARROW
+	*sound_hitchar IMP_FSHAR
+
+	*damage 100, magic+blockable
+	*impactforce 15
+}
+
+//----------------------------------------------------------------------
+
+*template_projectile_bolt_instant
+{
+	*classname projectile_instant
+
+	*flags noattach
+	*destroydelay 2.0
+	*duration 2.0
+
+	*moveout 1.0
+	*startoffset 0
+	*velocityoffsetfactor 9
+
+	*attachaligned 0
+	*attachonobjects all
+
+	*sound_lrp LRP01
+	*sound_hitworld IMP_ARROW
+	*sound_hitchar IMP_FSHAR
+}
+
+//----------------------------------------------------------------------
+
+*projectile_bolt_normal
+{
+	*classname template_projectile_bolt_instant
+
+	*model0 "InstantTrail:Surface=SniperArrowTrail, Width=5, TexRepLen=100, Segments=10, Duration=0.5, FadeInTime=0.0, FadeOutTime=0.25, Flags=FadeEdges"
+
+	*attachclass attach_bolt_normal
+
+	*damage 1, pierce+blockable
+	*impactforce 10
+}
+
+//----------------------------------------------------------------------
+
+*projectile_bolt_poison
+{
+	*classname template_projectile_bolt_instant
+
+	*model0 "InstantTrail:Surface=Boltpoison, Width=5, TexRepLen=100, Segments=10, Duration=0.5, FadeInTime=0.0, FadeOutTime=0.25, Flags=FadeEdges"
+
+	*attachclass attach_bolt_poison
+
+	*sound_spawn stave_poison01b
+	*sound_lrp LRP01
+	*sound_hitworld stave_poison03b
+	*sound_hitchar stave_poison03b
+	*sound_hit stave_poison03b
+
+	*damage 1, poison+blockable
+	*impactforce 10
+}
+
+//----------------------------------------------------------------------
+
+*projectile_bolt_magic
+{
+	*classname projectile_homing
+
+	*model0 "speedtrail:surface=magicarrow01, duration=0.15, width=10.0, flags=tailfade+texfit"
+	*model1 "Particles:,MP=100,SU=Glimmer2,CO=0xFF80A0F0,,,DU=0.8,,FI=0.2,VE=10,MV2=-5,MV3=5,MV4=1,SZ0=5,SZ1=20,SZ2=5,SZ3=20,SZ4=2,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1"
+
+//	*removeattachedmodel model0, model1
+
+	*sound_loop0 Stave_Fire02b
+	*sound_hitworld imp_magic2
+	*sound_hitchar imp_magic2
+	*sound_imp imp_magic2
+
+	*flags explodeontimeout+keeplooping
+
+	*velocity 15
+	*homing_minvelocity 30
+	*homing_maxvelocity 30
+	*homing_acceleration 12
+	*homing_startfade 0.5
+	*homing_autoselecttarget 1
+	*homing_targetobjects characters
+	*collisionobjects characters+world
+
+	*impactforce 10
+	*damage 20, magic+blockable
+
+	*duration 3
+	*destroydelay 1
+
+	*explosion explosion_bolt_magic
+	*explosiontype aligned
+
+//	*timeout_effect 
+
+	*attachclass attach_bolt_magic
+	*attachaligned 0
+	*attachonobjects all
+}
+
+//----------------------------------------------------------------------
+//- Bombs --------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*projectile_bomb_normal
+{
+	*classname bomb
+
+	*physprim0 box, 8,8,8,0,0,0, physmovement+slideable, projectile, world+physmodel+physobject, excludeowner
+	*model0 weapons\dabomb
+	*model1 "speedtrail:surface=bombtrail01, duration=0.5, width=12.0, flags=alignfade+tailfade+texfit+texlock"
+
+	*damagetype explosive
+
+	*randanim0
+
+	*duration 1.5
+
+	*velocity 15-25
+	*gravity 2
+
+	*rotvelocity 0, 0, 0
+
+	*maxrenderoffsetblendtime 0.4
+
+	*sound_loop0 dem_fuse05sa
+	*sound_hitworld met_impact08b
+	*sound_hitchar 
+
+	*bounce_damage 0, crush+blockable
+	*bounce_impactforce 10
+	*bounce_elasticity 0.4
+	*bounce_elasticity_vf 0.2
+	*bounce_friction 0.2
+//	*bounce_effect BombBounce
+	*bounce_effectoffset 2.0
+
+	*explosion explosion_bomb_normal
+	*explosiontype aligned
+
+	*impactforce 20
+
+	*flags explodeontimeout+trueoffset
+}
+
+// Expired name, don't use anymore!
+*bomb_normal
+{
+	*classname projectile_bomb_normal
+}
+
+//-----------------------------------------------------------------------------
+
+*projectile_bomb_heavy
+{
+	*classname bomb
+
+	*physprim0 box, 8,8,8,0,0,0, physmovement, projectile, world+physmodel+physobject, excludeowner
+	*model0 weapons\hebomb
+	*model1 "speedtrail:surface=bombtrail01, duration=1.0, width=12.0, flags=alignfade+tailfade+texfit+texlock"
+
+	*damagetype explosive
+
+	*randanim0
+
+	*duration 3
+
+	*velocity 13-23
+	*gravity 2.1
+
+	*rotvelocity 0, 0, 0
+
+	*maxrenderoffsetblendtime 0.4
+
+	*sound_loop0 dem_fuse05sa
+	*sound_hitworld met_impact08b
+	*sound_hitchar 
+
+	*bounce_damage 0, crush+blockable
+	*bounce_impactforce 10
+	*bounce_elasticity 0.4
+	*bounce_elasticity_vf 0.2
+	*bounce_friction 0.2
+//	*bounce_effect BombBounce
+	*bounce_effectoffset 2.0
+
+	*explosion explosion_bomb_heavy
+	*explosiontype aligned
+
+	*impactforce 20
+
+	*flags explodeontimeout+trueoffset
+}
+
+//----------------------------------------------------------------------
+
+// DON'T CHANGE ANYTHING IN THIS TEMPLATE! IT'S HARDSCRIPTET IN LEVELS AS IT IS!
+*bomb_los_bananos
+{
+	*classname bomb
+	*physprim0 box, 8,8,8,0,0,0, physmovement, projectile, world+physmodel+physobject, excludeowner
+	*model0 weapons\dabomb
+	*model1 "speedtrail:surface=bombtrail01, duration=2.0, width=12.0, flags=alignfade+tailfade+texfit"
+
+	*damagetype explosive
+
+	*randanim0
+
+	*duration 3
+
+	*velocity 20-30
+	*gravity 4
+
+	*bounce_damage 0
+	*bounce_impactforce 10
+	*bounce_elasticity 0.4
+//	*bounce_effect BombBounce
+	*bounce_effectoffset 2.0
+
+	*sound_loop0 dem_fuse05sa
+	*sound_hitworld met_impact08b
+
+	*explosion explosion_bomb_dabomb
+	*explosiontype aligned
+
+	*impactforce 20
+
+	*flags explodeontimeout
+}
+
+//----------------------------------------------------------------------
+
+*bomb_celenheim
+{
+	*classname projectile_bouncer
+
+	*physprim0 box, 2,2,2,0,0,0, physmovement, projectile, world+physmodel+physobject, excludeowner
+
+	*model0 "particles:,MP=100,CO=0x70602010,CON=0x60501020,FI=0.2,AL1=1,VE=4,VEN=1,AX=2 2 2,SZ0=20,SZ1=50,SZ2=100,SZ3=200,SMT=1,LS=2,FL=al+nh+nl"
+
+	*damagetype explosive
+
+	*randanim0
+
+	*duration 3
+
+	*velocity 13-23
+	*gravity 2.1
+
+	*rotvelocity 0, 0, 0
+
+	*maxrenderoffsetblendtime 0.4
+
+	*sound_loop0 firebolt1
+	*sound_hitworld
+	*sound_hitchar 
+
+	*bounce_damage 0, crush+blockable
+	*bounce_impactforce 1
+	*bounce_elasticity 0.1
+	*bounce_friction 0.05
+//	*bounce_effect BombBounce
+	*bounce_effectoffset 2.0
+
+	*explosion explosion_bomb_celenheim
+	*explosiontype aligned
+
+	*impactforce 20
+
+	*flags explodeontimeout+trueoffset
+}
+
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*projectile_cannonball
+{
+	*classname bomb
+	*physprim0 box, 17,17,17,0,0,0, physmovement, projectile, world+physmodel+physobject, excludeowner
+	*model0 weapons\cannonballbig
+	*model1 "Particles:,MP=120,SU=p_FireBlob02,CO=0x6FFFFFFF,,DU=1.4,DUN=0.1,FI=0.1,VE=1,,AX=0 0 35,,,,,,OF=10,,,,,,MV4=2,SZ0=50,SZ1=70,SZ2=1,SZ3=1,SZ4=1,RT0=-2,RT1=2,RT2=-4,RT3=4,RT4=1,,,,,,,,,TC=0.022,,PP=2,,ES=8,,FS=0"
+	*model2 "Particles:,MP=60,SU=p_FireBlob01,CO=0x5FFFFFFF,,DU=0.8,DUN=0.1,FI=0.1,VE=1,,AX=0 0 35,,,,,,OF=10,,,,,,MV4=2,SZ0=100,SZ1=140,SZ2=1,SZ3=1,SZ4=1,RT0=-2,RT1=2,RT2=-4,RT3=4,RT4=1,,,,,,,,,TC=0.06,,PP=2,,ES=8,,FS=0"
+
+	*damagetype explosive
+	
+	*sound_loop0 stave_fire02
+
+	*explosion big_explosion
+	*explosiontype 1
+	*velocity 10
+	*gravity 10
+
+	*impactforce 15
+	*flags noattach
+	*duration 3
+	*numbounces 0
+}
+
+//----------------------------------------------------------------------
+
+
+*projectile_catapultfireball
+{
+	*classname bomb
+	*physprim0 box, 17,17,17,0,0,0, physmovement, projectile, world+physmodel+physobject, excludeowner
+	*model0 weapons\cannonballbig
+	*model1 "Particles:,MP=120,SU=p_FireBlob02,CO=0x6FFFFFFF,,DU=1.4,DUN=0.1,FI=0.1,VE=1,,AX=0 0 35,,,,,,OF=10,,,,,,MV4=2,SZ0=50,SZ1=70,SZ2=1,SZ3=1,SZ4=1,RT0=-2,RT1=2,RT2=-4,RT3=4,RT4=1,,,,,,,,,TC=0.022,,PP=2,,ES=8,,FS=0"
+	*model2 "Particles:,MP=60,SU=p_FireBlob01,CO=0x5FFFFFFF,,DU=0.8,DUN=0.1,FI=0.1,VE=1,,AX=0 0 35,,,,,,OF=10,,,,,,MV4=2,SZ0=100,SZ1=140,SZ2=1,SZ3=1,SZ4=1,RT0=-2,RT1=2,RT2=-4,RT3=4,RT4=1,,,,,,,,,TC=0.06,,PP=2,,ES=8,,FS=0"
+
+	*damagetype explosive+fire
+	
+	*sound_loop0 stave_fire02
+
+	*explosion explosion_catapultfireball
+	*explosiontype 1
+	*velocity 10
+	*gravity 10
+	*impactforce 15
+	*flags noattach
+	*duration 3
+	*numbounces 0
+}
+
+//----------------------------------------------------------------------
+
+*projectile_AAShell
+{
+	*classname projectile_cannonball
+	*duration 1
+	*explosion explosion_AAShell
+}
+
+//----------------------------------------------------------------------
+
+*projectile_firebottle
+{
+	*classname projectile_bouncer
+	*model0 world\stuff\bigbottle
+//	*model1 "speedtrail:surface=bombtrail01, duration=2.0, width=10.0, flags=alignfade+tailfade+texfit"
+	*model1 "Particles:MP=80,SU=FireBallFire,CO=0x80C06020,DU=0.25,FI=0,OF=7,AX=0 0 30,MV0=-1,MV1=1,MV2=-8,MV3=8,MV4=2,SZ0=5,SZ1=10,SZ2=5,SZ3=10,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPA=0,SPB=0,OFB=0.2,PP=2,FS=0.1,FL=quads+fadestill+early"
+//	*model2 "particles:,MP=40,SU=p_smokeblob04,CO=0xdd222222,DU=2,FI=0.5,AX=0 0 20,AXN=0 0 25,DI=sphere,DIS=1,SZ0=15,SZ1=25,SZ2=50,SZ3=45,RT0=-2,RT1=3,RT2=1,RT3=-2,TC=0.05"
+	
+	*damagetype fire
+
+	*removeattachedmodel model0
+
+	*sound_loop0e cocktail01
+	*sound_hitworld cocktail01
+	*sound_hitchar cocktail01
+	*sound_spawn cocktail04
+
+	*velocity 10-20
+	*rotvelocity 0, 0, 0.1
+	*gravity 1
+	*numbounces 0
+
+//	*explosion explosion_firebottle
+	*explosion firewall_medium
+	*explosiontype aligned
+	*explosionalignaxis 2
+
+	*attachclass attach_firebottle
+	*attachaligned 1
+	*attachalignedaxis 2
+	*attachonobjects characters
+	
+	// Move to firewall_medium
+	*shockwave 50, 5, 40, fire+explosive
+
+	*impactforce 5
+	*damage 30, fire+blockable
+
+	*duration 10
+	*destroydelay 1
+}
+
+//----------------------------------------------------------------------
+
+*projectile_hefirebottle
+{
+	*classname projectile_bouncer
+	*model0 world\stuff\hefirebottle
+//	*model1 "speedtrail:surface=bombtrail01, duration=2.0, width=10.0, flags=alignfade+tailfade+texfit"
+	*model1 "Particles:MP=80,SU=FireBallFire,CO=0x80C06020,DU=0.25,FI=0,OF=7,AX=0 0 30,MV0=-1,MV1=1,MV2=-8,MV3=8,MV4=2,SZ0=5,SZ1=10,SZ2=5,SZ3=10,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPA=0,SPB=0,OFB=0.2,PP=2,FS=0.1,FL=quads+fadestill+early"
+//	*model2 "particles:,MP=40,SU=p_smokeblob04,CO=0xdd222222,DU=2,FI=0.5,AX=0 0 20,AXN=0 0 25,DI=sphere,DIS=1,SZ0=15,SZ1=25,SZ2=50,SZ3=45,RT0=-2,RT1=3,RT2=1,RT3=-2,TC=0.05"
+
+	*damagetype fire
+
+	*removeattachedmodel model0
+
+	*sound_loop0e cocktail01
+	*sound_hitworld cocktail01
+	*sound_hitchar cocktail01
+	*sound_spawn cocktail04
+
+	*velocity 18
+	*rotvelocity 0, 0, 0.1
+	*gravity 1.2
+	*numbounces 0
+
+//	*explosion explosion_firebottle
+	*explosion firewall_large
+	*explosiontype aligned
+	*explosionalignaxis 2
+
+	*attachclass attach_hefirebottle
+	*attachaligned 1
+	*attachalignedaxis 2
+	*attachonobjects characters
+	
+	// Move to firewall_medium
+	*shockwave 70, 5, 80, fire+explosive
+
+	*impactforce 5
+	*damage 50, fire+blockable
+
+	*duration 10
+	*destroydelay 1
+}
+
+//----------------------------------------------------------------------
+
+*projectile_dragonbreathflame
+{
+	*classname projectile_bouncer
+	*model0 "Particles:,MP=30,SU=p_fireblob01,CO=0xC0F0C080,CON=0x00802020,,DU=1,DUN=1,FI=0.3,VE=10,MV0=-2,MV1=2,MV2=-2,MV3=2,MV4=1,SZ0=40,SZ1=40,SZ2=100,SZ3=100,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.5,,,SPA=0,SPB=0,,,,,TC=0.05,LS=30,FL=ets+asq+nl+sof"
+
+	*randanim0
+
+	*duration 2
+	*velocity 40
+	
+	*sound_loop0 dra_fire10
+
+	*flags nodestroy+noattach+nodamageonimpact
+
+	*absorbingobjects characters
+	*excludeowner 1
+	*bounce_elasticity 0.01
+	*bounce_friction 0.2
+
+	*damage 100, fire
+}
+
+*projectile_dragonball
+{
+	*classname projectile_tracer
+
+	*model1 "Particles:MP=200,SU=FireBallFire,CO=0x80C06020,DU=0.5,FI=0.1,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-4,MV1=4,MV2=-10,MV3=10,MV4=2,SZ0=20,SZ1=30,SZ2=30,SZ3=40,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,PP=2,FS=0.01,FL=quads+fadestill"
+	*model0 "Particles:MP=100,SU=FireBallSmoke,CO=0xFF000000,DU=1,FI=0.5,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-10,MV1=10,MV2=-10,MV3=10,MV4=2,SZ0=20,SZ1=30,SZ2=60,SZ3=80,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,FS=0.01,FL=quads+fadestill"
+
+	*flags noattach
+	*destroydelay 2.0
+
+	*sound_loop0 dra_fire10b
+	*sound_hit dem_expl14c
+	*sound_spawn dra_fire14
+
+	*duration 6
+	*velocity 30
+	*explosion fireball_explosion
+	*explosiontype 1
+	*excludeowner 1
+
+//	*attachclass attach_fire_medium
+//	*attachaligned 1
+//	*attachalignedaxis 2
+//	*attachonobjects all
+
+	*damage 0, fire // Damage added by staff instead
+	*impactforce 15
+}
+
+//----------------------------------------------------------------------
+
+*projectile_big_balista
+{
+	*classname burstarrow
+	*model0 weapons\ExplosiveArrow
+	*model1 "speedtrail:surface=arrowtrail01, duration=2.0, width=5.0, flags=tailfade+texfit"
+
+	*removeattachedmodel model0
+
+	*sound_move lrp_bu01
+	*sound_hitworld imp_arrow3b
+	*sound_hitchar imp_fsh
+
+	*velocity 60-120
+	*gravity 1.5
+
+	*explosion explosion_burstarrow_grenade
+	*explosiontype aligned
+
+	*impactforce 25
+	*damage 100, pierce+blockable
+
+	*duration 10
+	*destroydelay 3
+	
+	*attachclass attach_burstarrow
+}
+
+//----------------------------------------------------------------------
+
+*projectile_ballista_normal
+{
+	*classname burstarrow
+
+	*model0 weapons\Ballista
+	*model1 "speedtrail:surface=arrowtrail01, duration=2.0, width=10.0, flags=tailfade+texfit"
+
+	*sound_move lrp_bu01
+	*sound_hitworld imp_arrow3b
+	*sound_hitchar imp_fsh
+
+	*velocity 300-400
+	*gravity 1.1
+
+	*duration 10
+	*destroydelay 6
+
+	*attachclass attach_ballista
+	*attachaligned 1
+	*attachonobjects all
+	
+	*damage 250, special
+	*damage_effect attach_hit_dragon
+
+	*impactforce 10
+}
+
+//----------------------------------------------------------------------
+
+*projectile_ballista
+{
+	*classname burstarrow
+
+	*model0 weapons\Ballista
+	*model1 "speedtrail:surface=magicarrow01, duration=2.0, width=10.0, flags=tailfade+texfit"
+
+	*sound_move lrp_bu01
+	*sound_hitworld imp_arrow3b
+	*sound_hitchar imp_fsh
+
+	*velocity 200-220
+	*gravity 1.2
+
+	*duration 10
+	*destroydelay 6
+
+	*explosion explosion_ballista_magic
+	*explosiontype aligned
+
+	//*attachclass attach_ballista
+	//*attachaligned 1
+	//*attachonobjects all
+
+	*damage 150, special
+	*damage_effect attach_hit_dragon
+
+	*impactforce 10
+}
+
+//----------------------------------------------------------------------
+
+*projectile_ballista_vatar
+{
+	*classname burstarrow
+
+	*model0 weapons\Ballista
+ 	*model1 "Particles:MP=60,CO=0xddAE4B2B,CON=0x00202020,TS=4,DU=1,VE=2,VEN=4,AX=-99 0 0,AXN=10 0 0,OF=2,OFN=4,SZ1=15,SZ3=20,SPA=0,OFA=0.25,TC=0.02,LS=6,FL=asq+qd+nh+la"
+ 	*model2 "Particles:MP=90,CO=0xddAE4B2B,CON=0x00202020,VE=32,VEN=64,OF=10,SZ0=30,SZ1=40,SZ2=60,SZ3=75,SPA=0,OFA=0.25,TC=0.05,PP=8,LS=2,FL=qd+asq" 
+
+	*sound_loop0 Stave_Fire02b
+	*sound_hitworld imp_magic2
+	*sound_hitchar imp_magic2
+
+	*velocity 100-160
+	*gravity 1.5
+
+	*impactforce 25
+
+	*duration 10
+	*destroydelay 0
+
+	*explosion explosion_ballista_vatar
+	*explosiontype aligned
+
+	//*attachclass attach_ballista_vatar
+	//*attachaligned 1
+	//*attachonobjects all
+
+	*damage 300, special
+	//magic+blockable
+	*damage_effect attach_blood_vatar
+
+	*impactforce 10
+
+}
+
+//----------------------------------------------------------------------
+
+*projectile_rocket
+{
+	*classname projectile_tracer
+	*model0 weapons\Rocket
+	*model1 "Particles:MP=100,SU=FireBallSmoke#-1,CO=0xFF000000,DU=1,FI=0.5,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-10,MV1=10,MV2=-10,MV3=10,MV4=2,SZ0=10,SZ1=15,SZ2=30,SZ3=40,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,FS=1,FL=quads+fadestill"
+	*model2 "Particles:MP=200,SU=FireBallFire,CO=0x80C06020,DU=0.5,FI=0.1,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-4,MV1=4,MV2=-10,MV3=10,MV4=2,SZ0=10,SZ1=15,SZ2=15,SZ3=20,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,PP=2,FS=1,FL=quads+fadestill"
+	
+	*physprim0 box, 3,3,3,0,0,0, physmovement, projectile, world+physmodel+physobject, excludeowner
+
+	*removeattachedmodel model0
+
+	*sound_loop0 Stave_Fire02c
+	*sound_hitworld 
+	*sound_hitchar 
+
+	*velocity 180-200
+	*gravity 0.1
+
+	*flags noattach
+	
+	*explosion explosion_rocket
+	*explosiontype 1
+
+	*impactforce 75
+	*damage 250, explosive+blockable
+
+	*duration 10
+	*destroydelay 0.1
+}
+
+//----------------------------------------------------------------------

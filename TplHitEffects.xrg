@@ -1,0 +1,753 @@
+//----------------------------------------------------------------------
+//- HIT EFFECTS --------------------------------------------------------
+//----------------------------------------------------------------------
+
+*template_hiteffect
+{
+	*classname explosion
+	*duration 3
+	*randanim0
+}
+
+*template_hiteffect_special
+{
+	*classname explosion
+	*duration 3
+	*randanim0
+	*shockwave 128, 40
+	*camerashake 128, 4, 2, 12
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_std
+{
+	*classname template_hiteffect
+	*model0 "Particles:,MP=100,,CO=0x408080F0,TS=3,DU=1,DUN=1,FI=0.2,VE=10,VEN=15,AX=0 0,AXN=0 0,,,,,OF=3,OFN=6,,,,,,,SZ1=15,SZ2=15,SZ3=20,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,,,,,,,TC=0.015,,PP=3,,,ES=0.5,,,LS=30,FL=align+quads"
+}
+
+*hiteffect_std_enemy
+{
+	*classname template_hiteffect
+	*model0 "Particles:,MP=100,,CO=0x40F08080,TS=3,DU=1,DUN=1,FI=0.2,VE=10,VEN=15,AX=0 0,AXN=0 0,,,,,OF=3,OFN=6,,,,,,,SZ1=15,SZ2=15,SZ3=20,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,,,,,,,TC=0.015,,PP=3,,,ES=0.5,,,LS=30,FL=align+quads"
+}
+
+*hiteffect_std_special
+{
+	*shockwave 128, 5, 30
+	*classname template_hiteffect_special
+	*model0 "Particles:,MP=100,,CO=0xF08080A0,TS=3,DU=1,DUN=1,FI=0.2,VE=20,VEN=20,AX=0 0,AXN=0 0,,,,,OF=10,OFN=5,,,,,,SZ0=15,SZ1=20,SZ2=20,SZ3=25,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,,,,,,,TC=0.015,,PP=3,,,ES=0.5,,,LS=20,FL=align+quads"
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_zurana
+{
+	*classname template_hiteffect
+	*shockwave 128
+	*model0 "Particles:,MP=100,,CO=0x40FF8080,,TS=3,,DU=1,DUN=1,FI=0.2,,,VE=100,VEN=15,,AX=0 0,AXN=0 0,,,,,OF=3,OFN=6,,,,,,SZ0=50,SZ1=150,SZ2=150,SZ3=200,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,,,,,TC=0.015,,PP=3,,,ES=0.5,,,,LS=7,FL=align+quads"
+	*sound_spawn imp_fx01
+}
+
+*hiteffect_zurana_special
+{
+	*classname template_hiteffect_special
+	*shockwave 128
+	*model0 "Particles:,MP=100,,CO=0x40FF8080,,TS=3,,DU=1,DUN=1,FI=0.2,,,VE=150,VEN=15,,AX=0 0,AXN=0 0,,,,,OF=3,OFN=6,,,,,,SZ0=50,SZ1=150,SZ2=150,SZ3=200,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,,,,,TC=0.015,,PP=3,,,ES=0.5,,,,LS=7,FL=align+quads"
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_shortdagger
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x607777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=12,SZ2=12,SZ3=20,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_shortdagger_special
+{
+	*classname template_hiteffect_special
+	*shockwave 128, 1, 15, stab+blockable
+	*model0 "Particles:MP=33,CO=0x607777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=12,SZ2=12,SZ3=20,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+	*camerashake 128, 1.5, 0.5, 1.5
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_longdagger
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x607777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=12,SZ2=12,SZ3=20,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_longdagger_special
+{
+	*shockwave 128, 2, 20, stab+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x607777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=12,SZ2=12,SZ3=20,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+	*camerashake 128, 1.5, 0.5, 1.5
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_curvedagger
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x60957595,TS=6,DU=2,DUN=1,AL1=0.3,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_curvedagger_special
+{
+	*shockwave 128, 3, 25, stab+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x60957595,TS=6,DU=2,DUN=1,AL1=0.3,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+	*camerashake 128, 1.5, 0.5, 1.5
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_ceremonial
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=25,CO=150 150 255,DU=0.5,VE=35,VEN=5,AX=0 0 30,OF=3,OFN=6,SZ0=5,SZ2=15,SZ3=20,SZ4=5,SPA=0,TC=0.025,PP=3,ES=0.2,SMT=0.5,LS=8,FL=al+qd+sm"
+}
+
+*hiteffect_ceremonial_special
+{
+	*shockwave 128, 4, 50, stab+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=25,CO=150 150 255,DU=0.5,VE=35,VEN=5,AX=0 0 30,OF=3,OFN=6,SZ0=5,SZ2=15,SZ3=20,SZ4=5,SPA=0,TC=0.025,PP=3,ES=0.2,SMT=0.5,LS=8,FL=al+qd+sm"
+	*camerashake 128, 1.5, 0.5, 1.5
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_poisondagger
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=50,CO=0x5566ff69,TS=6,DU=2,DUN=1,FI=0.02,VE=10,VEN=3,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,TC=0.02,ES=1,LS=50,FL=al+qd"
+	*model1 "Particles:MP=70,SU=FireBallFire,CO=0x0920FF20,TS=2,DUN=1,VE=50,HO=1,OF=6,SZ0=30,SZ1=50,SZ2=50,SZ3=70,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.5,OFA=1,OFB=1,DOFA=1,DOFB=1,TC=0.03,PP=2,ES=1,SMT=1,FL=sm"
+}
+
+*hiteffect_poisondagger_special
+{
+	*shockwave 128, 5, 100, poison+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x5566ff69,TS=6,DU=2,DUN=1,FI=0.02,VE=10,VEN=3,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*model1 "Particles:MP=100,SU=FireBallFire,CO=0x0920FF20,TS=2,DUN=1,FI=0.1,VE=50,HO=1,OF=24,SZ0=30,SZ1=50,SZ2=50,SZ3=70,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.5,OFA=1,OFB=1,DOFA=1,DOFB=1,TC=0.02,PP=2,ES=1,SMT=2,FL=sm"
+	*camerashake 128, 10, 1, 8
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_shortsword
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x607777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=12,SZ2=12,SZ3=20,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_shortsword_special
+{
+	*shockwave 128, 10, 30, slash+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x707777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=11,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,SD=0,LS=40,FL=al+qd"
+	*camerashake 128, 3, 0.75, 3
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_broadsword
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x607777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=12,SZ2=12,SZ3=20,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_broadsword_special
+{
+	*shockwave 128, 12, 45, slash+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x707777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=11,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,SD=0,LS=40,FL=al+qd"
+	*camerashake 128, 3, 0.75, 3
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_longsword
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x6060bbbb,CON=0x00005500,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_longsword_special
+{
+	*shockwave 128, 14, 60, slash+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x6060bbbb,CON=0x00005500,TS=6,DU=2,DUN=1,AL1=0.3,VE=11,VEN=1,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*camerashake 128, 3, 0.75, 3
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_scimitar
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x6060bbbb,CON=0x00005500,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_scimitar_special
+{
+	*shockwave 128, 16, 80, slash+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x6060bbbb,CON=0x00005500,TS=6,DU=2,DUN=1,AL1=0.3,VE=11,VEN=1,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*camerashake 128, 3, 0.75, 3
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_dwarvensword
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x60957595,TS=6,DU=2,DUN=1,AL1=0.3,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_dwarvensword_special
+{
+	*shockwave 128, 18, 100, slash+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x60957595,TS=6,DU=2,DUN=1,AL1=0.3,VE=14,VEN=1,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*camerashake 128, 6, 0.75, 4
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_sabre
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x60957595,TS=6,DU=2,DUN=1,AL1=0.3,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_sabre_special
+{
+	*shockwave 128, 22, 120, slash+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x60957595,TS=6,DU=2,DUN=1,AL1=0.3,VE=14,VEN=1,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*camerashake 128, 6, 0.75, 4
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_falchion
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x6099dd99,CON=0x00202020,TS=6,DU=2,DUN=1,AL1=0.3,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_falchion_special
+{
+	*shockwave 128, 24, 140, slash+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x6099dd99,CON=0x00202020,TS=6,DU=2,DUN=1,FI=0.4,AL1=0.3,VE=15,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=45,FL=al+qd"
+	*model1 "ExpandSphere:SU=SHOCKWAVE4,SEG=11,SID=11,DU=0.5,RA1=60,RO0=3 4 5,RO1=1 1 1,RO2=1,SCL=0.3 1 1,TX1=2 1,TX2=10 10,TX3=2 2,CO0=0xff99dd99,CO1=0x00202020,CO2=10,CO3=1,FLG=clampcolors+fadepoles+postscale+fadeedges"
+	*camerashake 128, 4, 1, 4
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_bastard
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x1820Ff20,TS=6,DU=2,DUN=1,FI=0.02,VE=7,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,TC=0.03,ES=1,LS=50,FL=al+qd"
+}
+
+*hiteffect_bastard_special
+{
+	*shockwave 128, 40, 160, poison+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x5566ff69,TS=6,DU=2,DUN=1,FI=0.02,VE=10,VEN=3,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*model1 "Particles:MP=100,SU=FireBallFire,CO=0x0920FF20,TS=2,DUN=1,FI=0.1,VE=50,HO=1,OF=24,SZ0=30,SZ1=50,SZ2=50,SZ3=70,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.5,OFA=1,OFB=1,DOFA=1,DOFB=1,TC=0.02,PP=2,ES=1,SMT=2,FL=sm"
+	//*model1 "Particles:MP=200,SU=FireBallFire,CO=0x0920FF20,DU=2.3,DUN=1,VE=40,HO=1,OF=20,SZ0=30,SZ1=50,SZ2=40,SZ3=60,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.5,SPB=0.7,,OFB=0.25,PP=20,ES=0.1,FL=quads"
+	*camerashake 128, 10, 1, 8
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_ehrick
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x60957595,TS=6,DU=2,DUN=1,AL1=0.3,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+	*sound_spawn imp_fx03
+}
+
+*hiteffect_ehrick_special
+{
+	*shockwave 128, 40, 230, slash+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=2,CO=0xff957595,DU=1,FI=0.1,SZ0=60,SZ1=60,SZ2=60,SZ3=60,TC=0.02,TCS=0,ES=0.03,FL=qd"
+	*model1 "Particles:,MP=160,,CO=0x60957595,,TS=1.5,,DU=2,DUN=2,FI=0.2,,,VE=20,VEN=5,,AX=0 0 4,,,,,,OF=25,,,,,,MV4=1,SZ0=15,SZ1=30,SZ2=1,SZ3=1,,,,,,,,,,,,,,,PP=3,,,ES=0.5,SMT=1,SD=0,,LS=40,FL=asq+sm+qd"
+	*camerashake 128, 6, 0.75, 8
+	*sound_spawn imp_fx02
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_frostsword
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=25,SU=Glimmer2,CO=0xFF8888FF,TS=6,DU=2,DUN=1,FI=0.02,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,DOFA=1,DOFB=1,TC=0.04,ES=1,LS=50,FL=al+qd"
+}
+
+*hiteffect_frostsword_special
+{
+	*shockwave 128, 40, 100, cold+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=50,SU=Glimmer2,CO=0xFF8888FF,TS=3,DU=2,DUN=1,FI=0.2,VE=35,VEN=15,DIS=2,HO=1,SZ0=15,SZ1=25,SZ2=25,SZ3=35,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,TC=0.03,ES=1,LS=25,FL=al+qd"
+	*model1 "Particles:MP=100,SU=Glimmer2,CO=0xFF8888FF,TS=3,DU=2,DUN=1,FI=0.2,VE=25,VEN=15,DI=cylinder,DR=0 0 5,HO=1,OF=25,MV2=30,MV3=-30,SZ0=4,SZ1=18,SZ2=12,SZ3=18,RT2=5,RT3=10,SPA=0,SPB=0,DOFA=50,DOFB=0.2,TC=1,TCS=0.2,PP=100,ES=1,SD=0"
+	*camerashake 128, 10, 1, 12
+	*sound_spawn imp_fx02
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_firesword
+{
+	*classname template_hiteffect
+	*model0 "Particles:,MP=100,,CO=0xFFFF7010,TS=6,DU=2,DUN=1,FI=0.02,VE=5,VEN=5,,,,,,,OF=3,OFN=6,,,,,,SZ0=5,,,SZ3=20,SZ4=1,,,,,,,AL1=0.2,,,,,,,TC=0.02,,,,,ES=1,,,LS=50,FL=align+quads"
+	*camerashake 128, 5, 1, 8
+}
+
+*hiteffect_firesword_special
+{
+	*shockwave 128, 40, 300, fire+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:,MP=300,,CO=0xF0FF6010,TS=6,DU=2,DUN=1,FI=0.2,VE=25,VEN=40,,,DI=sphere,DIS=2,,HO=1,,,,,,,,SZ0=5,,SZ2=15,SZ3=30,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,,,,,,,,,PP=2,,,ES=1.5,,,LS=25,FL=primcenter+align+quads"
+	*model1 "ExpandSphere:SU=SphereMap01,,,DU=0.4,,,,,,,,,,,,CO0=0x80FF7010"
+	*camerashake 128, 10, 1, 12
+	*sound_spawn imp_fx03
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_beardedaxe
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x607777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=12,SZ2=12,SZ3=20,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_beardedaxe_special
+{
+	*shockwave 128, 40, 45, hack+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x707777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=11,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,SD=0,LS=40,FL=al+qd"
+	*camerashake 128, 3, 0.75, 3
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_kama
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x607777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=12,SZ2=12,SZ3=20,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_kama_special
+{
+	*shockwave 128, 40, 60, hack+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x707777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=11,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,SD=0,LS=40,FL=al+qd"
+	*camerashake 128, 3, 0.75, 3
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_shortaxe
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x6060bbbb,CON=0x00005500,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+
+*hiteffect_shortaxe_special
+{
+	*shockwave 128, 40, 80, hack+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x6060bbbb,CON=0x00005500,TS=6,DU=2,DUN=1,AL1=0.3,VE=11,VEN=1,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*camerashake 128, 3, 0.75, 3
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_pikeaxe
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x6060bbbb,CON=0x00005500,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_pikeaxe_special
+{
+	*shockwave 128, 40, 100, hack+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x6060bbbb,CON=0x00005500,TS=6,DU=2,DUN=1,AL1=0.3,VE=11,VEN=1,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*camerashake 128, 3, 0.75, 3
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_bruteaxe
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x60957595,TS=6,DU=2,DUN=1,AL1=0.3,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_bruteaxe_special
+{
+	*shockwave 128, 40, 120, hack+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=2,CO=0xff957595,DU=1,FI=0.1,SZ0=60,SZ1=60,SZ2=60,SZ3=60,TC=0.02,TCS=0,ES=0.03,FL=qd"
+	*model1 "Particles:MP=50,CO=0x60957595,TS=2,DU=2,DUN=1,FI=0.2,VE=20,VEN=5,OF=50,MV4=1,SZ0=15,SZ1=30,SZ2=1,SZ3=1,TC=0.02,PP=2,ES=0.5,SMT=1,SD=0,LS=40,FL=al+sm+qd"
+	*camerashake 128, 6, 0.75, 8
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_battleaxe
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=26,CO=0x80F08020,CON=,TS=3,DU=2,DUN=1,FI=0.2,VE=10,VEN=3,AX=0 0,AXN=0 0,OF=3,OFN=6,SZ1=15,SZ2=15,SZ3=20,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,TC=0.02,ES=0.5,LS=45,FL=al+qd"
+}
+
+*hiteffect_battleaxe_special
+{
+	*shockwave 128, 40, 140, hack+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=50,CO=0x80F08020,TS=2,DU=2,DUN=1,FI=0.2,VE=20,VEN=5,OF=50,MV4=1,SZ0=15,SZ1=30,SZ2=1,SZ3=1,TC=0.02,PP=2,ES=0.5,SMT=1,SD=0,LS=40,FL=al+sm+qd"
+	*camerashake 128, 6, 0.75, 8
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_waraxe
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x1820Ff20,TS=6,DU=2,DUN=1,FI=0.02,VE=7,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,TC=0.03,ES=1,LS=50,FL=al+qd"
+}
+
+*hiteffect_waraxe_special
+{
+	*shockwave 128, 40, 160, poison+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x5566ff69,TS=6,DU=2,DUN=1,FI=0.02,VE=10,VEN=3,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*model1 "Particles:MP=100,SU=FireBallFire,CO=0x0920FF20,TS=2,DUN=1,FI=0.1,VE=50,HO=1,OF=24,SZ0=30,SZ1=50,SZ2=50,SZ3=70,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.5,OFA=1,OFB=1,DOFA=1,DOFB=1,TC=0.02,PP=2,ES=1,SMT=2,FL=sm"
+	*camerashake 128, 10, 1, 8
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_shatteraxe
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=25,SU=Glimmer2,CO=0xFF8888FF,TS=6,DU=2,DUN=1,FI=0.02,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,DOFA=1,DOFB=1,TC=0.04,ES=1,LS=50,FL=al+qd"
+}
+
+*hiteffect_shatteraxe_special
+{
+	*shockwave 128, 40, 100, cold+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=50,SU=Glimmer2,CO=0xFF8888FF,TS=3,DU=2,DUN=1,FI=0.2,VE=35,VEN=15,DIS=2,HO=1,SZ0=15,SZ1=25,SZ2=25,SZ3=35,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,TC=0.03,ES=1,LS=25,FL=al+qd"
+	*model1 "Particles:MP=100,SU=Glimmer2,CO=0xFF8888FF,TS=3,DU=2,DUN=1,FI=0.2,VE=25,VEN=15,DI=cylinder,DR=0 0 5,HO=1,OF=25,MV2=30,MV3=-30,SZ0=4,SZ1=18,SZ2=12,SZ3=18,RT2=5,RT3=10,SPA=0,SPB=0,DOFA=50,DOFB=0.2,TC=1,TCS=0.2,PP=100,ES=1,SD=0"
+	*camerashake 128, 10, 1, 12
+	*sound_spawn imp_fx02
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_greataxe
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x607777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=12,SZ2=12,SZ3=20,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+	*camerashake 64, 2.5, 0.5, 4
+}
+
+*hiteffect_greataxe_special
+{
+	*shockwave 128, 40, 160, hack+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=300,CO=0x607777bb,CON=0x00000022,TS=6,DU=2,DUN=1,FI=0.2,VE=25,VEN=40,DI=sphere,DIS=2,HO=1,SZ0=5,SZ2=15,SZ3=30,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,PP=2,ES=1.5,LS=25,FL=primcenter+al+qd"
+	*model1 "ExpandSphere:SU=SphereMap01,DU=0.4,CO0=0x607777bb,CO1=0x00000022"
+	*camerashake 128, 10, 1, 5
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_slaying
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0xFF5050FF,TS=6,DU=2,DUN=1,FI=0.02,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,TC=0.03,ES=1,LS=50,FL=al+qd"
+}
+
+*hiteffect_slaying_special
+{
+	*shockwave 128, 40, 300, magic+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=70,CO=0x805050FF,TS=5,DUN=2,FI=0.1,VE=30,VEN=5,AX=0 0 30,OF=15,SZ0=5,,SZ2=30,SZ3=50,SPB=0.1,TC=0.03,PP=4,ES=0.5,LS=10,FL=al+qd"
+	*camerashake 128, 8, 1, 8
+	*sound_spawn imp_fx02
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_spikeclub
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x607777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=12,SZ2=12,SZ3=20,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_spikeclub_special
+{
+	*shockwave 128, 40, 30, crush+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x707777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=11,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,SD=0,LS=40,FL=al+qd"
+	*camerashake 128, 3, 0.75, 3
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_warhammer
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x607777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=12,SZ2=12,SZ3=20,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_warhammer_special
+{
+	*shockwave 128, 40, 45, crush+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x707777bb,CON=0x00000022,TS=6,DU=2,DUN=1,AL1=0.3,VE=11,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,SD=0,LS=40,FL=al+qd"
+	*camerashake 128, 3, 0.75, 3
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_morningstar
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x6060bbbb,CON=0x00005500,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_morningstar_special
+{
+	*shockwave 128, 40, 60, crush+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x6060bbbb,CON=0x00005500,TS=6,DU=2,DUN=1,AL1=0.3,VE=11,VEN=1,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*camerashake 128, 3, 0.75, 3
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_heavyclub
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x6060bbbb,CON=0x00005500,TS=6,DU=2,DUN=1,AL1=0.3,VE=6,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_heavyclub_special
+{
+	*shockwave 128, 40, 80, crush+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x6060bbbb,CON=0x00005500,TS=6,DU=2,DUN=1,AL1=0.3,VE=11,VEN=1,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*camerashake 128, 3, 0.75, 3
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_mace
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x60957595,TS=6,DU=2,DUN=1,AL1=0.3,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_mace_special
+{
+	*shockwave 128, 40, 100, crush+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x60957595,TS=6,DU=2,DUN=1,AL1=0.3,VE=14,VEN=1,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*camerashake 128, 6, 0.75, 4
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_maul
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x60957595,TS=6,DU=2,DUN=1,AL1=0.3,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=35,FL=al+qd"
+}
+
+*hiteffect_maul_special
+{
+	*shockwave 128, 40, 80, crush+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x60957595,TS=6,DU=2,DUN=1,AL1=0.3,VE=14,VEN=1,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*camerashake 128, 6, 0.75, 4
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_battlehammer
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=25,SU=Glimmer2,CO=0x80A40010,TS=6,DU=2,DUN=1,FI=0.02,VE=9,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,DOFA=1,DOFB=1,TC=0.04,ES=1,LS=50,FL=al+qd"
+}
+
+*hiteffect_battlehammer_special
+{
+	*shockwave 128, 40, 150, crush+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=50,SU=Glimmer2,CO=0x80A40010,TS=3,DU=2,DUN=1,FI=0.2,VE=35,VEN=15,DIS=2,HO=1,SZ0=15,SZ1=25,SZ2=25,SZ3=35,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,TC=0.03,ES=1,LS=25,FL=al+qd"
+	*model1 "Particles:MP=100,SU=Glimmer2,CO=0x80A40010,TS=3,DU=2,DUN=1,FI=0.2,VE=25,VEN=15,DI=cylinder,DR=0 0 5,HO=1,OF=25,MV2=30,MV3=-30,SZ0=4,SZ1=18,SZ2=12,SZ3=18,RT2=5,RT3=10,SPA=0,SPB=0,DOFA=50,DOFB=0.2,TC=1,TCS=0.2,PP=100,ES=1,SD=0"
+	*camerashake 128, 10, 1, 12
+	*sound_spawn imp_fx02
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_chaos
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x1820Ff20,TS=6,DU=2,DUN=1,FI=0.02,VE=7,VEN=2,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,TC=0.03,ES=1,LS=50,FL=al+qd"
+}
+
+*hiteffect_chaos_special
+{
+	*shockwave 128, 40, 160, poison+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=33,CO=0x5566ff69,TS=6,DU=2,DUN=1,FI=0.02,VE=10,VEN=3,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,TC=0.03,ES=1,LS=50,FL=al+qd"
+	*model1 "Particles:MP=100,SU=FireBallFire,CO=0x0920FF20,TS=2,DUN=1,FI=0.1,VE=50,HO=1,OF=24,SZ0=30,SZ1=50,SZ2=50,SZ3=70,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.5,OFA=1,OFB=1,DOFA=1,DOFB=1,TC=0.02,PP=2,ES=1,SMT=2,FL=sm"
+	*camerashake 128, 10, 1, 8
+	*sound_spawn imp_fx01
+}
+
+//----------------------------------------------------------------------
+
+
+*hiteffect_heavymorningstar
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x80434F3E,TS=6,DU=2,DUN=1,FI=0.02,VE=9,VEN=3,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,TC=0.03,ES=1,LS=50,FL=al"
+	*sound_spawn imp_fx03
+}
+
+*hiteffect_heavymorningstar_special
+{
+	*shockwave 128, 40, 200, crush+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=50,SU=shockwave4,CO=0x80434F3E,TS=2.5,DU=2,DUN=1,FI=0.2,VE=40,VEN=10,AX=0 0,AXN=0 0,OF=3,OFN=6,SZ1=15,SZ2=15,SZ3=20,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,TC=0.03,PP=3,ES=0.5,LS=30,FL=al"
+	*model1 "ExpandSphere:SU=Electric1,CO=0x80434F3E,SEG=11,SID=11,DU=0.5,RA1=90,RO0=3 4 5,RO1=1 1 1,RO2=1,SCL=0.3 1 1,TX1=2 1,TX2=10 10,TX3=2 2,CO0=0x802080F0,CO1=0x00f0f0f0,CO2=10,CO3=1,FLG=clampcolors+fadepoles+postscale+fadeedges"
+	*camerashake 128, 6, 0.75, 8
+	*sound_spawn imp_fx02
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_hammeroflightning
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=70,SU=electric1,CO=0x408080F0,TS=3,DU=1,DUN=1,FI=0.2,VE=25,VEN=15,OF=3,OFN=6,SZ1=15,SZ2=15,SZ3=20,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,TC=0.015,PP=2,ES=0.5,LS=10,FL=qd+al"
+	*camerashake 64, 2.5, 0.5, 4
+}
+
+*hiteffect_hammeroflightning_special
+{
+	*shockwave 128, 40, 300, magic+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=100,CO=100 100 255,TS=4,FI=0.5,VE=1,LO=0 0 120,AX=0 0 -50,DI=cylinder,DIS=10 10 30,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,SPA=0,SPB=0,PP=2,ES=0.5,LS=30,FL=qd+al"
+	*model1 "Particles:MP=100,CO=100 100 255,TS=3,DU=2.25,FI=0.25,VE=100,VEN=25,AX=0 0 3,SZ0=15,SZ1=15,SZ2=40,SZ3=40,SZ4=3,RT0=2,RT1=4,RT2=4,RT3=6,RT4=2,PP=2,ES=0.5,SMT=2.25,LS=5,FL=qd+al+sm"
+	*model2 "Particles:MP=20,CO=100 100 255,TS=5,DUN=3,FI=0.5,VE=200,VEN=100,SZ0=1,SZ1=1,SZ2=40,SZ3=60,SZ4=3,SPB=0,TC=0.05,PP=4,ES=0.25,LS=80,FL=qd+al"
+	*camerashake 128, 8, 1, 5
+	*sound_spawn imp_fx02
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_mordessa
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0xff6655ff,CON=0xff0000ff,TS=6,DU=2,DUN=1,FI=0.02,VE=9,VEN=3,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,TC=0.03,ES=1,LS=50,FL=al"
+	*sound_spawn imp_fx03
+}
+
+*hiteffect_mordessa_special
+{
+	*shockwave 128, 40, 50, slash+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=50,SU=shockwave4,CO=0x406655ff,TS=2.5,DU=2,DUN=1,FI=0.2,VE=40,VEN=10,AX=0 0,AXN=0 0,OF=3,OFN=6,SZ1=15,SZ2=15,SZ3=20,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,TC=0.03,PP=3,ES=0.5,LS=30,FL=al"
+	*model1 "ExpandSphere:SU=Electric1,SEG=11,SID=11,DU=0.5,RA1=90,RO0=3 4 5,RO1=1 1 1,RO2=1,SCL=0.3 1 1,TX1=2 1,TX2=10 10,TX3=2 2,CO0=0xFFaa00bb,CO1=0xffff00ff,CO2=10,CO3=1,FLG=clampcolors+fadepoles+postscale+fadeedges"
+	*camerashake 128, 6, 0.75, 8
+	*sound_spawn imp_fx02
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_assembly
+{
+	*classname template_hiteffect
+	*model0 "Particles:MP=33,CO=0x802080F0,CON=0x00f0f0f0,TS=6,DU=2,DUN=1,FI=0.02,VE=9,VEN=3,OF=3,OFN=6,SZ0=8,SZ1=13,SZ2=13,SZ3=26,SZ4=1,AL1=0.2,TC=0.03,ES=1,LS=50,FL=al"
+	*sound_spawn imp_fx03
+}
+
+*hiteffect_assembly_special
+{
+	*shockwave 128, 40, 75, slash+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=50,SU=shockwave4,CO=0x802080F0,CON=0x00f0f0f0,TS=2.5,DU=2,DUN=1,FI=0.2,VE=40,VEN=10,AX=0 0,AXN=0 0,OF=3,OFN=6,SZ1=15,SZ2=15,SZ3=20,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,TC=0.03,PP=3,ES=0.5,LS=30,FL=al"
+	*model1 "ExpandSphere:SU=Electric1,CO=0x802080F0,SEG=11,SID=11,DU=0.5,RA1=90,RO0=3 4 5,RO1=1 1 1,RO2=1,SCL=0.3 1 1,TX1=2 1,TX2=10 10,TX3=2 2,CO0=0x802080F0,CO1=0x00f0f0f0,CO2=10,CO3=1,FLG=clampcolors+fadepoles+postscale+fadeedges"
+	*camerashake 128, 6, 0.75, 8
+	*sound_spawn imp_fx02
+}
+
+//----------------------------------------------------------------------
+
+*hiteffect_electric
+{
+	*classname template_hiteffect
+	*model0 "Particles:,MP=100,SU=DotParticle,CO=0xF05060F0,TS=2.5,DU=0.5,,FI=0.2,VE=40,VEN=30,,,,,,,,,,,,,,SZ0=15,SZ1=20,SZ2=0,SZ3=0,,,,,,,,,SPA=0,SPB=0,,,DOFA=10,DOFB=20,TC=0.005,TCS=0,,,,ES=0.5,,,LS=15,FL=quads+align"
+	*camerashake 128, 2, 1, 8
+}
+
+*hiteffect_electric_special
+{
+	*shockwave 128, 40, 50, magic+blockable
+	*classname template_hiteffect_special
+	*model0 "Particles:MP=100,CO=0xF05060F0,TS=3,DU=1,FI=0.2,VE=60,VEN=80,SZ0=15,SZ1=25,SZ2=0,SZ3=0,SPA=0,SPB=0,DOFA=10,DOFB=20,TC=0.005,TCS=0,ES=1,LS=15,FL=quads+worldrot+align"
+	*camerashake 128, 5, 2, 12
+	*sound_spawn imp_fx02
+}
+
+//----------------------------------------------------------------------

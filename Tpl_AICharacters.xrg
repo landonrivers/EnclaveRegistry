@@ -1,0 +1,5310 @@
+*Ai_Knight
+{
+	*classname template_paladin
+	*model "players\\Knight\\Knight"
+	*dialogue Dlg_Knight
+	*character Knight
+	
+	*speed_jump 18
+
+	*ai_evadespeed 5
+	*ai_charge 30
+	*ai_dodge 2
+	*ai_riposte 20
+	*ai_wait 5
+	*ai_tauntchance 15
+	*ai_standfast 10
+	*ai_flank 10
+	
+	*dialogue Dlg_Knight
+
+	*rpgobject char
+	{
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_crossbow 0.5
+		*skill_bow 0.5		
+	}
+}
+
+*Ai_Knight_L0
+{
+	*classname ai_knight
+	*character Squire
+	*model "players\\Knight\\Knight"
+	*team 0
+
+	*ai_evadespeed 5
+	*ai_charge 30
+	*ai_dodge 2
+	*ai_riposte 20
+	*ai_wait 5
+	*ai_tauntchance 20
+	*ai_standfast 25
+	*ai_flank 10
+
+	*rpgobject char
+	{
+		*item0 weapon_sword_lightshort
+		*weapon_dagger_short
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_crossbow 0.5
+		*skill_bow 0.5		
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_other	0, All=1
+
+	*ai_skill 20
+	*ai_aimbonus 1
+	*ai_maxspeed 6.5
+	*ai_useflags switchweapon 
+	//*ai_hitratio 20
+}
+
+*Ai_Knight_L1
+{
+	*classname ai_knight
+	*character Armsman
+	*model "players\\Knight\\Knighta1"
+	*team 0
+
+	*ai_evadespeed 5
+	*ai_charge 30
+	*ai_dodge 10
+	*ai_riposte 20
+	*ai_wait 3
+	*ai_tauntchance 25
+	*ai_standfast 15
+	*ai_flank 10
+
+	*rpgobject char
+	{
+		*item0 weapon_sword_long
+		*weapon_dagger_short
+		*attrib_health 150
+		*attrib_maxhealth 150
+		*skill_sword 0.7
+		*skill_axe 0.7
+		*skill_hammer 0.7
+		*skill_crossbow 0.7
+		*skill_bow 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_other	0, All=1
+
+	*ai_skill 50
+	*ai_aimbonus 3
+	*ai_maxspeed 6.75
+	*ai_useflags switchweapon
+	//*ai_hitratio 30
+}
+
+*Ai_Knight_L2
+{
+	*classname ai_knight
+	*character Knight
+	*model "players\\Knight\\Knighta2"
+	*team 0
+
+	*ai_evadespeed 5
+	*ai_charge 30
+	*ai_dodge 10
+	*ai_riposte 15
+	*ai_wait 0
+	*ai_tauntchance 15
+	*ai_standfast 10
+	*ai_flank 20
+
+	*rpgobject char
+	{
+		*item0 weapon_sword_dwarven
+		*weapon_dagger_long
+		*attrib_health 200
+		*attrib_maxhealth 200
+		*skill_sword 0.85
+		*skill_axe 0.85
+		*skill_hammer 0.85
+		*skill_crossbow 0.85
+		*skill_bow 0.85
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+
+	*ai_skill 70
+	*ai_aimbonus 6
+	*ai_maxspeed 7.0
+	*ai_useflags switchweapon
+	//*ai_hitratio 40
+}
+
+*Ai_Knight_L3
+{
+	*classname ai_knight
+	*character Champion
+	*model "players\\Knight\\Knighta3"
+	*team 0
+
+	*ai_evadespeed 5
+	*ai_charge 30
+	*ai_dodge 15
+	*ai_riposte 5
+	*ai_wait 0
+	*ai_tauntchance 5
+	*ai_standfast 5
+	*ai_flank 30
+
+	*rpgobject char
+	{
+		*item0 weapon_sword_warrior
+		*weapon_dagger_long
+		*item_shield_kite
+		*attrib_health 400
+		*attrib_maxhealth 400
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_crossbow 1.0
+		*skill_bow 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+
+	*ai_skill 90
+	*ai_aimbonus 10
+	*ai_maxspeed 7.5
+	*ai_useflags switchweapon
+	//*ai_hitratio 100
+}
+
+*Ai_Knight_Commander
+{
+	*classname ai_knight
+	*character Commander Ehrick
+	*model "players\\Knight\\CaptainEric"
+	*team 0
+
+	*ai_evadespeed 9
+	*ai_maxspeed 9
+	*ai_charge 30
+	*ai_dodge 15
+	*ai_riposte 5
+	*ai_wait 0
+	*ai_tauntchance 5
+	*ai_standfast 5
+	*ai_flank 30
+
+	*rpgobject char
+	{
+		*item0 weapon_sword_warrior
+		*item_shield_magic
+		*attrib_health 500
+		*attrib_maxhealth 500
+		*skill_sword 1.3
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_crossbow 1.0
+		*skill_bow 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+
+	*ai_skill 90
+	*ai_aimbonus 10
+	*ai_useflags switchweapon
+	//*ai_hitratio 100
+}
+
+*Ai_Archer
+{
+	*classname template_char
+	
+	*model "players\\archer\\Archer"
+	*character Archer
+	*dialogue Dlg_Archer
+	*animlist Anim_Archer
+	*phys_height_crouch 21
+
+	*speed_jump 18
+
+	*ai_evadespeed 5
+	*ai_charge 25
+	*ai_dodge 15
+	*ai_riposte 15
+	*ai_wait 5
+	*ai_tauntchance 10
+	*ai_standfast 5
+	*ai_flank 25
+
+	*rpgobject char
+	{
+		*attrib_health 60
+		*attrib_maxhealth 60
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_bow 0.7
+		*skill_crossbow 0.7
+	}
+}
+
+*Ai_Archer_L0
+{
+	*classname ai_archer
+	*character Elven Archer
+	*model "players\\archer\\Archer"
+	*team 0
+
+	*rpgobject char
+	{
+		*item0 weapon_crossbow_light
+		*weapon_dagger_short
+		*attrib_health 60
+		*attrib_maxhealth 60
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_bow 0.7
+		*skill_crossbow 0.7
+		*skill_dagger 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.1, Fire=0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_cloth	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.2, Fire=0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_leather	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.3, Fire=0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_chain	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.4, Fire=0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_plate	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.5, Fire=0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_other	0, All=1
+
+	*ai_skill 50
+	*ai_aimbonus 2
+	*ai_maxspeed 6.75
+	*ai_useflags switchweapon
+	//*ai_hitratio 40
+}
+
+*Ai_Archer_L1
+{
+	*classname ai_archer
+	*character Elven Marksman
+	*model "players\\archer\\ArcherA1"
+	*team 0
+
+	*rpgobject char
+	{
+		*item0 weapon_crossbow_dwarven
+		*weapon_dagger_long
+		*attrib_health 110
+		*attrib_maxhealth 110
+		*skill_sword 0.7
+		*skill_axe 0.7
+		*skill_hammer 0.7
+		*skill_bow 0.85
+		*skill_crossbow 0.85
+		*skill_dagger 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.1, Fire=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_cloth	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.2, Fire=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.3, Fire=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.4, Fire=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_plate	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.5, Fire=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_other	0, All=1
+
+	*ai_skill 70
+	*ai_aimbonus 5
+	*ai_maxspeed 7.0
+	*ai_useflags switchweapon
+	//*ai_hitratio 60
+}
+
+*Ai_Archer_L2
+{
+	*classname ai_archer
+	*character Elven Elite Archer
+	*model "players\\archer\\ArcherA2"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_bow_long
+		*weapon_dagger_curved
+		*attrib_health 160
+		*attrib_maxhealth 160
+		*skill_sword 0.85
+		*skill_axe 0.85
+		*skill_hammer 0.85
+		*skill_bow 1.0
+		*skill_crossbow 1.0
+		*skill_dagger 1.25
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.1, Fire=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.2, Fire=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.3, Fire=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.4, Fire=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.5, Fire=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+
+	*ai_skill 80
+	*ai_aimbonus 8
+	*ai_maxspeed 7.5
+	*ai_useflags switchweapon
+	//*ai_hitratio 80
+}
+
+*Ai_Archer_L3
+{
+	*classname ai_archer
+	*character Elven Hunter
+	*model "players\\archer\\ArcherA3"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_bow_burst
+		*weapon_dagger_curved
+		*attrib_health 320
+		*attrib_maxhealth 320
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_bow 1.5
+		*skill_crossbow 1.5
+		*skill_dagger 1.5
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.1, Fire=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_cloth	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.2, Fire=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_leather	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.3, Fire=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_chain	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.4, Fire=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_plate	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.5, Fire=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+
+	*ai_skill 90
+	*ai_aimbonus 10
+	*ai_maxspeed 7.75
+	*ai_useflags switchweapon
+	//*ai_hitratio 100
+}
+
+*Ai_Huntress
+{
+	*classname template_archer
+	*character Huntress
+	*dialogue Dlg_Huntress
+	*model "players\\Huntress\\Huntress"
+	*phys_height_crouch 19
+
+	*speed_jump 18
+
+	*ai_evadespeed 5
+	*ai_charge 25
+	*ai_dodge 15
+	*ai_riposte 15
+	*ai_wait 5
+	*ai_tauntchance 5
+	*ai_standfast 5
+	*ai_flank 25
+	*rpgobject char
+	{
+		*attrib_health 60
+		*attrib_maxhealth 60
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_bow 0.7
+		*skill_crossbow 0.7
+		*skill_dagger 0.7
+	}
+}
+
+*Ai_Huntress_L0
+{
+	*classname ai_archer
+	*character Elven Huntress
+	*dialogue Dlg_Huntress
+	*model "players\\Huntress\\Huntress"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_bow_short
+		*weapon_dagger_short
+		*attrib_health 60
+		*attrib_maxhealth 60
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_bow 0.7
+		*skill_crossbow 0.7
+		*skill_dagger 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.1, Fire=0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_cloth	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.2, Fire=0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_leather	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.3, Fire=0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_chain	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.4, Fire=0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_plate	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.5, Fire=0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_other	0, All=1
+
+	*ai_skill 50
+	*ai_aimbonus 2
+	*ai_maxspeed 6.75
+	*ai_useflags switchweapon
+	//*ai_hitratio 40
+}
+
+*Ai_Huntress_L1
+{
+	*classname ai_archer
+	*character Elven Marksman
+	*dialogue Dlg_Huntress
+	*model "players\\huntress\\HuntressA1"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_crossbow_dwarven
+		*weapon_dagger_long
+		*attrib_health 90
+		*attrib_maxhealth 90
+		*skill_sword 0.7
+		*skill_axe 0.7
+		*skill_hammer 0.7
+		*skill_bow 1.0
+		*skill_crossbow 1.0
+		*skill_dagger 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.1, Fire=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_cloth	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.2, Fire=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.3, Fire=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.4, Fire=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_plate	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.5, Fire=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_other	0, All=1
+
+	*ai_skill 70
+	*ai_aimbonus 5
+	*ai_maxspeed 7.0
+	*ai_useflags switchweapon
+	//*ai_hitratio 60
+}
+
+*Ai_Huntress_L2
+{
+	*classname ai_archer
+	*character Elven Elite Archer
+	*dialogue Dlg_Huntress
+	*model "players\\huntress\\HuntressA2"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_bow_burst
+		*weapon_dagger_curved
+		*attrib_health 160
+		*attrib_maxhealth 160
+		*skill_sword 0.85
+		*skill_axe 0.85
+		*skill_hammer 0.85
+		*skill_bow 1.25
+		*skill_crossbow 1.25
+		*skill_dagger 1.25
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.1, Fire=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.2, Fire=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.3, Fire=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.4, Fire=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.5, Fire=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+
+	*ai_skill 80
+	*ai_aimbonus 8
+	*ai_maxspeed 7.5
+	*ai_useflags switchweapon
+	//*ai_hitratio 80
+}
+
+*Ai_Huntress_L3
+{
+	*classname ai_archer
+	*character Elven Elite Huntress
+	*dialogue Dlg_Huntress
+	*model "players\\huntress\\HuntressA3"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_bow_sniper
+		*weapon_dagger_curved
+		*attrib_health 320
+		*attrib_maxhealth 320
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_bow 1.5
+		*skill_crossbow 1.5
+		*skill_dagger 1.5
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.1, Fire=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_cloth	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.2, Fire=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_leather	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.3, Fire=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_chain	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.4, Fire=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_plate	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.5, Fire=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+
+	*ai_skill 90
+	*ai_aimbonus 10
+	*ai_maxspeed 7.75
+	*ai_useflags switchweapon
+	//*ai_hitratio 100
+}
+
+*Ai_Wizard
+{
+	*classname template_wizard
+	*model "players\\Wizard\\Wizard"
+	*character Wizard
+
+	*speed_jump 18
+	*phys_height_crouch 20
+
+	*ai_evadespeed 5
+	*ai_charge 20
+	*ai_dodge 10
+	*ai_riposte 10
+	*ai_wait 10
+	*ai_tauntchance 0
+	*ai_standfast 5
+	*ai_flank 20
+	*rpgobject char
+	{
+		*attrib_health 70
+		*attrib_maxhealth 70
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 0.5
+		*skill_dagger 0.6
+	}
+	*ai_useflags shockwave+magicshield
+}
+
+*Ai_Wizard_L0
+{
+	*classname ai_wizard
+	*character Wizard Apprentice
+	*model "players\\Wizard\\Wizard"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_staff_cold
+		*item1 item_staff_shield
+		*weapon_dagger_short
+		*attrib_health 70
+		*attrib_maxhealth 70
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 0.5
+		*skill_dagger 0.6
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_other	0, All=1
+	
+	*ai_skill 50
+	*ai_aimbonus 1
+	*ai_useflags magicshield
+	*ai_maxspeed 7.0
+	//*ai_hitratio 20
+}
+
+*Ai_Wizard_L1
+{
+	*classname ai_wizard
+	*character Wizard Journeyman
+	*model "players\\Wizard\\WizardA1"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_staff_lightning
+		*item1 item_staff_shield
+		*weapon_dagger_long
+		*attrib_health 120
+		*attrib_maxhealth 120
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 0.7
+		*skill_dagger 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_other	0, All=1
+
+	*ai_skill 60
+	*ai_aimbonus 3
+	*ai_useflags magicshield+summon
+	*ai_maxspeed 7.2
+	//*ai_hitratio 30
+}
+
+*Ai_Wizard_L2
+{
+	*classname ai_wizard
+	*character Wizard Adept
+	*model "players\\Wizard\\WizardA2"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_staff_mind
+		*item1 item_staff_shield
+		*weapon_dagger_curved
+		*attrib_health 170
+		*attrib_maxhealth 170
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 1.0
+		*skill_dagger 0.8
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+
+	*ai_skill 70
+	*ai_aimbonus 6
+	*ai_useflags shockwave+magicshield
+	*ai_maxspeed 7.4
+	//*ai_hitratio 40
+}
+
+*Ai_Wizard_L3
+{
+	*classname ai_wizard
+	*character High Wizard
+	*model "players\\Wizard\\WizardA3"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_staff_fire
+		*weapon_dagger_curved
+		*attrib_health 340
+		*attrib_maxhealth 340
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 1.5
+		*skill_dagger 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+
+	*ai_skill 80
+	*ai_aimbonus 10
+	*ai_useflags shockwave+magicshield
+	*ai_maxspeed 7.6
+	//*ai_hitratio 100
+}
+
+*Ai_Druid
+{
+	*classname template_Druid
+	*model "players\\Druid\\Druid"
+	*character Druid
+	*phys_height_crouch 19
+
+	*speed_jump 18
+
+	*ai_evadespeed 5
+	*ai_charge 25
+	*ai_dodge 10
+	*ai_riposte 25
+	*ai_wait 2
+	*ai_tauntchance 0
+	*ai_standfast 5
+	*ai_flank 2
+
+	*rpgobject char
+	{
+		*attrib_health 90
+		*attrib_maxhealth 90
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 0.3
+		*skill_summon 0.7
+		*skill_dagger 0.7
+	}
+	*ai_useflags shockwave+magicshield+summon
+}
+
+*Ai_Druid_L0
+{
+	*classname Ai_Druid
+	*character Druid Novice
+	*model "players\\Druid\\Druid"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_staff_spirit
+		*item1 item_staff_shield
+		*weapon_dagger_short
+		*attrib_health 90
+		*attrib_maxhealth 90
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 0.3
+		*skill_summon 0.7
+		*skill_dagger 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Poison+Explosive+Special=0.0, Fire+Cold+Magic+Summon=0.05, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_cloth	0, Sniper+Pierce+Poison+Explosive+Special=0.2, Fire+Cold+Magic+Summon=0.05, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_leather	0, Sniper+Pierce+Poison+Explosive+Special=0.3, Fire+Cold+Magic+Summon=0.05, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_chain	0, Sniper+Pierce+Poison+Explosive+Special=0.4, Fire+Cold+Magic+Summon=0.05, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_plate	0, Sniper+Pierce+Poison+Explosive+Special=0.5, Fire+Cold+Magic+Summon=0.05, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_other	0, All=1
+
+	*ai_skill 50
+	*ai_aimbonus 1
+	*ai_useflags magicshield+summon
+	*ai_maxspeed 7.25
+	//*ai_hitratio 20
+}
+
+*Ai_Druid_L1
+{
+	*classname Ai_Druid
+	*character Druid Protector
+	*model "players\\Druid\\DruidA1"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_staff_spirit
+		*item1 item_staff_shield
+		*weapon_dagger_long
+		*attrib_health 140
+		*attrib_maxhealth 140
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 0.5
+		*skill_summon 1.0
+		*skill_dagger 0.8
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Poison+Explosive+Special=0.0, Fire+Cold+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_cloth	0, Sniper+Pierce+Poison+Explosive+Special=0.2, Fire+Cold+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Poison+Explosive+Special=0.3, Fire+Cold+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Poison+Explosive+Special=0.4, Fire+Cold+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_plate	0, Sniper+Pierce+Poison+Explosive+Special=0.5, Fire+Cold+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_other	0, All=1
+
+	*ai_skill 60
+	*ai_aimbonus 3
+	*ai_useflags magicshield+summon
+	*ai_maxspeed 7.5
+	//*ai_hitratio 30
+}
+
+*Ai_Druid_L2
+{
+	*classname Ai_Druid
+	*character Druid Guardian
+	*model "players\\Druid\\DruidA2"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_staff_spirit
+		*item1 item_staff_shield
+		*weapon_dagger_curved
+		*attrib_health 190
+		*attrib_maxhealth 190
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 0.7
+		*skill_summon 1.0
+		*skill_dagger 1.0		
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Poison+Explosive+Special=0.0, Fire+Cold+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Poison+Explosive+Special=0.2, Fire+Cold+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Poison+Explosive+Special=0.3, Fire+Cold+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Poison+Explosive+Special=0.4, Fire+Cold+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Poison+Explosive+Special=0.5, Fire+Cold+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+	
+	*ai_skill 70
+	*ai_aimbonus 6
+	*ai_useflags shockwave+magicshield+summon
+	*ai_maxspeed 7.75
+	//*ai_hitratio 40
+}
+
+*Ai_Druid_L3
+{
+	*classname Ai_Druid
+	*character Druid Elder
+	*model "players\\Druid\\DruidA3"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_staff_spirit
+		*item1 item_staff_shield
+		*weapon_dagger_curved
+		*attrib_health 380
+		*attrib_maxhealth 380
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 1.0
+		*skill_summon 1.5
+		*skill_dagger 1.5
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Poison+Explosive+Special=0.0, Fire+Cold+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_cloth	0, Sniper+Pierce+Poison+Explosive+Special=0.2, Fire+Cold+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_leather	0, Sniper+Pierce+Poison+Explosive+Special=0.3, Fire+Cold+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_chain	0, Sniper+Pierce+Poison+Explosive+Special=0.4, Fire+Cold+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_plate	0, Sniper+Pierce+Poison+Explosive+Special=0.5, Fire+Cold+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+
+	*ai_skill 80
+	*ai_aimbonus 10
+	*ai_useflags shockwave+magicshield+summon
+	*ai_maxspeed 8.0
+	//*ai_hitratio 100
+}
+
+*Ai_Engineer
+{
+	*classname template_Engineer
+	*character Engineer
+	*model "players\\Engineer\\Engineer"
+
+	*speed_jump 18
+	*phys_height_crouch 19
+
+	*ai_evadespeed 5
+	*ai_charge 25
+	*ai_dodge 5
+	*ai_riposte 15
+	*ai_wait 2
+	*ai_tauntchance 20
+	*ai_standfast 25
+	*ai_flank 15
+
+	*rpgobject char
+	{
+		*attrib_health 80
+		*attrib_maxhealth 80
+		*skill_sword 0.5
+		*skill_axe 0.4
+		*skill_hammer 0.3
+		*skill_bow 0.5
+		*skill_crossbow 0.5
+		*skill_bomb 0.5
+	}
+}
+
+*Ai_Engineer_L0
+{
+	*classname Ai_Engineer
+	*character Gnome Apprentice
+	*model "players\\Engineer\\Engineer"
+	*team 0
+
+	*ai_evadespeed 5
+	*ai_charge 25
+	*ai_dodge 5
+	*ai_riposte 15
+	*ai_wait 2
+	*ai_standfast 25
+	*ai_flank 15
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_light
+		*weapon_dagger_short
+		*attrib_health 80
+		*attrib_maxhealth 80
+		*skill_sword 0.5
+		*skill_axe 0.4
+		*skill_hammer 0.3
+		*skill_bow 0.5
+		*skill_crossbow 0.5
+		*skill_bomb 0.5
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Special=0.0, Explosive=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.1, Explosive=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.2, Explosive=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.4, Explosive=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.5, Explosive=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_other	0, All=1
+
+	*ai_skill 10
+	*ai_aimbonus 1
+	*ai_maxspeed 7.2
+	*ai_useflags switchweapon
+	//*ai_hitratio 20
+}
+
+*Ai_Engineer_L1
+{
+	*classname Ai_Engineer
+	*character Gnome Engineer
+	*model "players\\Engineer\\EngineerA1"
+	*team 0
+	
+	*ai_evadespeed 5
+	*ai_charge 30
+	*ai_dodge 5
+	*ai_riposte 15
+	*ai_wait 1
+	*ai_tauntchance 30
+	*ai_standfast 15
+	*ai_flank 20
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_mace
+		*weapon_dagger_short
+		*attrib_health 130
+		*attrib_maxhealth 130
+		*skill_sword 0.7
+		*skill_axe 0.6
+		*skill_hammer 0.5
+		*skill_bow 0.7
+		*skill_crossbow 0.7
+		*skill_bomb 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Special=0.0, Explosive=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.1, Explosive=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.2, Explosive=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.4, Explosive=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.5, Explosive=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_other	0, All=1
+
+	*ai_skill 40
+	*ai_aimbonus 3
+	*ai_maxspeed 7.3
+	*ai_useflags switchweapon
+	//*ai_hitratio 30
+}
+
+*Ai_Engineer_L2
+{
+	*classname Ai_Engineer
+	*character Gnome Experimentist
+	*model "players\\Engineer\\EngineerA2"
+	*team 0
+	
+	*ai_evadespeed 5
+	*ai_charge 30
+	*ai_dodge 5
+	*ai_riposte 10
+	*ai_wait 0
+	*ai_tauntchance 25
+	*ai_standfast 10
+	*ai_flank 25
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_maul
+		*weapon_dagger_long
+		*attrib_health 180
+		*attrib_maxhealth 180
+		*skill_sword 0.9
+		*skill_axe 0.8
+		*skill_hammer 0.7
+		*skill_bow 0.8
+		*skill_crossbow 0.8
+		*skill_bomb 0.8
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Special=0.0, Explosive=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.1, Explosive=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.2, Explosive=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.4, Explosive=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.5, Explosive=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_other	0, All=1
+
+	*ai_skill 60
+	*ai_aimbonus 6
+	*ai_maxspeed 7.4
+	*ai_useflags switchweapon
+	//*ai_hitratio 30
+}
+
+*Ai_Engineer_L3
+{
+	*classname Ai_Engineer
+	*character Gnome Overseer
+	*model "players\\Engineer\\EngineerA3"
+	*team 0
+	
+	*ai_evadespeed 6
+	*ai_charge 30
+	*ai_dodge 10
+	*ai_riposte 4
+	*ai_wait 0
+	*ai_tauntchance 20
+	*ai_standfast 8
+	*ai_flank 25
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_battle
+		*weapon_dagger_long
+		*item_shield_buckler
+		*attrib_health 360
+		*attrib_maxhealth 360
+		*skill_sword 1.0
+		*skill_axe 0.9
+		*skill_hammer 0.8
+		*skill_bow 1.0
+		*skill_crossbow 1.0
+		*skill_bomb 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Special=0.0, Explosive=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.1, Explosive=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.2, Explosive=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.4, Explosive=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.5, Explosive=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_other	0, All=1
+
+	*ai_skill 80
+	*ai_aimbonus 10
+	*ai_maxspeed 7.5
+	*ai_useflags switchweapon
+	//*ai_hitratio 100
+}
+
+*Ai_Boarrider
+{
+	*classname template_Boarrider
+	*character Halfling
+	*dialogue dlg_boarrider
+	*model "players\\Boarrider\\Boarrider"
+
+	*speed_jump 18
+	*phys_height_crouch 18
+
+	*ai_evadespeed 5
+	*speed_forward 6
+	*ai_maxspeed 6
+	
+	*ai_charge 20
+	*ai_dodge 10
+	*ai_riposte 20
+	*ai_wait 5
+	*ai_tauntchance 5
+	*ai_standfast 20
+	*ai_flank 20
+	*rpgobject char
+	{
+		*attrib_health 50
+		*attrib_maxhealth 50
+		*skill_sword 0.5
+		*skill_axe 0.4
+		*skill_hammer 0.3
+		*skill_bow 0.3
+		*skill_crossbow 0.3
+		*skill_dagger 0.5
+	}
+}
+
+*Ai_Boarrider_L0
+{
+	*classname Ai_Boarrider
+	*character Halfling
+	*dialogue dlg_boarrider
+	*model "players\\Boarrider\\Boarrider"
+	*team 0
+	*ai_charge 20
+	*ai_dodge 10
+	*ai_riposte 20
+	*ai_wait 5
+	*ai_tauntchance 10
+	*ai_standfast 20
+	*ai_flank 20
+	
+	*rpgobject char
+	{
+		*item0 weapon_axe_short
+		*weapon_dagger_short
+		*attrib_health 50
+		*attrib_maxhealth 50
+		*skill_sword 0.5
+		*skill_axe 0.4
+		*skill_hammer 0.3
+		*skill_bow 0.3
+		*skill_crossbow 0.3
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_other	0, All=1
+
+	*ai_skill 5
+	*ai_aimbonus 1
+	*ai_maxspeed 6.0
+	*speed_forward 6.0
+	*ai_useflags switchweapon
+	//*ai_hitratio 20
+}
+
+*Ai_Boarrider_L1
+{
+	*classname Ai_Boarrider
+	*character Halfling Scout
+	*dialogue dlg_boarrider
+	*model "players\\Boarrider\\BoarriderA1"
+	*team 0
+	*ai_charge 20
+	*ai_dodge 10
+	*ai_riposte 20
+	*ai_wait 5
+	*ai_tauntchance 5
+	*ai_standfast 15
+	*ai_flank 20
+
+	*rpgobject char
+	{
+		*item0 weapon_axe_pike
+		*weapon_dagger_short
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_sword 0.7
+		*skill_axe 0.6
+		*skill_hammer 0.5
+		*skill_bow 0.7
+		*skill_crossbow 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_other	0, All=1
+
+	*ai_skill 30
+	*ai_aimbonus 3
+	*ai_maxspeed 6.5
+	*speed_forward 6.5
+	*ai_useflags switchweapon
+	//*ai_hitratio 50
+}
+
+*Ai_Boarrider_L2
+{
+	*classname Ai_Boarrider
+	*character Halfling Lookout
+	*dialogue dlg_boarrider
+	*model "players\\Boarrider\\BoarriderA2"
+	*team 0
+	*ai_charge 20
+	*ai_dodge 10
+	*ai_riposte 20
+	*ai_wait 5
+	*ai_tauntchance 5
+	*ai_standfast 10
+	*ai_flank 20
+
+	*rpgobject char
+	{
+		*item0 weapon_axe_battle
+		*weapon_dagger_long
+		*attrib_health 150
+		*attrib_maxhealth 150
+		*skill_sword 0.9
+		*skill_axe 0.8
+		*skill_hammer 0.7
+		*skill_bow 0.8
+		*skill_crossbow 0.8
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_other	0, All=1
+
+	*ai_skill 50
+	*ai_aimbonus 6
+	*ai_maxspeed 7.0
+	*speed_forward 7.0
+	*ai_useflags switchweapon
+	//*ai_hitratio 70
+}
+
+*Ai_Boarrider_L3
+{
+	*classname Ai_Boarrider
+	*character Halfling Watcher
+	*dialogue dlg_boarrider
+	*model "players\\Boarrider\\BoarriderA3"
+	*team 0
+
+	*ai_charge 20
+	*ai_dodge 10
+	*ai_riposte 20
+	*ai_wait 5
+	*ai_tauntchance 3
+	*ai_standfast 5
+	*ai_flank 20
+
+	*rpgobject char
+	{
+		*item0 weapon_axe_war
+		*weapon_dagger_long
+		*item_shield_buckler
+		*attrib_health 300
+		*attrib_maxhealth 300
+		*skill_sword 1.0
+		*skill_axe 0.9
+		*skill_hammer 0.8
+		*skill_bow 1.0
+		*skill_crossbow 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_other	0, All=1
+
+	*ai_skill 80
+	*ai_aimbonus 10
+	*ai_maxspeed 7.5
+	*speed_forward 7.5
+	*ai_useflags switchweapon
+	//*ai_hitratio 100
+}
+
+*Ai_Berserker
+{
+	*classname template_berserker
+	*character Beserker
+	*model "players\\ogre\\Ogre"
+
+	*speed_jump 18
+	*phys_height_crouch 22
+
+	*ai_evadespeed 5
+	*ai_charge 30
+	*ai_dodge 2
+	*ai_riposte 20
+	*ai_wait 5
+	*ai_tauntchance 20
+	*ai_standfast 30
+	*ai_flank 10
+	*rpgobject char
+	{
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_bow 0.5
+		*skill_crossbow 0.5
+	}
+}
+
+*Ai_Berserker_L0
+{
+	*classname ai_berserker
+	*character Berserker
+	*model "players\\ogre\\Ogre"
+	*team 1
+	*ai_charge 30
+	*ai_dodge 2
+	*ai_riposte 15
+	*ai_wait 5
+	*ai_tauntchance 20
+	*ai_standfast 30
+	*ai_flank 10
+	
+	*rpgobject char
+	{
+		*item0 weapon_hammer_spiked
+		*weapon_dagger_long
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_bow 0.5
+		*skill_crossbow 0.5
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_other	0, All=1
+
+	*ai_skill 20
+	*ai_aimbonus 1
+	*ai_maxspeed 6.75
+	*ai_useflags switchweapon
+	//*ai_hitratio 20
+}
+
+*Ai_Berserker_L1
+{
+	*classname ai_berserker
+	*character Berserker Basher
+	*model "players\\ogre\\OgreA1"
+	*team 1
+	*ai_charge 30
+	*ai_dodge 2
+	*ai_riposte 10
+	*ai_wait 4
+	*ai_tauntchance 15
+	*ai_standfast 20
+	*ai_flank 15
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_heavyclub
+		*weapon_dagger_long
+		*attrib_health 150
+		*attrib_maxhealth 150
+		*skill_sword 0.7
+		*skill_axe 0.7
+		*skill_hammer 0.7
+		*skill_bow 0.7
+		*skill_crossbow 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_other	0, All=1
+
+	*ai_skill 50
+	*ai_aimbonus 3
+	*ai_maxspeed 7.0
+	*ai_useflags switchweapon
+	//*ai_hitratio 50
+}
+
+*Ai_Berserker_L2
+{
+	*classname ai_berserker
+	*character Berserker Headsmasher
+	*model "players\\ogre\\OgreA2"
+	*team 1
+
+	*ai_charge 30
+	*ai_dodge 10
+	*ai_riposte 15
+	*ai_wait 5
+	*ai_tauntchance 10
+	*ai_standfast 15
+	*ai_flank 20
+
+	*rpgobject char
+	{
+		*item0 weapon_axe_great
+		*weapon_dagger_long
+		*attrib_health 200
+		*attrib_maxhealth 200
+		*skill_sword 0.85
+		*skill_axe 0.85
+		*skill_hammer 0.85
+		*skill_bow 0.85
+		*skill_crossbow 0.85
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+
+	*ai_skill 70
+	*ai_aimbonus 6
+	*ai_maxspeed 7.25
+	*ai_useflags switchweapon
+	//*ai_hitratio 70
+}
+
+*Ai_Berserker_L3
+{
+	*classname ai_berserker
+	*character Berserker Brute
+	*model "players\\ogre\\OgreA3"
+	*team 1
+
+	*ai_charge 30
+	*ai_dodge 15
+	*ai_riposte 15
+	*ai_wait 5
+	*ai_tauntchance 5
+	*ai_standfast 10
+	*ai_flank 30
+
+	*rpgobject char
+	{
+		*item0 weapon_axe_shatter
+		*weapon_dagger_long
+		*item_shield_thorn	
+		*attrib_health 400
+		*attrib_maxhealth 400
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_bow 1.0
+		*skill_crossbow 1.0
+		*skill_dagger 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+
+	*ai_skill 90
+	*ai_aimbonus 10
+	*ai_maxspeed 7.5
+	*ai_useflags switchweapon
+	//*ai_hitratio 100
+}
+
+*Ai_Berserker_Captain
+{
+	*classname ai_berserker
+	*character Bor'je
+	*model "players\\ogre\\OgreA1"
+	*team 1
+	*ai_charge 30
+	*ai_dodge 2
+	*ai_riposte 10
+	*ai_wait 4
+	*ai_tauntchance 15
+	*ai_standfast 20
+	*ai_flank 15
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_heavyclub
+		*item_shield_thorn
+		*attrib_health 150
+		*attrib_maxhealth 150
+		*skill_sword 0.7
+		*skill_axe 0.7
+		*skill_hammer 0.7
+		*skill_bow 0.7
+		*skill_crossbow 0.7
+		*skill_dagger 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_other	0, All=1
+
+	*ai_skill 50
+	*ai_aimbonus 3
+	*ai_maxspeed 7.0
+	*ai_useflags switchweapon
+	//*ai_hitratio 50
+}
+
+*Ai_Assassin
+{
+	*classname template_assassin
+	*character Assassin
+	*model "players\\assassin\\Assassin"
+	*phys_height_crouch 19
+
+	*speed_jump 18
+
+	*ai_evadespeed 5
+	*ai_charge 25
+	*ai_dodge 15
+	*ai_riposte 15
+	*ai_wait 5
+	*ai_tauntchance 15
+	*ai_standfast 25
+	*ai_flank 25
+	*rpgobject char
+	{
+		*attrib_health 60
+		*attrib_maxhealth 60
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_bow 0.7
+		*skill_crossbow 1.0
+		*skill_dagger 0.7
+	}
+}
+
+*Ai_Assassin_L0
+{
+	*classname ai_assassin
+	*character Assassin
+	*model "players\\assassin\\Assassin"
+	*team 1
+	*rpgobject char
+	{
+		*item0 weapon_crossbow_dwarven
+		*weapon_dagger_short
+		*attrib_health 60
+		*attrib_maxhealth 60
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_bow 0.7
+		*skill_crossbow 1.0
+		*skill_dagger 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Poison=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Poison=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Poison=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Poison=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Poison=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_other	0, All=1
+
+	*ai_skill 50
+	*ai_aimbonus 2
+	*ai_maxspeed 7.0
+	*ai_useflags switchweapon
+	//*ai_hitratio 50
+}
+
+*Ai_Assassin_L1
+{
+	*classname ai_assassin
+	*character Assassin Sneaker
+	*model "players\\assassin\\AssassinA1"
+	*team 1
+	*rpgobject char
+	{
+		*item0 weapon_crossbow_heavy
+		*weapon_dagger_long
+		*attrib_health 90
+		*attrib_maxhealth 90
+		*skill_sword 0.7
+		*skill_axe 0.7
+		*skill_hammer 0.7
+		*skill_bow 1.0
+		*skill_crossbow 1.2
+		*skill_dagger 0.8
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Poison=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Poison=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Poison=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Poison=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Poison=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_other	0, All=1
+
+	*ai_skill 70
+	*ai_aimbonus 4
+	*ai_maxspeed 7.25
+	*ai_useflags switchweapon
+	//*ai_hitratio 60
+}
+
+*Ai_Assassin_L2
+{
+	*classname ai_assassin
+	*character Assassin Stalker
+	*model "players\\assassin\\AssassinA2"
+	*team 1
+	*rpgobject char
+	{
+		*item0 weapon_bow_long
+		*weapon_dagger_curved
+		*attrib_health 160
+		*attrib_maxhealth 160
+		*skill_sword 0.85
+		*skill_axe 0.85
+		*skill_hammer 0.85
+		*skill_bow 1.25
+		*skill_crossbow 1.35
+		*skill_dagger 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.1, Poison=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.2, Poison=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.3, Poison=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.4, Poison=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.5, Poison=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+
+	*ai_skill 80
+	*ai_aimbonus 8
+	*ai_maxspeed 7.5
+	*ai_useflags switchweapon
+	//*ai_hitratio 80
+}
+
+*Ai_Assassin_L3
+{
+	*classname ai_assassin
+	*character Assassin Elite
+	*model "players\\assassin\\AssassinA3"
+	*team 1
+	*rpgobject char
+	{
+		*item0 weapon_bow_sniper
+		*weapon_dagger_curved
+		*attrib_health 320
+		*attrib_maxhealth 320
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_bow 1.5
+		*skill_crossbow 1.5
+		*skill_dagger 1.5
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.1, Poison=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.2, Poison=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.3, Poison=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.4, Poison=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.5, Poison=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+
+	*ai_skill 90
+	*ai_aimbonus 10
+	*ai_maxspeed 7.75
+	*ai_useflags switchweapon
+	//*ai_hitratio 100
+}
+
+*Ai_Sorceress
+{
+	*classname template_Sorceress
+	*character Sorceress
+	*model "players\\Sorceress\\Sorceress"
+
+	*speed_jump 18
+	*phys_height_crouch 19
+
+	*ai_evadespeed 5
+	*ai_charge 20
+	*ai_dodge 10
+	*ai_riposte 10
+	*ai_wait 10
+	*ai_tauntchance 0
+	*ai_standfast 20
+	*ai_flank 20
+	*rpgobject char
+	{
+		*skill_magic 1.0
+		*skill_dagger 1.0
+	}
+	*ai_useflags shockwave+magicshield
+}
+
+*Ai_Sorceress_L0
+{
+	*classname ai_Sorceress
+	*character Sorceress Novice
+	*model "players\\Sorceress\\Sorceress"
+	*team 1
+	*rpgobject char
+	{
+		*item0 weapon_staff_poison
+		*item1 item_staff_shield
+		*weapon_dagger_short
+		*attrib_health 70
+		*attrib_maxhealth 70
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 0.5
+		*skill_dagger 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.0, Slash+Crush+Hack+Stab+Unarmed=0.0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_other	0, All=1
+
+	*ai_skill 50
+	*ai_aimbonus 2
+	*ai_maxspeed 7.0
+	*ai_useflags magicshield
+	//*ai_hitratio 50
+}
+
+*Ai_Sorceress_L1
+{
+	*classname ai_Sorceress
+	*character Sorceress
+	*model "players\\Sorceress\\SorceressA1"
+	*team 1
+	*rpgobject char
+	{
+		*item0 weapon_staff_lightning
+		*item1 item_staff_shield
+		*weapon_dagger_long
+		*attrib_health 120
+		*attrib_maxhealth 120
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 0.7
+		*skill_dagger 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+	
+	*ai_skill 60
+	*ai_aimbonus 4
+	*ai_useflags magicshield+summon
+	*ai_maxspeed 7.2
+	//*ai_hitratio 65
+}
+
+*Ai_Sorceress_L2
+{
+	*classname ai_Sorceress
+	*character Sorceress Adept
+	*model "players\\Sorceress\\SorceressA2"
+	*team 1
+	*rpgobject char
+	{
+		*item0 weapon_staff_darkness
+		*item1 item_staff_shield
+		*weapon_dagger_curved
+		*attrib_health 170
+		*attrib_maxhealth 170
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 1.0
+		*skill_dagger 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_other	0, All=1
+
+	*ai_skill 70
+	*ai_aimbonus 8
+	*ai_useflags shockwave+magicshield+summon
+	*ai_maxspeed 7.4
+	//*ai_hitratio 80
+}
+
+*Ai_Sorceress_L3
+{
+	*classname ai_Sorceress
+	*character High Sorceress
+	*model "players\\Sorceress\\SorceressA3"
+	*team 1
+	*rpgobject char
+	{
+		*item0 weapon_staff_fire
+		*item1 item_staff_shield
+		*weapon_dagger_poison
+		*attrib_health 340
+		*attrib_maxhealth 340
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 1.5
+		*skill_dagger 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+
+	*ai_skill 80
+	*ai_aimbonus 10
+	*ai_useflags shockwave+magicshield+summon
+	*ai_maxspeed 7.6
+	//*ai_hitratio 100
+}
+
+*Ai_Lich
+{
+	*classname template_lich
+	*character Lich
+	*model "players\\Lich\\Lich"
+	*phys_height_crouch 20
+
+	*speed_jump 18
+
+	*ai_evadespeed 5
+	*ai_charge 15
+	*ai_dodge 5
+	*ai_riposte 25
+	*ai_wait 10
+	*ai_tauntchance 0
+	*ai_standfast 25
+	*ai_flank 20
+	*rpgobject char
+	{
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_dagger 1.0
+		*skill_magic 0.5
+		*skill_summon 1.0
+	}
+	*ai_useflags shockwave+magicshield+summon
+}
+
+*Ai_Lich_L0
+{
+	*classname ai_lich
+	*character Lesser Lich
+	*model "players\\Lich\\Lich"
+	*team 1
+	*rpgobject char
+	{
+		*weapon_dagger_short
+		*item0 item_staff_doom
+		*item1 item_staff_shield
+		*attrib_health 90
+		*attrib_maxhealth 90
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 0.3
+		*skill_summon 0.7
+		*skill_dagger 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Explosive+Special=0.0, Cold+Posion+Magic+Summon=0.05, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Explosive+Special=0.2, Cold+Posion+Magic+Summon=0.05, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Explosive+Special=0.3, Cold+Posion+Magic+Summon=0.05, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Explosive+Special=0.5, Cold+Posion+Magic+Summon=0.05, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Explosive+Special=0.7, Cold+Posion+Magic+Summon=0.05, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_other	0, All=1
+
+	*ai_skill 50
+	*ai_aimbonus 2
+	*ai_useflags magicshield+summon
+	*ai_maxspeed 7.0
+	//*ai_hitratio 20
+}
+
+*Ai_Lich_L1
+{
+	*classname ai_lich
+	*character Lich
+	*model "players\\Lich\\LichA1"
+	*team 1
+	*rpgobject char
+	{
+		*item0 weapon_staff_doom
+		*item1 item_staff_shield
+		*weapon_dagger_long
+		*attrib_health 140
+		*attrib_maxhealth 140
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 0.5
+		*skill_summon 1.0
+		*skill_dagger 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Explosive+Special=0.0, Cold+Posion+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Explosive+Special=0.2, Cold+Posion+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Explosive+Special=0.3, Cold+Posion+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Explosive+Special=0.5, Cold+Posion+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Explosive+Special=0.7, Cold+Posion+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_other	0, All=1
+
+	*ai_skill 60
+	*ai_aimbonus 4
+	*ai_useflags magicshield+summon
+	*ai_maxspeed 7.25
+	//*ai_hitratio 30
+}
+
+*Ai_Lich_L2
+{
+	*classname ai_lich
+	*character Greater Lich
+	*model "players\\Lich\\LichA2"
+	*team 1
+	*rpgobject char
+	{
+		*item0 weapon_staff_doom
+		*item1 item_staff_shield
+		*weapon_dagger_curved
+		*attrib_health 190
+		*attrib_maxhealth 190
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 0.7
+		*skill_summon 1.0
+		*skill_dagger 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Explosive+Special=0.0, Cold+Poison+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Explosive+Special=0.2, Cold+Poison+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Explosive+Special=0.3, Cold+Poison+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Explosive+Special=0.5, Cold+Poison+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Explosive+Special=0.7, Cold+Poison+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+
+	*ai_skill 70
+	*ai_aimbonus 8
+	*ai_useflags shockwave+magicshield+summon
+	*ai_maxspeed 7.5
+	//*ai_hitratio 40
+}
+
+*Ai_Lich_L3
+{
+	*classname ai_lich
+	*character Arch Lich
+	*model "players\\Lich\\LichA3"
+	*team 1
+	*rpgobject char
+	{
+		*item0 weapon_staff_doom
+		*item1 item_staff_shield
+		*weapon_dagger_poison
+		*attrib_health 380
+		*attrib_maxhealth 380
+		*attrib_mana 400
+		*attrib_maxmana 400
+		*skill_magic 1.0
+		*skill_summon 1.0
+		*skill_dagger 1.0
+	}
+	
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Explosive+Special=0.0, Cold+Poison+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Explosive+Special=0.2, Cold+Poison+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Explosive+Special=0.3, Cold+Poison+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Explosive+Special=0.5, Cold+Poison+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Explosive+Special=0.7, Cold+Poison+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+
+	*ai_skill 80
+	*ai_aimbonus 10
+	*ai_useflags shockwave+magicshield+summon		
+	*ai_maxspeed 7.75
+	//*ai_hitratio 100
+}
+
+*Ai_Bombardier
+{
+	*classname template_bombardier
+	*character Bombardier
+	*model "players\\Orc\\Bombardier"
+
+	*speed_jump 18
+	*phys_height_crouch 18
+
+	*ai_evadespeed 5
+	*ai_charge 25
+	*ai_dodge 5
+	*ai_riposte 15
+	*ai_wait 2
+	*ai_tauntchance 25
+	*ai_standfast 25
+	*ai_flank 15
+	*rpgobject char
+	{
+		*attrib_health 80
+		*attrib_maxhealth 80
+		*skill_sword 0.5
+		*skill_axe 0.4
+		*skill_hammer 0.3
+		*skill_bow 0.5
+		*skill_crossbow 0.5
+		*skill_bow 0.5
+		*skill_bomb 0.5
+	}
+}
+
+*Ai_Bombardier_L0
+{
+	*classname ai_bombardier
+	*character Orc Apprentice
+	*model "players\\Orc\\Bombardier"
+	*team 1
+	*ai_charge 25
+	*ai_dodge 5
+	*ai_riposte 15
+	*ai_wait 2
+	*ai_tauntchance 25
+	*ai_standfast 25
+	*ai_flank 15
+
+	*rpgobject char
+	{
+		*item0 weapon_sword_short
+		*weapon_dagger_short
+		*attrib_health 80
+		*attrib_maxhealth 80
+		*skill_sword 0.5
+		*skill_axe 0.4
+		*skill_hammer 0.3
+		*skill_bow 0.5
+		*skill_crossbow 0.5
+		*skill_bow 0.5
+		*skill_bomb 0.5
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Special=0.0, Explosive=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.1, Explosive=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.2, Explosive=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.4, Explosive=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.6, Explosive=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_other	0, All=1
+
+	*ai_skill 10
+	*ai_aimbonus 1
+	*ai_maxspeed 7.0
+	*ai_useflags switchweapon
+	//*ai_hitratio 20
+}
+
+*Ai_Bombardier_L1
+{
+	*classname ai_bombardier
+	*character Orc Bombardier
+	*model "players\\Orc\\BombardierA1"
+	*team 1
+	*ai_charge 25
+	*ai_dodge 5
+	*ai_riposte 15
+	*ai_wait 2
+	*ai_tauntchance 20
+	*ai_standfast 20
+	*ai_flank 15
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_morningstar
+		*weapon_dagger_short
+		*attrib_health 130
+		*attrib_maxhealth 130
+		*skill_sword 0.7
+		*skill_axe 0.6
+		*skill_hammer 0.5
+		*skill_bow 0.3
+		*skill_crossbow 0.7
+		*skill_bomb 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Special=0.0, Explosive=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.1, Explosive=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.2, Explosive=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.4, Explosive=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.6, Explosive=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_other	0, All=1
+
+
+	*ai_skill 40
+	*ai_aimbonus 3
+	*ai_maxspeed 7.4
+	*ai_useflags switchweapon
+	//*ai_hitratio 50
+}
+
+*Ai_Bombardier_L2
+{
+	*classname ai_bombardier
+	*character Orc Deathcrafter
+	*model "players\\Orc\\BombardierA2"
+	*team 1
+	*ai_charge 25
+	*ai_dodge 10
+	*ai_riposte 10
+	*ai_wait 2
+	*ai_tauntchance 15
+	*ai_standfast 15
+	*ai_flank 20
+
+	*rpgobject char
+	{
+		*item0 weapon_sword_falchion
+		*weapon_dagger_long
+		*attrib_health 180
+		*attrib_maxhealth 180
+		*skill_sword 0.9
+		*skill_axe 0.8
+		*skill_hammer 0.7
+		*skill_bow 0.8
+		*skill_crossbow 0.8
+		*skill_bomb 0.8
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Special=0.0, Explosive=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.1, Explosive=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.2, Explosive=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.4, Explosive=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.6, Explosive=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_other	0, All=1
+
+	*ai_skill 60
+	*ai_aimbonus 6
+	*ai_maxspeed 7.5
+	*ai_useflags switchweapon
+	//*ai_hitratio 70
+}
+
+*Ai_Bombardier_L3
+{
+	*classname ai_bombardier
+	*character Orc Destructor
+	*model "players\\Orc\\BombardierA3"
+	*team 1
+	*ai_charge 30
+	*ai_dodge 10
+	*ai_riposte 10
+	*ai_wait 0
+	*ai_tauntchance 10
+	*ai_standfast 10
+	*ai_flank 25
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_chaos
+		*weapon_dagger_long
+		*item_shield_chaos
+		*attrib_health 360
+		*attrib_maxhealth 360
+		*skill_sword 1.0
+		*skill_axe 0.9
+		*skill_hammer 0.8
+		*skill_bow 1.0
+		*skill_crossbow 1.0
+		*skill_bomb 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Special=0.0, Explosive=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.1, Explosive=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.2, Explosive=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.3, Explosive=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.6, Explosive=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_other	0, All=1
+	
+	*ai_skill 80
+	*ai_aimbonus 10
+	*ai_maxspeed 7.6
+	*ai_useflags switchweapon
+	//*ai_hitratio 100
+}
+
+*Ai_Bombardier_Act
+{
+	*classname ai_bombardier
+	*character Orc Apprentice
+	*model "players\\Orc\\Bombardier"
+	*team 1
+
+	*rpgobject char
+	{
+		*item0 item_none
+		*item1 item_none
+		*attrib_health 80
+		*attrib_maxhealth 80
+	}
+}
+
+*Ai_Bombardier_Ghost
+{
+	*classname ai_bombardier
+	*character Ghost Orch
+	*model "players\\Orc\\OrcGhost"
+	*team 1
+	*ai_charge 25
+	*ai_dodge 10
+	*ai_riposte 10
+	*ai_wait 2
+	*ai_tauntchance 15
+	*ai_standfast 15
+	*ai_flank 20
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_war
+		*item1 item_shield_round
+		*weapon_axe_brute
+		*attrib_health 180
+		*attrib_maxhealth 180
+		*skill_sword 0.9
+		*skill_axe 0.8
+		*skill_hammer 0.7
+		*skill_bow 0.8
+		*skill_crossbow 0.8
+		*skill_bomb 0.8
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Special=0.0, Explosive=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.1, Explosive=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.2, Explosive=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.4, Explosive=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.6, Explosive=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_other	0, All=1
+
+	*ai_skill 60
+	*ai_aimbonus 6
+	*ai_maxspeed 7.4
+	*ai_useflags switchweapon
+	//*ai_hitratio 70
+}
+
+*Ai_Wolfrider
+{
+	*classname template_wolfrider
+	*character Goblin
+	*model "players\\wolfrider\\wolfrider"
+	*phys_height_crouch 18
+
+	*speed_jump 18
+
+	*ai_evadespeed 4
+	*ai_charge 20
+	*ai_dodge 10
+	*ai_riposte 20
+	*ai_wait 5
+	*ai_tauntchance 35
+	*ai_standfast 20
+	*ai_flank 20
+
+	*rpgobject char
+	{
+		*attrib_health 50
+		*attrib_maxhealth 50
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_bow 0.5
+		*skill_crossbow 0.5
+		*skill_unarmed 0.5
+	}
+}
+
+*Ai_Wolfrider_L0
+{
+	*classname ai_wolfrider
+	*character Snotling
+	*model "players\\wolfrider\\wolfrider"
+	*team 1
+	*ai_charge 20
+	*ai_dodge 10
+	*ai_riposte 20
+	*ai_wait 5
+	*ai_tauntchance 35
+	*ai_standfast 20
+	*ai_flank 20
+
+	*rpgobject char
+	{
+		*item0 weapon_axe_bearded
+		*weapon_dagger_short
+		*attrib_health 50
+		*attrib_maxhealth 50
+		*skill_sword 0.6
+		*skill_axe 0.5
+		*skill_hammer 0.4
+		*skill_bow 0.5
+		*skill_crossbow 0.5
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*protection_factor_other	0, All=1
+
+	*ai_skill 5
+	*ai_aimbonus 1
+	*ai_maxspeed 7.2
+	*ai_useflags switchweapon
+	//*ai_hitratio 30
+}
+
+*Ai_Wolfrider_L1
+{
+	*classname ai_wolfrider
+	*character Goblin 
+	*model "players\\wolfrider\\wolfriderA1"
+	*team 1
+	*ai_charge 20
+	*ai_dodge 10
+	*ai_riposte 15
+	*ai_wait 5
+	*ai_tauntchance 30
+	*ai_standfast 20
+	*ai_flank 20
+
+	*rpgobject char
+	{
+		*item0 weapon_axe_short
+		*weapon_dagger_short
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_sword 0.7
+		*skill_axe 0.6
+		*skill_hammer 0.5
+		*skill_bow 0.2
+		*skill_crossbow 0.5
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_other	0, All=1
+
+	*ai_skill 10
+	*ai_aimbonus 3
+	*ai_maxspeed 7.3
+	*ai_useflags switchweapon
+	//*ai_hitratio 60
+}
+
+*Ai_Wolfrider_L2
+{
+	*classname ai_wolfrider
+	*character Goblin Warrior
+	*model "players\\wolfrider\\wolfriderA2"
+	*team 1
+	*ai_charge 25
+	*ai_dodge 10
+	*ai_riposte 10
+	*ai_wait 5
+	*ai_tauntchance 25
+	*ai_standfast 15
+	*ai_flank 20	
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_morningstar
+		*weapon_dagger_long
+		*attrib_health 150
+		*attrib_maxhealth 150
+		*skill_sword 1.0
+		*skill_axe 0.8
+		*skill_hammer 0.7
+		*skill_bow 0.7
+		*skill_crossbow 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_other	0, All=1
+
+	*ai_skill 50
+	*ai_aimbonus 6
+	*ai_maxspeed 7.4
+	*ai_useflags switchweapon
+	//*ai_hitratio 80
+}
+
+*Ai_Wolfrider_L3
+{
+	*classname ai_wolfrider
+	*character Goblin Fanatic
+	*model "players\\wolfrider\\wolfriderA3"
+	*team 1
+	*ai_charge 30
+	*ai_dodge 5
+	*ai_riposte 5
+	*ai_wait 5
+	*ai_tauntchance 20
+	*ai_standfast 15
+	*ai_flank 20
+
+	*rpgobject char
+	{
+		*item0 weapon_axe_war
+		*weapon_dagger_long
+		*item_shield_brute
+		*attrib_health 300
+		*attrib_maxhealth 300
+		*skill_sword 1.0
+		*skill_axe 0.9
+		*skill_hammer 0.8
+		*skill_bow 1.0
+		*skill_crossbow 1.25
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_other	0, All=1
+
+	*ai_skill 80
+	*ai_aimbonus 10
+	*ai_maxspeed 7.5
+	*ai_useflags switchweapon
+	//*ai_hitratio 100
+}
+
+*Ai_Paladin
+{
+	*classname template_char
+	*character Paladin
+	*dialogue Dlg_Paladin
+	*model "players\\paladin\\paladin"
+
+	*speed_jump 18
+	*phys_height_crouch 22
+
+	*ai_evadespeed 5
+	*ai_charge 25
+	*ai_dodge 5
+	*ai_riposte 10
+	*ai_wait 2
+	*ai_tauntchance 25
+	*ai_standfast 25
+	*ai_flank 15
+	*dialogue Dlg_Paladin
+	
+	*ai_charge 30
+	*ai_dodge 2
+	*ai_riposte 20
+	*ai_wait 5
+	*ai_tauntchance 10
+	*ai_standfast 15
+	*ai_flank 10
+
+	*rpgobject char
+	{
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_bow 1.0
+		*skill_crossbow 1.0
+	}
+}
+
+*Ai_Paladin_L0
+{
+	*classname ai_paladin
+	*character Footman
+	*model "players\\paladin\\paladin"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_sword_lightshort
+		*weapon_dagger_short
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_crossbow 0.5
+		*skill_bow 0.5
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_other	0, All=1
+
+	*ai_skill 10
+	*ai_aimbonus 1
+	*ai_maxspeed 6.5
+	*ai_useflags switchweapon
+	//*ai_hitratio 20
+}
+
+*Ai_Paladin_L1
+{
+	*classname ai_paladin
+	*character Soldier
+	*model "players\\paladin\\paladina1"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_sword_broad
+		*weapon_dagger_short
+		*attrib_health 150
+		*attrib_maxhealth 150
+		*skill_sword 0.7
+		*skill_axe 0.7
+		*skill_hammer 0.7
+		*skill_crossbow 0.7
+		*skill_bow 0.7
+		*skill_dagger 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_other	0, All=1
+
+	*ai_skill 50
+	*ai_aimbonus 3
+	*ai_maxspeed 7.0
+	*ai_useflags switchweapon
+	//*ai_hitratio 40
+}
+
+*Ai_Paladin_L1_Act
+{
+	*classname ai_paladin
+	*character Soldier
+	*model "players\\paladin\\paladina1"
+	*team 0
+	*rpgobject char
+	{
+	}
+}
+
+*Ai_Paladin_L2
+{
+	*classname ai_paladin
+	*character Paladin
+	*model "players\\paladin\\paladina2"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_sword_dwarven
+		*weapon_dagger_long
+		*attrib_health 200
+		*attrib_maxhealth 200
+		*skill_sword 0.85
+		*skill_axe 0.85
+		*skill_hammer 0.85
+		*skill_crossbow 0.85
+		*skill_bow 0.85
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1	
+
+	*ai_skill 70
+	*ai_aimbonus 6
+	*ai_maxspeed 7.5
+	*ai_useflags switchweapon
+	//*ai_hitratio 60
+}
+
+*Ai_Paladin_L3
+{
+	*classname ai_paladin
+	*character Templar
+	*model "players\\paladin\\paladina3"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_sword_bastard
+		*weapon_dagger_long
+		*item_shield_kite
+		*attrib_health 400
+		*attrib_maxhealth 400
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_crossbow 1.0
+		*skill_bow 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=3
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.6, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+
+	*ai_skill 90
+	*ai_aimbonus 10
+	*ai_maxspeed 8.0
+	*ai_useflags switchweapon
+	//*ai_hitratio 100
+}
+
+*template_wolf
+{
+	*classname template_char
+	*team 1
+	*anim boar2
+	*speed_forward 12
+	*speed_jump 18
+
+	*models "players\\wolfrider\\wolf;players\\wolfrider\\wolfA1;players\\wolfrider\\wolfA2;players\\wolfrider\\wolfA3"
+}
+
+*Ai_Wolf
+{
+	*classname template_wolf
+	*character Wolf
+	*model "players\\wolfrider\\wolf"
+	*ai_evadespeed 8
+}
+
+*Ai_Wolf_L0
+{
+	*classname ai_wolf
+	*character Wolf L0
+	*model "players\\wolfrider\\wolf"
+}
+
+*Ai_Wolf_L1
+{
+	*classname ai_wolf
+	*character Wolf L1
+	*model "players\\wolfrider\\wolfA1"
+}
+
+*Ai_Wolf_L2
+{
+	*classname ai_wolf
+	*character Wolf L2
+	*model "players\\wolfrider\\wolfA2"
+}
+
+*Ai_Wolf_L3
+{
+	*classname ai_wolf
+	*character Wolf L3
+	*model "players\\wolfrider\\wolfA3"
+}
+
+*template_boar
+{
+	*classname template_char
+	*team 0
+	*anim boar2
+	*speed_forward 12
+	*speed_jump 18
+
+	*models "players\\boarrider\\boar;players\\boarrider\\boarA1;players\\boarrider\\boarA2;players\\boarrider\\boarA3"
+}
+
+*Ai_Boar
+{
+	*classname template_boar
+	*character Boar
+	*model "players\\boarrider\\boar"
+	*ai_evadespeed 8
+}
+
+*Ai_Boar_L0
+{
+	*classname ai_boar
+	*character Boar
+	*model "players\\boarrider\\boar"
+}
+
+*Ai_Boar_L1
+{
+	*classname ai_boar
+	*character Boar
+	*model "players\\boarrider\\boarA1"
+}
+
+*Ai_Boar_L2
+{
+	*classname ai_boar
+	*character Boar
+	*model "players\\boarrider\\boarA2"
+}
+
+*Ai_Boar_L3
+{
+	*classname ai_boar
+	*character Boar
+	*model "players\\boarrider\\boarA3"
+}
+
+*Ai_Wraith
+{
+	*classname template_char
+	*character Lesser Wraith
+	*animlist Anim_Wraith
+	*model "players\\wraith\\wraith"
+	*ai_evadespeed 8
+	*team -1
+	*dialogue Dlg_Wraith
+	*sound wra_entity
+	*spawn_sound wra_spawn02
+	*ai_type Wraith
+	*ai_behaviour Wraith
+	*ai_awareness 200
+	*ai_charge 20
+	*ai_dodge 0
+	*ai_riposte 0
+	*ai_wait 0
+	*ai_standfast 0
+	*ai_tauntchance 0
+	*ai_flank 10	
+
+	*phys_width 10
+	*phys_height 10
+	*phys_height_crouch 10
+	*phys_dead_radius 10
+	*phys_stepsize 23.5
+	*phys_friction 0.8
+	
+	*phys_flyer 1
+	*phys_ghost 1
+	*phys_nogravity 1
+
+	*no_shadow 1
+	
+	*speed_forward 7
+	*speed_up 7
+
+	*damage_factor_skin		1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head		1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs		1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms		1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+	
+	*damage_effect damageeffect_wraith
+	*death_effect deatheffect_wraith
+	*hidewhendead 1
+}
+
+*Ai_Wraith_L0
+{
+	*classname ai_wraith
+	*character Lesser Wraith
+
+	*animlist Anim_Wraith
+	*model "players\\wraith\\wraith"
+//	*model1	"Particles:,MP=50,SU=Wraith_Particle0,DU=5,DUN=12,FI=0.01,MV2=-4,MV3=4,MV4=4,SZ0=50,SZ1=70,SZ2=0.1,SZ3=0.2,SZ4=1,RT0=-4,RT1=4,RT2=-4,RT3=4,RT4=2,TC=0.03,TCS=0.03"
+	*team -1
+	*dialogue Dlg_Wraith
+	*sound wra_entity
+	*spawn_sound wra_spawn02
+	*ai_type Wraith
+	*ai_behaviour Wraith
+	*ai_awareness 200
+	*ai_wraithattacks 1
+	*ai_wraithtimer 0.01
+
+	*rpgobject char
+	{
+		*item0 weapon_wraith
+		*attrib_health 10
+		*attrib_maxhealth 10
+		*skill_unarmed 1.0
+	}
+
+	*damage_effect damageeffect_wraith
+	*death_effect deatheffect_wraith
+	*hidewhendead 1
+}
+
+*Ai_Wraith_L1
+{
+	*classname ai_wraith
+	*character Shadow Wraith
+
+	*animlist Anim_Wraith
+	*model "players\\wraith\\wraith_black"
+//	*model1	"Particles:,MP=50,SU=Wraith_Particle0,CO=0xFF000000,DU=5,DUN=12,FI=0.01,MV2=-4,MV3=4,MV4=4,SZ0=50,SZ1=70,SZ2=0.1,SZ3=0.2,SZ4=1,RT0=-4,RT1=4,RT2=-4,RT3=4,RT4=2,TC=0.03,TCS=0.03"
+	*team -1
+	*dialogue Dlg_Wraith
+	*sound wra_entity
+	*spawn_sound wra_spawn01
+	*ai_type Wraith
+	*ai_behaviour Wraith
+	*ai_awareness 200
+	*ai_wraithattacks 1
+	*ai_wraithtimer 0.01
+
+	*rpgobject char
+	{
+		*item0 weapon_wraith
+		*attrib_health 25
+		*attrib_maxhealth 25
+		*skil_unarmed 1.0
+	}
+
+	*damage_effect damageeffect_wraithblack
+	*death_effect deatheffect_wraithblack
+	*hidewhendead 1
+}
+
+*Ai_Wraith_L2
+{
+	*classname ai_wraith
+	*character Mist Wraith
+
+	*animlist Anim_Wraith
+	*model "players\\wraith\\wraith_green"
+//	*model1	"Particles:,MP=50,SU=Wraith_Particle0,CO=0xFF33CC33,DU=5,DUN=12,FI=0.01,MV2=-4,MV3=4,MV4=4,SZ0=50,SZ1=70,SZ2=0.1,SZ3=0.2,SZ4=1,RT0=-4,RT1=4,RT2=-4,RT3=4,RT4=2,TC=0.03,TCS=0.03"
+	*team -1
+	*dialogue Dlg_Wraith
+	*sound wra_entity
+	*spawn_sound wra_spawn02
+	*ai_type Wraith
+	*ai_behaviour Wraith
+	*ai_awareness 200
+
+	*ai_wraithattacks 1
+	*ai_wraithtimer 0.01
+
+
+	*rpgobject char
+	{
+		*item0 weapon_wraith
+		*attrib_health 75
+		*attrib_maxhealth 75
+		*skill_unarmed 1.0
+	}
+
+	*damage_effect damageeffect_wraithgreen
+	*death_effect deatheffect_wraithgreen
+	*hidewhendead 1
+}
+
+*Ai_Wraith_L3
+{
+	*classname ai_wraith
+	*character Hell Wraith
+
+	*animlist Anim_Wraith
+	*model "players\\wraith\\wraith_red"
+//	*model1	"Particles:,MP=50,SU=Wraith_Particle0,CO=0xFFFF0000,DU=5,DUN=12,FI=0.01,MV2=-4,MV3=4,MV4=4,SZ0=50,SZ1=70,SZ2=0.1,SZ3=0.2,SZ4=1,RT0=-4,RT1=4,RT2=-4,RT3=4,RT4=2,TC=0.03,TCS=0.03"
+	*team -1
+	*dialogue Dlg_Wraith
+	*sound wra_entity
+	*spawn_sound wra_spawn01
+	*ai_type Wraith
+	*ai_behaviour Wraith
+	*ai_awareness 200
+
+	*ai_wraithattacks 1
+	*ai_wraithtimer 0.01
+
+	*rpgobject char
+	{
+		*item0 weapon_wraith
+
+		*attrib_health 25
+		*attrib_maxhealth 25
+		*skill_unarmed 1.0
+	}
+
+	*damage_effect damageeffect_wraithred
+	*death_effect deatheffect_wraithred
+	*hidewhendead 1
+}
+
+*Ai_Vulture
+{
+	*classname template_char
+	*character Vulture
+	*model "players\\vulture\\vulture"
+	*ai_evadespeed 8
+	*team -1
+	*animlist Anim_Vulture
+	*dialogue Dlg_Vulture
+	
+	*ai_type Vulture
+	*ai_behaviour Vulture
+	*ai_awareness 400
+	*ai_charge 20
+	*ai_dodge 0
+	*ai_riposte 0
+	*ai_wait 0
+	*ai_standfast 0
+	*ai_tauntchance 0
+	*ai_flank 10	
+
+	*phys_width 20
+	*phys_height 20
+	*phys_height_crouch 20
+	*phys_dead_radius 8
+	*phys_stepsize 23.5
+	*phys_friction 0.8
+	
+	*phys_flyer 1
+	*phys_ghost 1
+	*phys_nogravity 1
+
+	*no_shadow 1
+	
+	*speed_forward 7
+	*speed_up 7
+}
+
+*Ai_Vulture_L0
+{
+	*classname ai_vulture
+	*character Astral Vulture
+
+	*animlist Anim_Vulture
+	*model "players\\vulture\\astralvulture"
+	*model1 "particles:setting=vulturetrail"
+	*phys_flyer 1
+	*dialogue Dlg_Vulture
+	*sound 
+	*ai_type Wraith
+	*ai_behaviour Wraith
+	*ai_awareness 400
+
+	*rpgobject char
+	{
+		*item0 weapon_wraith
+		*attrib_health 10
+		*attrib_maxhealth 10
+		*skill_unarmed 1.0
+	}
+	
+	*damage_effect damageeffect_wraith
+	*death_effect deatheffect_wraith
+	*hidewhendead 1
+}
+
+*Ai_Vulture_L1
+{
+	*classname ai_vulture
+	*character Vulture
+
+	*animlist Anim_Vulture
+	*model "players\\vulture\\vulture"
+	*phys_flyer 1
+	*dialogue Dlg_Vulture
+	*sound 
+	*ai_type Wraith
+	*ai_behaviour Wraith
+	*ai_awareness 0
+
+	*rpgobject char
+	{
+		*item0 weapon_wraith
+		*attrib_health 10
+		*attrib_maxhealth 10
+		*skill_unarmed 1.0
+	}
+}
+
+*Ai_DragonBat
+{
+	*classname template_char
+	*character Dragon Bat
+	*model "players\\DragonBat\\DragonBat"
+	*ai_evadespeed 8
+	*team -1
+	*animlist Anim_Vulture
+	*dialogue Dlg_Wraith
+	
+	*ai_type Vulture
+	*ai_behaviour Vulture
+	*ai_awareness 400
+	*ai_charge 20
+	*ai_dodge 0
+	*ai_riposte 0
+	*ai_wait 0
+	*ai_standfast 0
+	*ai_tauntchance 0
+	*ai_flank 10	
+
+	*phys_width 20
+	*phys_height 20
+	*phys_height_crouch 20
+	*phys_dead_radius 8
+	*phys_stepsize 23.5
+	*phys_friction 0.8
+	
+	*phys_flyer 1
+	*phys_ghost 1
+	*phys_nogravity 1
+
+	*no_shadow 1
+	
+	*speed_forward 10
+	*speed_up 10
+	
+	*damage_effect damageeffect_wraithblack
+	*death_effect deatheffect_wraithblack
+	*hidewhendead 1
+}
+
+*Ai_DragonBat_L0
+{
+	*classname ai_vulture
+	*character Dragon Bat
+
+	*animlist Anim_Vulture
+	*model "players\\DragonBat\\DragonBat"
+	*model1 "particles:setting=dragonbattrail"
+	*phys_flyer 1
+	*dialogue Dlg_Wraith
+	*sound 
+	*ai_type Wraith
+	*ai_behaviour Wraith
+	*ai_awareness 400
+
+	*rpgobject char
+	{
+		*item0 weapon_wraith
+		*attrib_health 10
+		*attrib_maxhealth 10
+		*skill_unarmed 1.0
+	}
+	
+	*damage_effect damageeffect_wraithblack
+	*death_effect deatheffect_wraithblack
+	*hidewhendead 1
+}
+
+*Ai_DragonBat_L1
+{
+	*classname ai_vulture
+	*character Dragon Bat
+
+	*animlist Anim_Vulture
+	*model "players\\DragonBat\\DragonBat"
+	*phys_flyer 1
+	*dialogue Dlg_Wraith
+	*sound 
+	*ai_type Wraith
+	*ai_behaviour Wraith
+	*ai_awareness 0
+
+	*rpgobject char
+	{
+		*item0 weapon_wraith
+		*attrib_health 10
+		*attrib_maxhealth 10
+		*skill_unarmed 1.0
+	}
+	
+	*damage_effect damageeffect_wraithblack
+	*death_effect deatheffect_wraithblack
+	*hidewhendead 1
+}
+
+*Ai_Special_Vatar
+{
+	*classname template_char
+	*character Vatar
+	*model "players\\vatar\\vatar"
+	*phys_width 32
+	*phys_height 100
+	*team 1
+	*animlist Anim_Vatar
+	*speed_forward 10
+	*speed_up 10
+	*ai_maxspeed 10	
+	*rpgobject char
+	{
+		*weapon_vatar_normal
+		*weapon_vatar_homing
+		*weapon_vatar_grenade
+		*weapon_vatar_stomp
+		*attrib_health 3500
+		*attrib_maxhealth 3500
+		*attrib_mana 5000
+		*attrib_maxmana 5000
+		*skill_unarmed 1.0
+		*skill_magic 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=2
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_other	0, All=1
+
+	*ai_evadespeed 5
+	*ai_skill 85
+	*ai_type Vatar
+	*ai_behaviour Vatar
+	*ai_personality Berserker
+	*FLAGS "NonPushable"+"noblink"
+	//*ai_hitratio 90
+	
+	*camera_stand_head_offset 0, 0, 120 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	*camera_crouch_head_offset 0, 0, 120 // (same as above)
+	*camera_behind_head_offset 0, -100, -400 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+	*camera_shoulder_offset 30, 0, 0 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+}
+
+*Ai_Special_Durzu
+{
+	*classname template_char
+	*character Durzu
+	*model "players\\durzu\\durzu"
+	*phys_width 96
+	*phys_height 100
+	*phys_height_crouch 48
+	*phys_stepsize 48
+
+	*speed_jump 20
+
+	*animlist Anim_Durzu
+	*dialogue Dlg_Durzu
+	*team 1
+	*rpgobject char
+	{
+		*weapon_quakefist
+		*weapon_lavaball
+		*weapon_lavaball_spawn
+		*skill_unarmed 1.0
+		*skill_magic 1.0
+		*attrib_health 2000
+		*attrib_maxhealth 2000
+	}
+
+	*damage_factor_default	1, Sniper+Pierce=0, Fire=0, Cold=0, Poison=0, Magic+Summon=0, Explosive=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*damage_factor_skin		1, Sniper+Pierce=0, Fire=0, Cold=0, Poison=0, Magic+Summon=0, Explosive=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*damage_factor_head		1, Sniper+Pierce=0, Fire=0, Cold=0, Poison=0, Magic+Summon=0, Explosive=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*damage_factor_legs		1, Sniper+Pierce=0, Fire=0, Cold=0, Poison=0, Magic+Summon=0, Explosive=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*damage_factor_arms		1, Sniper+Pierce=0, Fire=0, Cold=0, Poison=0, Magic+Summon=0, Explosive=0, Slash+Crush+Hack+Stab+Unarmed=0
+	*damage_factor_other	1, All=0
+
+	*ai_type Durzu
+	*ai_evadespeed 5
+	*ai_skill 20
+	//*ai_hitratio 70
+	*ai_behaviour Durzu
+	*ai_personality Berserker
+	*damage_effect attach_hit_durzu
+	*hidewhendead 1
+	*ai_immortal 1
+	*ai_explodetime 5
+	*ai_explosion durzu_death_explosion
+	*ai_maxspawn 2	
+	*FLAGS "NonPushable"+"noblink"
+
+	*camera_stand_head_offset 0, 0, 120 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	*camera_crouch_head_offset 0, 0, 120 // (same as above)
+	*camera_behind_head_offset 0, -100, -400 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+	*camera_shoulder_offset 30, 0, 0 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+}
+
+*Ai_Special_Zurana
+{
+	*classname character
+
+	*phys_friction 0.8
+	*speed_forward 18
+	*speed_up 18
+	*ai_maxspeed 18
+	*deathanims animlist:221,animlist:222,animlist:223,animlist:224,animlist:220
+
+	*blood_color 255, 255, 255
+
+	*ai_min_idle_sound_interval 5
+	*ai_max_idle_sound_interval 50
+
+	*camera_face_offset 0, 0, 0 //From mouth attachpoint, in model space (Fwd, Left, Up)
+
+	*character Zurana
+	*model "players\\Zurana\\Zurana"
+	*phys_width 80
+	*phys_height 200
+	*phys_height_crouch 100
+	*phys_stepsize 48
+
+	*speed_jump 0
+
+	*animlist Anim_Zurana
+	*dialogue Dlg_Zurana
+	*team 1
+	*rpgobject char
+	{
+		*weapon_claw_ZuranasHighSwat
+		*weapon_claw_ZuranasLowSwat
+		*item_shield_zuranas
+		*attrib_health 3500
+		*attrib_maxhealth 3500
+		*skill_unarmed 1.0
+		*skill_magic 1.0
+		*skill_sword 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive=0, Slash+Crush+Hack+Stab=0, Unarmed+Special=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive=0, Slash+Crush+Hack+Stab=0, Unarmed+Special=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive=0, Slash+Crush+Hack+Stab=0, Unarmed+Special=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive=0, Slash+Crush+Hack+Stab=0, Unarmed+Special=1 
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab=1, Unarmed+Special=0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab=1, Unarmed+Special=0
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab=1, Unarmed+Special=0
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab=1, Unarmed+Special=0
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab=1, Unarmed+Special=0
+	*protection_factor_other	0, All=1
+	*FLAGS "NonPushable"+"noblink"+"alwaysvisible"
+
+	*ai_type Zurana
+	*ai_behaviour Zurana
+	*ai_personality Berserker
+	*ai_evadespeed 5
+	*ai_skill 80
+	//*ai_hitratio 70
+	*ai_useflags combo
+}
+
+*Ai_Special_Zurana_Copy
+{
+	*classname ai_special_zurana
+	*character Daemoncopy 
+	*dialogue Dlg_Zurana2
+	*model "players\\Zurana\\ZuranaMagic"
+	*team 0
+
+	*no_shadow 1
+
+	*rpgobject char
+	{
+		*item0 weapon_claw_ZuranasHighSwat
+		*item1 item_shield_zuranas
+		*attrib_health 3000
+		*attrib_maxhealth 3000
+		*skill_unarmed 1.0
+		*skill_magic 1.0
+		*skill_sword 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive=0, Slash+Crush+Hack+Stab=0, Unarmed+Special=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive=0, Slash+Crush+Hack+Stab=0, Unarmed+Special=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive=0, Slash+Crush+Hack+Stab=0, Unarmed+Special=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive=0, Slash+Crush+Hack+Stab=0, Unarmed+Special=1 
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab=1, Unarmed+Special=0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab=1, Unarmed+Special=0
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab=1, Unarmed+Special=0
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab=1, Unarmed+Special=0
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab=1, Unarmed+Special=0
+	*protection_factor_other	0, All=1
+
+	*FLAGS "NonPushable"+"noblink"+"nocrouch"
+	*camera_stand_head_offset 0, 0, 300 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	*camera_crouch_head_offset 0, 0, 120 // (same as above)
+	*camera_behind_head_offset 0, -100, -300 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+	*camera_shoulder_offset 30, 0, 0 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+}
+
+*Ai_Special_Dragon
+{
+	*classname template_char
+	*character Fyrlakith
+	*model "players\\dragon\\dragon"
+
+	*phys_width 127
+	*phys_height 96
+	*phys_height_crouch 64
+	*phys_stepsize 48
+	*phys_nogravity 1
+	*phys_flyer 1
+
+	*speed_forward 12
+	*speed_up 12
+	*speed_jump 50
+
+	*animlist Anim_Dragon
+	*dialogue Dlg_Dragon
+	*team 0
+	*rpgobject char
+	{
+		*weapon_dragonbreath
+		*weapon_dragonball
+		*attrib_health 1250
+		*attrib_maxhealth 1250
+		*skill_unarmed 1.0
+		*skill_magic 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Slash+Crush+Hack+Stab+Unarmed=1, Special=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Slash+Crush+Hack+Stab+Unarmed=1, Special=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Slash+Crush+Hack+Stab+Unarmed=1, Special=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Slash+Crush+Hack+Stab+Unarmed=1, Special=1 
+	*damage_factor_other		1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Slash+Crush+Hack+Stab+Unarmed=1, Special=1
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab+Unarmed=0.85, Special=0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab+Unarmed=0.85, Special=0
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab+Unarmed=0.85, Special=0
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab+Unarmed=0.85, Special=0
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab+Unarmed=0.85, Special=0
+	*protection_factor_other	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab+Unarmed=0.85, Special=0
+	
+	//*damage_factor_default 	1, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab+Unarmed=0, Special=1"
+	//*damage_factor_head 	2, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab+Unarmed=0, Special=1"
+
+	*ai_immortal 99
+
+	*ai_sightrange 2000
+	*ai_sight 100
+	*ai_awareness 1000
+	*FLAGS "NonPushable"+"noblink"
+
+	*damage_effect attach_hit_dragon
+	
+	*ai_evadespeed 5
+	*ai_skill 100
+	*ai_type Dragon
+	*ai_behaviour Dragon
+	*ai_personality Berserker
+
+	//Don't need camera but this influences activate position
+	*camera_stand_head_offset 0, 0, 64 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	*camera_behind_head_offset 0, 0, 100 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+}
+
+*Ai_Mordessa
+{
+	*classname template_char
+	*character Mordessa
+	*model "players\\Mordessa\\Mordessa"
+	*animlist anim_archer	
+	*team 1
+	*dialogue Dlg_Mordessa
+
+	*ai_tauntchance 0
+	*ai_awareness 100
+	*ai_charge 20
+	*ai_dodge 0
+	*ai_riposte 0
+	*ai_wait 0
+	*ai_standfast 0
+	*ai_tauntchance 10
+	*ai_flank 0
+	*speed_forward 10
+	*speed_up 10
+	*speed_jump 18
+	*phys_height 35
+
+	*ai_maxspeed 10
+
+	*lipsync_limits -5,27
+	
+	*rpgobject char
+	{
+		*attrib_health 1500
+		*attrib_maxhealth 1500
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_sword 1.0
+		*skill_magic 1.0
+	}
+	
+	*damage_factor_skin			1, Sniper+Pierce+Cold+Magic+Summon+Explosive+Special=1.00, Fire+Poison=1.0, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Cold+Magic+Summon+Explosive+Special=1.00, Fire+Poison=1.0, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Cold+Magic+Summon+Explosive+Special=0.25, Fire+Poison=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Cold+Magic+Summon+Explosive+Special=0.50, Fire+Poison=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed=0.5, Magic+Summon=0.2
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed=0.5, Magic+Summon=0.2
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed=0.5, Magic+Summon=0.2
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed=0.5, Magic+Summon=0.2
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed=0.5, Magic+Summon=0.2
+	*protection_factor_other	0, All=0.6
+
+	*ai_evadespeed 10
+	*ai_skill 80
+	*ai_useflags shockwave+magicshield+combo
+}
+
+*Ai_Special_Mordessa
+{
+	*classname Ai_Mordessa
+
+	*rpgobject char
+	{
+		*item0 weapon_Staff_Mordessa
+		*item1 item_staff_shield
+		*item weapon_sword_mordessa
+		*skill_sword 1.2
+		*skill_magic 1.2
+	}
+
+	*ai_useranged 75	
+}
+
+*Ai_Special_Mordessa_ArkMoor
+{
+	*classname Ai_Mordessa
+
+	*model "players\\Mordessa\\Mordessab"
+
+	*rpgobject char
+	{
+		*attrib_health 1000
+		*attrib_maxhealth 1000
+		*item0 weapon_Staff_Mordessa
+		*item1 item_staff_shield
+		*item weapon_sword_mordessa
+	}
+
+	*ai_useflags shockwave+magicshield+combo+switchweapon
+}
+
+*Ai_Special_Mordessa_Act1
+{
+	*classname Ai_Mordessa
+	*clientflags linkinfinite
+
+	*model "players\\Mordessa\\MordessaPoint"
+
+	*rpgobject char
+	{
+	*item0 item_none
+	*item1 item_none
+	}
+}
+
+*Ai_Special_Mordessa_Act2
+{
+	*classname Ai_Mordessa
+	*clientflags linkinfinite
+	*rpgobject char
+	{
+		*item0 weapon_Staff_Mordessa
+		*item1 item_staff_shield
+	}
+}
+
+*Ai_Special_Mordessa_Act3
+{
+	*classname Ai_Mordessa
+	*clientflags linkinfinite
+	*rpgobject char
+	{
+		*item0 weapon_sword_mordessa
+		*item1 item_staff_shield
+	}
+}
+
+*Ai_Special_Marcus
+{
+	*classname template_char
+	*character Merchant Marcus
+	*model "players\\MerchantMarcus\\Marcus"
+
+	*speed_jump 18
+	*phys_height 32
+	*phys_height_crouch 23
+
+	*team 0
+	*dialogue Dlg_Lorus
+	*rpgobject char
+	{
+		*item0 item_none
+		*item1 item_none
+		*attrib_health 110
+		*attrib_maxhealth 110
+		*skill_unarmed 1.0
+		*skill_dagger 1.0
+		*skill_sword 1.0
+	}
+	*ai_evadespeed 6
+	*ai_skill 70
+	//*ai_hitratio 70
+	*FLAGS "NonPushable"
+        *ai_useflags alwaysaggressive
+}
+
+*Ai_Special_Lorus
+{
+	*classname template_char
+	*character Captain Lorus
+	*model "players\\Lorus\\Lorus"
+	*team 0
+	*dialogue Dlg_Lorus
+	*phys_height 32
+	*phys_height_crouch 23
+	*rpgobject char
+	{
+		*item0 weapon_sword_scimitar
+		*attrib_health 110
+		*attrib_maxhealth 110
+		*skill_unarmed 1.0
+		*skill_dagger 1.0
+		*skill_sword 1.0
+	}
+	*ai_evadespeed 6
+	*ai_skill 70
+	//*ai_hitratio 80
+}
+
+*Ai_Special_AncestorHead
+{
+	*classname template_char
+	*character Senator Alecto
+	*model "players\\AncestorHead\\Head"
+	*phys_height_crouch 17
+
+	*speed_jump 18
+
+	*team 0
+	*dialogue Dlg_Ancestor
+	*rpgobject char
+	{
+		*attrib_health 300
+		*attrib_maxhealth 300
+		*skill_unarmed 1.0
+		*skill_dagger 1.0
+		*skill_sword 1.0		
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Unarmed+Hack+Stab=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.80, Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.4, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+
+	*ai_evadespeed 5
+	*ai_skill 80
+	//*ai_hitratio 90
+}
+
+*Ai_Special_Jasindra
+{
+	*classname template_char
+	*character Princess Jasindra
+	*model "players\\PrincessJasindra\\Princess"
+	*phys_height_crouch 19
+	*team 0
+	*dialogue Dlg_Jasindra
+	*rpgobject char
+	{
+		*item0 item_none
+		*item1 item_none
+		*attrib_health 75
+		*attrib_maxhealth 75
+	}
+	*ai_evadespeed 5
+	*ai_skill 50
+	//*ai_hitratio 90
+}
+
+*Ai_Special_Ayndirel
+{
+	*classname template_char
+	*character Queen Aylindel
+	*model "players\\QueenAyndirel\\Queen"
+	*phys_height_crouch 20
+
+	*speed_jump 18
+
+	*team 0
+	*dialogue Dlg_Aylindel
+	*animlist Anim_Druid
+
+	*ai_tauntchance 0	
+
+	*rpgobject char
+	{
+		*item0 weapon_staff_queen
+		*attrib_health 350
+		*attrib_maxhealth 350
+		*skill_unarmed 1.0
+		*skill_dagger 1.0
+		*skill_magic 1.0
+		*skill_summon 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Slash+Crush+Unarmed+Hack+Stab=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon+Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_other	0, All=1
+
+	*ai_evadespeed 10
+	*ai_maxspeed 10
+	*ai_skill 60
+	//*ai_hitratio 100
+}
+
+*Ai_Special_Ayndirel_Act
+{
+	*classname Ai_Special_Ayndirel
+	*rpgobject char
+	{
+		*item0 item_none
+		*item1 item_none
+	}
+}
+
+*Ai_Zale
+{
+	*classname template_wizard
+	*character Zale
+	*dialogue Dlg_Zale
+	*model "players\\Zale\\Zale"
+
+	*speed_jump 18
+	*phys_height_crouch 22
+
+	*team 0
+	*dialogue Dlg_Zale
+
+	*ai_tauntchance 0
+	
+	*rpgobject char
+	{
+		*attrib_health 300
+		*attrib_maxhealth 300
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 2.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+	
+	*targetname char_zale
+	*ai_evadespeed 5
+	*ai_skill 50
+	*ai_useflags shockwave+magicshield
+	//*ai_hitratio 100
+}
+
+*Ai_Special_Zale
+{
+	*classname ai_zale
+	*rpgobject char
+	{
+		*item0 weapon_staff_earthspirit
+		*item1 item_staff_shield
+		*attrib_health 300
+		*attrib_maxhealth 300
+		*attrib_mana 9000
+		*attrib_maxmana 9000
+		*skill_magic 5.0
+	}
+	*ai_skill 85
+}
+
+*Ai_Special_Zale2
+{
+	*classname Ai_Zale
+	*rpgobject char
+	{
+		*item0 weapon_staff_earthspirit
+		*item1 item_staff_shield
+		*attrib_health 300
+		*attrib_maxhealth 300
+		*attrib_mana 500
+		*attrib_maxmana 500
+		*skill_magic 1.5
+	}
+}
+
+*Ai_Special_Zale_Act
+{
+	*classname Ai_Zale
+	*rpgobject char
+	{
+		*item0 item_none
+		*item1 item_none	
+	}
+}
+
+*Ai_Special_Marna
+{
+	*classname ai_assassin
+	*character Marna
+	*model "players\\assassin\\marna"
+
+	*speed_jump 18
+
+	*team 1
+	*rpgobject char
+	{
+		*item0 item_none
+		*item1 item_none
+		*attrib_health 60
+		*attrib_maxhealth 60
+	}
+	*ai_skill 100
+	//*ai_hitratio 50
+}
+
+*Ai_AncestorWarrior
+{
+	*classname template_char
+	*character Ancestor Warrior
+	*dialogue Dlg_Ancestor
+	*model "players\\AncestorWarrior\\Warrior8"
+	*phys_height_crouch 23
+
+	*speed_jump 18
+
+	*ai_evadespeed 5
+	*ai_charge 25
+	*ai_dodge 5
+	*ai_riposte 10
+	*ai_wait 2
+	*ai_tauntchance 5
+	*ai_standfast 25
+	*ai_flank 15
+	*animlist Anim_Guard
+	*dialogue Dlg_Ancestor
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Unarmed+Hack+Stab=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.80, Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_other	0, All=1
+
+}
+
+*Ai_AncestorWarrior_L0
+{
+	*classname Ai_AncestorWarrior
+	*character Ancestor Footman
+	*model "players\\AncestorWarrior\\Warrior8"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_dagger_ancient
+		*weapon_dagger_ancient
+		*attrib_health 50
+		*attrib_maxhealth 50
+		*skill_dagger 1.0
+		*skill_sword 0.25
+		*skill_axe 0.25
+		*skill_hammer 0.25
+		*skill_crossbow 0.25
+	}
+	*ai_skill 10
+	*ai_maxspeed 7.1
+	*ai_useflags alwaysblock+switchweapon
+	//*ai_hitratio 20
+}
+
+*Ai_AncestorWarrior_L1
+{
+	*classname Ai_AncestorWarrior
+	*character Ancestor Footman
+	*model "players\\AncestorWarrior\\Warrior7"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_dagger_ancient
+		*weapon_dagger_ancient
+		*attrib_health 65
+		*attrib_maxhealth 65
+		*skill_dagger 1.0
+		*skill_sword 0.4
+		*skill_axe 0.4
+		*skill_hammer 0.4
+		*skill_crossbow 0.4
+	}
+	*ai_skill 20
+	*ai_maxspeed 6.0
+	*speed_forward 6.0
+	*ai_useflags alwaysblock+switchweapon
+	//*ai_hitratio 20
+}
+
+*Ai_AncestorWarrior_L2
+{
+	*classname Ai_AncestorWarrior
+	*character Ancestor Footman
+	*model "players\\AncestorWarrior\\Warrior6"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_sword_shortancient
+		*weapon_dagger_ancient
+		*attrib_health 85
+		*attrib_maxhealth 85
+		*skill_dagger 1.0
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_crossbow 0.5
+	}
+	*ai_skill 30
+	*ai_maxspeed 7.2
+	*speed_forward 7.2
+	*ai_useflags alwaysblock+switchweapon
+	//*ai_hitratio 20
+}
+
+*Ai_AncestorWarrior_L3
+{
+	*classname Ai_AncestorWarrior
+	*character Ancestor Legionnare
+	*model "players\\AncestorWarrior\\Warrior5"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_sword_shortancient
+		*weapon_dagger_ancient
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_dagger 1.0
+		*skill_sword 0.6
+		*skill_axe 0.6
+		*skill_hammer 0.6
+		*skill_crossbow 0.6
+	}
+	*ai_skill 40
+	*ai_maxspeed 7.3
+	*speed_forward 7.3
+	*ai_useflags alwaysblock+switchweapon
+	//*ai_hitratio 30
+}
+
+*Ai_AncestorWarrior_L4
+{
+	*classname Ai_AncestorWarrior
+	*character Ancestor Legionnare
+	*model "players\\AncestorWarrior\\Warrior4"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_sword_shortancient
+		*weapon_dagger_ancient
+		*attrib_health 125
+		*attrib_maxhealth 125
+		*skill_dagger 1.0
+		*skill_sword 0.7
+		*skill_axe 0.7
+		*skill_hammer 0.7
+		*skill_crossbow 0.7
+	}
+	*ai_skill 50
+	*ai_maxspeed 7.4
+	*speed_forward 7.4
+	*ai_useflags alwaysblock+switchweapon 
+	//*ai_hitratio 40
+}
+
+*Ai_AncestorWarrior_L5
+{
+	*classname Ai_AncestorWarrior
+	*character Ancestor Elite
+	*model "players\\AncestorWarrior\\Warrior3"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_sword_ancient
+		*weapon_dagger_ancient
+		*item_shield_scutum_r
+		*attrib_health 150
+		*attrib_maxhealth 150
+		*skill_dagger 1.0
+		*skill_sword 0.8
+		*skill_axe 0.8
+		*skill_hammer 0.8
+		*skill_crossbow 0.8
+	}
+	*ai_skill 60
+	*ai_maxspeed 7.5
+	*speed_forward 7.5
+	*ai_useflags alwaysblock+switchweapon 
+	//*ai_hitratio 60
+}
+
+*Ai_AncestorWarrior_L6
+{
+	*classname Ai_AncestorWarrior
+	*character Ancestors Centurion
+	*model "players\\AncestorWarrior\\Warrior2"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_sword_ancient
+		*weapon_dagger_ancient
+		*item_shield_scutum_b
+		*attrib_health 175
+		*attrib_maxhealth 175
+		*skill_dagger 1.0
+		*skill_sword 0.9
+		*skill_axe 0.9
+		*skill_hammer 0.9
+		*skill_crossbow 0.9
+	}
+	*ai_skill 70
+	*ai_maxspeed 7.6
+	*speed_forward 7.6
+	*ai_useflags alwaysblock+switchweapon 
+	//*ai_hitratio 80
+}
+
+*Ai_AncestorWarrior_L7
+{
+	*classname Ai_AncestorWarrior
+	*character Ancestor Commander
+	*model "players\\AncestorWarrior\\Warrior1"
+	*team 0
+	*rpgobject char
+	{
+		*item0 weapon_sword_ancient
+		*weapon_dagger_ancient
+		*item_shield_scutum_r
+		*attrib_health 200
+		*attrib_maxhealth 200
+		*skill_dagger 1.0		
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_crossbow 1.0
+	}
+	*ai_skill 80
+	*ai_maxspeed 7.7
+	*speed_forward 7.7
+	*ai_useflags alwaysblock+switchweapon 
+	//*ai_hitratio 100
+}
+
+*Ai_Nightcrawler_L0
+{
+	*classname template_wolfrider
+	*character Nightcrawler
+	*model "players\\nightcrawler\\nightcrawler"
+
+	*speed_jump 18
+
+	*team -1
+	*dialogue Dlg_Nightcrawler
+	*rpgobject char
+	{
+		*item0 weapon_unarmed_nightcrawler
+		*attrib_health 50
+		*attrib_maxhealth 50
+		*skill_unarmed 0.7
+	}
+	*ai_evadespeed 8.5
+	*ai_maxspeed 8.5
+	*ai_charge 20
+	*ai_dodge 0
+	*ai_riposte 0
+	*ai_wait 0
+	*ai_standfast 0
+	*ai_tauntchance 0
+	*ai_flank 15
+	*ai_skill 50
+	*ai_behaviour Explore
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+}
+
+*Ai_Nightcrawler_L1
+{
+	*classname template_wolfrider
+	*character Nightcrawler
+	*model "players\\nightcrawler\\nightcrawler"
+
+	*speed_jump 18
+
+	*team -1
+	*dialogue Dlg_Nightcrawler
+	*rpgobject char
+	{
+		*item0 weapon_unarmed_nightcrawler
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_unarmed 2.0
+	}
+	*ai_evadespeed 11
+	*ai_maxspeed 11
+	*ai_charge 20
+	*ai_dodge 0
+	*ai_riposte 0
+	*ai_wait 0
+	*ai_standfast 0
+	*ai_tauntchance 0
+	*ai_flank 15
+	*ai_skill 50
+	*ai_behaviour Explore
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+}
+
+*AI_NightCrawler_CloseTargeted
+{
+	*classname AI_NightCrawler_L0
+	*MaxTargetingDistance 128
+}
+
+*AI_Nightcrawler_SpiritSpawn
+{
+	*classname Ai_Nightcrawler_L0
+	*spawn_anim 
+	*spawn_sound forc_magicc05b
+	*spawn_effect_center Spawn01
+	*spawn_effect_ground
+	*dialogue Dlg_Nightcrawler
+	*rpgobject char
+	{
+		*item0 weapon_unarmed_nightcrawler
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_unarmed 1.5
+	}
+}
+
+*Ai_Nightcrawler_Small_L0
+{
+	*classname template_wolfrider
+	*character Nightcrawler
+	*model "players\\nightcrawler\\nightcrawlers"
+	*team -1
+
+	*speed_jump 18
+
+	*dialogue Dlg_Nightcrawler
+	*rpgobject char
+	{
+		*item0 weapon_unarmed_smallnightcrawler
+		*attrib_health 30
+		*attrib_maxhealth 30
+		*skill_unarmed 0.5
+	}
+	
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+
+	*ai_evadespeed 5
+	*ai_maxspeed 4
+	*ai_charge 30
+	*ai_dodge 0
+	*ai_riposte 0
+	*ai_wait 0
+	*ai_tauntchance 0
+	*ai_standfast 0
+	*ai_flank 8
+	*ai_skill 30
+}
+
+*Ai_Stonegnome_L0
+{
+	*classname template_char
+	*character Stonegnome
+	*model "players\\StoneGnome\\StoneGnome"
+	*model1 "players\\StoneGnome\\StoneGnomeF"
+	*model2 "speedtrail:surface=IceBoltTrail, duration=2.0, width=20.0, flags=alignfade+tailfade+texfit"
+	*render_first_only 1
+	*animlist Anim_Stonegnome
+	*dialogue Dlg_StoneGnome
+	*spawn_sound lav_special03
+	*team 1
+	
+	*speed_forward 6
+	*speed_up 6
+	*speed_jump 18
+
+	*ai_maxspeed 6	
+
+	*ai_charge 30
+	*ai_dodge 0
+	*ai_riposte 0
+	*ai_wait 0
+	*ai_tauntchance 0
+	*ai_standfast 0
+	*ai_flank 0
+	*ai_skill 50
+
+	*rpgobject char
+	{
+		*item0 weapon_unarmed_stonegnome
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_unarmed 1.0
+	}
+	*ai_evadespeed 5
+	*ai_type DurzuSpawn
+	*ai_explosion explosion_stonegnome
+	*ai_FreezeEffect attach_hit_stonegnomeFreezeEffect
+
+	*damage_factor_skin			1, Sniper+Pierce+Magic+Summon+Special=1.0, Cold=2, Poison+Fire=0.1, Explosive=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Magic+Summon+Special=1.0, Cold=2, Poison+Fire=0.1, Explosive=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Magic+Summon+Special=1.0, Cold=2, Poison+Fire=0.1, Explosive=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Magic+Summon+Special=1.0, Cold=2, Poison+Fire=0.1, Explosive=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+
+	*damage_effect attach_hit_stonegnome
+	*death_effect deatheffect_stonegnome
+}
+
+
+*AI_StoneGnome_DurzuSpawn
+{
+	*classname Ai_Stonegnome_L0
+	*phys_ghost 1   //Spawned from explosion; this'll be reset by the explosion 
+	*phys_immune 1	//...dito... 
+
+	*speed_forward 4
+	*speed_up 4
+	*speed_jump 18
+
+	*ai_type DurzuSpawn
+	*ai_awareness 400
+	*ai_behaviour Explore
+	*ai_personality Berserker
+	*ai_lifetimer 30
+	*ai_lifedrain 10
+	*ai_flightspeed 20
+}
+
+*Ai_Assembly_L0
+{
+	*classname template_wizard
+	*character Assembly Member
+	*model "players\\AssemblyMember\\Assembly"
+
+	*phys_height 32
+	*phys_height_crouch 22
+
+	*speed_jump 18
+
+	*team 0
+	*dialogue Dlg_Assembly
+	*rpgobject char
+	{
+		*item0 weapon_staff_assembly
+		*attrib_health 500
+		*attrib_maxhealth 500
+		*attrib_mana 500
+		*attrib_maxmana 500
+		*skill_dagger 1.0
+		*skill_magic 1.0
+		*skill_summon 1.0
+	}
+	
+	*ai_tauntchance 0
+	*ai_charge 10
+	*ai_dodge 0
+	*ai_riposte 0
+	*ai_wait 0
+	*ai_standfast 5
+	*ai_flank 0
+	*dialogue Dlg_Assembly
+	*ai_maxspeed 10
+	*ai_evadespeed 10
+	*speed_forward 10
+	*ai_useflags shockwave+magicshield
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Slash+Crush+Unarmed+Hack+Stab=2
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Fire+Cold+Poison+Special+Slash+Crush+Hack+Stab+Unarmed+Explosive+Pierce=0.5, Magic+Summon=0.3
+	*protection_factor_cloth	0, Sniper+Fire+Cold+Poison+Special+Slash+Crush+Hack+Stab+Unarmed+Explosive+Pierce=0.5, Magic+Summon=0.3
+	*protection_factor_leather	0, Sniper+Fire+Cold+Poison+Special+Slash+Crush+Hack+Stab+Unarmed+Explosive+Pierce=0.5, Magic+Summon=0.3
+	*protection_factor_chain	0, Sniper+Fire+Cold+Poison+Special+Slash+Crush+Hack+Stab+Unarmed+Explosive+Pierce=0.5, Magic+Summon=0.3
+	*protection_factor_plate	0, Sniper+Fire+Cold+Poison+Special+Slash+Crush+Hack+Stab+Unarmed+Explosive+Pierce=0.5, Magic+Summon=0.3
+	*protection_factor_other	0, All=1
+}
+
+*Ai_Assembly_Act
+{
+	*classname template_wizard
+	*character Assembly Guard
+	*model "players\\AssemblyMember\\Assembly"
+
+	*speed_jump 18
+
+	*team 0
+	*dialogue Dlg_Assembly
+	*rpgobject char
+	{
+		*item0 item_none
+		*item1 item_none
+	}
+}
+
+*Ai_Assembly_ActNoCull
+{
+	*classname Ai_Assembly_Act
+	*clientflags linkinfinite
+	*speed_jump 18
+}
+
+*Ai_AssemblyGuard_L0
+{
+	*classname template_paladin
+	*character Assembly Guard
+	*model "players\\AssemblyMember\\Assembly2"
+
+	*speed_jump 18
+
+	*team 0
+	*dialogue Dlg_Wizard
+	*rpgobject char
+	{
+		*item0 weapon_sword_assembly
+		*item1 item_shield_assembly
+		*attrib_health 500
+		*attrib_maxhealth 500
+		*skill_sword 1.0
+	}
+	
+	*ai_charge 30
+	*ai_dodge 10
+	*ai_riposte 20
+	*ai_wait 0
+	*ai_standfast 30
+	*ai_flank 30
+	*ai_tauntchance 0
+	*speed_forward 9
+	*ai_evadespeed 9
+	*ai_maxspeed 9
+	
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Slash+Crush+Unarmed+Hack+Stab=2, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Slash+Crush+Unarmed+Hack+Stab=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed+Pierce=0.5, Magic+Summon=0.2
+	*protection_factor_cloth	0, Sniper+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed+Pierce=0.5, Magic+Summon=0.2
+	*protection_factor_leather	0, Sniper+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed+Pierce=0.5, Magic+Summon=0.2
+	*protection_factor_chain	0, Sniper+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed+Pierce=0.5, Magic+Summon=0.2
+	*protection_factor_plate	0, Sniper+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed+Pierce=0.5, Magic+Summon=0.2
+	*protection_factor_other	0, All=0.5
+
+	*ai_useflags combo
+}
+
+*Ai_Skeleton
+{
+	*classname template_char
+	*character Skeleton
+	*model "players\\Skeleton\\Skeleton"
+	*speed_forward 6
+	*speed_jump 18
+	*phys_height_crouch 20
+
+	*ai_maxspeed 6	
+	*ai_charge 20
+	*ai_dodge 1
+	*ai_riposte 2
+	*ai_wait 5
+	*ai_tauntchance 0	
+	*ai_standfast 5
+	*ai_flank 0
+	*ai_skill 20
+	*ai_evadespeed 4
+
+	*rpgobject char
+	{
+		*item0 weapon_axe_bearded
+		*weapon_dagger_long
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_dagger 1.0
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_crossbow 1.0
+		*skill_bow 1.0
+		*skill_unarmed 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1 
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5, Magic+Summon=0.3
+	*protection_factor_cloth	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5, Magic+Summon=0.3
+	*protection_factor_leather	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5, Magic+Summon=0.3
+	*protection_factor_chain	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5, Magic+Summon=0.3
+	*protection_factor_plate	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5, Magic+Summon=0.3
+	*protection_factor_other	0, All=0.5
+
+	*spawn_anim animlist:245
+	*spawn_sound ske_spawn01
+	*spawn_effect_center
+	*spawn_effect_ground SkeletonSpawn
+
+	*death_effect deatheffect_skeleton
+	*damage_effect attach_hit_skeleton
+
+	*team -1
+	*animlist Anim_Skeleton
+	*dialogue Dlg_Skeleton
+}
+
+*Ai_Skeleton_L0
+{
+	*classname ai_skeleton
+	*character Skeleton
+	*model "players\\Skeleton\\Skeleton"
+	*speed_forward 4
+	*ai_maxspeed 4
+	*ai_skill 10
+	//*ai_hitratio 20
+	*ai_evadespeed 3
+	
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1 
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5, Magic+Summon=0.3
+	*protection_factor_cloth	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5, Magic+Summon=0.3
+	*protection_factor_leather	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5, Magic+Summon=0.3
+	*protection_factor_chain	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5, Magic+Summon=0.3
+	*protection_factor_plate	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5, Magic+Summon=0.3
+	*protection_factor_other	0, All=0.5
+	
+	*spawn_sound ske_spawn01
+
+	*rpgobject char
+	{
+		*item0 weapon_axe_bearded
+		*weapon_dagger_long
+		*attrib_health 50
+		*attrib_maxhealth 50
+		*skill_dagger 0.5
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_crossbow 0.5
+		*skill_bow 0.5
+	}
+}
+
+*Ai_Skeleton_L1
+{
+	*classname ai_skeleton
+	*character Undead
+	*model "players\\Skeleton\\Skeleton"
+	*speed_forward 5
+	*ai_maxspeed 5
+	*ai_skill 10
+	//*ai_hitratio 20
+	*ai_evadespeed 4
+	
+	*spawn_sound ske_spawn01
+	
+	*rpgobject char
+	{
+		*item0 weapon_sword_scimitar
+		*weapon_dagger_long
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_dagger 0.7
+		*skill_sword 0.7
+		*skill_axe 0.7
+		*skill_hammer 0.7
+		*skill_crossbow 0.7
+		*skill_bow 0.7
+	}
+}
+
+*Ai_Skeleton_L2
+{
+	*classname ai_skeleton
+	*character Skeleton
+	*model "players\\Skeleton\\Skeleton"
+	*speed_forward 6
+	*ai_maxspeed 6
+	*ai_skill 10
+	//*ai_hitratio 20
+	*ai_evadespeed 4
+	
+	*spawn_sound ske_spawn01
+	
+	*rpgobject char
+	{
+		*item0 weapon_hammer_morningstar
+		*weapon_dagger_long
+		*attrib_health 150
+		*attrib_maxhealth 150
+		*skill_dagger 1.0
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_crossbow 1.0
+		*skill_bow 1.0
+	}
+}
+
+*Ai_Skeleton_L3
+{
+	*classname ai_skeleton
+	*character Grim Skeleton
+	*model "players\\Skeleton\\Skeleton"
+	*speed_forward 6
+	*ai_maxspeed 6
+	*ai_skill 10
+	*ai_evadespeed 4
+	
+	*spawn_sound ske_spawn01
+	
+	*rpgobject char
+	{
+		*item0 weapon_axe_war
+		*weapon_dagger_long
+		*attrib_health 300
+		*attrib_maxhealth 300
+		*skill_dagger 1.25
+		*skill_sword 1.25
+		*skill_axe 1.25
+		*skill_hammer 1.25
+		*skill_crossbow 1.25
+		*skill_bow 1.25
+	}
+}
+
+*Ai_Skeleton_L4
+{
+	*classname ai_skeleton
+	*character Shadow Skeleton
+	*model "players\\Skeleton\\Skeleton_Shadow"
+	*speed_forward 6
+	*ai_maxspeed 6
+	*ai_skill 70
+	//*ai_hitratio 40
+	*ai_evadespeed 4
+
+	*death_effect deatheffect_shadowskeleton
+	*damage_effect attach_hit_shadowskeleton
+	*spawn_sound ske_spawn01
+
+	*no_shadow 1
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_shadowstar
+		*attrib_health 150
+		*attrib_maxhealth 150
+		*skill_dagger 1.5
+		*skill_sword 1.5
+		*skill_axe 1.5
+		*skill_hammer 1.5
+		*skill_crossbow 1.5
+		*skill_bow 1.5	
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1 
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special+Magic+Summon=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5
+	*protection_factor_cloth	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special+Magic+Summon=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5
+	*protection_factor_leather	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special+Magic+Summon=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5
+	*protection_factor_chain	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special+Magic+Summon=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5
+	*protection_factor_plate	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special+Magic+Summon=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0,5, Hack=0.5
+	*protection_factor_other	0, All=0.5
+
+	*death_effect deatheffect_shadowskeleton
+	*damage_effect attach_hit_shadowskeleton
+
+}
+
+*Ai_Skeleton_L5
+{
+	*classname ai_skeleton
+	*character Dread Skeleton
+	*model "players\\Skeleton\\Skeleton_Dread"
+	*speed_forward 6
+	*ai_maxspeed 6
+	*ai_skill 40
+	//*ai_hitratio 50
+	*ai_evadespeed 4
+	
+	*spawn_sound ske_spawn01
+
+	*rpgobject char
+	{
+		*item0 weapon_axe_kama
+		*weapon_dagger_long
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_dagger 1.25
+		*skill_sword 1.25
+		*skill_axe 1.25
+		*skill_hammer 1.25
+		*skill_crossbow 1.25
+		*skill_bow 1.25
+	}
+}
+
+*Ai_Skeleton_L6
+{
+	*classname ai_skeleton
+	*character Dread Archer
+	*model "players\\Skeleton\\Skeleton_Dread"
+	*speed_forward 6
+	*ai_maxspeed 6
+	*ai_skill 90
+	*ai_aimbonus 30
+	//*ai_hitratio 90
+	*ai_evadespeed 4
+	*spawn_sound ske_spawn01
+
+	*rpgobject char
+	{
+		*item0 weapon_crossbow_light
+		*weapon_dagger_long
+		*attrib_health 170
+		*attrib_maxhealth 170
+		*skill_dagger 1.25
+		*skill_sword 1.25
+		*skill_axe 1.25
+		*skill_hammer 1.25
+		*skill_crossbow 1.25
+		*skill_bow 1.25
+	}
+}
+
+*Ai_Skeleton_L7
+{
+	*classname ai_skeleton
+	*character HellBone
+	*model "players\\Skeleton\\SkeletonKing"
+	*speed_forward 9
+	*dialogue Dlg_Hellbone
+	*animlist Anim_Hellbone
+
+	*phys_height 50
+	*phys_height_crouch 34
+
+	*ai_skill 50
+	*ai_maxspeed 9
+	//*ai_hitratio 100
+	*ai_evadespeed 4
+	*spawn_sound ske_spawn01
+
+	*rpgobject char
+	{
+		*item0 weapon_axe_great
+		*attrib_health 400
+		*attrib_maxhealth 400
+		*skill_dagger 1.0
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_crossbow 1.0
+		*skill_bow 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1 
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.8, Crush=0,8, Hack=0.8, Magic+Summon=0.5
+	*protection_factor_cloth	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.8, Crush=0,8, Hack=0.8, Magic+Summon=0.5
+	*protection_factor_leather	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.8, Crush=0,8, Hack=0.8, Magic+Summon=0.5
+	*protection_factor_chain	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.8, Crush=0,8, Hack=0.8, Magic+Summon=0.5
+	*protection_factor_plate	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.8, Crush=0,8, Hack=0.8, Magic+Summon=0.5
+	*protection_factor_other	0, All=0.5
+
+
+}
+
+*Ai_Skeleton_L8
+{
+	*classname ai_skeleton
+	*character HellBone
+	*model "players\\Skeleton\\SkeletonKing"
+	*speed_forward 9
+	*dialogue Dlg_Hellbone
+	*animlist Anim_Hellbone
+
+	*phys_height 50
+	*phys_height_crouch 34
+
+	*ai_skill 50
+	*ai_maxspeed 9
+	//*ai_hitratio 100
+	*ai_evadespeed 4
+	*spawn_sound ske_spawn01
+	
+	*rpgobject char
+	{
+		*item0 weapon_axe_shatter
+		*attrib_health 100
+		*attrib_maxhealth 100
+		*skill_dagger 0.35
+		*skill_sword 0.35
+		*skill_axe 0.35
+		*skill_hammer 0.35
+		*skill_crossbow 0.35
+		*skill_bow 0.35
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1 
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special+Stab+Slash+Hack+Unarmed=1.0, Crush=1.2, Hack=1.1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.8, Crush=0,8, Hack=0.8, Magic+Summon=0.2
+	*protection_factor_cloth	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.8, Crush=0,8, Hack=0.8, Magic+Summon=0.2
+	*protection_factor_leather	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.8, Crush=0,8, Hack=0.8, Magic+Summon=0.2
+	*protection_factor_chain	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.8, Crush=0,8, Hack=0.8, Magic+Summon=0.2
+	*protection_factor_plate	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Stab+Slash+Hack+Unarmed=0.8, Crush=0,8, Hack=0.8, Magic+Summon=0.2
+	*protection_factor_other	0, All=0.5
+}
+
+*Ai_Skeleton_Summon
+{
+	*classname ai_skeleton
+	*character Shadow Skeleton
+	*model "players\\Skeleton\\Skeleton_Shadow"
+	*speed_forward 8
+	*ai_maxspeed 8
+	*ai_behaviour follow
+	*ai_charge 20
+	*ai_dodge 0
+	*ai_riposte 0
+	*ai_wait 0
+	*ai_tauntchance 0	
+	*ai_standfast 5
+	*ai_flank 10
+	*ai_skill 60
+	*ai_evadespeed 8
+	*awareness 400
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_shadowstar
+		*item1 item_shield_bruteshadow
+		*attrib_health 300
+		*attrib_maxhealth 300
+		*skill_hammer 1.0
+	}
+	
+	*spawn_effect_ground SkeletonSpawn2
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Stab+Slash+Hack+Unarmed=1, Crush=1, Hack=1 
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Stab+Slash+Hack+Unarmed=1, Crush=1, Hack=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Stab+Slash+Hack+Unarmed=1, Crush=1, Hack=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Stab+Slash+Hack+Unarmed=1, Crush=1, Hack=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.4, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_cloth	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.4, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_leather	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.4, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_chain	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.4, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_plate	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.4, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_other	0, All=1
+
+	*death_effect deatheffect_shadowskeleton
+	*damage_effect attach_hit_shadowskeleton
+
+	*timeout_sound gol_aichar
+	*timeout_effect_ground SkeletonTimeoutEffect
+}
+
+*Ai_Golem
+{
+	*classname template_char
+	*character Earth Golem
+	*model "players\\Golem\\Golem"
+	*animlist Anim_Default
+	*dialogue Dlg_Golem
+	*speed_forward 4
+	*speed_up 4
+	*speed_jump 18
+	*phys_height_crouch 22
+
+	*ai_maxspeed 4
+	*ai_behaviour follow
+	*ai_charge 20
+	*ai_dodge 0
+	*ai_riposte 0
+	*ai_wait 0
+	*ai_tauntchance 0	
+	*ai_standfast 5
+	*ai_flank 0
+	*ai_skill 60
+	*ai_evadespeed 4
+	*phys_height 32
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_golem
+		*attrib_health 300
+		*attrib_maxhealth 300
+		*skill_hammer 1.0
+	}
+	
+	
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Stab+Slash+Hack+Unarmed=1, Crush=1, Hack=1 
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Stab+Slash+Hack+Unarmed=1, Crush=1, Hack=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Stab+Slash+Hack+Unarmed=1, Crush=1, Hack=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Stab+Slash+Hack+Unarmed=1, Crush=1, Hack=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.4, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_cloth	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.4, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_leather	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.4, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_chain	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.4, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_plate	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.4, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_other	0, All=1
+
+	*spawn_anim animlist:245
+	*spawn_sound gol_aichar
+	*spawn_effect_ground EarthGolemSpawnEffect
+
+	*timeout_sound gol_aichar
+	*timeout_effect_ground EarthGolemTimeoutEffect
+
+	*death_effect deatheffect_golem
+	*damage_effect attach_hit_golem
+
+	*team -1
+}
+
+*Ai_Golem_L0
+{
+	*classname Ai_Golem
+	*character Earth Golem
+	*model "players\\Golem\\Golem"
+	*speed_forward 4
+	*ai_maxspeed 4
+	*dialogue Dlg_Golem
+	*ai_skill 80
+	*ai_behaviour follow
+	//*ai_hitratio 40
+	*ai_evadespeed 4
+	*spawn_sound gol_aichar
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_golem
+		*attrib_health 300
+		*attrib_maxhealth 300
+		*skill_hammer 1.0
+	}
+}
+
+*Ai_Golem_Summon
+{
+	*classname ai_golem
+	*character Earth Golem
+	*model "players\\Golem\\Golem"
+	*awareness 400
+	*dialogue Dlg_Golem
+	*speed_forward 4
+	*ai_maxspeed 4
+	*ai_behaviour follow
+	*ai_charge 20
+	*ai_dodge 0
+	*ai_riposte 0
+	*ai_wait 0
+	*ai_tauntchance 0	
+	*ai_standfast 5
+	*ai_flank 0
+	*ai_skill 80
+	*ai_evadespeed 4
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_golem
+		*attrib_health 300
+		*attrib_maxhealth 300
+		*skill_hammer 1.0
+	}
+}
+
+*Ai_Scaara_L0
+{
+	*classname template_char
+	*character Scaara Warrior
+	*dialogue Dlg_Scaara
+	*model "players\\FrogMan\\FrogMan"
+
+	*speed_jump 18
+
+	*team 1
+	*animlist Anim_FrogMan
+	*dialogue Dlg_Scaara
+	*rpgobject char
+	{
+		*item0 weapon_axe_trident
+		*attrib_health 200
+		*attrib_maxhealth 200
+		*skill_dagger 1.0
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_crossbow 1.0
+		*skill_bow 1.0
+	}
+	*ai_charge 20
+	*ai_dodge 0
+	*ai_riposte 0
+	*ai_wait 0
+	*ai_standfast 0
+	*ai_tauntchance 0
+	*ai_flank 25
+	*ai_skill 50
+	//*ai_hitratio 20
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.5, Poison=0.4, Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.5, Poison=0.4, Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.5, Poison=0.4, Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.5, Poison=0.4, Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Explosive+Special=0.5, Poison=0.4, Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_other	0, All=1
+
+	*damage_effect attach_blood_frogman
+}
+
+*Ai_special_Bombardier_Torch
+{
+	*classname ai_bombardier
+	*character Orc Apprentice
+	*model "players\\Orc\\Bombardier"
+	*team 1
+	*rpgobject char
+	{
+		*item0 item_torch
+		*attrib_health 80
+		*attrib_maxhealth 80
+		*skill_dagger 1.0
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_crossbow 1.0
+		*skill_bow 1.0
+		*skill_unarmed 1.0
+	}
+	*ai_skill 1
+	*ai_maxspeed 7
+	//*ai_hitratio 20
+}

@@ -1,0 +1,10 @@
+*cheats 1
+*alwayscheats 1
+*spawnmask -1
+*gameclass EnclaveDM
+*__gameclass GameTest
+*gamename "Deathmatch"
+*autoactivate 1
+*rotatepickups 1
+*defaultrespawntime 10
+*selffire 1

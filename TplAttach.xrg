@@ -1,0 +1,523 @@
+//----------------------------------------------------------------------
+//- ATTACH MODELS ------------------------------------------------------
+//----------------------------------------------------------------------
+// GORE
+//----------------------------------------------------------------------
+
+*template_attach_blood
+{
+	*classname attachmodel
+
+	*model0 "Particles:,MP=100,SU=BloodSpurt01,CON=0x00202020,TS=5,,,FI=0.2,VE=15,VEN=5,,AX=0 0 -5,,,,,,,,,,,,,SZ0=0,SZ1=2,SZ2=2,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,,,SPA=0.08,SPB=0.08,,,,,TC=0.02,,,,,ES=1.5,,,,LS=20,FL=al+qd"
+	*randanim0
+
+	*duration 2
+
+	*attachtype painfull
+	*allowattachedonly 1
+}
+
+//----------------------------------------------------------------------
+
+*attach_blood_small01
+{
+	*classname template_attach_blood
+	*model0 "Particles:,MP=100,SU=BloodSpurt01,CON=0x00202020,TS=5,,,FI=0.2,VE=15,VEN=5,,AX=0 0 -5,,,,,,,,,,,,,SZ0=0,SZ1=2,SZ2=2,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,,,SPA=0.08,SPB=0.08,,,,,TC=0.02,,,,,ES=1.5,,,,LS=20,FL=al+qd"
+}
+
+//----------------------------------------------------------------------
+
+*attach_blood_small02
+{
+	*classname template_attach_blood
+	*model0 "Particles:,MP=100,SU=BloodSpurt01,CON=0x00202020,TS=5,,,FI=0.2,VE=15,VEN=5,,AX=0 0 -5,,,,,,,,,,,,,SZ0=0,SZ1=2,SZ2=2,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,,,SPA=0.2,SPB=0.2,,,,,TC=0.02,,,,,ES=1.5,,,,LS=20,FL=al+qd"
+}
+
+//----------------------------------------------------------------------
+
+*attach_blood_small03
+{
+	*classname template_attach_blood
+	*model0 "Particles:,MP=100,SU=BloodSpurt01,CON=0x00202020,TS=5,DU=4,,FI=0.2,VE=15,VEN=10,,AX=0 0 -5,,,,,,,,,,,,,SZ0=0,SZ1=2,SZ2=2,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,,,SPA=0.08,SPB=0.08,,,,,TC=0.04,,,,,ES=3,,,,LS=20,FL=al+qd"
+}
+
+//----------------------------------------------------------------------
+
+*attach_blood_dragon
+{
+	*classname template_attach_blood
+	*model0 "Particles:,MP=100,SU=BloodSpurt01,CON=0x00202020,TS=5,FI=0.2,VE=20,VEN=5,,AX=0 0 -2,HO=40,SZ0=0,SZ2=20,SZ3=50,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,SPA=0.08,SPB=0.08,,,DOFA=1,DOFB=1,TC=0.02,TCS=2,,EP=12,,ES=1.5,,,,LS=10,FL=al+q,,,,,,SZ0=0,SZ1=2,SZ2=2,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,,,SPA=0.08,SPB=0.08,,,,,TC=0.02,ES=1.5,LS=20,FL=al+qd"
+}
+
+//----------------------------------------------------------------------
+
+*attach_hit_clawburn
+{
+	*classname attachmodel
+
+	*model0 "Particles:,MP=100,SU=BloodSpurt01,CO=0x80501010,TS=5,FI=0.2,VE=15,VEN=5,,AX=0 0 -5,,DI=cube,DIS=0 0 2,SZ0=0,SZ1=2,SZ2=2,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,SPA=0.08,SPB=0.08,TC=0.02,EP=0.1,EPC=0.15,LS=30,ES=5,FL=asq+qd+so"
+
+	*duration 8
+
+	*damage 1, poison, 2
+
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+// NOGORE
+//----------------------------------------------------------------------
+
+*attach_blood_frogman
+{
+	*classname template_attach_blood
+	*model0 "Particles:,MP=100,SU=BloodSpurt01,CO=0x9033CC00,CON=0x00202020,TS=5,,,FI=0.2,VE=15,VEN=5,,AX=0 0 -5,,,,,,,,,,,,,SZ0=0,SZ1=2,SZ2=2,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,,,SPA=0.08,SPB=0.08,,,,,TC=0.02,,,,,ES=1.5,,,,LS=20,FL=al+qd"
+}
+
+//----------------------------------------------------------------------
+
+*attach_hit_dragon
+{
+	*classname template_attach_blood
+	*model0 "Particles:,MP=100,SU=BloodSpurt01,CO=0xF0501010,CON=0x00202020,TS=5,FI=0.2,VE=20,VEN=5,,AX=0 0 -2,HO=40,SZ0=0,SZ2=20,SZ3=50,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,SPA=0.08,SPB=0.08,,,DOFA=1,DOFB=1,TC=0.02,TCS=2,,EP=12,,ES=1.5,,,,LS=10,FL=al+q,,,,,,SZ0=0,SZ1=2,SZ2=2,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,,,SPA=0.08,SPB=0.08,,,,,TC=0.02,ES=1.5,LS=20,FL=al+qd"
+}
+
+//----------------------------------------------------------------------
+
+*attach_hit_golem
+{
+	*classname template_attach_blood
+	*model0 "Particles:,MP=50,SU=BloodSpurt01,CO=0x40605040,DU=2,FI=0.1,VE=1.5,VEN=1.5,AX=0 0 25,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=0.02,SZ0=4,SZ1=8,SZ2=20,SZ3=40,SZ4=0.02,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.01,TC=0.05,ES=1.5,FL=qd"
+}
+
+//----------------------------------------------------------------------
+
+*attach_hit_durzu
+{
+	*classname attachmodel
+	*model0 "Particles:,MP=50,SU=BloodSpurt01,CO=0x80585048,,,DU=2,,FI=0.1,VE=1.5,VEN=1.5,,AX=0 0 40,,,,,,,,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=0.02,,SZ1=40,SZ2=50,SZ3=100,SZ4=0.02,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.01,,,,,,,,,TC=0.05,,,,,ES=2,,,,,FL=qd"
+	*randanim0
+
+	*duration 10
+}
+
+//----------------------------------------------------------------------
+
+*attach_hit_stonegnomeFreezeEffect
+{
+	*classname attachmodel
+//	*model0 "Particles:,MP=50,SU=CloudBall,CO=0x209C93D0,DU=2,FI=0.1,VE=1.5,VEN=1.5,AX=0 0 25,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=0.02,SZ0=4,SZ1=8,SZ2=20,SZ3=40,SZ4=0.02,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.01,TC=0.05,ES=3,FL=qd"
+	*model0 "Particles:MP=120,CO=0x609C93D0,TS=3,DU=2,VE=10,VEN=20,AX=0 0 10,SZ0=6,SZ1=8,SZ2=12,SZ3=16,ES=1,SMT=2,LS=9,FL=asq+qd"
+
+	*duration 10
+}
+
+//----------------------------------------------------------------------
+
+*attach_hit_stonegnome
+{
+	*classname attachmodel
+	*model0 "Particles:,MP=50,SU=BloodSpurt01,CO=0x80585048,DU=2,FI=0.1,VE=1.5,VEN=1.5,AX=0 0 25,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=0.02,SZ0=4,SZ1=8,SZ2=20,SZ3=40,SZ4=0.02,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.01,TC=0.05,ES=2,FL=qd"
+	*randanim0
+	*sound_spawn du_special06
+
+	*duration 10
+}
+
+//----------------------------------------------------------------------
+
+*attach_hit_skeleton
+{
+	*classname attachmodel
+	*model0 "Particles:MP=50,SU=p_smokeblob01b,CO=0x40605040,DU=0.8,VE=20,VEN=40,OF=3,SZ3=15,RT0=2,RT1=-2,RT2=2,RT3=-2,RT4=0.75,PP=50,ES=0.01,SMT=0.8,FL=sm"
+	*randanim0
+
+	*duration 10
+}
+
+//----------------------------------------------------------------------
+
+*attach_hit_shadowskeleton
+{
+	*classname attachmodel
+	*model0 "Particles:MP=50,SU=ahp,CO=0xFF000000,DU=0.8,AL0=0.4,VE=20,VEN=40,OF=3,SZ3=15,RT0=2,RT1=-2,RT2=2,RT3=-2,RT4=0.75,PP=50,ES=0.01,SMT=0.8,FL=sm"
+	*randanim0
+
+	*duration 10
+}
+
+//----------------------------------------------------------------------
+
+*attach_fire_small
+{
+	*classname attachmodel
+
+	*model fire
+	
+	*duration 5-10
+
+	*damage 10, fire, 0.8
+
+	*animattr0 5
+	*animattr1 1
+	*anim0 0x1A1A
+	*anim1 0x0C00
+	*colors0 0xC0ffafaf
+	*colors1 0xC0ffafaf
+	*colors2 0xC0ff3f3f
+	*colors3 0x0000100A
+
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_fire_medium
+{
+	*classname attachmodel
+
+	*model fire
+	
+	*duration 10-15
+
+	*damage 15, fire, 0.8
+
+	*animattr0 15
+	*animattr1 1
+	*anim0 0x3030
+	*anim1 0x1000
+	*colors0 0xC0ffafaf
+	*colors1 0xC0ffafaf
+	*colors2 0xC0ff3f3f
+	*colors3 0x0000180C
+
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_fire_large
+{
+	*classname attachmodel
+
+	*model fire
+
+	*duration 15-20
+
+	*damage 20, fire, 0.8
+
+	*animattr0 20
+	*animattr1 1
+	*anim0 0x5050
+	*anim1 0x2000
+	*colors0 0xC0ffafaf
+	*colors1 0xC0ffafaf
+	*colors2 0xC0ff3f3f
+	*colors3 0x00002010
+
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_firebottle
+{
+	*classname attachmodel
+	
+	*model0 "particles:,MP=30,SU=afire01,CO=0x50CEAF71,DU=0.3,FI=0.15,AX=0 0 90,AXN=0 0 70,DI=sphere,DIS=1.5,SZ0=22,SZ1=28,SZ2=12,RT0=3,RT1=-2,RT2=-3,RT3=1,LS=4,ES=5,FL=asq"
+	*model1 "particles:,MP=40,SU=p_smokeblob04,CO=0xdd222222,DU=2,FI=1.8,AX=0 0 20,AXN=0 0 25,DI=sphere,DIS=1,SZ0=15,SZ1=25,SZ2=50,SZ3=45,RT0=-2,RT1=3,RT2=1,RT3=-2,ES=5,TC=0.05"
+	
+	*duration 6.5
+
+	*damage 15, fire, 1.5
+	
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_hefirebottle
+{
+	*classname attachmodel
+	
+	*model0 "particles:,MP=30,SU=afire01,CO=0x50CEAF71,DU=0.3,FI=0.15,AX=0 0 90,AXN=0 0 70,DI=sphere,DIS=1.5,SZ0=22,SZ1=28,SZ2=12,RT0=3,RT1=-2,RT2=-3,RT3=1,LS=4,ES=7,FL=asq"
+	*model1 "particles:,MP=40,SU=p_smokeblob04,CO=0xdd222222,DU=2,FI=1.8,AX=0 0 20,AXN=0 0 25,DI=sphere,DIS=1,SZ0=15,SZ1=25,SZ2=50,SZ3=45,RT0=-2,RT1=3,RT2=1,RT3=-2,ES=7,TC=0.05"
+	
+	*duration 10
+
+	*damage 25, fire, 1.5
+	
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_firesword
+{
+	*classname attachmodel
+	
+	*model0 "particles:,MP=30,SU=afire01,CO=0x50CEAF71,DU=0.3,FI=0.15,AX=0 0 90,AXN=0 0 70,DI=sphere,DIS=1.5,SZ0=22,SZ1=28,SZ2=12,RT0=3,RT1=-2,RT2=-3,RT3=1,LS=4,ES=6,FL=asq"
+	*model1 "particles:,MP=40,SU=p_smokeblob04,CO=0xdd222222,DU=2,FI=1.8,AX=0 0 20,AXN=0 0 25,DI=sphere,DIS=1,SZ0=15,SZ1=25,SZ2=50,SZ3=45,RT0=-2,RT1=3,RT2=1,RT3=-2,ES=6,TC=0.05"
+	
+	*duration 8
+
+	*damage 25, fire, 1.5
+	
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_poison
+{
+	*classname attachmodel
+
+	*model0 "Particles:,MP=60,SU=CloudBall,CO=0x60208020,CON=0x0020F020,TS=0.5,DU=0.5,,FI=0.1,VE=20,VEN=20,,,,,,,,,,,,,,,SZ0=5,SZ1=5,,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,SPA=0.15,SPB=0.15,,,ES=4,,,,,,,,,,,,FL=qd"
+
+	*duration 5.5
+
+	*damage 15, poison, 0.5
+
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_poison_small
+{
+	*classname attachmodel
+
+	*model0 "Particles:,MP=60,SU=CloudBall,CO=0x60208020,CON=0x0020F020,TS=0.5,DU=0.5,,FI=0.1,VE=20,VEN=20,,,,,,,,,,,,,,,SZ0=5,SZ1=5,,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,SPA=0.15,SPB=0.15,,,,,,ES=5,,,,,,,,,FL=qd"
+
+	*duration 6.5
+
+	*damage 10, poison, 0.8
+
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_poison_large
+{
+	*classname attachmodel
+
+	*model0 "Particles:,MP=110,SU=CloudBall,CO=0x40208020,CON=0x0020F020,TS=0.5,DU=0.5,,FI=0.1,VE=30,VEN=30,,,,,,,,,,,,,,,SZ0=5,SZ1=5,SZ2=15,SZ3=15,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,SPA=0.2,SPB=0.2,,,,,,,PP=2,,ES=5,,,,,,FL=qd"
+
+	*duration 7.5
+
+	*damage 20, poison, 0.8
+
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_darkness_small
+{
+	*classname attachmodel
+	
+	*model0 "Particles:,MP=60,SU=ahp,CON=0x0020F020,TS=0.5,DU=0.5,,FI=0.1,VE=20,VEN=20,,,,,,,,,,,,,,,SZ0=13,SZ1=13,,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,SPA=0.15,SPB=0.15,,,ES=4,,,,,,,,,,,,FL=qd"
+
+	*duration 5.5
+
+	*damage 15, magic, 0.8
+
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_burstarrow
+{
+	*classname attachmodel
+	
+	*model0 "weapons\\longarrow"
+
+	*duration 10
+
+	*attachtype leathal
+}
+
+//----------------------------------------------------------------------
+
+*attach_firearrow
+{
+	*classname attachmodel
+	
+	*model0 "weapons\\firearrow"
+	*model1 "particles:,MP=30,SU=afire01,CO=0x50CEAF71,DU=0.3,FI=0.15,AX=0 0 90,AXN=0 0 70,DI=sphere,DIS=1.5,SZ0=22,SZ1=28,SZ2=12,RT0=3,RT1=-2,RT2=-3,RT3=1,LS=4,ES=4,FL=asq"
+	*model2 "particles:,MP=40,SU=p_smokeblob04,CO=0xdd222222,DU=2,FI=1.8,AX=0 0 20,AXN=0 0 25,DI=sphere,DIS=1,SZ0=15,SZ1=25,SZ2=50,SZ3=45,RT0=-2,RT1=3,RT2=1,RT3=-2,ES=4,TC=0.05"
+	//*model1 fire
+
+	*duration 5.5
+
+	*damage 5, fire, 1.5
+
+	//*animattr0 5
+	//*animattr1 1
+	//*anim0 0x1A1A
+	//*anim1 0x0C00
+	//*colors0 0xC0ffafaf
+	//*colors1 0xC0ffafaf
+	//*colors2 0xC0ff3f3f
+	//*colors3 0x0000100A
+
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_lafirearrow
+{
+	*classname attachmodel
+	
+	*model0 "weapons\\firearrow"
+	*model1 "particles:,MP=30,SU=afire01,CO=0x50CEAF71,DU=0.3,FI=0.15,AX=0 0 90,AXN=0 0 70,DI=sphere,DIS=1.5,SZ0=22,SZ1=28,SZ2=12,RT0=3,RT1=-2,RT2=-3,RT3=1,LS=4,ES=6,FL=asq"
+	*model2 "particles:,MP=40,SU=p_smokeblob04,CO=0xdd222222,DU=2,FI=1.8,AX=0 0 20,AXN=0 0 25,DI=sphere,DIS=1,SZ0=15,SZ1=25,SZ2=50,SZ3=45,RT0=-2,RT1=3,RT2=1,RT3=-2,ES=6,TC=0.05"
+	//*model1 fire
+
+	*duration 7.5
+
+	*damage 10, fire, 1.5
+	
+	//*animattr0 10
+	//*animattr1 1
+	//*anim0 0x3030
+	//*anim1 0x1000
+	//*colors0 0xC0ffafaf
+	//*colors1 0xC0ffafaf
+	//*colors2 0xC0ff3f3f
+	//*colors3 0x0000180C
+
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_sniperarrow
+{
+	*classname attachmodel
+	
+	*model0 "weapons\\sniperarrow"
+
+	*duration 10-15
+
+	*attachtype leathal
+}
+
+//----------------------------------------------------------------------
+
+*attach_magicarrow
+{
+	*classname attachmodel
+	
+	*model0 "weapons\\magicarrow"
+
+	*duration 10-15
+
+	*attachtype leathal
+}
+
+//----------------------------------------------------------------------
+
+*attach_bolt_normal
+{
+	*classname attachmodel
+	
+	*model0 "weapons\\normalbolt"
+
+	*duration 10
+
+	*attachtype leathal
+}
+
+//----------------------------------------------------------------------
+
+*attach_bolt_magic
+{
+	*classname attachmodel
+	
+	*model0 "weapons\\magicbolt"
+
+	*duration 5-10
+
+	*attachtype leathal
+}
+
+//----------------------------------------------------------------------
+
+*attach_bolt_poison
+{
+	*classname attachmodel
+	
+	*model0 "weapons\\normalbolt"
+	*model1 "Particles:,MP=60,SU=CloudBall,CO=0x60208020,CON=0x0020F020,TS=0.5,DU=0.5,,FI=0.1,VE=20,VEN=20,,,,,,,,,,,,,,,SZ0=5,SZ1=5,,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,SPA=0.15,SPB=0.15,,ES=3,,,,,,,,,,,,,FL=qd"
+
+	*duration 5
+
+	*damage 10, poison, 0.8
+
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_hit_fireburn
+{
+	*classname attachmodel
+
+	*model0 "Particles:,MP=50,SU=CloudBall,CO=0x50585048,,,,DU=2,,FI=0.1,,,VE=1.5,VEN=1.5,,AX=0 0 25,,,,,,,,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=0.02,SZ0=4,SZ1=8,SZ2=20,SZ3=40,SZ4=0.02,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.01,,,,,,,TC=0.05,,,,,ES=2,,,,,FL=qd"
+	*duration 4
+
+	*damage 2, fire, 1.4
+
+	*attachtype painfull
+}
+
+//----------------------------------------------------------------------
+
+*attach_ballista
+{
+	*classname attachmodel
+	
+	*model0 "weapons\\ballista"
+
+	*duration 100
+
+	*attachtype leathal
+}
+
+//----------------------------------------------------------------------
+
+*attach_ballista_poison
+{
+	*classname attachmodel
+	
+//	*model1 "weapons\\ballista"
+	*model0 "Particles:,MP=60,SU=CloudBall,CO=0x60208020,CON=0x0020F020,TS=0.5,,DU=0.3,,FI=0.1,,,VE=20,VEN=40,,,,,,,,,,,,,,,,SZ1=30,SZ2=50,SZ3=70,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPA=0.15,SPB=0.15,,,,,,,,,,ES=5,,,,,FL=qd"
+	
+	*duration 10
+	
+	*damage 15, special, 0.8
+
+	*attachtype leathal
+}
+
+//----------------------------------------------------------------------
+
+*attach_ballista_vatar
+{
+	*classname attachmodel
+	
+	*model0 "weapons\\ballista"
+	*model1 "Particles:,MP=60,SU=CloudBall,CO=0x60208020,CON=0x0020F020,TS=0.5,DU=0.3,,FI=0.1,VE=20,VEN=40,,,,,,,,,,,,,,,,SZ1=30,SZ2=50,SZ3=70,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,SPA=0.15,SPB=0.15,,ES=5,,,,,,,,,,,,,FL=qd"
+	
+	*duration 10
+	
+	*damage 15, magic, 0.8
+
+	*attachtype leathal
+}
+
+//----------------------------------------------------------------------

@@ -1,0 +1,1519 @@
+
+*game_trigger_exit
+{
+	*classname trigger
+	*triggerobjects character
+	*active 0
+}
+
+*sky
+{
+	*classname worldsky
+	*sky_name Sky_Default
+}
+
+*sky_indoor
+{
+	*classname worldsky
+	*fog_disable
+	*sky_indoor
+	*sky_name Sky_Default
+}
+
+*LIGHT_SKY
+{
+	*CLASSNAME			"LIGHT"
+	*LIGHT_TYPE			2
+	*LIGHT_ID			1
+	*LIGHT_RANGE		30000
+	*LIGHT				140
+	*LIGHT_COLOR		0xffffffe0
+	*LIGHT_DIRECTION	0.4, -0.6, -0.65
+	*LIGHT_POWER		2
+	*LIGHT_DONTEVALTHISAGAIN	1
+	*LIGHT_TRACELEN		2048
+
+	*$AMBLIGHT "The fake-radiosity lightsource."
+	{
+		*CLASSNAME "LIGHT"
+		*LIGHT_TYPE			1
+		*LIGHT_ID			1
+		*LIGHT				250
+		*LIGHT_RANGE		30000
+		*LIGHT_DONTEVALTHISAGAIN	1
+		*LIGHT_TRACELEN		2048
+	}
+}
+
+*Light_Parallell
+{
+	*classname Light
+	*light_type 2
+	*light_range 30000
+}
+
+*LIGHT_Elm7
+{
+	*CLASSNAME			"LIGHT"
+	*LIGHT_RANGE 32
+	*LIGHT_COLOR 0xffff5528
+	*LIGHT 250
+	*BRUSHFLAGS 32
+}
+
+
+
+*EnclaveDM
+{
+	*classname P3DM
+	*script_test
+	"
+		void OnHurt(string _Allan, string _Allan2) 
+		{ 
+			net_conout \"OUCH! \" + _Allan,-1;
+			wait 15;
+			net_conout \"Oj! \" + _Allan2,-1;
+			wait 15;
+			net_conout \"Aj-aj!\" + _Allan,-1;
+		}
+	"
+
+	*script_test2
+	"
+		void OnFniss()
+		{
+			net_conout \"Fniss! \",-1;
+		}
+
+		void OnHurt(string _Allan, string _Allan2) 
+		{ 
+			net_conout \"OUCH-II! \" + _Allan,-1;
+			OnFniss();
+			wait 15;
+			net_conout \"Oj-II! \" + _Allan2,-1;
+			wait 15;
+			net_conout \"Aj-aj-II!\" + _Allan,-1;
+		}
+	"
+}
+
+*TP3CTF
+{
+	*classname P3CTF
+	*snd_ctf_capture CTFRET_FR
+	*snd_ctf_capture_enemy CTFRET_EN
+	*snd_ctf_returnflag CTFCAP_FR
+	*snd_ctf_returnflag_enemy CTFCAP_EN
+	*snd_ctf_flagtaken CTFCAP_EN
+	*snd_ctf_flagtaken_enemy CTFCAP_FR
+}
+
+*coordsys
+{
+	*classname ext_model
+	*model coordsys
+	*duration 5
+}
+
+/*
+	*info_ctf_redflag
+	{
+		*classname			rpg_ctfitem
+		*targetname			ctf_redflag
+		*team				0
+		*rpgobject			pickup_ctf_redflag
+	}
+
+	*info_ctf_blueflag
+	{
+		*classname			rpg_ctfitem
+		*targetname			ctf_blueflag
+		*team				1
+		*rpgobject			pickup_ctf_blueflag
+	}
+
+	*info_start_red
+	{
+		*ogr_base			ogr_template_player_start
+		*classname			info_player_start
+		*team				0
+	}
+
+	*info_start_blue
+	{
+		*ogr_base			ogr_template_player_start
+		*classname			info_player_start
+		*team				1
+	}
+*/
+
+*info_start_light
+{
+	*classname			info_player_start
+	*team				0
+}
+
+*info_start_dark
+{
+	*classname			info_player_start
+	*team				1
+}
+
+*info_startsingle_light
+{
+	*classname			info_player_start
+	*team				0
+}
+
+*info_startsingle_dark
+{
+	*classname			info_player_start
+	*team				1
+}
+
+*Tree_Tree01
+{
+	*CLASSNAME			MODEL
+	*MODEL				flora\Tree01
+	*PHYSMODEL			world\flora\P_Tree01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree01.xw
+}
+
+*Tree_Tree02
+{
+	*CLASSNAME			MODEL
+	*MODEL				flora\Tree02
+	*PHYSMODEL			world\flora\P_Tree02.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree02.xw
+}
+
+*Tree_Tree02_2
+{
+	*CLASSNAME			MODEL
+	*MODEL				flora\Tree02_2
+	*PHYSMODEL			world\flora\P_Tree02_2.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree02_2.xw
+}
+
+*Tree_Tree02_3
+{
+	*CLASSNAME			MODEL
+	*MODEL				flora\Tree02_3
+	*PHYSMODEL			world\flora\P_Tree02_3.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree02_3.xw
+}
+
+*TEMPLATE_TORCH2
+{
+	*CLASSNAME			MODEL
+	*CLIENTFLAGS		NoRefresh
+
+	*$LIGHT
+	{
+		*CLASSNAME "LIGHT"
+		*CLIENTFLAGS		NoRefresh
+		*LIGHT				300
+		*LIGHT_RANGE		256
+		*LIGHT_COLOR		0xffffcc80
+
+		*LIGHT_FLARE		80
+		*LIGHT_FLARERANGE	768
+		*LIGHT_FLARESIZE	192
+		*LIGHT_FLAREDEPTHOFFSET	8
+		*MODEL			FLARE
+	}
+
+	*$LIGHT2
+	{
+		*CLASSNAME		LIGHT
+		*CLIENTFLAGS		NoRefresh
+		*LIGHT				100
+		*LIGHT_COLOR		0xffffcc80
+		*LIGHT_RANGE		600
+		*LIGHT_FLAGS		4
+	}
+}
+
+*TEMPLATE_TORCH
+{
+	*CLASSNAME			MODEL
+	*OGR_BASE			Ogr_Template_Torch
+	*CLIENTFLAGS		NoRefresh
+
+	*$MODEL
+	{
+		*MODEL "fire"
+		*CLIENTFLAGS		NoRefresh
+		*ANIM1 "0x50b"
+		*ANIM0 "0"
+		*ANIMATTR0 "4"
+		*SOUND FIRE_MED01b
+		*COLORS0 "0xffafafff"
+		*COLORS1 "0xffafafff"
+		*COLORS2 "0xffff6fc0"
+		*CLASSNAME "ext_model"
+		*ORIGIN		8, 0, 20
+	}
+
+	*$LIGHT
+	{
+		*CLASSNAME "LIGHT"
+		*CLIENTFLAGS		NoRefresh
+		*LIGHT			300
+		*LIGHT_RANGE		256
+		*LIGHT_COLOR		0xffffcc80
+
+		*LIGHT_FLARE		80
+		*LIGHT_FLARERANGE	768
+		*LIGHT_FLARESIZE	192
+		*LIGHT_FLAREDEPTHOFFSET	8
+		*MODEL			FLARE
+	}
+
+	*$LIGHT2
+	{
+		*CLASSNAME		LIGHT
+		*CLIENTFLAGS		NoRefresh
+		*LIGHT			100
+		*LIGHT_COLOR		0xffffcc80
+		*LIGHT_RANGE		600
+		*LIGHT_FLAGS		4
+	}
+}
+
+*TEMPLATE_TORCHSMALL
+{
+	*CLASSNAME			MODEL
+	*OGR_BASE			Ogr_Template_Torch
+	*CLIENTFLAGS		NoRefresh
+
+	*$MODEL
+	{
+		*MODEL "fire"
+		*CLIENTFLAGS	NoRefresh
+		*ANIM1 "0x203"
+		*ANIM0 "0"
+		*ANIMATTR0 "3"
+		*SOUND FIRE_MED01b
+		*COLORS0 "0xffafafff"
+		*COLORS1 "0xffafafff"
+		*COLORS2 "0xffff6fc0"
+		*CLASSNAME "ext_model"
+		*ORIGIN		8, 0, 20
+	}
+
+	*$LIGHT
+	{
+		*CLASSNAME "LIGHT"
+		*CLIENTFLAGS		NoRefresh
+		*LIGHT				300
+		*LIGHT_RANGE		256
+		*LIGHT_COLOR		0xffffcc80
+
+		*LIGHT_FLARE		80
+		*LIGHT_FLARERANGE	768
+		*LIGHT_FLARESIZE	192
+		*LIGHT_FLAREDEPTHOFFSET	8
+		*MODEL			FLARE
+	}
+
+	*$LIGHT2
+	{
+		*CLASSNAME		LIGHT
+		*CLIENTFLAGS		NoRefresh
+		*LIGHT				100
+		*LIGHT_COLOR		0xffffcc80
+		*LIGHT_RANGE		600
+		*LIGHT_FLAGS		4
+	}
+}
+
+*TEMPLATE_TORCH_DMG
+{
+	*COMMENT			"Adds a damage trigger to the generic torch template."
+	*CLASSNAME			TEMPLATE_TORCH
+
+	*$DAMAGE
+	{
+		*CLIENTFLAGS		NoRefresh+NoUpdate
+		*CLASSNAME trigger_damage
+		*DAMAGE 5
+		*HITSPERSECOND 1
+		*TRIGGEROBJECTS Player
+		*PHYSPRIM0 box, 1, 1, 1,0,0,0, rotation, trigger
+	}
+}
+
+*LIGHT_CANDLE01
+{
+	*CLASSNAME			TEMPLATE_TORCH
+	*MODEL				WORLD\LIGHTS\Candle01
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_Candle01.XW
+	*PHYSMODEL			WORLD\LIGHTS\P_Candle01.XW
+
+	*$MODEL
+	{
+		*ANIM1 "0x102"
+		*ORIGIN		0, 0, 15.5
+	}
+
+	*$LIGHT
+	{
+		*LIGHT_FLARE		40
+		*LIGHT_FLARERANGE	512
+		*LIGHT_FLARESIZE	128
+		*ORIGIN			0, 0, 18
+	}
+
+	*$LIGHT2
+	{
+		*LIGHT			200
+		*ORIGIN			0, 0, 34
+	}
+}
+
+*LIGHT_CANDLE02
+{
+	*CLASSNAME			TEMPLATE_TORCH
+	*MODEL				WORLD\LIGHTS\Candle02
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_Candle02.XW
+	*PHYSMODEL			WORLD\LIGHTS\P_Candle02.XW
+
+	*$MODEL
+	{
+		*ANIM1 "0x102"
+		*ORIGIN		0, 0, 12.5
+	}
+
+	*$LIGHT
+	{
+		*LIGHT_FLARE		40
+		*LIGHT_FLARERANGE	512
+		*LIGHT_FLARESIZE	128
+		*ORIGIN			0, 0, 16
+	}
+
+	*$LIGHT2
+	{
+		*LIGHT			200
+		*ORIGIN			0, 0, 32
+	}
+}
+
+*LIGHT_CANDLE03
+{
+	*CLASSNAME			TEMPLATE_TORCH
+	*MODEL				WORLD\LIGHTS\Candle03
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_Candle03.XW
+	*PHYSMODEL			WORLD\LIGHTS\P_Candle03.XW
+
+	*$MODEL
+	{
+		*ANIM1 "0x102"
+		*ORIGIN		0, 0, 8.5
+	}
+
+	*$LIGHT
+	{
+		*LIGHT_FLARE		40
+		*LIGHT_FLARERANGE	512
+		*LIGHT_FLARESIZE	128
+		*ORIGIN			0, 0, 12
+	}
+
+	*$LIGHT2
+	{
+		*LIGHT			200
+		*ORIGIN			0, 0, 28
+	}
+}
+
+*LIGHT_Standbowl1
+{
+	*CLASSNAME			TEMPLATE_TORCH_DMG
+	*MODEL				WORLD\LIGHTS\Standbowl1
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_Standbowl1.XW
+	*PHYSMODEL			WORLD\LIGHTS\P_Standbowl1.XW
+
+	*$MODEL
+	{
+		*ORIGIN			0, 0, 48
+	}
+
+	*$LIGHT
+	{
+		*ORIGIN			0, 0, 52
+	}
+
+	*$LIGHT2
+	{
+		*ORIGIN			0, 0, 112
+	}
+
+	*$DAMAGE
+	{
+		*ORIGIN 0, 0, 56
+	}
+}
+
+*LIGHT_Standbowl2
+{
+	*CLASSNAME			TEMPLATE_TORCHSMALL
+	*MODEL				WORLD\LIGHTS\Standbowl2
+	*PHYSMODEL			WORLD\LIGHTS\P_Standbowl2.XW
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_Standbowl2.XW
+
+	*$MODEL
+	{
+		*ORIGIN			0, 0, 49
+	}
+
+	*$LIGHT
+	{
+		*ORIGIN			0, 0, 52
+		*LIGHT_FLARE		55
+		*LIGHT_FLARERANGE	512
+		*LIGHT_FLARESIZE	128
+		*LIGHT_FLAREDEPTHOFFSET	4
+
+	}
+
+	*$LIGHT2
+	{
+		*ORIGIN			0, 0, 104
+		*LIGHT			60
+		*LIGHT_RANGE		500
+	}
+}
+
+*LIGHT_outlandIronLampFloor
+{
+	*CLASSNAME			TEMPLATE_TORCH_DMG
+	*MODEL				WORLD\LIGHTS\outlandIronLampFloor
+	*PHYSMODEL			WORLD\LIGHTS\P_outlandIronLampFloor.XW
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_outlandIronLampFloor.XW
+
+	*$MODEL
+	{
+		*MODEL "fire"
+		*CLIENTFLAGS	NoRefresh
+		*ANIM1 "1032"
+		*ANIM0 "0"
+		*ANIMATTR0 "3"
+		*COLORS0 "0xffffffff"
+		*COLORS1 "0xffffffff"
+		*COLORS2 "0xffff0000"
+		*ORIGIN	 "0, 0, 61.5"
+	}
+
+	*$LIGHT
+	{
+		*ORIGIN			0, 0, 70
+
+	}
+
+	*$LIGHT2
+	{
+		*ORIGIN			0, 0, 120
+		*LIGHT			50
+		*LIGHT_RANGE		500
+	}
+}
+*LIGHT_outlandIronLampWall
+{
+	*CLASSNAME			TEMPLATE_TORCH_DMG
+	*MODEL				WORLD\LIGHTS\outlandIronLampWall
+	*PHYSMODEL			WORLD\LIGHTS\P_outlandIronLampWall.XW
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_outlandIronLampWall.XW
+
+	*$MODEL
+	{
+		*MODEL "fire"
+		*CLIENTFLAGS	NoRefresh
+		*ANIM1 "1032"
+		*ANIM0 "0"
+		*ANIMATTR0 "3"
+		*SOUND FIRE_MED01b
+		*COLORS0 "0xffafafff"
+		*COLORS1 "0xffafafff"
+		*COLORS2 "0xffff6fc0"
+		*CLASSNAME "ext_model"
+		*ORIGIN			"20, 0, 22"
+	}
+	*$LIGHT
+	{
+		*ORIGIN			20, 0, 28
+	}
+
+	*$LIGHT2
+	{
+		*LIGHT			50
+		*LIGHT_RANGE		500
+		*ORIGIN			44, 0, 28
+	}
+}
+
+*LIGHT_Thorch1
+{
+	*CLASSNAME			TEMPLATE_TORCH_DMG
+	*MODEL				WORLD\LIGHTS\TORCH1
+	*PHYSMODEL			WORLD\LIGHTS\P_TORCH1.XW
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_TORCH1.XW
+
+	*$MODEL
+	{
+		*ORIGIN			8, 0, 9
+	}
+
+	*$LIGHT
+	{
+		*ORIGIN			9, 0, 14
+	}
+
+	*$LIGHT2
+	{
+		*ORIGIN			40, 0, 13
+		*LIGHT			50
+		*LIGHT_RANGE		500
+	}
+
+	*$DAMAGE
+	{
+		*ORIGIN 8, 0, 9
+	}
+}
+
+*LIGHT_Globelight
+{
+	*CLASSNAME			TEMPLATE_TORCH_DMG
+	*MODEL				WORLD\LIGHTS\Globelight
+	*PHYSMODEL			WORLD\LIGHTS\P_Globelight.XW
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_Globelight.XW
+
+	*$MODEL
+	{
+		*ORIGIN			12, 0, 8
+		*MODEL			Particles:,MP=30,CO=0x9000CCFF,CON=0x90101010,TS=1.2,DUN=5,FI=0.3,MV0=-4,MV1=4,MV2=-4,MV3=4,MV4=0.7,SZ0=1,,SZ2=1,,SZ4=0.1,RT0=-5,RT1=5,RT2=-5,RT3=5,RT4=2,TC=0.2,EPC=2,FL=quads
+	}
+
+	*$LIGHT
+	{
+		*ORIGIN			12, 0, 8
+		*LIGHT_COLOR		0xff6080a6
+	}
+
+	*$LIGHT2
+	{
+		*ORIGIN			48, 0, 8
+		*LIGHT			50
+		*LIGHT_RANGE		500
+		*LIGHT_COLOR		0xff6080a6
+	}
+
+	*$DAMAGE
+	{
+		*ORIGIN 13, 0, 6
+	}
+}
+
+*LIGHT_RagTorch
+{
+	*CLASSNAME			TEMPLATE_TORCH_DMG
+	*MODEL				WORLD\LIGHTS\RagTorch
+	*PHYSMODEL			WORLD\LIGHTS\P_RagTorch.XW
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_RagTorch.XW
+
+	*$MODEL
+	{
+		*ORIGIN			13, 0, 6
+		*SOUND FIRE_MED01b
+	}
+
+	*$LIGHT
+	{
+		*ORIGIN			13, 0, 16
+	}
+
+	*$LIGHT2
+	{
+		*ORIGIN			40, 0, 16
+		*LIGHT			50
+		*LIGHT_RANGE		500
+	}
+
+	*$DAMAGE
+	{
+		*ORIGIN 13, 0, 6
+	}
+}
+
+*LIGHT_CrowntorchBig
+{
+	*CLASSNAME			TEMPLATE_TORCH_DMG
+	*MODEL				WORLD\LIGHTS\CrowntorchBig
+	*PHYSMODEL			WORLD\LIGHTS\P_CrowntorchBig.XW
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_CrowntorchBig.XW
+
+	*$MODEL
+	{
+		*ORIGIN			20, 0, 44
+		*CLIENTFLAGS	NoRefresh
+		*ANIM1 "4118"
+		*ANIM0 "0"
+		*ANIMATTR0 "3"
+		*SOUND FIRE_MED01b
+		*COLORS0 "0xffffffff"
+		*COLORS1 "0xffffffff"
+		*COLORS2 "0xffff0000"
+
+	}
+
+	*$LIGHT
+	{
+		*ORIGIN			20, 0, 56
+		*LIGHT			380
+//		*LIGHT			320
+		*LIGHT_RANGE		512
+	}
+
+	*$LIGHT2
+	{
+		*ORIGIN			44, 0, 34
+		*LIGHT			100
+//		*LIGHT			90
+		*LIGHT_RANGE		1000
+	}
+
+	*$DAMAGE
+	{
+		*ORIGIN 		20, 0, 44
+	}
+}
+
+*LIGHT_CubeLantern1_0
+{
+	*CLASSNAME			TEMPLATE_TORCH_DMG
+	*MODEL				WORLD\LIGHTS\CubeLantern1_0
+	*PHYSMODEL			WORLD\LIGHTS\P_CubeLantern.XW
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_CubeLantern.XW
+
+	*$MODEL
+	{
+		*ORIGIN			0, 0, 9
+		*SOUND FIRE_MED01b
+	}
+
+	*$LIGHT
+	{
+		*ORIGIN			0, 0, 16
+	}
+
+	*$LIGHT2
+	{
+		*ORIGIN			0, 0, 43
+		*LIGHT			50
+		*LIGHT_RANGE		500
+	}
+
+	*$DAMAGE
+	{
+		*ORIGIN 0, 0, 12
+	}
+}
+
+*LIGHT_CubeLantern2_0
+{
+	*CLASSNAME			TEMPLATE_TORCH_DMG
+	*MODEL				WORLD\LIGHTS\CubeLantern2_0
+	*PHYSMODEL			WORLD\LIGHTS\P_CubeLantern.XW
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_CubeLantern.XW
+
+	*$MODEL
+	{
+		*ORIGIN			0, 0, 9
+		*SOUND FIRE_MED01b
+	}
+
+	*$LIGHT
+	{
+		*ORIGIN			0, 0, 16
+	}
+
+	*$LIGHT2
+	{
+		*ORIGIN			0, 0, 43
+		*LIGHT			50
+		*LIGHT_RANGE		500
+	}
+
+	*$DAMAGE
+	{
+		*ORIGIN 0, 0, 12
+	}
+}
+
+*LIGHT_Townlamp
+{
+	*CLASSNAME			TEMPLATE_TORCH
+	*MODEL				WORLD\LIGHTS\Townlamp
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_Townlamp.XW
+	*PHYSMODEL			WORLD\LIGHTS\P_Townlamp.XW
+
+	*$MODEL
+	{
+		*ANIM1 "0x102"
+		*ORIGIN		0, 0, 6
+		*SOUND FIRE_MED01b
+	}
+
+	*$LIGHT
+	{
+		*LIGHT_FLARE		40
+		*LIGHT_FLARERANGE	512
+		*LIGHT_FLARESIZE	128
+		*ORIGIN			0, 0, 7
+	}
+
+	*$LIGHT2
+	{
+		*LIGHT			100
+		*ORIGIN			0, 0, 4
+	}
+}
+
+*LIGHT_TownlampB
+{
+	*CLASSNAME			TEMPLATE_TORCH
+	*MODEL				WORLD\LIGHTS\TownlampB
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_TownlampB.XW
+	*PHYSMODEL			WORLD\LIGHTS\P_TownlampB.XW
+
+	*$MODEL
+	{
+		*ANIM1 "0x102"
+		*ORIGIN		0, 0, 6
+		*SOUND FIRE_MED01b
+	}
+
+	*$LIGHT
+	{
+		*LIGHT_FLARE		40
+		*LIGHT_FLARERANGE	512
+		*LIGHT_FLARESIZE	128
+		*ORIGIN			0, 0, 7
+	}
+
+	*$LIGHT2
+	{
+		*LIGHT			100
+		*ORIGIN			0, 0, 4
+	}
+}
+
+*LIGHT_TownlampC
+{
+	*CLASSNAME			TEMPLATE_TORCH
+	*MODEL				WORLD\LIGHTS\TownlampB
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_TownlampB.XW
+	*PHYSMODEL			WORLD\LIGHTS\P_TownlampB.XW
+
+
+	*$MODEL
+	{
+		*MODEL
+	}
+
+	*$LIGHT
+	{
+		*LIGHT_FLARE		40
+		*LIGHT_FLARERANGE	512
+		*LIGHT_FLARESIZE	128
+		*ORIGIN			0, 0, 7
+	}
+
+	*$LIGHT2
+	{
+		*LIGHT			100
+		*ORIGIN			0, 0, 4
+	}
+}
+
+*watertile_elm3
+{
+	*classname model
+	*model watertile:256,4
+}
+
+*watertile_elm8
+{
+	*classname model
+	*model watertile:512,8,WaterTileElm8
+}
+
+*watertile_elm6
+{
+	*classname model
+	*model watertile:2048,8,Elm6lava,8,6
+}
+
+*watertile_modelroom
+{
+	*classname model
+	*model watertile:256,4,WaterTile3
+}
+
+*bush01_01
+{
+	*classname model
+	*model flora\bush01_01
+	*LIGHT_SHADOWMODEL		world\flora\S_Bush01_01.xw
+}
+
+*bush01_02
+{
+	*classname model
+	*model flora\bush01_02
+	*LIGHT_SHADOWMODEL		world\flora\S_Bush01_01.xw
+}
+
+*bush01_03
+{
+	*classname model
+	*model flora\bush01_03
+	*LIGHT_SHADOWMODEL		world\flora\S_Bush01_01.xw
+}
+
+*bush01_04
+{
+	*classname model
+	*model flora\bush01_04
+	*LIGHT_SHADOWMODEL		world\flora\S_Bush01_01.xw
+}
+
+*bush01_05
+{
+	*classname model
+	*model flora\bush01_05
+	*LIGHT_SHADOWMODEL		world\flora\S_Bush01_05.xw
+}
+
+*bush01_06
+{
+	*classname model
+	*model flora\bush01_06
+	*LIGHT_SHADOWMODEL		world\flora\S_Bush01_06.xw
+}
+
+*bush01_07
+{
+	*classname model
+	*model flora\bush01_07
+	*LIGHT_SHADOWMODEL		world\flora\S_Bush01_06.xw
+}
+
+*bush02_01
+{
+	*classname model
+	*model flora\bush02_01
+	*LIGHT_SHADOWMODEL		world\flora\S_Bush01_07.xw
+}
+
+*tree01
+{
+	*classname model
+	*model flora\tree01
+}
+
+*tree02
+{
+	*classname model
+	*model flora\tree02
+}
+
+*tree02_2
+{
+	*classname model
+	*model flora\tree02_2
+}
+
+*tree02_3
+{
+	*classname model
+	*model flora\tree02_3
+}
+
+*tree03_01
+{
+	*classname model
+	*model flora\tree03_01
+	*PHYSMODEL			world\flora\P_Tree03_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree03_01.xw
+}
+
+*tree03_02
+{
+	*classname model
+	*model flora\tree03_02
+	*PHYSMODEL			world\flora\P_Tree03_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree03_01.xw
+}
+
+*tree03_03
+{
+	*classname model
+	*model flora\tree03_03
+	*PHYSMODEL			world\flora\P_Tree03_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree03_01.xw
+}
+
+*tree03_04
+{
+	*classname model
+	*model flora\tree03_04
+	*PHYSMODEL			world\flora\P_Tree03_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree03_01.xw
+}
+
+*tree03_05
+{
+	*classname model
+	*model flora\tree03_05
+	*PHYSMODEL			world\flora\P_Tree03_05.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree03_05.xw
+}
+
+*tree03_06
+{
+	*classname model
+	*model flora\tree03_06
+	*PHYSMODEL			world\flora\P_Tree03_05.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree03_05.xw
+}
+
+*tree03_07
+{
+	*classname model
+	*model flora\tree03_07
+	*PHYSMODEL			world\flora\P_Tree03_05.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree03_05.xw
+}
+
+*tree03_08
+{
+	*classname model
+	*model flora\tree03_08
+	*PHYSMODEL			world\flora\P_Tree03_05.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree03_05.xw
+}
+
+*tree03_09
+{
+	*classname model
+	*model flora\tree03_09
+	*PHYSMODEL			world\flora\P_Tree03_05.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree03_09.xw
+}
+*tree04_01
+{
+	*classname model
+	*model flora\tree04_01
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_01.xw
+}
+
+*tree04_02
+{
+	*classname model
+	*model flora\tree04_02
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_01.xw
+}
+
+*tree04_03
+{
+	*classname model
+	*model flora\tree04_03
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_01.xw
+}
+
+*tree04_04
+{
+	*classname model
+	*model flora\tree04_04
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_01.xw
+}
+
+*tree04_05
+{
+	*classname model
+	*model flora\tree04_05
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_05.xw
+}
+
+*tree04_06
+{
+	*classname model
+	*model flora\tree04_06
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_05.xw
+}
+
+*tree04_07
+{
+	*classname model
+	*model flora\tree04_07
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_05.xw
+}
+
+*tree04_08
+{
+	*classname model
+	*model flora\tree04_08
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_05.xw
+}
+
+*tree04_09
+{
+	*classname model
+	*model flora\tree04_09
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_09.xw
+}
+
+*tree04_10
+{
+	*classname model
+	*model flora\tree04_10
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_09.xw
+}
+
+*tree04_11
+{
+	*classname model
+	*model flora\tree04_11
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_09.xw
+}
+
+*tree04_12
+{
+	*classname model
+	*model flora\tree04_12
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_09.xw
+}
+
+*tree04_13
+{
+	*classname model
+	*model flora\tree04_13
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_13.xw
+}
+
+*tree04_14
+{
+	*classname model
+	*model flora\tree04_14
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_13.xw
+}
+
+*tree04_15
+{
+	*classname model
+	*model flora\tree04_15
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_13.xw
+}
+
+*tree04_16
+{
+	*classname model
+	*model flora\tree04_16
+	*PHYSMODEL			world\flora\P_Tree04_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree04_13.xw
+}
+
+*tree05_01
+{
+	*classname model
+	*model flora\tree05_01
+	*PHYSMODEL			world\flora\P_Tree05_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree05_01.xw
+}
+
+*tree05_02
+{
+	*classname model
+	*model flora\tree05_02
+	*PHYSMODEL			world\flora\P_Tree05_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree05_01.xw
+}
+
+*tree05_03
+{
+	*classname model
+	*model flora\tree05_03
+	*PHYSMODEL			world\flora\P_Tree05_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree05_01.xw
+}
+
+*tree05_04
+{
+	*classname model
+	*model flora\tree05_04
+	*PHYSMODEL			world\flora\P_Tree05_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree05_01.xw
+}
+
+*tree05_05
+{
+	*classname model
+	*model flora\tree05_05
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree05_05.xw
+}
+
+*tree06_01
+{
+	*classname model
+	*model flora\tree06_01
+	*PHYSMODEL			world\flora\P_Tree06_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree06_01.xw
+}
+
+*tree06_02
+{
+	*classname model
+	*model flora\tree06_02
+	*PHYSMODEL			world\flora\P_Tree06_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree06_01.xw
+}
+
+*tree06_03
+{
+	*classname model
+	*model flora\tree06_03
+	*PHYSMODEL			world\flora\P_Tree06_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree06_01.xw
+}
+
+*tree06_04
+{
+	*classname model
+	*model flora\tree06_04
+	*PHYSMODEL			world\flora\P_Tree06_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree06_01.xw
+}
+
+*tree07_01
+{
+	*classname model
+	*model flora\tree07_01
+	*PHYSMODEL			world\flora\P_Tree07_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree07_01.xw
+}
+
+*tree07_02
+{
+	*classname model
+	*model flora\tree07_02
+	*PHYSMODEL			world\flora\P_Tree07_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree07_01.xw
+}
+
+*tree07_03
+{
+	*classname model
+	*model flora\tree07_03
+	*PHYSMODEL			world\flora\P_Tree07_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree07_01.xw
+}
+
+*tree07_04
+{
+	*classname model
+	*model flora\tree07_04
+	*PHYSMODEL			world\flora\P_Tree07_01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Tree07_01.xw
+}
+
+*treetile01
+{
+	*OGR_CLASSNAME		treetile
+	*CLASSNAME			MODEL
+	*MODEL				flora\treetile01
+	*PHYSMODEL			world\flora\P_TreeTile01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Treetile01.xw
+}
+
+*treetile02
+{
+	*OGR_CLASSNAME		treetile
+	*CLASSNAME			MODEL
+	*MODEL				flora\treetile02
+	*PHYSMODEL			world\flora\P_TreeTile01.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Treetile01.xw
+}
+
+*treetile02_02
+{
+	*OGR_CLASSNAME		treetile
+	*CLASSNAME			MODEL
+	*MODEL				flora\treetile02_02
+	*PHYSMODEL			world\flora\P_Treetile02_02.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_Treetile02_02.xw
+}
+
+*tree_deadtree
+{
+	*classname model
+	*model flora\deadtree
+	*PHYSMODEL			world\flora\P_deadtree.xw
+	*LIGHT_SHADOWMODEL		world\flora\S_deadtree.xw
+}
+
+*pickup_coin
+{
+	*classname item
+	*physprim0 box, 8, 8, 8,0,0,0, 0, trigger+pickup, 0
+	*rpgobject item_coin
+	*flags rotate+nofall
+}
+
+*pickup_potion_DONTUSETHIS
+{
+	*classname item
+	*physprim0 box, 8, 8, 8,0,0,0, 0, trigger+pickup, 0
+	*rpgobject item_potion_health
+	*flags rotate+nofall
+}
+
+*pickup_stone_diamond
+{
+	*classname item
+	*physprim0 box, 8, 8, 8,0,0,0, 0, trigger+pickup, 0
+	*rpgobject item_stone_diamond
+	*flags rotate+nofall
+}
+
+*pickup_stone_ruby
+{
+	*classname item
+	*physprim0 box, 8, 8, 8,0,0,0, 0, trigger+pickup, 0
+	*rpgobject item_stone_ruby
+	*flags rotate+nofall
+}
+
+*pickup_stone_emerald
+{
+	*classname item
+	*physprim0 box, 8, 8, 8,0,0,0, 0, trigger+pickup, 0
+	*rpgobject item_stone_emerald
+	*flags rotate+nofall
+}
+
+*pickup_stone_sapphire
+{
+	*classname item
+	*physprim0 box, 8, 8, 8,0,0,0, 0, trigger+pickup, 0
+	*rpgobject item_stone_sapphire
+	*flags rotate+nofall
+}
+
+*pickup
+{
+	*classname item
+	*physprim0 box, 8, 8, 8,0,0,9, offset, trigger+pickup, 0
+	*flags rotate+nofall
+}
+
+*pickup_jasindra
+{
+	*classname item
+	*physprim0 box, 32, 32, 16,0,0,16, offset, trigger+pickup, 0
+	*rpgobject pickup_jasindra
+	*flags rotate+nofall
+}
+
+*TEMPLATE_Crystal
+{
+	*CLASSNAME			MODEL
+	*OGR_BASE			Ogr_Template_Torch
+	*CLIENTFLAGS		NoRefresh
+
+        *$MODEL
+	{
+		"MODEL" "Particles:,MP=50,SU=Glimmer1,CO=0xFFC0C0FF,,,FI=0.5,,,,,DI=sphere,DIS=10 10 10,,,,,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=0.2,SZ0=2,,SZ2=2,,SZ4=2,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.2,,,,,,,,,TC=0.2"
+		"BRUSHFLAGS" "32"
+		"ORIGIN" "0,-96,0"
+	}
+
+	*$LIGHT
+	{
+		*CLASSNAME "LIGHT"
+		*CLIENTFLAGS		NoRefresh
+		*LIGHT			300
+		*LIGHT_RANGE		256
+
+		*LIGHT_FLARE		80
+		*LIGHT_FLARERANGE	768
+		*LIGHT_FLARESIZE	192
+		*LIGHT_FLAREDEPTHOFFSET	8
+		*MODEL			FLARE
+                *Origin                 0, 0, 8
+	}
+
+	*$LIGHT2
+	{
+		*CLASSNAME		LIGHT
+		*CLIENTFLAGS		NoRefresh
+		*LIGHT			96
+		*LIGHT_RANGE		512
+		*LIGHT_FLAGS		4
+                *Origin                 0, 0, 48
+	}
+}
+
+*Crystal_Blue
+{
+	*CLASSNAME			TEMPLATE_Crystal
+	*MODEL				World\Lights\Crystal_Blue
+
+        *$MODEL
+	{
+		
+	}
+                
+	*$LIGHT
+	{
+
+                *LIGHT_COLOR		0xff6080a6
+	}
+
+	*$LIGHT2
+	{
+
+                *LIGHT_COLOR		0xff6080a6
+	}
+}
+
+*Crystal_Green
+{
+	*CLASSNAME			TEMPLATE_Crystal
+	*MODEL				World\Lights\Crystal_Green
+                
+	*$LIGHT
+	{
+
+                *LIGHT_COLOR		96, 192, 32
+	}
+
+	*$LIGHT2
+	{
+
+                *LIGHT_COLOR		96, 192, 32
+	}
+}
+
+*Crystal_Red
+{
+	*CLASSNAME			TEMPLATE_Crystal
+	*MODEL				World\Lights\Crystal_Red
+                
+	*$LIGHT
+	{
+
+                *LIGHT_COLOR		224, 96, 32
+	}
+
+	*$LIGHT2
+	{
+
+                *LIGHT_COLOR		224, 96, 32
+	}
+}
+
+*Crystal_Yellow
+{
+	*CLASSNAME			TEMPLATE_Crystal
+	*MODEL				World\Lights\Crystal_Yellow
+                
+	*$LIGHT
+	{
+
+                *LIGHT_COLOR		224, 192, 24
+	}
+
+	*$LIGHT2
+	{
+
+                *LIGHT_COLOR		224, 192, 24
+	}
+}
+
+*LIGHT_Metaltorch
+{
+	*CLASSNAME			TEMPLATE_TORCH_DMG
+	*MODEL				WORLD\LIGHTS\Metaltorch
+	*PHYSMODEL			WORLD\LIGHTS\P_Metaltorch.XW
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_Metaltorch.XW
+
+	*$MODEL
+	{
+		*ORIGIN			10, 0, 14
+	}
+
+	*$LIGHT
+	{
+		*ORIGIN			7, 0, 20
+	}
+
+	*$LIGHT2
+	{
+		*ORIGIN			32, 0, 56
+		*LIGHT			50
+		*LIGHT_RANGE		500
+	}
+
+	*$DAMAGE
+	{
+		*ORIGIN 8, 0, 24
+	}
+}
+
+*LIGHT_Metaltorch2
+{
+	*CLASSNAME			TEMPLATE_TORCH_DMG
+	*MODEL				WORLD\LIGHTS\Metaltorch2
+	*PHYSMODEL			WORLD\LIGHTS\P_Metaltorch2.XW
+	*LIGHT_SHADOWMODEL		WORLD\LIGHTS\S_Metaltorch2.XW
+
+	*$MODEL
+	{
+		*ORIGIN			10, 0, 14
+	}
+
+	*$LIGHT
+	{
+		*ORIGIN			7, 0, 20
+	}
+
+	*$LIGHT2
+	{
+		*ORIGIN			32, 0, 56
+		*LIGHT			50
+		*LIGHT_RANGE		500
+	}
+
+	*$DAMAGE
+	{
+		*ORIGIN 8, 0, 24
+	}
+}

@@ -1,0 +1,23 @@
+//----------------------------------------------------------------------
+
+*Mordessa_DeathStrike
+{
+	*classname projectile_instant
+
+	*model0 "Electric"
+	*model1 "ExpandSphere:SU=Electric1,SEG=11,SID=11,DU=0.7,RA0=20,RA1=50,,RO0=3 4 5,RO1=1 1 1,RO2=1,SCL=0.3 1 1,,TX1=2 1,TX2=10 10,TX3=2 2,CO0=0xFFF06050,CO1=0x00F0F0F0,CO2=10,CO3=1,,,FLG=clampcolors+fadepoles+postscale"
+	*model2 "Particles:,MP=200,SU=DotParticle,CO=0xFFF06050,TS=17,DU=2,,FI=0.2,VE=13,,,,,,DR=0.3 0.6 0.9,,OF=3,,,,,,,SZ0=15,SZ1=15,SZ2=5,SZ3=5,,,,,,,,,SPA=0,SPB=0,,,DOFA=10,DOFB=20,,TCS=0,,,ES=10,,,FL=quads"
+
+	*aligned_explosion model1,model2
+
+	*randanim0
+
+	*moveout 1.0
+	*startoffset 50
+
+	*flags noattach
+	*destroydelay 2.0
+	*duration 0.6
+}
+
+//----------------------------------------------------------------------

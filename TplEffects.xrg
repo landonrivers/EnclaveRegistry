@@ -1,0 +1,895 @@
+//----------------------------------------------------------------------
+
+*WaterRipple
+{
+	*classname ext_model
+	*model0 "Disc"
+//	*model0 "Particles:,,SU=arrowtrail01,,,TS=2,,DU=2,,FI=0.1,,,VE=7,,,,,,,,,OF=7,,,,,,,SZ0=1,SZ1=5,SZ2=1,SZ3=5,,,,,,,,SPB=0,,,,,,,PP=10,,,ES=0.2,,,,LS=-1,FL=qd+asq+nh"
+//	*model1 "Particles:,,SU=arrowtrail01,CO=0x30FFFFFF,,TS=2,,DU=2,,FI=0.1,,,VE=7,,,,,,,,,OF=4,,,,,,,SZ0=1,,SZ2=1,,,,,,,,,SPB=0,,,,,,,PP=10,,,ES=0.2,,,,LS=-20,FL=qd+asq+nh"
+	*duration 5
+}
+
+//----------------------------------------------------------------------
+
+*WaterSplashSmall
+{
+	*classname ext_model
+	*model0 ""
+	*model1 ""
+	*duration 5
+}
+
+//----------------------------------------------------------------------
+
+*WaterSplashMedium
+{
+	*classname ext_model
+	*model0 "Particles:,MP=200,SU=p_waterbeed06,TS=5,DU=2,DUN=2,FI=0.1,VE=10,VEN=4,LO=0 0 -7,AX=0 0 -2,OF=10,OFN=2,SZ0=1,SZ1=2,SZ2=1,SZ3=2,RT0=-2,RT1=2,RT2=-2,RT3=2,SPB=0.05,OFB=0.15,TC=0.02,PP=4,ES=0.5,LS=99,FL=qd+asq+nh"
+	*model1 "Particles:,MP=200,SU=p_waterbeed06,TS=5,TO=-0.3,DU=2,DUN=2,FI=0.1,VE=10,VEN=6,LO=0 0 -9,AX=0 0 -2,OF=10,OFN=2,SZ0=1,SZ1=2,SZ2=1,SZ3=2,RT0=-2,RT1=2,RT2=-2,RT3=2,SPB=0.15,OFB=0.2,TC=0.02,PP=4,ES=0.5,LS=99,FL=qd+asq+nh"
+	*sound_spawn imp_water02b
+	*duration 3
+}
+
+//----------------------------------------------------------------------
+
+*WaterSplashLarge
+{
+	*classname ext_model
+	*model0 ""
+	*model1 ""
+	*duration 5
+}
+
+//----------------------------------------------------------------------
+
+*CharacterTeleportEffect
+{
+	*classname ext_model
+	*model0 "Particles:MP=150,,CO=0x402080F0,CON=0x00808080,TS=5,,,DUN=1,FI=0.5,,,VE=10,VEN=10,LO=0 0 -10,,,DI=sphere,DIS=5 5 7,,HO=1,OF=-20,ES=1,,LS=30,FL=pc+al+nh+wr+sof"
+	*model1 "Particles:MP=150,,CO=0x402080F0,CON=0x00808080,TS=4,,DU=5,DUN=1,FI=0.5,,,VE=3,VEN=4,LO=0 0 -10,AX=0 0 1,,DI=sphere,DIS=5 5 7,,HO=1,OF=-20,MV2=-20,MV3=20,MV4=0.2,SZ0=2,SZ1=5,SZ2=2,SZ3=5,ES=1,FL=pc+nh+wr+sof"
+	*duration 5
+}
+
+//----------------------------------------------------------------------
+
+*EarthGolemSpawnEffect
+{
+	*classname ext_model
+	*model0 "Particles:,MP=300,SU=CloudBall,CO=0x80322A24,,TS=2,,DU=2,DUN=2,FI=0.5,,,VE=20,VEN=5,,AX=0 0 -4,,,,,,OF=10,OFN=10,,,,,,,SZ1=30,,SZ3=20,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.2,,SPB=0.2,,OFB=0.1,,,,,,,,ES=3,,,,,FL=qd+pc"
+	*model1 "Particles:,MP=100,SU=CloudBall,CO=0x80322A24,,TS=2,TO=-0.5,DU=2,DUN=2,FI=0.5,,,VE=30,VEN=30,,AX=0 0 -15,,,,,,OF=20,OFN=10,,,,,,,SZ1=30,,SZ3=20,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,,SPB=0.1,,OFB=0.25,,,,,,,,ES=1,,,,,FL=qd+pc"
+	*duration 5
+}
+
+//----------------------------------------------------------------------
+
+*EarthGolemTimeoutEffect
+{
+	*classname ext_model
+	*model0 "Particles:,MP=200,SU=CloudBall,CO=0x80322A24,,TS=4,,,,FI=0.5,,,VE=8,VEN=10,LO=0 0 40,AX=0 0 -3,,DI=sphere,DIS=3 3 4,,,,,,,,,,,SZ1=40,,SZ3=40,,,,,,,,,,,,,,,,,,ES=2,,,,,FL=qd+pc"
+	*model1 "Particles:,MP=200,SU=CloudBall,CO=0x80322A24,,TS=3,TO=-0.3,,,FI=0.5,,,VE=15,VEN=20,,AX=0 0 -4,,,,,,OF=10,OFN=10,,,,,,,SZ1=40,,SZ3=20,,,,,,,,SPB=0.08,,OFB=0.04,,,,,,,,ES=2,,,,,FL=qd"
+	*duration 5
+}
+
+//----------------------------------------------------------------------
+
+*SkeletonTimeoutEffect
+{
+	*classname ext_model
+	*model0 "Particles:,MP=200,SU=ahp,,,TS=4,,,,FI=0.5,,,VE=8,VEN=10,LO=0 0 40,AX=0 0 -3,,DI=sphere,DIS=3 3 4,,,,,,,,,,,SZ1=40,,SZ3=40,,,,,,,,,,,,,,,,,,ES=2,,,,,FL=qd+pc"
+	*model1 "Particles:,MP=200,SU=ahp,,,TS=3,TO=-0.3,,,FI=0.5,,,VE=15,VEN=20,,AX=0 0 -4,,,,,,OF=10,OFN=10,,,,,,,SZ1=40,,SZ3=20,,,,,,,,SPB=0.08,,OFB=0.04,,,,,,,,ES=2,,,,,FL=qd"
+	*duration 5
+}
+
+//----------------------------------------------------------------------
+
+*bolt_trail
+{
+	*classname bolt
+	*model weapons\NormalBolt
+	*sound_spawn Arrow2
+	*duration 10
+
+	*damagetype pierce
+}
+
+*projectile_firebolt
+{
+	*classname Spell_FireBolt
+	*physprim0 point, 3,0,0,0,0,0, physmovement, projectile, world+physmodel+physobject+character, excludeowner
+	*model0 particles_torchfire
+	*model1 flare
+	*sound 
+	*duration 8
+	*explosion explosion_rocket
+	*explosiontype 1
+	*shockwave 128, 40
+	*velocity 32
+	*damage 75, fire+pierce
+	*trail Sparkles1
+	*trailfreq 0.1
+	*anim0 0x101
+}
+
+*projectile_hefirebolt
+{
+	*classname Spell_FireBolt
+	*physprim0 point, 3,0,0,0,0,0, physmovement, projectile, world+physmodel+physobject+character, excludeowner
+	*model0 particles_torchfire
+	*model1 flare
+	*sound 
+	*duration 8
+	*explosion explosion_rocket
+	*explosiontype 1
+	*shockwave 256, 80
+	*velocity 23
+	*damage 170, fire+pierce
+	*trail Sparkles1
+	*trailfreq 0.1
+	*anim0 0x101
+}
+
+*projectile_grappler
+{
+	*classname grappler
+	*physprim0 point, 3,0,0,0,0,0, physmovement, projectile, world+physmodel+physobject+character, excludeowner
+	*model coordsys
+	*velocity 50
+	*movetohands 1
+	*flags nodestroy
+	*time 1
+}
+
+*projectile_arrow
+{
+	*classname Arrow
+//	*physprim0 point, 3,0,0,0,0,0, physmovement, projectile, world+physmodel+physobject+character, excludeowner
+	*maxvelocity 132
+	*minvelocity 20
+	*duration 8
+	*damage 50
+	*flags nodestroy
+	*model0 weapons\longarrow
+
+	*damagetype pierce
+}
+
+
+//----------------------------------------------------------------------
+
+*cannonball_impact
+{
+	*classname projectile_bouncer
+	*model0 weapons\cannonball
+	*model1 "speedtrail:surface=bombtrail01, duration=2.0, width=10.0, flags=alignfade+tailfade+texfit"
+
+	*removeattachedmodel model0
+
+	*sound_move stave_fire02
+	*sound_hitworld 
+	*sound_hitchar 
+
+	*velocity 500
+	*gravity 1
+	*numbounces 0
+
+	*explosion test_explosion
+	*explosiontype aligned
+	*shockwave 128, 40
+
+	*impactforce 10
+	*damage 150, fire, blockable
+	*shockwave 128, 80, 50
+
+	*duration 10
+	*destroydelay 1
+}
+
+//----------------------------------------------------------------------
+
+*canonball_explosion
+{
+	*classname ext_model
+	*model0 "Particles:,MP=2,,,,DU=1,,FI=0.01,,,,,,,,,,,,,,,,SZ0=180,SZ1=180,SZ2=180,SZ3=180,,,,,,,,,,,,,,,TC=0.02,TCS=0,,,ES=0.03,,,FL=quads+nohistory"
+	*model1 "Particles:,MP=100,SU=FireBall01,CO=0x40F0C0A0,,DU=1.5,DUN=2.5,FI=0.1,VE=10,,,,,,,,OF=20,,,,,,,SZ0=50,SZ1=80,SZ2=100,SZ3=130,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.2,,,,,,,,,,,PP=4,,ES=0.1,,,FL=quads+nohistory"
+	*model2 "Particles:,MP=200,SU=FireBall01,CO=0xFFF0A080,TS=6,DU=4,,FI=0.1,VE=45,,AX=0 0 -8,,,,,,OF=10,,,,,,,,,SZ2=1,SZ3=1,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.3,,,SPA=0,SPB=0,,,DOFA=10,DOFB=20,,TCS=0,,,ES=1, FL=quads+nohistory"
+	*duration 4
+}
+
+//----------------------------------------------------------------------
+
+*Spawn01
+{
+	*classname ext_model
+	*model0 "Particles:,MP=200,,CO=0x808080F0,,DU=1,DUN=1.5,FI=0.2,,,,,DI=sphere,DIS=5 5 8,,,,,MV0=-5,MV1=5,MV2=-10,MV3=10,MV4=1,SZ0=20,SZ1=40,SZ2=5,SZ3=15,,,,,,,,,,,,,,,,,PP=5,,,ES=0.2,,,,FL=nh"
+	*model1 "Particles:,MP=200,,CO=0x608080F0,TS=4,DU=2,,FI=0.5,VE=-110,,,,,,,,OF=150,,,,,,,SZ0=1,SZ1=5,SZ2=40,SZ3=80,,,,,,,,,SPA=0,SPB=0,OFA=0.25,,DOFA=10,DOFB=20,,TCS=0,,EP=0.2,EPC=0.1,ES=2.5,,,LS=3,FL=align+quads"
+	*duration 10
+}
+
+//----------------------------------------------------------------------
+
+*SpiritSpawn
+{
+	*classname ext_model
+	*model0 "Particles:,MP=300,CO=0xFF202080,TS=5,FI=1,VEN=5,AX=0 0 1,AXN=0 0 1,DIS=0 0 12,OF=30,MV2=-5,MV3=5,MV4=0.5,SZ0=1,SZ1=5,SZ2=5,SZ3=20,RT1=12,RT3=12,RT4=1,SPB=0,DOFA=10,TCS=12,ES=4,SMT=1,LS=100,FL=al+qd"
+	*model1 "Particles:,MP=300,CO=0x80202040,TS=5,DU=4,FI=3,VEN=5,AX=0 0 8,AXN=0 0 1,DIS=0 0 12,OF=14,MV2=-5,MV3=5,MV4=0.5,SZ0=1,SZ1=5,SZ2=5,SZ3=20,RT1=12,RT3=12,RT4=1,SPB=0,DOFA=10,TCS=12,ES=4,LS=100,FL=al+qd"
+	*duration 10
+}
+
+//----------------------------------------------------------------------
+
+*SkeletonSpawn
+{
+	*classname ext_model
+	*model0 "Particles:,MP=200,SU=CloudBall,CO=0x40605040,,DU=2,,FI=0.3,VE=15,VEN=10,AX=0 0 -6,AXN=0 0 2,DI=cylinder,DIS=2 2 0,MV0=-2,MV1=2,MV2=-2,MV3=2,SZ0=5,,,SZ3=20,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,SPB=0.2,,OFB=0.2,ES=2,FL=qd"
+	*duration 5
+}
+
+*SkeletonSpawn2
+{
+	*classname ext_model
+	*model0 "Particles:,MP=200,SU=ahp,CO=0x80202020,CON=0x60001000,,DU=2,,FI=0.3,VE=15,VEN=10,,AX=0 0 -6,AXN=0 0 2,DI=cylinder,DIS=2 2 0,MV0=-2,MV1=2,MV2=-2,MV3=2,SZ0=5,SZ3=20,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,SPB=0.2,OFB=0.2,ES=2,FL=qd"
+	*duration 5
+}
+
+//----------------------------------------------------------------------
+
+*GolemSpawn
+{
+	*classname ext_model
+	*model0 "Particles:,MP=200,SU=CloudBall,CO=0x40605040,,,,DU=2,,FI=0.3,,,VE=20,VEN=10,,AX=0 0 -6,AXN=0 0 2,DI=cylinder,DIS=2 2 0,,,,,MV0=-2,MV1=2,MV2=-2,MV3=2,,SZ0=5,SZ1=15,SZ2=15,SZ3=25,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,,SPB=0.2,,OFB=0.2,,,,,,,,ES=2,,,,,FL=qd"
+	*duration 5
+}
+
+//----------------------------------------------------------------------
+//- Vatar Projectile ---------------------------------------------------
+//----------------------------------------------------------------------
+
+*vatarprojectile
+{
+	*classname projectile_tracer
+
+	*model1 "Particles:MP=200,SU=FireBallFire,CO=0x80900000,DU=0.5,FI=0.1,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-4,MV1=4,MV2=-10,MV3=10,MV4=2,SZ0=20,SZ1=30,SZ2=30,SZ3=40,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,PP=2,FS=0.01,FL=quads+fadestill"
+	*model0 "Particles:MP=100,SU=FireBallSmoke,CO=0xFF000000,DU=1,FI=0.5,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-10,MV1=10,MV2=-10,MV3=10,MV4=2,SZ0=20,SZ1=30,SZ2=60,SZ3=80,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,FS=0.01,FL=quads+fadestill"
+
+	*flags noattach
+	*destroydelay 2.0
+
+	*sound_move Stave_fire02
+	*sound_hit Stave_fire03
+
+	*duration 6
+	*velocity 15
+	*explosion vatarprojectile_explosion
+	*explosiontype 1
+
+	*impactforce 30
+}
+
+*VatarProjectileRelease
+{
+	*classname projectile
+	*model0 "Particles:,MP=50,,CO=0x80C06020,,DU=1,,FI=0.1,VE=20,VEN=40,AX=0 0 20,AXN=0 0 40,DI=sphere,DIS=1.3,OF=5,OFN=10,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=1.2,SZ1=20,SZ2=5,SPA=0.1,SPB=0.1,ES=0.5"
+	*duration 3
+}
+
+*VatarProjectile_Explosion
+{
+	*classname explosion
+	*model0 "Particles:,MP=2,,,,DU=1,,FI=0.01,,,,,,,,,,,,,,,,SZ0=180,SZ1=180,SZ2=180,SZ3=180,,,,,,,,,,,,,,,TC=0.02,TCS=0,,,ES=0.03,,,FL=quads+nohistory"
+	*model1 "Particles:,MP=100,SU=FireBall01,CO=0x40F0C0A0,,DU=1.5,DUN=2.5,FI=0.1,VE=10,,,,,,,,OF=20,,,,,,,SZ0=50,SZ1=80,SZ2=100,SZ3=130,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.2,,,,,,,,,,,PP=4,,ES=0.1,,,FL=quads+nohistory"
+	*model2 "Particles:,MP=200,SU=FireBall01,CO=0xFFF0A080,TS=6,DU=4,,FI=0.1,VE=45,,AX=0 0 -8,,,,,,OF=10,,,,,,,,,SZ2=1,SZ3=1,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.3,,,SPA=0,SPB=0,,,DOFA=10,DOFB=20,,TCS=0,,,ES=1, FL=quads+nohistory"
+	*duration 4
+	*shockwave 256, 160, 100, fire+explosive
+}
+
+//----------------------------------------------------------------------
+//- Vatar Homing -------------------------------------------------------
+//----------------------------------------------------------------------
+
+*vatarhoming
+{
+	*classname projectile_homing
+	*model1 "Particles:MP=200,SU=FireBallFire,CO=0x80C06020,DU=0.5,FI=0.1,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-4,MV1=4,MV2=-10,MV3=10,MV4=2,SZ0=20,SZ1=30,SZ2=30,SZ3=40,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,PP=2,FS=0.01,FL=quads+fadestill"
+	*model0 "Particles:MP=100,SU=FireBallSmoke,CO=0xFF000000,DU=1,FI=0.5,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-10,MV1=10,MV2=-10,MV3=10,MV4=2,SZ0=20,SZ1=30,SZ2=60,SZ3=80,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,FS=0.01,FL=quads+fadestill"
+
+	*flags noattach
+	*destroydelay 2.0
+
+	*sound_move Stave_fire02
+	*sound_hit Stave_fire03
+
+	*duration 10
+	*velocity 10-15
+
+	*homing_minvelocity 10
+	*homing_maxvelocity 15
+	*homing_acceleration 5
+	*homing_autoselecttarget 1
+	*homing_targetobjects characters
+	*collisionobjects characters
+
+	*explosion vatarhoming_explosion
+	*explosiontype 1
+
+	*damage 0, fire // Damage added by staff instead
+	*impactforce 15
+}
+
+*VatarHomingRelease
+{
+	*classname projectile
+	*model0 "Particles:,MP=50,,CO=0x80C06020,,DU=1,,FI=0.1,VE=20,VEN=40,AX=0 0 20,AXN=0 0 40,DI=sphere,DIS=1.3,OF=5,OFN=10,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=1.2,SZ1=20,SZ2=5,SPA=0.1,SPB=0.1,ES=0.5"
+	*duration 3
+}
+
+*VatarHoming_Explosion
+{
+	*classname explosion
+	*model0 "Particles:,MP=2,,,,DU=1,,FI=0.01,,,,,,,,,,,,,,,,SZ0=180,SZ1=180,SZ2=180,SZ3=180,,,,,,,,,,,,,,,TC=0.02,TCS=0,,,ES=0.03,,,FL=quads+nohistory"
+	*model1 "Particles:,MP=100,SU=FireBall01,CO=0x40F0C0A0,,DU=1.5,DUN=2.5,FI=0.1,VE=10,,,,,,,,OF=20,,,,,,,SZ0=50,SZ1=80,SZ2=100,SZ3=130,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.2,,,,,,,,,,,PP=4,,ES=0.1,,,FL=quads+nohistory"
+	*model2 "Particles:,MP=200,SU=FireBall01,CO=0xFFF0A080,TS=6,DU=4,,FI=0.1,VE=45,,AX=0 0 -8,,,,,,OF=10,,,,,,,,,SZ2=1,SZ3=1,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.3,,,SPA=0,SPB=0,,,DOFA=10,DOFB=20,,TCS=0,,,ES=1, FL=quads+nohistory"
+	*duration 4
+	*shockwave 64, 32, 16, fire+explosive
+}
+
+*VatarHomingWave
+{
+	*classname staffshockwave
+	*model0 "ExpandSphere:SU=SphereMap01,SEG=15,SID=20,DU=0.8,RA0=0,RA1=200,RO0=0 0 5,RO1=1 1 1,RO2=1,SCL=1 1 0.5,,,TX2=1 1,TX3=2 2,CO0=0xC0F08020,CO1=0x00F0F000,CO2=2,CO3=2,FT=0.1,PTH=0.7,FLG=clampcolors+fadepoles+postscale"
+	*model1 "ExpandRing:,SU=FireBallFire,CO=0x80C05820,RI0=1,RI1=0,,RI3=0,RI4=0,RI5=3,DU=0.5,,FI=0.1,,,,,,,MV0=-4,MV1=4,MV2=-4,MV3=4,MV4=1,SZ0=15,SZ1=15,SZ2=5,SZ3=5,SZ4=0.1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.5,,,,,,,,,,,PP=10,,ES=1.5,,,FL=quads"
+//	*model1 "Particles:,,SU=FireBallFire,CO=0x80C05820,DU=0.25,,,VE=400,,,,,,,HO=1,OF=20,,,,,,,SZ0=30,SZ1=50,SZ2=30,SZ3=50,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.5,,,,SPB=0.7,,OFB=0.25,,,,,PP=10,,ES=0.1,,,FL=quads"
+	*duration 2.0
+
+	*radius 150
+	*force 50
+	*damage 300, fire, 0.5
+}
+
+*VatarHomingFlash
+{
+	*classname ext_model
+	*model0 "ExpandRing:MP=100,,CO=0x80F08020,RI0=0.3,RI1=20,RI2=0,,RI4=0 0.25 0,RI5=3,DU=1,,,VE=10,,,,,,MV0=-1,MV1=1,MV2=-1,MV3=1,MV4=2,,,SZ2=0,SZ3=0,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,SPA=0,SPB=0,,,,,,TCS=0,PP=2,,ES=0.251"
+	*duration 2.0
+}
+
+//----------------------------------------------------------------------
+
+*VatarStomp
+{
+	*classname firewave
+	*duration 2.0
+
+	*radius 200
+	*RADIUSGROWTH 400
+	*force 30
+	*damage 200, fire, 0.5
+}
+
+//----------------------------------------------------------------------
+
+*lavaball
+{
+	*classname fireball
+
+	*model1 "Particles:MP=200,SU=FireBallFire,CO=0x80C06020,DU=0.5,FI=0.1,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-4,MV1=4,MV2=-10,MV3=10,MV4=2,SZ0=25,SZ1=35,SZ2=35,SZ3=50,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,PP=2,FS=0.01,FL=quads+fadestill"
+	*model0 "Particles:MP=100,SU=FireBallSmoke,CO=0xFF000000,DU=1,FI=0.5,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-10,MV1=10,MV2=-10,MV3=10,MV4=2,SZ0=25,SZ1=35,SZ2=70,SZ3=95,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,FS=0.01,FL=quads+fadestill"
+	
+	*MAXRENDEROFFSETBLENDTIME 1.5
+	*explosion explosion_stonegnome_nospawn
+}
+
+*lavaball_spawn
+{
+	*classname lavaball
+	*explosion explosion_stonegnome_spawn
+}
+
+*quakestrike
+{
+	*classname firewave
+	*duration 1.0
+
+	*model0 "ExpandSphere:SU=SphereMap01,SEG=15,SID=20,DU=0.8,RA0=0,RA1=300,RO0=0 0 5,RO1=1 1 1,RO2=1,SCL=1 1 0.5,,,TX2=1 1,TX3=2 2,CO0=0xC0F08020,CO1=0x00F0F000,CO2=2,CO3=2,FT=0.1,PTH=0.7,FLG=clampcolors+fadepoles+postscale"
+	*model1 "Particles:MP=300,CO=0xF0FF6010,TS=4,DU=2,DUN=1,FI=0.2,VE=40,VEN=20,AX=0 0 1,DIS=2,HO=1,SZ0=5,SZ2=15,SZ3=30,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPB=0.25,PP=2,ES=1.5,LS=25,FL=primcenter+al+qd"
+
+	*radius 600
+	*RADIUSGROWTH 600
+	*force 20
+	*damage 300, fire, 0.5
+
+	*camerashake 1024, 10, 5, 8
+}
+
+//----------------------------------------------------------------------
+
+*projectile_gatlingzapper
+{
+	*classname projectile_bouncer
+
+	*model0 "Particles:,MP=50,,CO=0xFF20F020,,DU=0.1,,FI=0.05,,,,,,,,,,,,,MV2=-3,MV3=3,MV4=1,SZ0=15,SZ1=15,SZ2=1,SZ3=1,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,,,,,,,,,PP=4"
+
+	*randanim0
+
+	*duration 6.0
+	*velocity 40
+
+	*absorbingobjects characters
+	*bounce_alignmentlimit 0.95
+	*bounce_damage 100, poison
+	*bounce_impactforce 10
+	*bounce_elasticity 1
+	*bounce_friction 0
+	*bounce_sound stave_poison03
+	*bounce_effect AcidBoltBounce
+	*bounce_effectoffset 2.0
+
+	*explosion AcidBoltExplosion
+	*explosiontype aligned
+
+	*shockwave 32, 10, 5
+	*impactforce 20
+
+	*flags noattach
+	*destroydelay 1.0
+}
+
+*projectile_minddagger
+{
+	*classname Projectile_Bounce
+	*physprim0 point, 3,0,0,0,0,0, physmovement, projectile, world+physmodel+physobject+character, excludeowner
+	*model lightningsphere
+	*anim0 2
+	*anim1 10
+	*duration 8
+	*velocity 32
+	*numbounce 3
+	*bounceangle 0.7
+	*damage 10
+}
+
+*explosion_fire1
+{
+	*classname FireExplosion1
+	*model Particles_Explosion
+	*sound_spawn firebolt3
+	*duration 2
+	*shockwave 128, 45, 45, fire
+}
+
+*circle_fire
+{
+	*classname Firewall
+	*physprim0 sphere, 120,0,0, 0,0,60, offset, trigger, 0
+	*intersectnotify character+projectile
+	*model fire
+	*sound firewall0
+	*sound_spawn firewall1
+	*duration 10
+	*animattr0 80
+	*anim0 0x9090
+	*anim1 0x2050
+	*colors0 0xafffafaf
+	*colors1 0xafffafaf
+	*colors2 0xafff3f3f
+	*colors3 0x0001200a
+}
+
+*circle_blizzard
+{
+	*classname Blizzard
+	*physprim0 sphere, 120,0,0, 0,0,60, offset, trigger, 0
+	*intersectnotify character+projectile
+	*model blizzard
+	*sound icerain0
+	*sound_spawn icerain1
+	*duration 10
+}
+
+*ray_zapper
+{
+	*classname ext_model
+	*model Rail
+	*colors0 0xff6060ff
+	*randanim0
+	*duration 0.5
+}
+*ray_zapper_zale
+{
+	*classname ext_model
+	*model Rail
+	*colors0 0xffff6000
+	*randanim0
+	*duration 0.5
+}
+
+*effect_fireray
+{
+	*classname ext_model
+	*model flametounge
+	*colors0 0x80ffc060
+	*duration 1
+	*animattr0 0.2
+}
+
+*effect_iceray
+{
+	*classname ext_model
+	*model icetounge
+	*colors0 0x8080a0ff
+	*duration 1
+	*animattr0 0.2
+}
+
+*zapperexplosion
+{
+	*classname ext_model
+	*model ConcaveSprite:S_ZapperExpl
+	*sound_spawn Zapp2
+	*duration 1.5
+	*anim0 0x18
+	*anim1 20
+}
+*zapperexplosion_zale
+{
+	*classname ext_model
+	*model ConcaveSprite:S_ZapperExpl_zale
+	*sound_spawn Zapp2
+	*duration 1.5
+	*anim0 0x18
+	*anim1 20
+}
+*explosion_rocket
+{
+	*classname RocketExplosion
+	*model SphereSprite:S_RocketExpl
+	*model1 rocketdebris
+	*sound_spawn Firebolt3
+	*duration 2
+	*anim0 0x24
+	*anim1 0x18
+}
+
+*boltthrower_hit__
+{
+	*classname RocketTrail
+	*duration 3
+	*model "Weapons\\Bolt"
+	*model1 Sprite:S_RocketSmoke
+}
+
+*trail_rocket
+{
+	*classname RocketTrail
+	*duration 1.5
+	*model Sprite:S_RocketSmoke
+	*anim0 0x18
+	*anim1 0x50
+}
+
+*trail_rocketuw
+{
+	*classname RocketTrail_UW
+	*duration 1.5
+	*model Sprite:S_RocketSmoke_UW
+	*anim0 0x20
+	*anim1 0x50
+}
+
+*explosion_rocketuw
+{
+	*classname RocketExplosion
+	*model SphereSprite:S_RocketExpl_uw
+	*sound_spawn Rocket3
+	*duration 2
+	*anim0 0x28
+	*anim1 -14
+}
+
+*projectile_rocketlauncher
+{
+	*classname Weapon_Rocket
+	*physprim0 point, 3,0,0,0,0,0, physmovement, projectile, world+physmodel+physobject+character, excludeowner
+	*model0 Sprite:S_Rocket
+	*model1 flare
+	*sound Rocket2
+	*duration 8
+	*explosion explosion_rocket
+	*explosiontype 1
+	*velocity 44
+	*damage 80, fire
+	*shockwave 128, 100
+	*impactforce 15
+	*anim0 0x10
+	*trail trail_rocket
+	*trailuw trail_rocketuw
+	*trailfreq 0.05
+}
+
+*leafdripper
+{
+	*ogr_base ogr_template_leafdripper
+	*classname ext_model
+	*model leafdripper
+	*randanim0
+	*colors3 0x20040100
+	*animattr0 8
+}
+
+*fireblade
+{
+	*classname ext_model
+	*model fireblade
+	*randanim0
+}
+
+*shockwave
+{
+	*classname ext_model
+	*model shockwave
+//	*duration 10
+}
+
+*butterfly
+{
+	*classname model_butterfly
+	*model butterfly
+	*anim0 20
+}
+
+*test_teleportsuck
+{
+	*classname ext_model
+	*model teleportsuck
+	*duration 2
+	*randanim0
+}
+
+*test_glimmer
+{
+	*classname ext_model
+	*model glimmer
+	*anim1 80
+	*randanim0
+}
+
+*test_electric
+{
+	*classname ext_model
+	*model electric
+	*randanim0
+}
+
+*cm_electric
+{
+	*classname ext_model
+	*model electric:electric1,100.0,1.0
+	*randanim0
+}
+
+*test_dustcloud
+{
+	*classname ext_model
+	*model dustcloud
+	*duration 3
+	*anim1 40
+	*colors0 0xA0807060
+	*randanim0
+}
+
+*test_fire
+{
+	*classname firetest
+	*model cataball
+	*anim1 50
+	*randanim0
+}
+
+*cm_bloodspurt
+{
+	*classname BloodSpurt
+	*anim0 5
+	*anim1 128
+}
+
+*cm_bloodspurt_long
+{
+	*classname BloodSpurt
+	*anim0 10
+	*anim1 128
+}
+
+*deatheffect_light
+{
+	*classname ext_model
+	*model0 "Particles:,MP=200,,CO=0x80F0E0C0,,,DUN=1,FI=0.5,,,AX=0 0 15,AXN=0 0 30,DI=sphere,DIS=3 3 6,,,,,MV0=-5,MV1=5,MV2=-60,MV3=60,MV4=0.3,,SZ1=20,SZ2=20,SZ3=30,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,,,,,,,,,PP=3,,ES=0.5,,,FL=worldrot"
+	*randanim0
+	*duration 5
+}
+
+*deatheffect_challenge
+{
+	*classname ext_model
+	*model0 "Particles:,MP=150,SU=wraith_particle0,CO=0xF0FFFFFF,,TS=5,,DUN=5,FI=0.5,VE=30,VEN=50,LO=0 0 20,,,DI=sphere,DIS=2 2 4,,,,,,,,,,,,,,,,,,,,,,SPA=0.25,SPB=0.25,,OFB=0.25,,,,,PP=3,,,ES=0.5,SMT=5,,,,FL=sm"
+	*randanim0
+	*duration 5
+}
+
+*deatheffect_dark
+{
+	*classname ext_model
+	*model0 "Particles:,MP=200,,CO=0x8080F020,,DU=2,DUN=1,FI=0.5,VE=20,,AX=0 0 -20,AXN=0 0 -20,DI=sphere,DIS=3 3 6,,,,,MV0=-5,MV1=5,MV2=-20,MV3=20,MV4=0.3,,SZ1=20,SZ2=20,SZ3=30,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,,,,,,,,,PP=3,,ES=0.5,,,FL=worldrot"
+	*randanim0
+	*duration 5
+}
+
+*deatheffect_stonegnome
+{
+	*classname ext_model
+    *model0 "Particles:,MP=50,SU=CloudBall,CO=0x80585048,,,,,FI=0.5,VE=3,VEN=3,,AX=0 0 12,,,,,,,,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=0.04,,SZ1=20,SZ2=40,SZ3=80,SZ4=0.04,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.02,,,,,,,,,TC=0.1,,,,,ES=4,SMT=0.5,SD=10,,,FL=quads"
+	*randanim0
+	*duration 5
+}
+
+*damageeffect_stonegnome
+{
+	*classname attachmodel
+	*model0 "Particles:,MP=50,SU=CloudBall,CO=0x80585048,DU=2,FI=0.1,VE=1.5,VEN=1.5,AX=0 0 25,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=0.02,SZ0=4,SZ1=8,SZ2=20,SZ3=40,SZ4=0.02,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.01,TC=0.05,ES=3,FL=qd"
+	*randanim0
+	*duration 5
+}
+
+*damageeffect_golem
+{
+	*classname attachmodel
+	*model0 "Particles:,MP=50,SU=CloudBall,CO=0x40605040,DU=2,FI=0.1,VE=1.5,VEN=1.5,AX=0 0 25,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=0.02,SZ0=4,SZ1=8,SZ2=20,SZ3=40,SZ4=0.02,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.01,TC=0.05,ES=3,FL=qd"
+	*randanim0
+	*duration 5
+}
+
+*deatheffect_golem
+{
+	*classname attachmodel
+	*model0 "Particles:,MP=200,SU=CloudBall,CO=0x40605040,,,,DU=2,,FI=0.3,,,VE=20,VEN=10,,AX=0 0 -6,AXN=0 0 2,DI=cylinder,DIS=2 2 0,,,,,MV0=-2,MV1=2,MV2=-2,MV3=2,,SZ0=5,SZ1=15,SZ2=15,SZ3=25,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,SPB=0.2,OFB=0.2,ES=2,FL=qd"
+	*randanim0
+	*duration 5
+}
+
+*damageeffect_durzu
+{
+	*classname attachmodel
+	*model0 "Particles:,MP=50,SU=CloudBall,CO=0x80585048,,,DU=2,,FI=0.1,VE=1.5,VEN=1.5,,AX=0 0 40,,,,,,,,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=0.02,,SZ1=40,SZ2=50,SZ3=100,SZ4=0.02,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.01,,,,,,,,,TC=0.05,,,,,ES=2,,,,,FL=qd"
+	*randanim0
+	*duration 5
+}
+
+*deatheffect_wraith
+{
+	*classname ext_model
+	*model0 "Particles:,MP=150,SU=wraith_particle0,CO=0xF0FFFFFF,TS=5,,DUN=5,FI=0.5,VE=30,VEN=50,,,,DI=sphere,DIS=2 2 1,,,,,,,,,,,,,,,,,,,,,,SPA=0.25,SPB=0.25,,OFB=0.25,,,,,PP=3,,,ES=0.5,SMT=5,,,,FL=sm"
+	*randanim0
+	*duration 5
+}
+
+*damageeffect_wraith
+{
+	*classname ext_model
+	*model0 "Particles:,MP=200,SU=wraith_particle0,CO=0xFF303030,TS=5,,DUN=1,FI=0.1,VE=8,,,,,,,,OF=5,OFN=1,,,,,,,SZ1=20,SZ2=5,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,,,,,,,,,,,ES=0.5,,,FL=worldrot"
+	*randanim0
+	*duration 5
+}
+
+*deatheffect_wraithblack
+{
+	*classname ext_model
+	*model0 "Particles:,MP=150,SU=wraith_particle0,CO=0xF0000000,TS=5,,DUN=5,FI=0.5,VE=30,VEN=50,,,,DI=sphere,DIS=2 2 1,,,,,,,,,,,,,,,,,,,,,,SPA=0.25,SPB=0.25,,OFB=0.25,,,,,PP=3,,,ES=0.5,SMT=5,,,,FL=sm"
+	*randanim0
+	*duration 5
+}
+
+*damageeffect_wraithblack
+{
+	*classname ext_model
+	*model0 "Particles:,MP=200,SU=wraith_particle0,CO=0xFF000000,TS=5,,DUN=1,FI=0.1,VE=8,,,,,,,,OF=5,OFN=1,,,,,,,SZ1=20,SZ2=5,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,,,,,,,,,,,ES=0.5,,,FL=worldrot"
+	*randanim0
+	*duration 5
+}
+
+*deatheffect_wraithred
+{
+	*classname ext_model
+	*model0 "Particles:,MP=150,SU=wraith_particle0,CO=0xF0CC0000,TS=5,,DUN=5,FI=0.5,VE=30,VEN=50,,,,DI=sphere,DIS=2 2 1,,,,,,,,,,,,,,,,,,,,,,SPA=0.25,SPB=0.25,,OFB=0.25,,,,,PP=3,,,ES=0.5,SMT=5,,,,FL=sm"
+	*randanim0
+	*duration 5
+}
+
+*damageeffect_wraithred
+{
+	*classname ext_model
+	*model0 "Particles:,MP=200,SU=wraith_particle0,CO=0xFFCC0000,TS=5,,DUN=1,FI=0.1,VE=8,,,,,,,,OF=5,OFN=1,,,,,,,SZ1=20,SZ2=5,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,,,,,,,,,,,ES=0.5,,,FL=worldrot"
+	*randanim0
+	*duration 5
+}
+
+*deatheffect_wraithgreen
+{
+	*classname ext_model
+	*model0 "Particles:,MP=150,SU=wraith_particle0,CO=0xF066CC00,TS=5,,DUN=5,FI=0.5,VE=30,VEN=50,,,,DI=sphere,DIS=2 2 1,,,,,,,,,,,,,,,,,,,,,,SPA=0.25,SPB=0.25,,OFB=0.25,,,,,PP=3,,,ES=0.5,SMT=5,,,,FL=sm"
+	*randanim0
+	*duration 5
+}
+
+*damageeffect_wraithgreen
+{
+	*classname ext_model
+	*model0 "Particles:,MP=200,SU=wraith_particle0,CO=0xFF66CC00,TS=5,,DUN=1,FI=0.1,VE=8,,,,,,,,OF=5,OFN=1,,,,,,,SZ1=20,SZ2=5,,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,,,,,,,,,,,,,ES=0.5,,,FL=worldrot"
+	*randanim0
+	*duration 5
+}
+
+*damageeffect_skeleton
+{
+	*classname attachmodel
+	*model0 "Particles:MP=50,SU=p_smokeblob01b,CO=0x40605040,DU=0.8,VE=20,VEN=40,OF=3,SZ3=15,RT0=2,RT1=-2,RT2=2,RT3=-2,RT4=0.75,PP=50,ES=0.01,SMT=0.8,FL=sm"
+	*randanim0
+	*duration 5
+}
+
+*deatheffect_skeleton
+{
+	*classname attachmodel
+	*model0 "Particles:,MP=200,SU=CloudBall,CO=0x40605040,,,,DU=2,,FI=0.3,,,VE=20,VEN=10,,AX=0 0 -6,AXN=0 0 2,DI=cylinder,DIS=2 2 0,,,,,MV0=-2,MV1=2,MV2=-2,MV3=2,,SZ0=5,SZ1=15,SZ2=15,SZ3=25,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,SPB=0.2,OFB=0.2,ES=2,FL=qd"
+	*randanim0
+	*duration 5
+}
+
+*damageeffect_shadowskeleton
+{
+	*classname attachmodel
+	*model0 "Particles:MP=50,SU=ahp,CO=0xFF000000,DU=0.8,AL0=0.4,VE=20,VEN=40,OF=3,SZ3=15,RT0=2,RT1=-2,RT2=2,RT3=-2,RT4=0.75,PP=50,ES=0.01,SMT=0.8,FL=sm"
+	*randanim0
+	*duration 5
+}
+
+*deatheffect_shadowskeleton
+{
+	*classname attachmodel
+	*model0 "Particles:,MP=200,SU=ahp,CO=0x40605040,,,,DU=2,,FI=0.3,,,VE=20,VEN=10,,AX=0 0 -6,AXN=0 0 2,DI=cylinder,DIS=2 2 0,,,,,MV0=-2,MV1=2,MV2=-2,MV3=2,,SZ0=5,SZ1=15,SZ2=15,SZ3=25,,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=0.1,SPB=0.2,OFB=0.2,ES=2,FL=qd"
+	*randanim0
+	*duration 5
+}
+
+//----------------------------------------------------------------------
+
+*dragonbreath
+{
+	*classname projectile_bouncer
+
+	//*physprim0 box, 16,16,16,0,0,0, physmovement, projectile, world+physmodel+physobject, excludeowner
+
+	//*model0 "Particles:,MP=100,SU=FIREBALL01,CO=0x50805020,,DU=0.5,,FI=0.1,VE=80,VEN=50,AX=0 0 20,,DI=sphere,DIS=1,,,OF=10,OFN=20,MV0=-5,MV1=5,MV2=-15,MV3=15,MV4=1,,SZ1=20,SZ2=60,SZ3=80,SZ4=1,RT0=-1,RT1=1,RT2=-1,RT3=1,RT4=1,PP=2,FL=quads+nohistory"
+	//*model0 "Particles:MP=200,SU=FireBallFire,CO=0x80C06020,DU=0.5,FI=0.1,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-4,MV1=4,MV2=-10,MV3=10,MV4=2,SZ0=20,SZ1=30,SZ2=30,SZ3=40,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,PP=2,FS=0.01,FL=quads+fadestill"
+	*model0 "Particles:MP=200,SU=FireBallFire,CO=0x60C06020,DU=0.5,FI=0.1,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-4,MV1=4,MV2=-10,MV3=10,MV4=2,SZ0=10,SZ1=20,SZ2=20,SZ3=30,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,PP=2,FS=0.01,FL=quads+fadestill"
+
+	*damagetype fire
+
+	*randanim0
+
+	*duration 2.0
+	*velocity 40
+
+	*absorbingobjects characters
+	*excludeowner 1
+	*bounce_alignmentlimit 1
+	*bounce_damage 10, fire
+	*bounce_impactforce 10
+	*bounce_elasticy 0.0
+	*bounce_friction 0.2
+
+	*damage 50
+	*impactforce 10
+
+//	*flags noattach
+	*flags nodestroy+noattach+nodamageonimpact
+}
+
+//----------------------------------------------------------------------

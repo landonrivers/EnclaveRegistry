@@ -1,0 +1,279 @@
+*template_pickup
+{
+	*rpgclass pickup
+	*attachpoint 1
+	*attachrottrack 19
+	*attachangles 0,0.15,0.6
+
+	*anim_equip animlist:229
+	*flags questitem+unselectable
+	*sound_pickup EQ_MISC2
+}
+
+*pickup_spiralkey
+{
+	*classname template_pickup
+	*model world\stuff\spiralkey
+	*iconsurface gui_icon_spiralkey
+	*itemtype 0x180
+	*sound_pickup EQ_MISC7
+	*pickupmsg dm04:3
+}
+
+*pickup_darkkey_bottom
+{
+	*classname template_pickup
+	*model world\stuff\darkkey_bottom
+	*iconsurface gui_icon_darkkeyl
+	*itemtype 0x181
+	*sound_pickup EQ_MISC7
+	*pickupmsg lm12:1
+}
+
+*pickup_darkkey_middle
+{
+	*classname template_pickup
+	*model world\stuff\darkkey_middle
+	*iconsurface GUI_icon_darkkeym
+	*itemtype 0x182
+	*sound_pickup EQ_MISC7
+	*pickupmsg lm12:1
+}
+
+*pickup_darkkey_top
+{
+	*classname template_pickup
+	*model world\stuff\darkkey_top
+	*iconsurface gui_icon_darkkeyu
+	*itemtype 0x183
+	*sound_pickup EQ_MISC7
+	*pickupmsg lm12:1
+}
+
+*pickup_key_rusty
+{
+	*classname template_pickup
+	*model world\stuff\key_rusty
+	*iconsurface gui_icon_keyrusty
+	*dontdestroy
+	*itemtype 0x184
+	*sound_pickup EQ_MISC7
+	*pickupmsg dm02:1
+}
+
+
+*pickup_key_rusty_zale
+{
+	*classname template_pickup
+	*model world\stuff\key_rusty
+	*iconsurface gui_icon_keyrusty
+	*dontdestroy
+	*itemtype 0x184
+	*sound_pickup EQ_MISC7
+	*pickupmsg dm02:1
+	*MSG_ONPICKUP_DONTUSE "0x110;zalekey_ep;1;"
+}
+
+*pickup_arkmoorkey
+{
+	*classname template_pickup
+	*model world\stuff\arkmoorkey
+	*iconsurface gui_icon_arkmoorkey
+	*itemtype 0x185
+	*sound_pickup EQ_MISC7
+	*pickupmsg dm03:1
+}
+
+*pickup_tomeofsouls
+{
+	*classname template_pickup
+	*model world\stuff\tomeofsouls
+	*iconsurface gui_icon_tomeofsouls
+	*itemtype 0x186
+	*pickupmsg dm06:3
+}
+
+*pickup_accountbook
+{
+	*classname template_pickup
+	*model world\stuff\accountbook
+	*iconsurface gui_icon_accountbook
+	*itemtype 0x187
+}
+
+*pickup_logbook
+{
+	*classname template_pickup
+	*model world\stuff\logbook
+	*iconsurface gui_icon_logbook
+	*itemtype 0x188
+	*pickupmsg lm07:4
+}
+
+*pickup_pigeoncage
+{
+	*classname template_pickup
+	*model world\stuff\pigeoncage
+	*iconsurface gui_icon_pigeoncage
+	*itemtype 0x189
+}
+
+*pickup_zarunasrelic
+{
+	*classname template_pickup
+	*model world\stuff\zarunasrelic
+	*iconsurface gui_icon_zarunasrelic
+	*itemtype 0x18a
+	*pickupmsg dm01:4
+}
+
+*pickup_templekey
+{
+	*classname template_pickup
+	*model world\stuff\templekey
+	*iconsurface gui_icon_templekey
+	*itemtype 0x18b
+	*sound_pickup EQ_MISC7
+	*pickupmsg lm04:4
+}
+
+*pickup_gascanister
+{
+	*classname template_pickup
+	*model world\stuff\GasCanister
+	*iconsurface gui_icon_GasCanister
+	*itemtype 0x18c
+	*pickupmsg lm08:1
+}
+
+*pickup_butterfly
+{
+	*classname template_pickup
+	*model world\stuff\butterfly01
+	*iconsurface gui_icon_butterfly
+	*itemtype 0x18d
+}
+
+*pickup_key_fire
+{
+	*classname template_pickup
+	*model world\stuff\firekey
+	*iconsurface gui_icon_keyfire
+	*itemtype 0x18e
+	*sound_pickup EQ_MISC7
+}
+
+*pickup_key_silver
+{
+	*classname template_pickup
+	*model world\stuff\silverkey
+	*iconsurface gui_icon_keysilver
+	*itemtype 0x18f
+	*sound_pickup EQ_MISC7
+	*pickupmsg dm09:4
+}
+
+*pickup_key_star
+{
+	*classname template_pickup
+	*model world\stuff\starkey
+	*iconsurface gui_icon_keystar
+	*itemtype 0x190
+	*sound_pickup EQ_MISC7
+}
+
+*pickup_mapscroll
+{
+	*classname template_pickup
+	*model world\stuff\mapscroll
+	*iconsurface gui_icon_mapscroll
+	*itemtype 0x191
+	*attachangles 0,0.15,0.6
+}
+
+*pickup_gp_flint
+{
+	*classname template_pickup
+	*model world\stuff\gp_flint
+	*iconsurface gui_icon_gpflint
+	*combineto pickup_gp_full
+	*itemtype 0x192
+	*pickupmsg dm11:4
+}
+
+*pickup_gp_fuse
+{
+	*classname template_pickup
+	*model world\stuff\gp_fuse
+	*iconsurface gui_icon_gpfuse
+	*combineto pickup_gp_full
+	*itemtype 0x193
+	*pickupmsg dm11:3
+}
+
+*pickup_gp_bomb
+{
+	*classname template_pickup
+	*model world\stuff\gp_bomb
+	*iconsurface gui_icon_gpbomb
+	*combineto pickup_gp_full
+	*itemtype 0x194
+	*pickupmsg dm11:5
+}
+
+*pickup_gp_full
+{
+	*classname template_pickup
+	*model world\stuff\gp_full
+	*iconsurface gui_icon_gpfull
+	*combinefrom 0x192,0x193,0x194
+	*itemtype 0x195
+	*pickupmsg dm11:6
+}
+
+*pickup_key_wood
+{
+	*classname template_pickup
+	*model world\stuff\woodkey
+	*iconsurface gui_icon_keywood
+	*itemtype 0x196
+	*sound_pickup EQ_MISC7
+	*pickupmsg dm08:3
+}
+
+*pickup_treasure
+{
+	*classname template_pickup
+	*model world\stuff\treasure
+	*iconsurface gui_icon_treasure
+	*itemtype 0x197
+	*pickupmsg lm04:2
+}
+
+*pickup_darkkey_all
+{
+	*classname template_pickup
+	*model world\stuff\darkkey_all
+	*iconsurface gui_icon_darkkeya
+	*itemtype 0x198
+	*sound_pickup EQ_MISC7
+	*pickupmsg lm12:2
+}
+
+*pickup_darkflag
+{
+	*classname template_pickup
+	*model world\stuff\bannerflag_dark_folded
+	*iconsurface gui_icon_darkflag
+	*itemtype 0x199
+	*sound_pickup EQ_MISC7
+	*pickupmsg dm09:5
+}
+
+*pickup_jasindra
+{
+	*classname template_pickup
+	*iconsurface gui_icon_jasindra
+	*itemtype 0x19a
+	*sound_pickup EQ_MISC2
+}

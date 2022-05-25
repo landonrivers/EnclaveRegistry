@@ -1,0 +1,148 @@
+*cheats 1
+*alwayscheats 1
+*spawnmask -1
+*autoactivate 0
+*rotatepickups 0
+*gamename "Undefined"
+*selffire 1
+*enterwindow selectclass
+*enterspectator 1
+*enterintermission 1
+*rcon_password "asdf"
+*roundcountdown 0
+//*roundtimelimit 3000
+//*timelimit 1800
+*ai_numpursuits 3
+*ai_nummelee 2
+
+*includeclass
+{
+	*custommodels
+	{
+		*physicsprim
+	}
+
+	*classes
+	{
+		*coordsys
+		*spectator
+		*SpectatorIntermission
+	}
+
+	*models
+	{
+	}
+}
+*templates
+{
+	*include Templates.xrg
+	*include TplCharacters.xrg
+	*include TplProjectiles.xrg
+	*include TplExplosions.xrg
+	*include TplHitEffects.xrg
+	*include TplAttach.xrg
+	*include TplMagic.xrg
+//	*include TplDamageEffects.xrg
+	*include TplEffects.xrg
+	*include Tpl_AICharacters.xrg
+	*include TplPrefabs.xrg
+	*include TplChallenge.xrg
+	*include TplVatar.xrg
+}
+
+*rpgtemplates
+{
+	*include RpgPickups.xrg
+	*include RpgEnchantments.xrg
+	*include RpgWeapons.xrg
+	*include RpgItems.xrg
+	*include RpgAmmo.xrg
+	*include RpgMisc.xrg
+	*include RpgVatar.xrg
+}
+
+*campaign
+{
+	*include Campaign.xrg
+}
+/*
+*weapongroups
+{
+	*Sword weapon_sword_short,weapon_sword_long,weapon_sword_fire,weapon_sword_frost,weapon_sword_warriors
+	*Axe weapon_axe_short,weapon_axe_battle,weapon_axe_double,weapon_axe_berserkers
+	*Blunt weapon_hammer_chaos,weapon_hammer_spiked,weapon_hammer_fanged,weapon_hammer_war,weapon_hammer_thors
+	*Bow weapon_bow_short
+	*Crossbow weapon_crossbow_light,weapon_crossbow_dwarven,weapon_crossbow_elven
+	*Dagger weapon_dagger_short
+	*Shield item_shield_round,item_shield_kite,item_shield_chaos,item_shield_dragon
+	*Spell weapon_fire_wall,weapon_fire_ball,weapon_lightning_strike,weapon_cold_storm,weapon_fire_bolt
+	*Armour armour_level0,armour_level1,armour_level2,armour_level3
+}
+*/
+*fantasynamegen
+{
+	*group 1,0
+	{
+		*ai
+		*ad
+		*al
+		*am
+		*an
+		*cer
+		*cel
+		*can
+		*cer
+		*cen
+		*cin
+		*ciw
+		*cyn
+		*del
+		*der
+		*din
+		*dur
+		*dop
+		*el
+		*ed
+		*er
+		*en
+		*em
+		*ew
+		*eug
+		*eul
+		*fil
+		*fyn
+		*fel
+		*ger
+		*gin
+		*gel
+		*hin
+		*kel
+		*kyn
+		*kim
+		*ler
+		*len
+		*lin
+		*lam
+		*lar
+	}
+	*group 1,0
+	{
+		*al
+		*an
+		*ail
+		*ar
+		*el
+		*em
+		*as
+		*es
+		*ez
+		*en
+		*ena
+		*em
+		*ef
+		*yl
+		*yn
+		*yr
+	}
+}
+

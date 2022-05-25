@@ -1,0 +1,561 @@
+*template_item_staff_shield
+{
+	*rpgclass StaffSecondary
+
+	*itemtype 0x109
+	*linkeditemtypes 0x10,0x11,0x16
+
+	*flags canblock+needequippedlink+aiming+autoaim+rpgmodelflags
+
+	*attachpoint 1
+	*attachrottrack 19
+	*attachangles 0.1,0.25,0
+
+	*skill magic
+
+	*ai_type SHIELD_MAGIC
+}
+
+*item_staff_shield
+{
+	*classname template_item_staff_shield
+
+	*maxitems 300
+	*numitems 300
+}
+
+*template_item_shield_core
+{
+	*rpgclass shield
+	*itemtype 0x101
+	*linkeditemtypes 0x0,0x3,0x4,0x12
+	*flags canblock+needequippedlink+keepaftermission
+	*reloadtime 0
+	
+	*anim_block0 animlist:232
+	*anim_block1 animlist:233
+	*sound_pickup EQ_MISC6
+	*sound_block imp_sld1
+
+	*attachpoint 2
+	*attachrottrack 18
+
+	*block_area 180
+	*block_stunduration 0.35
+	*block_stunattackerduration 0.5
+
+	*ai_type SHIELD
+}
+
+*template_item_shield
+{
+	*classname template_item_shield_core
+	*anim_equip animlist:227
+	*sound_equip EQ_SHIELD1
+	*sound_unequip EQ_SHIELD2
+	*sound_pickup EQ_MISC6
+
+	*melee_stunduration 0.5
+}
+
+*item_shield_targa
+{
+	*classname template_item_shield
+
+	*price 25
+
+	*model "weapons\\WoodShield"
+	*iconsurface gui_icon_woodshield
+	*attachangles 0,0.20,0.30
+	*sound_block imp_sld5
+
+	*block_area 45
+	*block_stunduration 0.05
+	*block_stunattackerduration 0.25
+
+}
+
+*item_shield_buckler
+{
+	*classname template_item_shield
+
+	*price 50
+
+	*model "weapons\\Buckler"
+	*attachangles 0,0.20,0.33
+	*iconsurface gui_icon_buckler
+	*sound_block imp_sld1
+
+	*block_area 60
+	*block_stunduration 0.08
+	*block_stunattackerduration 0.3
+}
+
+*item_shield_spiked
+{
+	*classname template_item_shield
+
+	*price 100
+
+	*model "weapons\\SpikedShield"
+	*iconsurface GUI_Icon_SpikedShield
+	*attachangles 0,0.20,0.30
+	*sound_block imp_sld8
+
+	*block_area 80
+	*block_stunduration 0.09
+	*block_stunattackerduration 0.4
+}
+
+*item_shield_brute
+{
+	*classname template_item_shield
+
+	*price 150
+
+	*model "weapons\\bruteshield"
+	*iconsurface gui_icon_bruteshield
+	*attachangles 0,0.20,0.30
+	*sound_block imp_sld7
+
+	*block_area 100
+	*block_stunduration 0.10
+	*block_stunattackerduration 0.5
+}
+
+*item_shield_bruteshadow
+{
+	*classname template_item_shield
+
+	*price 150
+
+	*model "weapons\\bruteshield_shadow"
+	*iconsurface gui_icon_bruteshield
+	*attachangles 0,0.20,0.30
+	*sound_block imp_sld7
+
+	*no_shadow 1
+	
+	*block_area 180
+	*block_stunduration 0.11
+	*block_stunattackerduration 0.6
+}
+
+*item_shield_round
+{
+	*classname template_item_shield
+
+	*price 200
+
+	*model "weapons\\RoundShield"
+	*iconsurface gui_icon_roundshield
+	*attachangles 0,0.20,0.30
+	*sound_block imp_sld2
+
+	*block_area 120
+	*block_stunduration 0.12
+	*block_stunattackerduration 0.7
+}
+
+*item_shield_kite
+{
+	*classname template_item_shield
+
+	*price 250
+
+	*model "weapons\\Shield01"
+	*iconsurface gui_icon_kiteshield
+	*attachangles 0,0.25,-0.20
+	*sound_block imp_sld3
+
+	*block_area 140
+	*block_stunduration 0.13
+	*block_stunattackerduration 0.8
+}
+
+
+*item_shield_assembly
+{
+	*classname template_item_shield
+
+	*model "weapons\\AssemblyShield"
+	*iconsurface gui_icon_assemshield
+	*attachangles 0,0.20,0.30
+	*sound_block imp_sld2
+
+	*block_area 140
+	*block_stunduration 0.14
+	*block_stunattackerduration 1.0
+}
+
+*item_shield_blade
+{
+	*classname template_item_shield
+
+	*price 300
+
+	*model "weapons\\BladeShield"
+	*iconsurface gui_icon_bladeshield
+	*attachangles 0,0.2,0.3
+	*sound_block imp_sld2
+
+	*block_area 160
+	*block_stunduration 0.15
+	*block_stunattackerduration 1.0
+}
+
+*item_shield_chaos
+{
+	*classname template_item_shield
+
+	*price 400
+
+	*model "weapons\\ChaosShield"
+	*iconsurface gui_icon_chaosshield
+	*attachangles 0,0.25,0.35
+	*sound_block imp_sld3
+
+	*block_area 170
+	*block_stunduration 0.2
+	*block_stunattackerduration 1.1
+}
+
+*item_shield_thorn
+{
+	*classname template_item_shield
+
+	*price 500
+
+	*model "weapons\\ThornShield"
+	*iconsurface gui_icon_thornshield
+	*attachangles 0,0.2,0.3
+	*sound_block imp_sld3
+
+	*block_area 180
+	*block_stunduration 0.25
+	*block_stunattackerduration 1.2
+}
+
+*item_shield_ancient
+{
+	*classname template_item_shield
+
+	*price 900
+
+	*model "weapons\\ancientscutum_b"
+	*iconsurface gui_icon_ancientscutumb
+	*attachangles 0,0.2,0.3
+	*sound_block imp_sld4
+
+	*block_area 180
+	*block_stunduration 0.5
+	*block_stunattackerduration 1.3
+}
+
+*item_shield_ancient2
+{
+	*classname template_item_shield
+
+	*price 900
+
+	*model "weapons\\ancientscutum_r"
+	*iconsurface gui_icon_ancientscutumr
+	*attachangles 0,0.2,0.3
+	*sound_block imp_sld4
+
+	*block_area 180
+	*block_stunduration 0.5
+	*block_stunattackerduration 1.3
+}
+
+*item_shield_magic
+{
+	*classname template_item_shield
+
+	*price 1500
+
+	*model "weapons\\MagicShield"
+	*iconsurface gui_icon_magicshield
+	*attachangles 0,0.2,0.3
+	*sound_block imp_sld2
+	
+	*block_area 360
+	*block_stunduration 0.01
+	*block_stunattackerduration 0.1
+}
+
+*item_shield_zuranas
+{
+	*classname template_item_shield_core
+
+	*anim_block0 animlist:72
+	*anim_block1 animlist:73
+	
+	*model "weapons\\invisible"
+	*iconsurface gui_icon_zushield
+	*attachangles 0,0.2,0.3
+	*flags canblock 
+	*sound_block imp_bone
+	
+	*block_area 180
+	*block_stunduration 0.5
+	*block_stunattackerduration 0.5
+}
+
+*item_shield_golem
+{
+	*classname template_item_shield_core
+
+	*model "weapons\\golemshield"	
+	*attachangles 0,0.2,0.3
+	*flags canblock
+	*sound_block imp_bone
+	
+	*no_shadow 1
+	
+	*block_area 180
+	*block_stunduration 0.10
+}
+
+*item_shield_vine
+{
+	*classname template_item_shield_core
+
+	*price 50000
+
+	*model "world\\stuff\\bigbottle2"
+	*iconsurface gui_icon_molotov
+	*attachangles 0,0.2,0.3
+}
+
+*item_none
+{
+	*rpgclass item
+	*itemtype 0x100
+}
+
+*item_torch
+{
+	*rpgclass item
+	*itemtype 1
+
+	*itemtype 0x102
+
+	*model "Weapons\\IndyTorch"
+	*iconsurface gui_icon_torch
+	*attachangles 0,0.25,0
+	*attachpoint 1
+	*attachrottrack 19
+//	*attachmodel "Particles:MP=110,SU=p_fireblob02,CO=0x80C06020,CON=0xff800000,DU=0.1,VE=10,VEN=20,LO=0 0 6,AX=0 0 10,DI=cylinder,DIS=0.1 0.1 0.2,SZ2=1,SZ3=2,SPA=0.1,SPB=0,OFB=0.25,PP=10,SMT=0.5,LS=8,FL=sm+ct+qd+asq"
+//	*attachmodel "Particles:MP=110,SU=p_fireblob02,CO=0x80C06020,CON=0xff800000,DU=0.125,VE=5,VEN=10,LO=0 0 6,AX=0 0 99,SZ2=1,SZ3=2,PP=8,SMT=0.5,FL=sm+ct+qd"
+
+	*attachmodel0 "FireTorch:100,2,1"
+	*attachmodel1 "Particles:,MP=50,SU=p_fireblob04,CO=0xF0F0C080,,,,DU=0.3,,FI=0.2,,,,,LO=0 0 7,,,DI=sphere,DIS=0.45 0.45 0.55,,HO=1,,,,,,,,SZ0=4,SZ1=4,SZ2=4,SZ3=4,,RT0=-1,RT1=1,RT2=1,RT3=-1,,,,,,,,TC=0.0065,,,,,,,,,,FL=qd+nh+ct"
+	*attachmodel2 "Particles:,MP=100,SU=p_fireblob02,CO=0x80F0C080,,TS=0.7,,DU=0.1,,,,,VE=5,,LO=0 0 8,AX=0 0 80,,DI=cylinder,DIS=0.2 0.2 0.7,,,,,,,MV2=-1,MV3=1,MV4=2,SZ0=8,SZ1=8,SZ2=1,SZ3=1,SPB=0,,OFB=0.25,PP=6,LS=7,FL=qd+asq+ct+fe"
+
+	*sound_equip EQ_MISC1
+	*sound_unequip EQ_MISC2
+	*sound_pickup EQ_MISC1
+
+	*anim_equip animlist:227
+
+	*reloadtime 1
+
+	*ai_type TORCH
+}
+
+*item_potion_health
+{
+	*rpgclass potion
+	*itemtype 0x106
+	*price 150
+
+	*reloadtime anim
+	*potion_health 150
+	*magazinesize 5
+	*numitems 1
+
+	*attachpoint 1
+	*attachrottrack 19
+	*attachangles 0,0.3,0.3
+
+	*flags renderquantity+needammo+questitem+forceselected
+	*model world\stuff\sspotion
+	*iconsurface gui_icon_healthpotion
+	*anim_equip animlist:227
+	*anim_attack animlist:225
+	*sound_pickup bottle01
+	*sound_cast bottle02
+
+	*ai_type POTION_HEALING
+}
+
+*item_potion_health_1
+{
+	*classname item_potion_health
+	*numitems 1
+	*price 150
+}
+
+*item_potion_health_2
+{
+	*classname item_potion_health
+	*numitems 2
+	*price 300
+}
+
+*item_potion_health_3
+{
+	*classname item_potion_health
+	*numitems 3
+	*price 450
+}
+
+*item_potion_health_4
+{
+	*classname item_potion_health
+	*numitems 4
+	*price 600
+}
+
+*item_potion_health_5
+{
+	*classname item_potion_health
+	*numitems 5
+	*price 750
+}
+
+*item_potion_vine
+{
+	*rpgclass potion
+	*itemtype 0x106
+	*price 50000
+
+	*reloadtime anim
+	*potion_health 10
+	*magazinesize 50
+	*numitems 1
+
+	*attachpoint 1
+	*attachrottrack 19
+	*attachangles 0,0.3,0.3
+
+	*flags renderquantity+autoactivate
+	*model world\stuff\bigbottle
+	*anim_equip animlist:229
+	*sound_pickup bottle01
+	*sound_cast bottle02
+}
+
+*item_coin
+{
+	*rpgclass coin
+	*model world\stuff\pung
+	*itemtype 0x301
+	*flags autoactivate
+	*sound_cast coin01
+	*numcoin 5
+
+	*ai_type MONEY
+}
+
+*item_stone_diamond
+{
+	*rpgclass coin
+	*model world\stuff\stone_diamond
+	*itemtype 0x301
+	*flags autoactivate
+	*sound_cast coin02
+	*numcoin 200
+
+	*ai_type MONEY
+}
+
+*item_stone_ruby
+{
+	*rpgclass coin
+	*model world\stuff\stone_ruby
+	*itemtype 0x301
+	*flags autoactivate
+	*sound_cast coin02
+	*numcoin 150
+
+	*ai_type MONEY
+}
+
+*item_stone_emerald
+{
+	*rpgclass coin
+	*model world\stuff\stone_emerald
+	*itemtype 0x301
+	*flags autoactivate
+	*sound_cast coin02
+	*numcoin 100
+
+	*ai_type MONEY
+}
+
+*item_stone_sapphire
+{
+	*rpgclass coin
+	*model world\stuff\stone_sapphire
+	*itemtype 0x301
+	*flags autoactivate
+	*sound_cast coin02
+	*numcoin 50
+
+	*ai_type MONEY
+}
+
+*use_generic
+{
+	*rpgclass pickup
+	*itemtype 0x10e
+	*iconsurface gui_icon_use	
+	*flags unselectable
+	*dontdestroy 1
+}
+
+*armour_level0
+{
+	*rpgclass item
+	*price 0
+	*itemtype 0x200
+	*numitems 0
+	*sound_pickup EQ_SHIELD1
+	
+	*ai_type ARMOUR
+}
+
+*armour_level1
+{
+	*rpgclass item
+	*price 500
+	*itemtype 0x200
+	*numitems 1
+	*sound_pickup EQ_SHIELD1
+
+	*ai_type ARMOUR
+}
+
+*armour_level2
+{
+	*rpgclass item
+	*price 2500
+	*itemtype 0x200
+	*numitems 2
+	*sound_pickup EQ_SHIELD1
+
+	*ai_type ARMOUR
+}
+
+*armour_level3
+{
+	*rpgclass item
+	*price 4000
+	*itemtype 0x200
+	*numitems 3
+	*sound_pickup EQ_SHIELD1
+
+	*ai_type ARMOUR
+}

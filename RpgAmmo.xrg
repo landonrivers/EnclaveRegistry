@@ -1,0 +1,640 @@
+//----------------------------------------------------------------------
+
+*template_ammo_bolt
+{
+	*rpgclass ammo
+
+	*flags renderquantity+noviewmodel+needequippedlink
+	*linkeditemtypes 0x21
+
+	*maxitems 300
+	*magazinesize 1
+
+	*attachangles 0,0.25,0.35
+	*ammosurface1 GUI_HudArrows01_01
+	*ammosurface2 GUI_HudArrows01_02
+	*sound_pickup eq_misc3
+
+	*attachpoint 1
+	*attachrottrack 19
+	*attachangles 0.1,0.25,0
+
+	*ai_type AMMO_BOLT
+}
+
+//----------------------------------------------------------------------
+
+*template_bolt_normal
+{
+	*classname template_ammo_bolt
+	*itemtype 0x110
+
+	*spawn projectile_bolt_normal
+
+	*model "weapons\\NormalBolt"
+	*iconsurface gui_icon_normalbolt
+}
+
+*template_bolt_poison
+{
+	*classname template_ammo_bolt
+	*itemtype 0x112
+
+	*spawn projectile_bolt_poison
+
+	*model "weapons\\NormalBolt"
+	*iconsurface gui_icon_poisonbolt
+}
+
+*template_bolt_magic
+{
+	*classname template_ammo_bolt
+	*itemtype 0x111
+
+	*spawn projectile_bolt_magic
+
+	*model "weapons\\MagicBolt"
+	*iconsurface gui_icon_magicbolt
+}
+
+//----------------------------------------------------------------------
+
+*template_arrow_burst
+{
+	*rpgclass burstammo
+
+	*itemtype 0x120
+	*linkeditemtypes 0x20
+
+	*flags renderquantity+noviewmodel+needequippedlink
+	*iconsurface gui_icon_longarrow
+	*model "weapons\\LongArrow"
+
+	*ammosurface1 GUI_HudArrows01_01
+	*ammosurface2 GUI_HudArrows01_02
+	*sound_pickup eq_misc3
+	
+	*attachpoint 1
+	*attachrottrack 19
+	*attachangles 0.1,0.25,0
+
+	*maxitems 300
+
+	*magazinesize 8
+	*spawn projectile_burstarrow
+
+	*ai_type AMMO_BURST
+}
+
+//----------------------------------------------------------------------
+
+*template_arrow_fire
+{
+	*classname template_arrow_burst
+
+	*itemtype 0x121
+	*iconsurface gui_icon_firearrow
+	*model "weapons\\FireArrow"
+	
+	*magazinesize 8
+	*spawn projectile_burstarrow_fire
+
+	*ai_type AMMO_BURST_FIRE
+}
+
+*template_arrow_lafire
+{
+	*classname template_arrow_burst
+
+	*itemtype 0x121
+	*iconsurface gui_icon_lafirearrow
+	*model "weapons\\FireArrow"
+	
+	*magazinesize 4
+	*spawn projectile_burstarrow_lafire
+
+	*ai_type AMMO_BURST_FIRE
+}
+
+*template_arrow_grenade
+{
+	*classname template_arrow_burst
+
+	*itemtype 0x122
+	*iconsurface gui_icon_explosivearrow
+	*model "weapons\\ExplosiveArrow"
+
+	*magazinesize 1
+	*spawn projectile_burstarrow_grenade
+
+	*ai_type AMMO_BURST_EXPLOSIVE
+}
+
+*template_arrow_hegrenade
+{
+	*classname template_arrow_burst
+
+	*itemtype 0x122
+	*iconsurface gui_icon_heexplosive
+	*model "weapons\\ExplosiveArrow"
+
+	*magazinesize 1
+	*spawn projectile_burstarrow_hegrenade
+
+	*ai_type AMMO_BURST_EXPLOSIVE
+}
+
+//----------------------------------------------------------------------
+
+*template_arrow_sniper
+{
+	*rpgclass sniperammo
+
+	*itemtype 0x123
+	*linkeditemtypes 0x20
+	*flags renderquantity+noviewmodel+needequippedlink
+	*iconsurface gui_icon_sniperarrow
+
+	*model "weapons\\SniperArrow"
+
+	*sound_pickup eq_misc3
+
+	*maxitems 300
+	*magazinesize 1
+
+	*spawn projectile_sniperarrow_normal
+	
+	*ai_type AMMO_SNIPER
+}
+
+//----------------------------------------------------------------------
+
+*template_arrow_magic
+{
+	*rpgclass sniperammo
+
+	*itemtype 0x124
+	*linkeditemtypes 0x20
+	*flags renderquantity+noviewmodel+needequippedlink
+	*iconsurface gui_icon_magicarrow
+
+	*model "weapons\\MagicArrow"
+
+	*sound_pickup eq_misc3
+
+	*maxitems 300
+	*magazinesize 1
+
+	*spawn projectile_sniperarrow_magic
+
+	*ai_type AMMO_SNIPER
+}
+
+//----------------------------------------------------------------------
+
+
+*item_bolt_normal_20
+{
+	*classname template_bolt_normal
+	*numitems 20
+	*price 10
+}
+
+*item_bolt_normal_40
+{
+	*classname template_bolt_normal
+	*numitems 40
+	*price 20
+}
+
+*item_bolt_normal_60
+{
+	*classname template_bolt_normal
+	*numitems 60
+	*price 30
+}
+
+*item_bolt_normal_120
+{
+	*classname template_bolt_normal
+	*numitems 120
+	*price 60
+}
+
+*item_bolt_normal_240
+{
+	*classname template_bolt_normal
+	*numitems 240
+	*price 120
+}
+
+*item_bolt_poison_20
+{
+	*classname template_bolt_poison
+	*numitems 10
+	*price 100
+}
+
+*item_bolt_poison_40
+{
+	*classname template_bolt_poison
+	*numitems 20
+	*price 200
+}
+
+*item_bolt_poison_60
+{
+	*classname template_bolt_poison
+	*numitems 30
+	*price 300
+}
+
+*item_bolt_poison_120
+{
+	*classname template_bolt_poison
+	*numitems 40
+	*price 400
+}
+
+*item_bolt_poison_240
+{
+	*classname template_bolt_poison
+	*numitems 50
+	*price 500
+}
+
+*item_bolt_magic_20
+{
+	*classname template_bolt_magic
+	*numitems 10
+	*price 500
+}
+
+*item_bolt_magic_40
+{
+	*classname template_bolt_magic
+	*numitems 20
+	*price 1000
+}
+
+*item_bolt_magic_60
+{
+	*classname template_bolt_magic
+	*numitems 30
+	*price 1500
+}
+
+*item_bolt_magic_120
+{
+	*classname template_bolt_magic
+	*numitems 40
+	*price 2000
+}
+
+*item_bolt_magic_240
+{
+	*classname template_bolt_magic
+	*numitems 50
+	*price 2500
+}
+
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+
+/*
+//Removes burst ammo
+*item_arrow_burst_0
+{
+	*classname template_arrow_burst
+	*numitems 0
+	*price 0
+}
+*/
+
+*item_arrow_burst_20
+{
+	*classname template_arrow_burst
+	*numitems 20
+	*price 5
+}
+
+*item_arrow_burst_40
+{
+	*classname template_arrow_burst
+	*numitems 40
+	*price 10
+}
+
+*item_arrow_burst_60
+{
+	*classname template_arrow_burst
+	*numitems 60
+	*price 15
+}
+
+*item_arrow_burst_120
+{
+	*classname template_arrow_burst
+	*numitems 120
+	*price 30
+}
+
+*item_arrow_burst_240
+{
+	*classname template_arrow_burst
+	*numitems 240
+	*price 60
+}
+
+/*
+//Removes fire ammo
+*item_arrow_fire_0
+{
+	*classname template_arrow_fire
+	*numitems 0
+	*price 0
+}
+*/
+
+*item_arrow_fire_10
+{
+	*classname template_arrow_fire
+	*numitems 10
+	*price 15
+}
+
+*item_arrow_fire_20
+{
+	*classname template_arrow_fire
+	*numitems 20
+	*price 30
+}
+
+*item_arrow_fire_30
+{
+	*classname template_arrow_fire
+	*numitems 30
+	*price 45
+}
+
+*item_arrow_fire_60
+{
+	*classname template_arrow_fire
+	*numitems 60
+	*price 90
+}
+
+*item_arrow_fire_120
+{
+	*classname template_arrow_fire
+	*numitems 120
+	*price 140
+}
+
+*item_arrow_fire_240
+{
+	*classname template_arrow_fire
+	*numitems 240
+	*price 280
+}
+
+/*
+//Removes lafire ammo
+*item_arrow_lafire_0
+{
+	*classname template_arrow_lafire
+	*numitems 0
+	*price 0
+}
+*/
+
+*item_arrow_lafire_10
+{
+	*classname template_arrow_lafire
+	*numitems 10
+	*price 200
+}
+
+*item_arrow_lafire_20
+{
+	*classname template_arrow_lafire
+	*numitems 20
+	*price 400
+}
+
+*item_arrow_lafire_30
+{
+	*classname template_arrow_lafire
+	*numitems 30
+	*price 600
+}
+
+*item_arrow_lafire_60
+{
+	*classname template_arrow_lafire
+	*numitems 40
+	*price 800
+}
+
+*item_arrow_lafire_120
+{
+	*classname template_arrow_lafire
+	*numitems 50
+	*price 1000
+}
+
+*item_arrow_lafire_240
+{
+	*classname template_arrow_lafire
+	*numitems 60
+	*price 1200
+}
+
+/*
+//Removes grenade ammo
+*item_arrow_grenade_0
+{
+	*classname template_arrow_grenade
+	*numitems 0
+	*price 0
+}
+*/
+
+*item_arrow_grenade_5
+{
+	*classname template_arrow_grenade
+	*numitems 5
+	*price 30
+}
+
+*item_arrow_grenade_10
+{
+	*classname template_arrow_grenade
+	*numitems 10
+	*price 60
+}
+
+*item_arrow_grenade_15
+{
+	*classname template_arrow_grenade
+	*numitems 15
+	*price 90
+}
+
+*item_arrow_grenade_30
+{
+	*classname template_arrow_grenade
+	*numitems 20
+	*price 120
+}
+
+*item_arrow_grenade_60
+{
+	*classname template_arrow_grenade
+	*numitems 25
+	*price 150
+}
+
+/*
+//Removes hegrenade ammo
+*item_arrow_hegrenade_0
+{
+	*classname template_arrow_hegrenade
+	*numitems 0
+	*price 0
+}
+*/
+
+*item_arrow_hegrenade_5
+{
+	*classname template_arrow_hegrenade
+	*numitems 5
+	*price 200
+}
+
+*item_arrow_hegrenade_10
+{
+	*classname template_arrow_hegrenade
+	*numitems 10
+	*price 400
+}
+
+*item_arrow_hegrenade_15
+{
+	*classname template_arrow_hegrenade
+	*numitems 15
+	*price 600
+}
+
+*item_arrow_hegrenade_30
+{
+	*classname template_arrow_hegrenade
+	*numitems 20
+	*price 800
+}
+
+*item_arrow_hegrenade_60
+{
+	*classname template_arrow_hegrenade
+	*numitems 25
+	*price 1000
+}
+
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+
+/*
+//Removes sniper ammo
+*item_arrow_sniper_0
+{
+	*classname template_arrow_sniper
+	*numitems 0
+	*price 0
+}
+*/
+
+*item_arrow_sniper_5
+{
+	*classname template_arrow_sniper
+	*numitems 5
+	*price 10
+}
+
+*item_arrow_sniper_10
+{
+	*classname template_arrow_sniper
+	*numitems 10
+	*price 20
+}
+
+*item_arrow_sniper_15
+{
+	*classname template_arrow_sniper
+	*numitems 15
+	*price 30
+}
+
+*item_arrow_sniper_30
+{
+	*classname template_arrow_sniper
+	*numitems 30
+	*price 60
+}
+
+*item_arrow_sniper_60
+{
+	*classname template_arrow_sniper
+	*numitems 60
+	*price 120
+}
+
+/*
+//Removes magic ammo
+*item_arrow_magic_0
+{
+	*classname template_arrow_magic
+	*numitems 0
+	*price 0
+}
+*/
+
+*item_arrow_magic_5
+{
+	*classname template_arrow_magic
+	*numitems 5
+	*price 150
+}
+
+*item_arrow_magic_10
+{
+	*classname template_arrow_magic
+	*numitems 10
+	*price 300
+}
+
+*item_arrow_magic_15
+{
+	*classname template_arrow_magic
+	*numitems 15
+	*price 600
+}
+
+*item_arrow_magic_30
+{
+	*classname template_arrow_magic
+	*numitems 30
+	*price 1200
+}
+
+*item_arrow_magic_60
+{
+	*classname template_arrow_magic
+	*numitems 60
+	*price 2400
+}
+
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------

@@ -1,0 +1,226 @@
+//----------------------------------------------------------------------
+//- TEST PLAYER --------------------------------------------------------
+//----------------------------------------------------------------------
+
+*player_vatar
+{
+	*classname template_paladin
+
+	*rpgobject char
+	{
+		*weapon_vatar_normal
+		*weapon_vatar_homing
+		*weapon_vatar_grenade
+		*weapon_vatar_stomp
+	}
+}
+
+//----------------------------------------------------------------------
+//- PROJECTILES --------------------------------------------------------
+//----------------------------------------------------------------------
+
+*projectile_vatar_normal
+{
+	*classname projectile_tracer
+
+	*model0 "Particles:,MP=20,,CO=0xddAE4B2B,CON=0x00202020,,,DU=2.5,,FI=0.4,,,VE=30,,,AX=0 0 10,,,,,HO=1,OF=5,,,,,,,SZ0=30,SZ1=50,SZ2=30,SZ3=40,,,,,,,,,,,,,,,,,,,,,,LS=22,FL=ct+hf+asq+nh+nl"
+	*flags noattach
+
+//	*explosion explosion_vatar_normal
+	*explosion explosion_vatar_grenade_phase3
+
+	*explosiontype 1
+	
+	*sound_loop0 Stave_fire02
+	*sound_spawn stave_mag108
+
+	*velocity 15
+
+	*duration 6
+	*impactforce 30
+
+}
+
+*VatarNormalRelease
+{
+	*classname projectile
+	*model0 "Particles:,MP=20,,CO=0xddAE4B2B,,TS=2,,DU=1,,,,,VE=-60,,,,,,,,,,,,,,,,SZ0=20,SZ1=20,SZ2=0,SZ3=0,,,,,,,,,,,,,,,PP=20,,,ES=0.01,,,,LS=8,FL=qd+al"
+	*duration 1
+	
+	*sound_loop0 Stave_fire02
+}
+
+//----------------------------------------------------------------------
+
+*projectile_vatar_homing
+{
+	*classname projectile_homing
+
+	*model0 "Particles:MP=20,SU=glimmer1,CO=0xddAE4B2B,CON=0x00202020,DU=2.5,,FI=0.4,,,VE=8,,,AX=0 0 10,,,,,HO=1,OF=5,,,,,,,SZ0=30,SZ1=40,,,,,,,,,,,,,,,,,,,,,TC=0.02,,,,FL=ct+hf"
+//	*model0 "Particles:MP=95,CO=255 75 75,TS=4,DU=1.8,VE=14,VEN=14,AX=-15 0 0,AXN=10 0 0,OF=2,OFN=4,SZ1=15,SZ3=20,SPA=0,OFA=0.25,TC=0.02,LS=20,FL=al+qd+nh+la"
+//	*model1 "Particles:MP=100,CO=200 75 75,TS=2,DU=0.5,FI=0.2,VE=10,VEN=10,DR=-1.4 2.2 -3.8,OF=25,SZ1=20,SZ2=1,SZ3=2,AL1=1,SPA=0,SPB=0,TCS=0,SMT=0.5,FL=qd+nh+sm"
+//	*model2 "Particles:MP=100,CO=200 75 75,TS=2,DU=0.5,FI=0.2,VE=10,VEN=10,DR=1.8 2.5 3.1,OF=25,SZ1=20,SZ2=1,SZ3=2,AL1=1,SPA=0,SPB=0,TCS=0,SMT=0.5,FL=qd+nh+sm"
+
+	*explosion explosion_vatar_homing
+	
+	*flags noattach
+	*duration 8
+	*velocity 8
+	
+	*sound_loop0 stave_mag104b
+	*sound_spawn stave_mag105
+
+	*homing_minvelocity 3
+	*homing_maxvelocity 8
+	*homing_acceleration 5
+	*homing_autoselecttarget 1
+	*homing_targetobjects characters
+	*homing_startdelay 1
+	*collisionobjects all
+	*explosiontype 1
+	*impactforce 15
+
+}
+
+//----------------------------------------------------------------------
+
+*projectile_vatar_grenade
+{
+	*classname projectile_bouncer
+
+	*model0 "Particles:,MP=95,,CO=0xddAE4B2B,CON=0x00202020,TS=4,,DU=1.8,,,,,VE=8,VEN=14,,,,,,,,OF=2,OFN=4,,,,,,,SZ1=25,SZ2=15,SZ3=25,,,,,,,,,OFA=0.25,,,,TC=0.02,,,,,,,,,LS=20,FL=al+qd+nh+la"
+	*explosion explosion_vatar_grenade_phase12
+
+	*numbounces 0
+
+	*sound_spawn stave_mag105
+	
+	*flags noattach
+	*destroydelay 0.1
+
+	*velocity 40
+
+	*duration 3
+	*impactforce 30
+}
+
+*VatarBombRelease
+{
+	*classname projectile
+	*model0 "Particles:,MP=45,,CO=0xddAE4B2B,CON=0x00202020,,,DU=1,,,,,VE=-70,,,,,,,,,,,,,,,,SZ0=20,SZ1=20,SZ2=0,SZ3=0,,,,,,,,,,,,,,,PP=45,,,ES=0.01,,,,LS=8,FL=qd+al"
+	*duration 1
+}
+
+//----------------------------------------------------------------------
+//- EXPLOSIONS ---------------------------------------------------------
+//----------------------------------------------------------------------
+
+*explosion_vatar_normal
+{
+	*classname explosion
+
+	*model0 "particles:,MP=125,,CO=0xddAE4B2B,CON=0x00202020,,,DU=0.8,,FI=0.1,,,VE=120,VEN=80,,,,,,,,OF=5,,,,,,,,,SZ2=15,SZ3=15,,,,,,,,,,,,,,,PP=125,,,ES=0.01,,,,LS=10,FL=asq"
+
+	*shockwave 256, 40, 50, explosion
+
+	*duration 5
+	
+	*sound_spawn dem_expl18c
+}
+
+*explosion_vatar_homing
+{
+	*classname explosion
+
+	*model0 "particles:,MP=125,CO=0xddAE4B2B,CON=0x00202020,DU=0.8,,FI=0.1,VE=40,VEN=80,OF=5,SZ2=15,SZ3=15,,,,,,,,,,,,,,,PP=125,,,ES=0.01,,,,LS=10,FL=asq"
+
+	*shockwave 230, 50, 25, explosion
+	
+	*duration 5
+	
+	*sound_spawn dem_expl17c
+}
+
+//---NOT USED----------------------------------------------------------
+
+*explosion_vatar_grenade_phase1
+{
+	*classname ext_model
+
+	*model0 "Particles:MP=100,CO=0x80F03000,CON=0x00404040,TS=2,FI=0.5,VE=20,LO=0 0 10,AX=0 0 3,RT0=-2,RT1=2,RT2=-2,RT3=2,SPB=0,OFB=-0.1,ES=1,LS=20,FL=qd+al+ccn"
+
+	*explosion explosion_vatar_grenade_phase2
+	
+	*duration 5
+	
+	*sound_spawn dem_expl17c
+}
+
+//---NOT USED----------------------------------------------------------
+
+*explosion_vatar_grenade_phase2
+{
+	*classname ext_model
+
+	*model0 "Particles:MP=100,CO=0x80F03000,CON=0x00404040,TS=6,TO=2,FI=1,VE=-20,AX=0 0 2,OF=50,OFN=10,RT0=-2,RT1=2,RT2=-2,RT3=2,AL1=1,SPB=0,ES=1,LS=20,FL=qd+al+ccn"
+
+	*explosion explosion_vatar_grenade_phase3
+	
+	*duration 5
+	
+	*sound_spawn dem_expl08a
+}
+
+//----------------------------------------------------------------------
+
+*explosion_vatar_grenade_phase12
+{
+	*classname bomb
+	*physprim0 sphere, 3,0,0,0,0,0, physmovement, projectile, world+physmodel+physobject, excludeowner
+	*model0 "particles:,MP=30,,CO=0xddAE4B2B,CON=0x00202020,,,,,FI=0.3,,,VE=8,VEN=2,,AX=0 0 1,,,,,,OF=5,,,,,,,SZ0=20,SZ1=30,SZ2=180,SZ3=240,,RT0=2,RT1=4,RT2=4,RT3=2,RT4=1,SPA=0.5,SPB=0.5,,OFB=0.25,,,TC=0.1,,,,,ES=3,,,,LS=8,FL=qd+asq+nl"
+	*explosion explosion_vatar_grenade_phase3
+	*explosiontype 1
+	//*shockwave 256, 45, explosive
+	*flags nodestroy+noattach+nodamageonimpact+explodeontimeout
+	*bounce_elasticity 0.0
+	*velocity 0
+	*duration 1-3
+	*sound_spawn dem_expl19c
+
+}
+
+//----------------------------------------------------------------------
+
+*explosion_vatar_grenade_phase3
+{
+	*classname explosion
+
+	*model0 "Particles:,MP=100,,CO=0xddAE4B2B,CON=0x00202020,TS=4,TO=-0.1,DU=5,DUN=2,FI=0.5,,,VE=50,VEN=40,,,,,,,,OF=5,,,,,,,SZ0=80,SZ1=100,SZ2=80,SZ3=100,,,,,,,SPA=0.9,SPB=0.9,,OFB=0.25,,,,TCS=0,PP=25,,,ES=0.01,,,,LS=8,FL=qd+asq+nl"
+	*model1 "ExpandSphere:SU=SphereMap01,SEG=15,SID=20,DU=0.8,RA0=0,RA1=200,,RO0=0 0 5,RO1=1 1 1,RO2=1,,,,TX2=1 1,TX3=2 2,CO0=0xddAE4B2B,CO1=0x00F0F000,CO2=2,CO3=2,FT=0.1,PTH=0.7,FLG=clampcolors+fadepoles+postscale"
+	
+	*duration 5
+	
+	*shockwave 256, 50, 50, explosive
+	*impactforce 15
+	*sound_spawn dem_expl18c
+}
+
+//----------------------------------------------------------------------
+
+*explosion_vatar_stomp
+{
+	*classname explosion
+
+	*model0 "Particles:MP=120,CO=0xddAE4B2B,CON=0x00202020,TS=4,DU=2,FI=0.25,VE=100,VEN=50,AX=0 0 3,OF=-30,SZ0=20,SZ1=25,SZ2=70,SZ3=80,SPB=0,PP=120,ES=0.01,LS=2.5,FL=qd+asq+nl"
+
+	*duration 5
+	
+	*shockwave_reloadtime 1.5
+	*shockwave_stalltime 1.5
+	*shockwave_delay 0.7
+
+	*shockwave 300, 50, 80, explosive
+	*sound_spawn dem_expl01a
+}
+
+//----------------------------------------------------------------------

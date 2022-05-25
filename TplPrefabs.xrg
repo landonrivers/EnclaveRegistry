@@ -1,0 +1,237 @@
+*template_prefab
+{
+	*classname prefab
+}
+
+*prefab_catapult1
+{
+	*classname template_prefab
+
+	*prefab Prefab\catapult01.xw
+	
+	*mainentity ca
+	*mainentity_chargeduration 2
+	*mainentity_releaseduration 1
+	*mainentity_limitx -45,45
+	*mainentity_limity 0,0
+	*mainentity_siegeflags controlledcharge+accelleratedrelease
+	*mainentity_minemittervelocity 20
+	*mainentity_maxemittervelocity 200
+}
+
+*prefab_catapult_elm2
+{
+	*classname prefab_catapult1
+
+	*prefab Prefab\catapult_elm2.xw
+
+	*mainentity_chargeduration 2
+	*mainentity_releaseduration 1
+	*mainentity_minemittervelocity 40
+	*mainentity_maxemittervelocity 200	
+
+}
+
+*prefab_siegetower1
+{
+	*classname template_prefab
+
+	*mainentity_limitx 0,0
+	*mainentity_limity 0,0
+}
+
+*prefab_siegetower_elm2
+{
+	*classname prefab_siegetower1
+
+	*prefab Prefab\SiegeTower_Elm2.xw
+
+	*mainentity tower2
+
+}
+
+*prefab_arrowthrower1
+{
+	*classname template_prefab
+
+	*prefab Prefab\arrowthrower.xw
+
+	*mainentity at
+	*mainentity_chargeduration 2
+	*mainentity_releaseduration 0.1
+	*mainentity_limitx -45,45
+	*mainentity_limity 0,0
+	*mainentity_siegeflags controlledcharge
+}
+
+*prefab_cannon1
+{
+	*classname template_prefab
+	*prefab Prefab\cannon01.xw
+
+	*mainentity c
+	*mainentity_limitx -20,20
+	*mainentity_limity -20,20
+
+	*mainentity_chargeduration 1
+	*mainentity_releaseduration 0
+	*mainentity_reloadduration 2
+}
+
+*prefab_cannon2
+{
+	*classname prefab_cannon1
+	*prefab Prefab\cannon02.xw
+
+	*mainentity_limitx -40,40
+	*mainentity_limity -50,20
+	*mainentity_releaseduration 0
+	*mainentity_reloadduration 1
+	*mainentity_chargeduration 0
+	*mainentity_siegeflags lockplayer
+}
+
+*prefab_cannon3
+{
+	*classname template_prefab
+	*prefab Prefab\cannon03.xw
+
+	*mainentity c
+	*mainentity_limitx -20,20
+	*mainentity_limity -20,20
+
+	*mainentity_chargeduration 1
+	*mainentity_releaseduration 0
+	*mainentity_reloadduration 2
+}
+
+*prefab_cannon3_spawn
+{
+	*classname prefab_cannon3
+	*prefab Prefab\cannon03_spawn.xw
+}
+
+*prefab_ballista
+{
+	*classname template_prefab
+	*prefab Prefab\ballista.xw
+
+	*mainentity c
+	*mainentity_limitx -50,50
+	*mainentity_limity -35,45
+	*mainentity_siegeflags autocharge
+
+	*mainentity_chargeduration 0.7
+	*mainentity_releaseduration 0.05
+}
+
+*prefab_ballista_locked
+{
+	*classname prefab_ballista
+	*mainentity_siegeflags autocharge+lockplayer
+}
+
+
+*prefab_bossballista
+{
+	*classname template_prefab
+	*prefab Prefab\bossballista.xw
+
+	*mainentity c
+	*mainentity_limitx -120,120
+	*mainentity_limity -35,60
+	*mainentity_siegeflags autocharge
+
+	*mainentity_chargeduration 0.7
+	*mainentity_releaseduration 0.05
+}
+*prefab_bossballista360
+{
+	*classname template_prefab
+	*prefab Prefab\bossballista360.xw
+
+	*mainentity c
+	*mainentity_limitx -130,130
+	*mainentity_limity -35,75
+	*mainentity_siegeflags autocharge
+
+	*mainentity_chargeduration 0.7
+	*mainentity_releaseduration 0.05
+}
+
+*prefab_ballistavatar
+{
+	*classname template_prefab
+	*prefab Prefab\BallistaVatar.xw
+
+	*mainentity c
+	*mainentity_limitx -130,130
+	*mainentity_limity -35,60
+	*mainentity_siegeflags autocharge
+
+	*mainentity_chargeduration 0.7
+	*mainentity_releaseduration 0.05
+}
+
+
+
+
+*prefab_ballista_spawn
+{
+	*classname prefab_ballista
+	*prefab Prefab\ballista_spawn.xw
+}
+
+*prefab_AAGun
+{
+	*classname template_prefab
+	*prefab Prefab\AAGun.xw
+
+	*mainentity c
+	*mainentity_limitx -20,20
+	*mainentity_limity -30,20
+	*mainentity_releaseduration 1
+}
+
+*prefab_gatlingzapper
+{
+	*classname template_prefab
+	*prefab Prefab\GatlingZapper.xw
+
+	*mainentity c
+	*mainentity_limitx -30,30
+	*mainentity_limity -30,30
+	*mainentity_releaseduration 0.05
+}
+
+*prefab_beartrap
+{
+	*classname template_prefab
+	*prefab Prefab\BearTrap.xw
+}
+
+*prefab_beartrap_leaves
+{
+	*classname template_prefab
+	*prefab Prefab\BearTrap_Leaves.xw
+}
+
+*prefab_tele_vatar
+{
+	*classname template_prefab
+	*prefab Prefab\Tele_Vatar.xw
+	*mainentity main
+}
+
+*prefab_tele_mordessa
+{
+	*classname template_prefab
+	*prefab Prefab\Tele_Mordessa.xw
+	*mainentity main
+}
+
+*prefab_checkpoint
+{
+	*classname template_prefab
+	*prefab Prefab\Checkpoint.xw
+}

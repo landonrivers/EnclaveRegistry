@@ -1,0 +1,340 @@
+*enchantment_fireward
+{
+	*rpgclass enchantment
+	*enchname Fireward
+	*aura aura_resist_fire
+	*duration 30
+	*sound_activated fireward
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr res_fire
+		*rpg_mod_operation add
+		*rpg_mod_value 80
+	}
+}
+
+*enchantment_haste
+{
+	*rpgclass enchantment
+	*enchname Haste
+	*duration 30
+	*sound_activated pickmisc
+	*aura aura_haste
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr firerate
+		*rpg_mod_value 172
+		*rpg_mod_operation mul
+	}
+}
+
+*enchantment_health_small
+{
+	*rpgclass enchantment
+	*sound_activated pickhealth
+	*model "pickups\\nrg_s"
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr health
+		*rpg_mod_value 15
+		*rpg_mod_operation add
+		*rpg_mod_tick 1
+	}
+	*enchname Health (15)
+}
+
+*enchantment_health_medium
+{
+	*rpgclass enchantment
+	*sound_activated pickhealth
+	*model "pickups\\nrg"
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr health
+		*rpg_mod_value 50
+		*rpg_mod_operation add
+		*rpg_mod_tick 1
+	}
+	*enchname Health (50)
+}
+
+*enchantment_health_big
+{
+	*rpgclass enchantment
+	*sound_activated picksuper
+	*model "pickups\\nrg"
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr health
+		*rpg_mod_value 100
+		*rpg_mod_operation add
+		*rpg_mod_tick 1
+	}
+	*enchname Health (100)
+}
+
+*template_enchantment_ammo
+{
+	*rpgclass enchantment
+	*sound_activated pickmisc
+	*rpg_child0 modifier
+	{
+		*rpg_mod_operation add
+		*rpg_mod_tick 1
+	}
+}
+
+*template_enchantment_ammo0
+{
+	*classname template_enchantment_ammo
+	*sound_activated pickfuel
+	*enchname Rockets
+	*model "Weapons\\rockets"
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr ammo0
+	}
+}
+
+*template_enchantment_ammo1
+{
+	*classname template_enchantment_ammo
+	*sound_activated pickmisc
+	*enchname Ammo
+	*model "weapons\\zapperammo"
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr ammo1
+	}
+}
+
+*template_enchantment_ammo2
+{
+	*classname template_enchantment_ammo
+	*sound_activated pickbolts
+	*model "weapons\\boltammo"
+	*enchname Ammo
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr ammo2
+	}
+}
+
+*template_enchantment_ammo3
+{
+	*classname template_enchantment_ammo
+	*sound_activated pickbolts
+	*model "weapons\\boltammo"
+	*enchname Ammo
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr ammo3
+	}
+}
+
+*template_enchantment_ammo4
+{
+	*classname template_enchantment_ammo
+	*sound_activated pickbolts
+	*model "weapons\\boltammo"
+	*enchname Ammo
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr ammo4
+	}
+}
+
+*template_enchantment_ammo5
+{
+	*classname template_enchantment_ammo
+	*sound_activated pickbolts
+	*model "weapons\\boltammo"
+	*enchname Ammo
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr ammo5
+	}
+}
+
+*enchantment_ammo0_small
+{
+	*classname template_enchantment_ammo0
+	*sound_activated pickfuel
+	*rpg_child0 modifier
+	{
+		*rpg_mod_value 6
+	}
+	*enchname Rockets (6)
+}
+
+*enchantment_ammo1_small
+{
+	*classname template_enchantment_ammo1
+	*sound_activated pickmisc
+	*rpg_child0 modifier
+	{
+		*rpg_mod_value 10
+	}
+	*enchname Zapper Battery (5)
+}
+
+*enchantment_ammo2_small
+{
+	*classname template_enchantment_ammo2
+	*sound_activated pickbolts
+	*rpg_child0 modifier
+	{
+		*rpg_mod_value 15
+	}
+	*enchname HMG Bullets (15)
+}
+
+*enchantment_ammo3_small
+{
+	*classname template_enchantment_ammo3
+	*sound_activated pickmisc
+	*rpg_child0 modifier
+	{
+		*rpg_mod_value 50
+	}
+	*enchname Minigun Bullets (50)
+}
+
+*enchantment_ammo4_small
+{
+	*classname template_enchantment_ammo4
+	*sound_activated pickbolts
+	*rpg_child0 modifier
+	{
+		*rpg_mod_value 50
+	}
+	*enchname Bolts (50)
+}
+
+*enchantment_ammo5_small
+{
+	*classname template_enchantment_ammo5
+	*sound_activated pickmisc
+	*rpg_child0 modifier
+	{
+		*rpg_mod_value 20
+	}
+	*enchname Shotgun Shells (20)
+}
+
+*enchantment_ammo0_medium
+{
+	*classname template_enchantment_ammo0
+	*sound_activated pickfuel
+	*rpg_child0 modifier
+	{
+		*rpg_mod_value 10
+	}
+	*enchname Rockets (10)
+}
+
+*enchantment_ammo1_medium
+{
+	*classname template_enchantment_ammo1
+	*rpg_child0 modifier
+	{
+		*rpg_mod_value 20
+	}
+	*enchname Zapper Battery (20)
+}
+
+*enchantment_ammo2_medium
+{
+	*classname template_enchantment_ammo2
+	*rpg_child0 modifier
+	{
+		*rpg_mod_value 60
+	}
+	*enchname HMG Bullets (60)
+}
+
+*enchantment_ammo3_medium
+{
+	*classname template_enchantment_ammo3
+	*rpg_child0 modifier
+	{
+		*rpg_mod_value 200
+	}
+	*enchname Minigun Bullets (200)
+}
+
+*enchantment_ammo4_medium
+{
+	*classname template_enchantment_ammo4
+	*rpg_child0 modifier
+	{
+		*rpg_mod_value 200
+	}
+	*enchname Bolts (200)
+}
+
+*enchantment_ammo5_medium
+{
+	*classname template_enchantment_ammo5
+	*rpg_child0 modifier
+	{
+		*rpg_mod_value 40
+	}
+	*enchname Shotgun Shells (40)
+}
+
+
+*enchantment_ammo0_full
+{
+	*classname template_enchantment_ammo0
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr ammo0
+		*rpg_mod_attr2 maxammo0
+		*rpg_mod_operation copyadd
+	}
+}
+
+*enchantment_ammo1_full
+{
+	*classname template_enchantment_ammo1
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr ammo0
+		*rpg_mod_attr2 maxammo0
+		*rpg_mod_operation copyadd
+	}
+}
+
+*enchantment_ammo2_full
+{
+	*classname template_enchantment_ammo2
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr ammo0
+		*rpg_mod_attr2 maxammo0
+		*rpg_mod_operation copyadd
+	}
+}
+
+*enchantment_ammo3_full
+{
+	*classname template_enchantment_ammo3
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr ammo0
+		*rpg_mod_attr2 maxammo0
+		*rpg_mod_operation copyadd
+	}
+}
+
+*enchantment_ammo4_full
+{
+	*classname template_enchantment_ammo4
+	*rpg_child0 modifier
+	{
+		*rpg_mod_attr ammo0
+		*rpg_mod_attr2 maxammo0
+		*rpg_mod_operation copyadd
+	}
+}

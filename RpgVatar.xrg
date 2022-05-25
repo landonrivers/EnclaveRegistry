@@ -1,0 +1,141 @@
+//----------------------------------------------------------------------
+//- WEAPONS ------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*weapon_vatar_normal
+{
+	*iconsurface gui_icon_undef_right
+	*rpgclass summon
+	*spawn projectile_vatar_normal
+	*model "weapons\\Invisible"
+
+	*damagetype explosive+fire
+	*skill magic
+
+	*flags aiming
+	*itemtype 1
+
+	*attachangles 0,0.25,0
+
+	*reloadtime 1
+	*summondelay 0.7
+	*attachpoint 0
+	*attachrottrack 15
+	*muzzleattachpoint 2
+	*attackeffect VatarNormalRelease
+
+	*anim_stance animlist:112
+	*anim_attack animlist:134
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_MAGICBALL
+}
+
+//----------------------------------------------------------------------
+
+*weapon_vatar_homing
+{
+	*iconsurface gui_icon_undef_right
+	*rpgclass MultiSpreadSummon
+	*spawn projectile_vatar_homing
+	*model "weapons\\Invisible"
+	*attackeffect VatarNormalRelease
+	*HEADINGSPREAD 180
+	*PITCHSPREAD 180
+	*MAXPROJECTILES 5
+	*MINPROJECTILES 3
+
+	*damagetype explosive+fire
+	*skill magic
+
+	*flags aiming
+
+	*itemtype 2
+
+	*attachangles 0,0.25,0
+
+	*reloadtime 4	
+	*summondelay 3.3
+	*attachpoint 0
+	*attachrottrack 15
+	*muzzleattachpoint 2
+
+
+	*anim_stance animlist:112
+	*anim_attack animlist:133
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_MAGICBALL
+}
+
+//----------------------------------------------------------------------
+
+*weapon_vatar_grenade
+{
+	*rpgclass MultiSpreadSummon
+	*spawn projectile_vatar_grenade
+	*reloadtime 1
+
+	*model "weapons\\Invisible"
+	*attackeffect VatarBombRelease
+	*HEADINGSPREAD 70
+	*PITCHSPREAD 10
+	*MAXPROJECTILES 5
+	*MINPROJECTILES 3
+
+	*damagetype explosive+fire
+
+	*skill magic
+
+	*flags aiming
+
+	*itemtype 3
+
+	*attachangles 0,0.25,0
+	
+	*summondelay 0.8
+	*attachpoint 0
+	*attachrottrack 15
+	*muzzleattachpoint 2
+
+
+	*anim_stance animlist:112
+	*anim_attack animlist:134
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_MAGICBALL
+}
+
+//----------------------------------------------------------------------
+
+*weapon_vatar_stomp
+{
+	*itemtype 4
+	*rpgclass summon
+	*flags aiming
+	*spawn explosion_vatar_stomp
+	*model "weapons\\Invisible"
+	*reloadtime 1.5
+
+	*damagetype explosive+fire
+	*skill magic
+
+	*itemtype 4
+	*attachpoint 2
+	*attachrottrack 10
+	*muzzleattachpoint 0
+
+	*attachangles 0,0.25,0
+		
+	*anim_stance animlist:112
+	*anim_attack animlist:137
+
+	*summondelay 0.8
+
+	*ai_type MELEE_VATARSTOMP
+}
+
+//----------------------------------------------------------------------

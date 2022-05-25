@@ -1,0 +1,23 @@
+*cheats 1
+*alwayscheats 1
+*spawnmask -1
+*gameclass GameCampaign
+*gamename Campaign
+*gamemenu GameMenu_Campaign
+*autoactivate 1
+*rotatepickups 1
+*fixedteams 1
+*numfixedteams 2
+*friendlyfire 1
+*infoteamspawn 0
+*defaultrespawntime 10
+*selffire 1
+
+*window_selectchallenge selectchallenge
+*window_selectcharacter selectcharacter
+*window_equipcharacter equipcharacter
+*window_cutscene cutscene
+*window_briefing briefing
+*window_scoreboard scoreboard
+
+*music_setup "enclavemain"

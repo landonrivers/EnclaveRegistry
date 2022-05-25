@@ -1,0 +1,1287 @@
+*template_char
+{
+	*classname character
+
+	*phys_width 13
+	*phys_height 28
+	*phys_swim_height 41
+	*phys_height_crouch 16
+	*phys_dead_radius 8
+	*phys_stepsize 23.5
+	*phys_friction 0.8
+
+	*speed_forward 8
+	*speed_up 8
+	*speed_jump 15
+
+	*deathanims animlist:221,animlist:222,animlist:223,animlist:224,animlist:220
+	*animlist Anim_Default
+	*dialogue Default
+
+	*WaterRippleEffect waterripple
+	*WaterSplashEffect watersplashmedium
+	*WaterRippleSound
+	*WaterSplashSound imp_water02b
+
+	*damage_effect attach_blood_small03
+	*blood_color 255, 255, 255
+
+	*teleport_effect CharacterTeleportEffect
+	*teleport_sound
+
+	*ai_type Character
+	*ai_min_idle_sound_interval 5
+	*ai_max_idle_sound_interval 50
+	*AI_ACTIVATIONTIME 20
+
+	*camera_face_offset 0, 0, 0 //From mouth attachpoint, in model space (Fwd, Left, Up)
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+	
+	*show_mana 1
+
+	*rpgobject char
+	{
+		*attrib_health 350
+		*attrib_maxhealth 350
+		*attrib_mana 300
+		*attrib_maxmana 300
+
+		*manareg_amount 4
+		*manareg_rate 0.1
+		*manareg_delay 3
+
+		*item_staff_shield
+		*item_arrow_burst_120
+		//*item_arrow_fire_60
+		//*item_arrow_grenade_30
+		//*item_arrow_sniper_30
+		*item_bolt_normal_120
+	}
+
+	*ai_useflags switchweapon
+}
+
+*template_char_light
+{
+	*classname template_char
+	*death_effect DeathEffect_Light
+	*damage_effect attach_blood_small03
+	*blood_color 64, 0, 0
+}
+
+*template_char_dark
+{
+	*classname template_char
+//	*death_effect DeathEffect_Dark
+	*damage_effect attach_blood_small03
+	*blood_color 64, 32, 0
+}
+
+*template_paladin
+{
+	*classname template_char
+	*character Paladin
+	*model "players\\knight\\knight"
+	*team 0
+	*animlist Anim_Paladin
+	*dialogue Dlg_Knight
+	*phys_height 32
+	*phys_swim_height 49
+	*phys_height_crouch 25
+	//*camera_stand_head_offset 	0, 0, 64 	// From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	//*camera_crouch_head_offset 	0, 0, 50 	// (same as above)
+
+	//*camera_behind_head_offset 	0, -20, -80 	// From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+	//*camera_shoulder_offset 	10, -8, 5 	// (same as above)
+
+	//*camera_face_offset     	5, 5, 5    	// From mouth attachpoint, in model space (Fwd, Left, Up)
+
+	*camera_stand_head_offset 	0, 0, 60 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	*camera_crouch_head_offset 	0, 0, 44 // (same as above)
+	*camera_behind_head_offset 	0, -20, -100 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+	//*camera_shoulder_offset 	10, -8, 5 	// (same as above) Not used
+	//*camera_face_offset     	0, 0, -1 // From mouth attachpoint, in model space (Fwd, Left, Up) Not used
+
+	*lipsync_limits -5,25
+
+	*rpgobject char
+	{
+		*skill_dagger 1.0
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_crossbow 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.65
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_other	0, All=1
+
+}
+
+*player_noble01
+{
+	*classname template_paladin
+	*hightexres 1
+	*animlist Anim_Nobel01
+	*model "players\\noble\\nobel01"
+	*flags nohud
+
+	*rpgobject char
+	{
+	}
+}
+
+*player_paladin
+{
+	*classname template_paladin
+	*hightexres 1
+
+	*rpgobject char
+	{
+		*weapon_sword_warrior
+		*weapon_crossbow_heavy
+		*item_shield_kite
+	}
+
+	*ai_useflags shockwave+magicshield+summon+combo+switchweapon+alwaysblock+scriptmute 
+}
+
+*player_paladinA1
+{
+	*classname player_paladin
+	*model "players\\knight\\knightA1"
+}
+
+*player_paladinA2
+{
+	*classname player_paladin
+	*model "players\\knight\\knightA2"
+}
+
+*player_paladinA3
+{
+	*classname player_paladin
+	*model "players\\knight\\knightA3"
+}
+
+*template_archer
+{
+	*classname template_char
+	*character Archer
+	*team 0
+	*animlist Anim_Archer
+	*dialogue Dlg_Huntress
+	*phys_swim_height 47
+	*model "players\\Huntress\\Huntress"
+
+	//*camera_stand_head_offset 	0, 0, 56 	// From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	//*camera_crouch_head_offset 	0, 0, 24 	// (same as above)
+	//*camera_behind_head_offset 	0, -15, -70 	// From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+	//*camera_shoulder_offset    	10, -8, 5   	// From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+	//*camera_face_offset        	0, 0, 7    	// From mouth attachpoint, in model space (Fwd, Left, Up)
+
+	*camera_stand_head_offset 	0, 0, 52
+	*camera_crouch_head_offset 	0, 0, 38
+	*camera_behind_head_offset 	0, -16, -90
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5
+
+	*rpgobject char
+	{
+		*skill_bow 1.0
+		*skill_crossbow 1.2
+		*skill_dagger 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=0.85
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=0.85
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=0.85
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=0.85
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.0, Fire=0.15, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.2, Fire=0.30, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.3, Fire=0.40, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.5, Fire=0.60, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.65
+	*protection_factor_plate	0, Sniper+Pierce+Cold+Poison+Explosive+Special=0.7, Fire=0.80, Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_other	0, All=1
+
+}
+
+*player_archer
+{
+	*classname template_archer
+	*hightexres 1
+	*rpgobject char
+
+	*speed_forward 9
+	*speed_up 8
+	*speed_jump 15
+
+	*rpgobject char
+	{
+		*weapon_bow_sniper
+		*weapon_crossbow_heavy
+		*weapon_dagger_curved
+		*item_arrow_sniper_30
+		*item_arrow_grenade_30
+		*item_arrow_fire_30
+	}
+
+	*ai_useflags shockwave+magicshield+summon+combo+switchweapon+alwaysblock+scriptmute 
+}
+
+*player_archerA1
+{
+	*classname player_archer
+	*model "players\\Huntress\\HuntressA1"
+}
+
+*player_archerA2
+{
+	*classname player_archer
+	*model "players\\Huntress\\HuntressA2"
+}
+
+*player_archerA3
+{
+	*classname player_archer
+	*model "players\\Huntress\\HuntressA3"
+}
+
+*template_druid
+{
+	*classname template_char
+	*character Druid
+	*team 0
+	*animlist Anim_Druid
+	*dialogue Dlg_Druid
+	*phys_swim_height 48
+	*model "players\\druid\\druid"
+	
+	//*camera_stand_head_offset 0, 0, 53 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	//*camera_crouch_head_offset 0, 0, 24 // (same as above)
+	//*camera_behind_head_offset 0, -15, -70 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+
+	*camera_stand_head_offset 	0, 0, 52
+	*camera_crouch_head_offset 	0, 0, 38
+	*camera_behind_head_offset 	0, -16, -90
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5  
+
+	*show_mana 1
+
+	*rpgobject char
+	{
+		*skill_magic 1.0
+		*skill_summon 1.0
+		*skill_dagger 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Poison+Explosive+Special=0.0, Fire+Cold+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_cloth	0, Sniper+Pierce+Poison+Explosive+Special=0.2, Fire+Cold+Magic+Summon=0.3. Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Poison+Explosive+Special=0.3, Fire+Cold+Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Poison+Explosive+Special=0.5, Fire+Cold+Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_plate	0, Sniper+Pierce+Poison+Explosive+Special=0.7, Fire+Cold+Magic+Summon=0.6, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_other	0, All=1
+
+}
+
+*player_druid
+{
+	*classname template_druid
+	*hightexres 1
+	*rpgobject char
+	{
+		*weapon_staff_spirit
+		*weapon_staff_lightning2
+		*weapon_dagger_curved
+		*skill_summon 1.0
+
+		*manareg_delay 1
+	}
+
+	*ai_useflags shockwave+magicshield+summon+combo+switchweapon+alwaysblock+scriptmute 
+}
+
+*player_druidA1
+{
+	*classname player_druid
+	*model "players\\druid\\druidA1"
+	
+	*rpgobject char
+	{
+		*skill_summon 1.5
+	}
+}
+
+*player_druidA2
+{
+	*classname player_druid
+	*model "players\\druid\\druidA2"
+	
+	*rpgobject char
+	{
+		*skill_summon 2.0
+	}
+}
+
+*player_druidA3
+{
+	*classname player_druid
+	*model "players\\druid\\druidA3"
+
+	*rpgobject char
+	{
+		*skill_summon 2.5
+	}
+
+}
+
+*template_wizard
+{
+	*classname template_char
+	*character Wizard
+	*team 0
+	*animlist Anim_Wizard
+	*dialogue Dlg_Wizard
+	*model "players\\wizard\\wizard"
+    *phys_swim_height 49
+
+	//*camera_stand_head_offset 0, 0, 64 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	//*camera_crouch_head_offset 0, 0, 24 // (same as above)
+	//*camera_behind_head_offset 0, -15, -70 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+
+	*camera_stand_head_offset 	0, 0, 54
+	*camera_crouch_head_offset 	0, 0, 40
+	*camera_behind_head_offset 	0, -18, -92
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5  
+
+	*show_mana 1
+
+	*rpgobject char
+	{
+		*skill_magic 1.0
+		*skill_dagger 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.6, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.7, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.8, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_other	0, All=1
+}
+
+*player_wizard
+{
+	*classname template_wizard
+	*hightexres 1
+	*rpgobject char
+	{
+		*weapon_staff_fire
+		*weapon_staff_lightning2
+		*weapon_dagger_short
+
+		*manareg_delay 1
+
+		*skill_magic 1.0
+		*skill_dagger 0.7
+	}
+	*ai_useflags shockwave+magicshield+summon+combo+switchweapon+alwaysblock+scriptmute 
+}
+
+*player_wizardA1
+{
+	*classname player_wizard
+	*model "players\\wizard\\wizardA1"
+
+	*skill_magic 1.5
+	*skill_dagger 0.7
+}
+
+*player_wizardA2
+{
+	*classname player_wizard
+	*model "players\\wizard\\wizardA2"
+
+	*skill_magic 2.0
+	*skill_dagger 0.7
+}
+
+*player_wizardA3
+{
+	*classname player_wizard
+	*model "players\\wizard\\wizardA3"
+
+	*skill_magic 2.5
+	*skill_dagger 0.7
+}
+
+*template_engineer
+{
+	*classname template_char
+	*character Engineer
+	*team 0
+	*animlist Anim_Engineer
+	*dialogue Dlg_Engineer
+	*phys_swim_height 45
+	*model "players\\Engineer\\Engineer"
+	
+	//*camera_stand_head_offset 0, 0, 54 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	//*camera_crouch_head_offset 0, 0, 24 // (same as above)
+	//*camera_behind_head_offset 0, -10, -65 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+
+	*camera_stand_head_offset 	0, 0, 48
+	*camera_crouch_head_offset 	0, 0, 34
+	*camera_behind_head_offset 	0, -16, -84
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5 
+
+	*rpgobject char
+	{
+		*skill_sword 0.7
+		*skill_axe 0.8
+		*skill_hammer 1.0
+		*skill_crossbow 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Special=0.0, Explosive=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.2, Explosive=0.2, Magic+Summon=0. Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.3, Explosive=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.5, Explosive=0.4, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.7, Explosive=0.5, Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_other	0, All=1
+
+}
+
+*player_engineer
+{
+	*classname template_engineer
+	*hightexres 1
+	*rpgobject char
+	{
+		*weapon_hammer_battle
+		*weapon_crossbow_heavy
+		*weapon_bomb_normal
+		*item_shield_blade
+	}
+	*ai_useflags shockwave+magicshield+summon+combo+switchweapon+alwaysblock+scriptmute 
+}
+
+*player_engineerA1
+{
+	*classname player_engineer
+	*model "players\\Engineer\\EngineerA1"
+}
+
+*player_engineerA2
+{
+	*classname player_engineer
+	*model "players\\Engineer\\EngineerA2"
+}
+
+*player_engineerA3
+{
+	*classname player_engineer
+	*model "players\\Engineer\\EngineerA3"
+}
+
+*template_boarrider
+{
+	*classname template_char
+	*character Boarrider
+	*team 0
+	*animlist Anim_Boarrider
+	*dialogue Dlg_Boarrider
+	*phys_swim_height 45
+	*model "players\\boarrider\\boarrider"
+
+	*camera_stand_head_offset 	0, 0, 48
+	*camera_crouch_head_offset 	0, 0, 34
+	*camera_behind_head_offset 	0, -16, -84
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5 
+
+	//*camera_stand_head_offset 0, 0, 48 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	//*camera_crouch_head_offset 0, 0, 24 // (same as above)
+	//*camera_behind_head_offset 0, -5, -35 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+
+	*rpgobject char
+	{
+		*skill_sword 0.7
+		*skill_axe 1.0
+		*skill_hammer 0.8
+		*skill_crossbow 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0.2. Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+}
+
+*player_boarrider
+{
+	*classname template_boarrider
+	*hightexres 1
+	*rpgobject char
+	{
+		*weapon_axe_battle
+		*weapon_crossbow_heavy
+		*item_shield_kite
+	}
+
+	*speed_forward 11
+	*speed_up 8
+	*speed_jump 15
+
+	*ai_useflags shockwave+magicshield+summon+combo+switchweapon+alwaysblock+scriptmute 
+}
+
+*player_boarriderA1
+{
+	*classname player_boarrider
+	*model "players\\boarrider\\boarriderA1"
+}
+
+*player_boarriderA2
+{
+	*classname player_boarrider
+	*model "players\\boarrider\\boarriderA2"
+}
+
+*player_boarriderA3
+{
+	*classname player_boarrider
+	*model "players\\boarrider\\boarriderA3"
+}
+
+*template_berserker
+{
+	*classname template_char
+	*character Berserker
+	*team 1
+	*animlist Anim_Berserker
+	*dialogue Dlg_Berserker
+	*model "players\\ogre\\ogre"
+	//*camera_stand_head_offset 0, 0, 64 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	//*camera_crouch_head_offset 0, 0, 54 // (same as above)
+	//*camera_behind_head_offset 0, -15, -85 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+    
+	*camera_stand_head_offset 	0, 0, 60
+	*camera_crouch_head_offset 	0, 0, 44
+	*camera_behind_head_offset 	0, -20, -100
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5 
+	
+	*phys_swim_height 51
+	*phys_height 32
+
+	*rpgobject char
+	{
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_crossbow 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.65
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_other	0, All=1
+}
+
+*player_berserker
+{
+	*classname template_berserker
+	*hightexres 1
+	*rpgobject char
+	{
+		*weapon_axe_shatter
+		*weapon_crossbow_heavy
+		*item_shield_thorn
+	}
+	*ai_useflags shockwave+magicshield+summon+combo+switchweapon+alwaysblock+scriptmute 
+}
+
+*player_berserkerA1
+{
+	*classname player_berserker
+	*model "players\\ogre\\ogreA1"
+}
+
+*player_berserkerA2
+{
+	*classname player_berserker
+	*model "players\\ogre\\ogreA2"
+}
+
+*player_berserkerA3
+{
+	*classname player_berserker
+	*model "players\\ogre\\ogreA3"
+}
+
+*template_assassin
+{
+	*classname template_char
+	*character Assassin
+	*team 1
+	*animlist Anim_Assassin
+	*dialogue Dlg_Assassin
+	*model "players\\assassin\\assassin"
+	
+	//*camera_stand_head_offset 0, 0, 53 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	//*camera_crouch_head_offset 0, 0, 44 // (same as above)
+	//*camera_behind_head_offset 0, -15, -75 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+	
+	*camera_stand_head_offset 	0, 0, 52
+	*camera_crouch_head_offset 	0, 0, 38
+	*camera_behind_head_offset 	0, -16, -90
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5 
+	
+	*phys_swim_height 48
+    *rpgobject char
+	{
+		*skill_bow 1.0
+		*skill_crossbow 1.2
+		*skill_dagger 1.5
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=0.85
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=0.85
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=0.85
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=0.85
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Poison=0.15, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Poison=0.30, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Poison=0.40, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Poison=0.60, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.65
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Poison=0.80, Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_other	0, All=1
+}
+
+*player_assassin
+{
+	*classname template_assassin
+	*hightexres 1
+	*rpgobject char
+	{
+		*weapon_bow_sniper
+		*weapon_crossbow_heavy
+		*weapon_dagger_long
+		*item_arrow_sniper_30
+		*item_arrow_grenade_30
+		*item_arrow_fire_30
+	}
+
+	*speed_forward 9
+	*speed_up 8
+	*speed_jump 15
+
+	*ai_useflags shockwave+magicshield+summon+combo+switchweapon+alwaysblock+scriptmute 
+}
+
+*player_assassinA1
+{
+	*classname player_assassin
+	*model "players\\assassin\\assassinA1"
+}
+
+*player_assassinA2
+{
+	*classname player_assassin
+	*model "players\\assassin\\assassinA2"
+}
+
+*player_assassinA3
+{
+	*classname player_assassin
+	*model "players\\assassin\\assassinA3"
+}
+
+*template_sorceress
+{
+	*classname template_char
+	*character Sorceress
+	*team 1
+	*animlist Anim_Sorceress
+	*model "players\\Sorceress\\Sorceress"
+	*dialogue Dlg_Sorceress
+	//*camera_stand_head_offset 0, 0, 53 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	//*camera_crouch_head_offset 0, 0, 44 // (same as above)
+	//*camera_behind_head_offset 0, -15, -75 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).	*model "players\\sorceress\\sorceress"
+
+	*camera_stand_head_offset 	0, 0, 52
+	*camera_crouch_head_offset 	0, 0, 38
+	*camera_behind_head_offset 	0, -16, -90
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5     
+
+	*phys_swim_height 47
+	
+    *show_mana 1
+
+	*rpgobject char
+	{
+		*skill_magic 1.0
+		*skill_dagger 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.7, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_other	0, All=1
+}
+
+*player_sorceress
+{
+	*classname template_sorceress
+	*hightexres 1
+	*rpgobject char
+	{
+		*weapon_staff_poison
+		*weapon_staff_lightning2
+		*weapon_dagger_long
+
+		*skill_magic 1.0
+		*skill_dagger 0.7
+
+		*manareg_delay 1
+	}
+	*ai_useflags shockwave+magicshield+summon+combo+switchweapon+alwaysblock+scriptmute 
+}
+
+*player_sorceressA1
+{
+	*classname player_sorceress
+	*model "players\\sorceress\\sorceressA1"
+
+	*rpgobject char
+	{
+		*skill_magic 1.5
+		*skill_dagger 0.7
+	}
+}
+
+*player_sorceressA2
+{
+	*classname player_sorceress
+	*model "players\\sorceress\\sorceressA2"
+
+	*rpgobject char
+	{
+		*skill_magic 2.0
+		*skill_dagger 0.7
+	}
+}
+
+*player_sorceressA3
+{
+	*classname player_sorceress
+	*model "players\\sorceress\\sorceressA3"
+
+	*rpgobject char
+	{
+		*skill_magic 2.5
+		*skill_dagger 0.7
+	}
+}
+
+*template_lich
+{
+	*classname template_char
+	*character Lich
+	*team 1
+	*animlist Anim_Lich
+	*dialogue Dlg_Lich
+	*model "players\\lich\\lich"
+	*blood_color 128, 32, 32
+    *phys_swim_height 48
+	
+	//*camera_stand_head_offset 0, 0, 53 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	//*camera_crouch_head_offset 0, 0, 44 // (same as above)
+	//*camera_behind_head_offset 0, -15, -70 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).	*model "players\\sorceress\\sorceress"
+
+	*camera_stand_head_offset 	0, 0, 56
+	*camera_crouch_head_offset 	0, 0, 42
+	*camera_behind_head_offset 	0, -20, -96
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5 
+
+	*show_mana 1
+
+	*rpgobject char
+	{
+		*skill_magic 1.0
+		*skill_summon 1.0
+		*skill_dagger 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Explosive+Special=0.0, Cold+Poison+Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Explosive+Special=0.2, Cold+Poison+Magic+Summon=0.3. Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Explosive+Special=0.3, Cold+Poison+Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Explosive+Special=0.5, Cold+Poison+Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Explosive+Special=0.7, Cold+Poison+Magic+Summon=0.6, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_other	0, All=1
+}
+
+*player_lich
+{
+	*classname template_lich
+	*hightexres 1
+	*rpgobject char
+	{
+		*weapon_staff_doom
+		*weapon_staff_darkness2
+		*weapon_dagger_curved
+		*skill_summon 1.0
+
+		*manareg_delay 1
+	}
+	*ai_useflags shockwave+magicshield+summon+combo+switchweapon+alwaysblock+scriptmute 
+}
+
+*player_lichA1
+{
+	*classname player_lich
+	*model "players\\lich\\lichA1"
+	*rpgobject char
+	{
+		*skill_summon 1.5
+	}
+}
+
+*player_lichA2
+{
+	*classname player_lich
+	*model "players\\lich\\lichA2"
+	*rpgobject char
+	{
+		*skill_summon 2.0
+	}
+}
+
+*player_lichA3
+{
+	*classname player_lich
+	*model "players\\lich\\lichA3"
+	*rpgobject char
+	{
+		*skill_summon 2.5
+	}	
+}
+
+*template_bombardier
+{
+	*classname template_char
+	*character Bombardier
+	*team 1
+	*animlist Anim_Bombardier
+	*dialogue Dlg_Bombardier
+	*model "players\\Orc\\Bombardier"
+	//*camera_stand_head_offset 0, 0, 65 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	//*camera_crouch_head_offset 0, 0, 46 // (same as above)
+	//*camera_behind_head_offset 0, -12, -85 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+
+	*camera_stand_head_offset 	0, 0, 50
+	*camera_crouch_head_offset 	0, 0, 36
+	*camera_behind_head_offset 	0, -16, -90
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5 
+
+	*rpgobject char
+	{
+		*skill_sword 1.0
+		*skill_axe 0.7
+		*skill_hammer 0.8
+		*skill_crossbow 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Special=0.0, Explosive=0.1, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.2
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.2, Explosive=0.2, Magic+Summon=0. Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.3, Explosive=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.5, Explosive=0.4, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Special=0.7, Explosive=0.5, Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_other	0, All=1
+}
+
+*player_bombardier
+{
+	*classname template_bombardier
+	*hightexres 1
+	*rpgobject char
+	{
+		*weapon_hammer_heavymoringstar
+		*weapon_crossbow_heavy
+		*weapon_bomb_normal
+		*item_shield_thorn
+	}
+	*ai_useflags shockwave+magicshield+summon+combo+switchweapon+alwaysblock+scriptmute 
+}
+
+*player_bombardierA1
+{
+	*classname player_bombardier
+	*model "players\\Orc\\BombardierA1"
+}
+
+*player_bombardierA2
+{
+	*classname player_bombardier
+	*model "players\\Orc\\BombardierA2"
+}
+
+*player_bombardierA3
+{
+	*classname player_bombardier
+	*model "players\\Orc\\BombardierA3"
+}
+
+*template_wolfrider
+{
+	*classname template_char
+	*character Wolfrider
+	*team 1
+	*animlist Anim_Wolfrider
+	*dialogue Dlg_Wolfrider
+	*model "players\\wolfrider\\wolfrider"
+	//*camera_stand_head_offset 0, 0, 48 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	//*camera_crouch_head_offset 0, 0, 44 // (same as above)
+	//*camera_behind_head_offset 0, -20, -85 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+	
+	*camera_stand_head_offset 	0, 0, 44
+	*camera_crouch_head_offset 	0, 0, 30
+	*camera_behind_head_offset 	0, -16, -84
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5 
+
+	*rpgobject char
+	{
+		*skill_sword 0.7
+		*skill_axe 1.0
+		*skill_hammer 0.8
+		*skill_crossbow 1.0
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.0
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0.2. Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_other	0, All=1
+}
+
+*player_wolfrider
+{
+	*classname template_wolfrider
+    *phys_swim_height 39
+	*hightexres 1
+	*rpgobject char
+	{
+		*weapon_axe_war
+		*item_shield_brute
+		*weapon_crossbow_heavy
+	}
+
+	*speed_forward 11
+	*speed_up 8
+	*speed_jump 15
+
+	*ai_useflags shockwave+magicshield+summon+combo+switchweapon+alwaysblock+scriptmute 
+}
+
+*player_wolfriderA1
+{
+	*classname player_wolfrider
+	*model "players\\wolfrider\\wolfriderA1"
+}
+
+*player_wolfriderA2
+{
+	*classname player_wolfrider
+	*model "players\\wolfrider\\wolfriderA2"
+}
+
+*player_wolfriderA3
+{
+	*classname player_wolfrider
+	*model "players\\wolfrider\\wolfriderA3"
+}
+
+*trigger_mount
+{
+	*classname trigger_ext
+	*physprim0 box, 8, 32, 16,0,0,16, rotation+offset, trigger, 0, excludeowner
+	*intersectionflags use
+}
+
+*player_9320
+{
+	*classname template_char
+	*character 9320
+	*model "players\\9320\\9320"
+	
+	*team 0
+	
+	*animlist Anim_bombardier
+	*dialogue Dlg_Assembly
+	*phys_height 33
+	*phys_swim_height 49
+	*phys_height_crouch 25
+	
+	*camera_stand_head_offset 	0, 0, 52 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	*camera_crouch_head_offset 	0, 0, 40 // (same as above)
+	*camera_behind_head_offset 	0, -20, -100 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+	
+	*rpgobject char
+	{
+		*attrib_health 5000
+		*attrib_maxhealth 5000
+		*attrib_mana 300
+		*attrib_maxmana 300
+
+		*manareg_amount 4
+		*manareg_rate 0.1
+		*manareg_delay 3
+		*item weapon_rocketlauncher
+	}
+
+	*damage_factor_skin		1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head		1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs		1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms		1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0.5
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_other	0, All=0.5
+
+}
+
+*player_feticia
+{
+	*classname template_char
+	*character Feticia
+	*team 0
+	*animlist Anim_boarrider
+	*dialogue Dlg_Huntress
+	*phys_swim_height 47
+	*model "players\\feticia\\feticia"
+	
+	*team 1
+	
+	*camera_stand_head_offset 	0, 0, 52
+	*camera_crouch_head_offset 	0, 0, 40
+	*camera_behind_head_offset 	0, -20, -100
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5 
+
+	*rpgobject char
+	{
+		*attrib_health 5000
+		*attrib_maxhealth 5000
+		*attrib_mana 300
+		*attrib_maxmana 300
+
+		*manareg_amount 4
+		*manareg_rate 0.1
+		*manareg_delay 3
+		*item weapon_rocketlauncher
+	}
+
+	*damage_factor_skin		1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head		1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs		1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms		1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0.5
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0, Slash+Crush+Hack+Stab+Unarmed=0.4
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0.2, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_other	0, All=0.5
+
+}
+
+*player_Golem
+{
+	*classname template_char
+	*character Earth Golem
+	*model "players\\Golem\\Golem"
+	*animlist Anim_Default
+	
+	*team 0	
+
+	*dialogue Dlg_Golem
+	*speed_forward 6
+	*speed_up 6
+	*speed_jump 18
+
+	*phys_height 32
+
+	*camera_stand_head_offset 	0, 0, 60
+	*camera_crouch_head_offset 	0, 0, 40
+	*camera_behind_head_offset 	0, -20, -100
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5
+
+	*rpgobject char
+	{
+		*item0 weapon_hammer_golem2
+		*attrib_health 350
+		*attrib_maxhealth 350
+		*skill_hammer 1
+	}
+	
+	
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Stab+Slash+Hack+Unarmed=1, Crush=1, Hack=1 
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Stab+Slash+Hack+Unarmed=1, Crush=1, Hack=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Stab+Slash+Hack+Unarmed=1, Crush=1, Hack=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Stab+Slash+Hack+Unarmed=1, Crush=1, Hack=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_cloth	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_leather	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_chain	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_plate	0, Sniper+Explosive+Pierce+Poison+Cold+Fire+Special=0.5, Magic+Summon=0.5, Stab+Slash+Hack+Unarmed=0.5, Crush=0.5, Hack=0.5
+	*protection_factor_other	0, All=1
+
+	*death_effect deatheffect_golem
+	*damage_effect attach_hit_golem
+}
+
+*player_stonegnome
+{
+	*classname template_char
+	*character Stonegnome
+	*model "players\\StoneGnome\\StoneGnome"
+	*animlist Anim_Stonegnome
+	*dialogue Dlg_StoneGnome
+	*spawn_sound lav_special03
+	
+	*team 1
+
+	*speed_forward 6
+	*speed_up 6
+	*speed_jump 18
+
+	*camera_stand_head_offset 	0, 0, 50
+	*camera_crouch_head_offset 	0, 0, 40
+	*camera_behind_head_offset 	0, -20, -100
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5 
+
+	*rpgobject char
+	{
+		*item0 weapon_unarmed_stonegnome2
+		*attrib_health 5000
+		*attrib_maxhealth 5000
+		*skill_unarmed 1
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Magic+Summon+Special=1.0, Cold=2, Poison+Fire=0.1, Explosive=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Magic+Summon+Special=1.0, Cold=2, Poison+Fire=0.1, Explosive=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Magic+Summon+Special=1.0, Cold=2, Poison+Fire=0.1, Explosive=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Magic+Summon+Special=1.0, Cold=2, Poison+Fire=0.1, Explosive=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.5, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+
+	*damage_effect attach_hit_stonegnome
+	*death_effect deatheffect_stonegnome
+}
+
+*player_mondelore
+{
+	*classname template_paladin
+
+	*show_mana 1
+
+	*rpgobject char
+	{
+//		*weapon_sword_test
+		*item_torch
+		*attrib_mana 300
+		*attrib_maxmana 300
+	}
+}
