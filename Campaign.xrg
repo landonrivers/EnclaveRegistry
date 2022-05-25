@@ -352,6 +352,20 @@
 	{
 		*itemslot0 0x106,GUI_ICON_POTIONS32
 	}	
+	// new characters
+	*zale
+	{
+		*itemslot0 0x010,GUI_ICON_STAFFS32
+		*itemslot1 0x011,GUI_ICON_STAFFS32
+		*itemslot2 0x009,GUI_ICON_DAGGERS32
+		*itemslot3 0x106,GUI_ICON_POTIONS32
+	}
+	*mordessa
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot0 0x011,GUI_ICON_STAFFS32
+		*itemslot3 0x106,GUI_ICON_POTIONS32
+	}
 }
 
 *challenges
@@ -573,7 +587,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*cutscene_win l_cs01
 
-		*character paladin+archer+boarrider+engineer
+		*character paladin+archer+boarrider+engineer+zale
 		{
 			*map Iellon_Outpost_L
 			*award challenge:l_m3,gold:75,character:archer,item:paladin:weapon_crossbow_light
@@ -587,7 +601,7 @@
 		*music_battle light_01_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map Celadia_Village_L
 			*award challenge:l_m4,gold:150
@@ -602,7 +616,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*cutscene_win l_sb2
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map Deserted_Temple
 			*award challenge:l_m5,character:druid,gold:200
@@ -617,7 +631,7 @@
 		*music_battle dark_02_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map Divided_City
 			*award challenge:l_m6,character:boarrider,gold:250
@@ -631,7 +645,7 @@
 		*music_battle dark_01_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map Outland_Wastes
 			*award challenge:l_m7,character:engineer,gold:300,item:paladin:weapon_sword_frost2,item:boarrider:weapon_sword_frost2,item:engineer:weapon_sword_frost2
@@ -645,7 +659,7 @@
 		*music_battle dark_03_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map Ark_Amar
 			*award challenge:l_m8,gold:350
@@ -661,7 +675,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*cutscene_win l_sb3
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map Ancestors
 			*award challenge:l_m9,gold:400
@@ -675,7 +689,7 @@
 		*music_battle light_01_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map Sanctuary
 			*award challenge:l_m10,character:wizard,gold:450
@@ -689,7 +703,7 @@
 		*music_battle dark_04_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map Underworld_I
 			*award challenge:l_m11,gold:500
@@ -704,7 +718,7 @@
 		*music_battle dark_04_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map Underworld_II
 			*award challenge:l_m12,gold:550
@@ -719,7 +733,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*cutscene_win l_sb4,l_cs02
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map Kam-Zara
 			*award challenge:l_m13,gold:600
@@ -734,7 +748,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*backplane 12000
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map Ark_Moor_L
 			*award challenge:l_m14,gold:650,item:paladin:weapon_sword_mordessa
@@ -750,10 +764,12 @@
 		*backplane 12000
 		*cutscene_win l_sb5,l_endcredits
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map Vatar
-			*award special:unlockdarkcampaign,special:quittomenu,character:golem
+			*award special:unlockdarkcampaign,character:golem,character:zale,item:zale:weapon_staff_earthspirit1
+			// special:quittomenu removed because it prevented the Light Final cutscene from displaying
+			// therefore prevents unlocking the staff of the earth spirit for characters when the game is finished.
 		}
 	}
 	*d_m1
@@ -782,7 +798,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*cutscene_win d_cs3
 
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map Celadia_Village_D
 			*award challenge:d_m3,character:berserker,gold:200
@@ -798,7 +814,7 @@
 		*backplane 12000
 		*cutscene_win d_cs4,d_sb2
 
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map Ark_Moor_D
 			*award challenge:d_m4,character:sorceress,gold:200
@@ -812,7 +828,7 @@
 		*music_battle dark_02_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map Mansion_of_Dreams_I
 			*award challenge:d_m5,character:wolfrider,gold:250
@@ -827,7 +843,7 @@
 		*music_battle dark_01_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map The_Guardian
 			*award challenge:d_m6,gold:300
@@ -842,7 +858,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*cutscene_win d_cs5
 
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map Mansion_of_Dreams_II
 			*award challenge:d_m7,character:bombardier,gold:350
@@ -857,7 +873,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*backplane 15000
 
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map Wilderness_I
 			*award challenge:d_m8,gold:400
@@ -873,7 +889,7 @@
 		*backplane 8000
 		*cutscene_win d_sb3
 
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map Wilderness_II
 			*award challenge:d_m9,gold:450
@@ -888,7 +904,7 @@
 		*music_battle light_01_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map Iellon_Outpost_D
 			*award challenge:d_m10,character:lich,gold:500
@@ -902,7 +918,7 @@
 		*music_battle light_02_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map The_Great_Wall
 			*award challenge:d_m11,gold:550
@@ -918,7 +934,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*cutscene_win d_cs7,d_sb4
 
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map Mines_Of_Ungard
 			*award challenge:d_m12,gold:600
@@ -933,7 +949,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*cutscene_win d_cs8
 
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map Ur-Annon_Island
 			*award challenge:d_m13,gold:650,item:bombardier:weapon_sword_mordessa
@@ -948,10 +964,11 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*cutscene_win d_sb5,d_endcredits
 
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map Celenheim
-			*award character:stonegnome,special:quittomenu
+			*award character:stonegnome,character:mordessa,item:mordessa:weapon_staff_mordessa1
+			// special:quittomenu removed because it prevents final cutscene from being selectable.
 		}
 	}
 	*d_c1_1
@@ -962,7 +979,7 @@
 		*music_battle light_02_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map tolvfors
 			*award challenge:d_c1_2,gold:100
@@ -977,7 +994,7 @@
 		*music_atmosphere light_02_a
 		*music_battle light_02_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map tolvfors
 			*award challenge:d_c1_3,gold:200
@@ -992,7 +1009,7 @@
 		*music_atmosphere light_02_a
 		*music_battle light_02_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map tolvfors
 			*award gold:300
@@ -1023,7 +1040,7 @@
 		*music_atmosphere dark_03_a
 		*music_battle dark_03_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map lexe
 			*award challenge:d_c3_2,gold:300
@@ -1038,7 +1055,7 @@
 		*music_atmosphere dark_03_a
 		*music_battle dark_03_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map lexe
 			*award challenge:d_c3_3,gold:500
@@ -1053,7 +1070,7 @@
 		*music_atmosphere dark_03_a
 		*music_battle dark_03_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+mordessa
 		{
 			*map lexe
 			*award gold:800
@@ -1068,7 +1085,7 @@
 		*music_atmosphere light_01_a
 		*music_battle light_01_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map forbiddenatgard
 			*award challenge:l_c1_2,gold:100
@@ -1083,7 +1100,7 @@
 		*music_atmosphere light_01_a
 		*music_battle light_01_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map forbiddenatgard
 			*award challenge:l_c1_3,gold:200
@@ -1098,7 +1115,7 @@
 		*music_atmosphere light_01_a
 		*music_battle light_01_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map forbiddenatgard
 			*award gold:300
@@ -1129,7 +1146,7 @@
 		*music_atmosphere dark_03_a
 		*music_battle dark_03_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map hagastrom
 			*award challenge:l_c3_2,gold:300
@@ -1144,7 +1161,7 @@
 		*music_atmosphere dark_03_a
 		*music_battle dark_03_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map hagastrom
 			*award challenge:l_c3_3,gold:500
@@ -1159,7 +1176,7 @@
 		*music_atmosphere dark_03_a
 		*music_battle dark_03_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map hagastrom
 			*award gold:800
@@ -1359,6 +1376,9 @@
 				*weapon_staff_mind2 l_m10
 				*weapon_staff_fire l_m10
 				*weapon_staff_fire2 l_m10
+				// new staff of the earth spirit entries
+				*weapon_staff_earthspirit1 l_sb5
+				*weapon_staff_earthspirit2 l_sb5
 				*weapon_dagger_short l_m5
 				*weapon_dagger_long l_m5
 				*weapon_dagger_curved l_m5
@@ -1572,6 +1592,9 @@
 				*weapon_staff_mind2 l_m10	
 				*weapon_staff_fire l_m10
 				*weapon_staff_fire2 l_m10
+				// new staff of the earth spirit entries
+				*weapon_staff_earthspirit1 l_sb5
+				*weapon_staff_earthspirit2 l_sb5
 				*weapon_dagger_short l_m10
 				*weapon_dagger_long l_m10
 				*weapon_dagger_curved l_m10
@@ -1618,7 +1641,44 @@
 				*item_potion_health_4 l_m10
 				*item_potion_health_5 l_m12
 			}
-		}					    
+		}	
+		// new character zale - available items
+		*zale
+		{
+			*items
+			{
+				*item_staff_shield
+				//*armour_level0
+			}
+			*availableitems
+			{
+				*weapon_staff_cold l_m2
+				*weapon_staff_cold2 l_m2
+				*weapon_staff_poison l_m3
+				*weapon_staff_poison2 l_m3
+				*weapon_staff_lightning l_m7
+				*weapon_staff_lightning2 l_m7
+				*weapon_staff_darkness l_m7
+				*weapon_staff_darkness2 l_m7
+				*weapon_staff_mind l_m10
+				*weapon_staff_mind2 l_m10
+				*weapon_staff_fire l_m10
+				*weapon_staff_fire2 l_m10
+				// new staff of the earth spirit entries
+				*weapon_staff_earthspirit1 l_sb5
+				*weapon_staff_earthspirit2 l_sb5
+				*weapon_dagger_short l_m2
+				*weapon_dagger_long l_m5
+				*weapon_dagger_curved l_m5
+				*weapon_dagger_sacrifice l_m7
+				*weapon_dagger_poison l_m12
+				*item_potion_health_1 l_m2
+				*item_potion_health_2 l_m5
+				*item_potion_health_3 l_m7
+				*item_potion_health_4 l_m10
+				*item_potion_health_5 l_m12
+			}
+		}				    
 	}
 }
 
@@ -1810,6 +1870,9 @@
 				*weapon_staff_mind2 d_m10
 				*weapon_staff_fire d_m10
 				*weapon_staff_fire2 d_m10
+				// new staff of mordessa entry
+				*weapon_staff_mordessa1 d_sb5
+				*weapon_staff_mordessa d_sb5
 				*weapon_dagger_short d_m4
 				*weapon_dagger_long d_m4
 				*weapon_dagger_curved d_m7
@@ -2025,6 +2088,9 @@
 				*weapon_staff_mind2 d_m10
 				*weapon_staff_fire d_m10
 				*weapon_staff_fire2 d_m10
+				// new staff of mordessa entry
+				*weapon_staff_mordessa1 d_sb5
+				*weapon_staff_mordessa d_sb5
 				*weapon_dagger_short d_m10
 				*weapon_dagger_long d_m10
 				*weapon_dagger_curved d_m10
@@ -2071,7 +2137,44 @@
 				*item_potion_health_4 d_m10
 				*item_potion_health_5 d_m12
 			}
-		}				
+		}
+		// new character mordessa - available items
+		*mordessa
+		{
+			*items
+			{
+				*item_staff_shield
+				//*armour_level0
+			}
+			*availableitems
+			{
+				*weapon_sword_short d_m2
+				*weapon_sword_broad d_m3
+				*weapon_sword_long d_m4
+				*weapon_sword_scimitar d_m5
+				*weapon_sword_dwarven d_m6
+				*weapon_sword_sabre d_m7
+				*weapon_sword_falchion d_m8
+				*weapon_sword_bastard d_m9
+				*weapon_sword_warrior d_m10
+				*weapon_sword_frost2 d_m11
+				*weapon_sword_mordessa d_m13
+				*weapon_sword_fire d_m11
+				*weapon_staff_cold2 d_m4
+				*weapon_staff_poison2 d_m4
+				*weapon_staff_lightning2 d_m7
+				*weapon_staff_darkness2 d_m7
+				*weapon_staff_mind2 d_m10
+				// new staff of mordessa entry
+				*weapon_staff_mordessa d_sb5
+				*weapon_staff_fire2 d_m10
+				*item_potion_health_1 d_m2
+				*item_potion_health_2 d_m5
+				*item_potion_health_3 d_m7
+				*item_potion_health_4 d_m10
+				*item_potion_health_5 d_m12
+			}
+		}					
 	}
 }
 

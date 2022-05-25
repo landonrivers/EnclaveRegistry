@@ -426,8 +426,11 @@
 	*classname player_wizard
 	*model "players\\wizard\\wizardA1"
 
-	*skill_magic 1.5
-	*skill_dagger 0.7
+	*rpgobject char
+	{
+		*skill_magic 1.5
+		*skill_dagger 0.7
+	}
 }
 
 *player_wizardA2
@@ -435,8 +438,11 @@
 	*classname player_wizard
 	*model "players\\wizard\\wizardA2"
 
-	*skill_magic 2.0
-	*skill_dagger 0.7
+	*rpgobject char
+	{
+		*skill_magic 2.0
+		*skill_dagger 0.7
+	}
 }
 
 *player_wizardA3
@@ -444,8 +450,31 @@
 	*classname player_wizard
 	*model "players\\wizard\\wizardA3"
 
-	*skill_magic 2.5
-	*skill_dagger 0.7
+	*rpgobject char
+	{
+		*skill_magic 2.5
+		*skill_dagger 0.7
+	}
+}
+
+// new character zale template
+*player_zale
+{
+	*classname player_wizard
+	*character Zale
+	*dialogue Dlg_Zale
+	*model "players\\Zale\\Zale"
+
+	*rpgobject char
+	{
+		*item0 weapon_staff_earthspirit
+		*item1 item_staff_shield
+		*attrib_health 300
+		*attrib_maxhealth 300
+		*attrib_mana 500
+		*attrib_maxmana 500
+		*skill_magic 3.0
+	}
 }
 
 *template_engineer
@@ -1269,6 +1298,53 @@
 
 	*damage_effect attach_hit_stonegnome
 	*death_effect deatheffect_stonegnome
+}
+
+// new character mordessa
+*player_mordessa
+{
+	*classname template_char
+	*character Mordessa
+	*model "players\\Mordessa\\Mordessa"
+	*animlist anim_archer	
+	*team 1
+	*dialogue Dlg_Mordessa
+
+	*speed_forward 10
+	*speed_up 10
+	*speed_jump 18
+	*phys_height 35
+
+	*lipsync_limits -5,27
+
+	// camera variables pulled from paladin / knight
+	*camera_stand_head_offset 	0, 0, 52
+	*camera_crouch_head_offset 	0, 0, 38
+	*camera_behind_head_offset 	0, -16, -90
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5
+	
+	*rpgobject char
+	{
+		*skill_sword 1.2
+		*skill_magic 1.2
+	}
+	
+	*damage_factor_skin			1, Sniper+Pierce+Cold+Magic+Summon+Explosive+Special=1.00, Fire+Poison=1.0, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Cold+Magic+Summon+Explosive+Special=1.00, Fire+Poison=1.0, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Cold+Magic+Summon+Explosive+Special=0.25, Fire+Poison=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Cold+Magic+Summon+Explosive+Special=0.50, Fire+Poison=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed=0.5, Magic+Summon=0.2
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed=0.5, Magic+Summon=0.2
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed=0.5, Magic+Summon=0.2
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed=0.5, Magic+Summon=0.2
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Slash+Crush+Hack+Stab+Unarmed=0.5, Magic+Summon=0.2
+	*protection_factor_other	0, All=0.6
+
+	*ai_evadespeed 10
+	*ai_skill 80
+	*ai_useflags shockwave+magicshield+combo
 }
 
 *player_mondelore

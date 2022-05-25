@@ -2467,10 +2467,15 @@
 	*flags aiming+autoaim+rpgmodelflags
 
 	*itemtype 0x11
+	// new characters - adding price
+	*price 4000
 
 	*model "weapons\\MordessaStaff"
 	*iconsurface gui_icon_MordessaStaff
 	*shield_iconsurface gui_icon_shieldfire
+
+	// adding the fire color glow
+	*attachmodel "DynLight:LO=0 0 50,C0=0xFFF08040,C1=0xFFF0A040,CFS=4,R0=200,R1=300,RFS=4"
 	
 	*sound_attack Stave_mag201a
 
@@ -2494,6 +2499,12 @@
 
 	*ai_type RANGED_MAGICSTAFF_MORDESSA
 }
+// For characters with it in main-hand
+*weapon_staff_mordessa1
+{
+	*classname weapon_staff_mordessa
+	*itemtype 0x10
+}
 
 //----------------------------------------------------------------------
 
@@ -2509,6 +2520,9 @@
 	*model "weapons\\earthspirit"
 	*iconsurface gui_icon_earthspirit
 	*shield_iconsurface gui_icon_shieldzale
+
+	// add astral staff glow
+	*attachmodel "DynLight:LO=0 0 20,C0=0xFF80C0F0,C1=0xFFF0F000,CFS=1,R0=200,R1=300,RFS=1"
 		
 	*sound_attack Stave_mag209
 	
@@ -2531,6 +2545,17 @@
 	*shockwave zale_shockwave
 
 	*ai_type RANGED_MAGICSTAFF_ZALE
+}
+*weapon_staff_earthspirit1
+{
+	*classname weapon_staff_earthspirit
+	*itemtype 0x10
+	*price 5000
+}
+*weapon_staff_earthspirit2
+{
+	*classname weapon_staff_earthspirit1
+	*itemtype 0x11
 }
 
 //----------------------------------------------------------------------
