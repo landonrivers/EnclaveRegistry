@@ -67,6 +67,15 @@
 		//*item_arrow_grenade_30
 		//*item_arrow_sniper_30
 		*item_bolt_normal_120
+
+		*skill_dagger 0.5
+		*skill_sword 0.5
+		*skill_axe 0.5
+		*skill_hammer 0.5
+		*skill_crossbow 0.5
+		*skill_bow 0.5
+		*skill_magic 0.5
+		*skill_summon 0.5
 	}
 
 	*ai_useflags switchweapon
