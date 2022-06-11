@@ -2165,9 +2165,9 @@
 				*weapon_staff_lightning2 d_m7
 				*weapon_staff_darkness2 d_m7
 				*weapon_staff_mind2 d_m10
+				*weapon_staff_fire2 d_m10
 				// new staff of mordessa entry
 				*weapon_staff_mordessa d_sb5
-				*weapon_staff_fire2 d_m10
 				*item_potion_health_1 d_m2
 				*item_potion_health_2 d_m5
 				*item_potion_health_3 d_m7
