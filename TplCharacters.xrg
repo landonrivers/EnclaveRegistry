@@ -1326,6 +1326,10 @@
 	
 	*rpgobject char
 	{
+		*attrib_health 1000
+		*attrib_maxhealth 1000
+		*attrib_mana 300
+		*attrib_maxmana 300
 		*skill_sword 1.2
 		*skill_magic 1.2
 	}
