@@ -1425,6 +1425,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -1525,6 +1526,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -1576,6 +1582,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -1676,6 +1683,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -1727,6 +1739,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -1827,6 +1840,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -1878,6 +1896,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -1978,6 +1997,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -2029,6 +2053,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -2129,6 +2154,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -2180,6 +2210,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -2280,6 +2311,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -2330,7 +2366,7 @@
 			}
 			*availableitems
 			{
-				*weapon_rocketlauncher
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -2431,6 +2467,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -2478,6 +2519,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -2578,6 +2620,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -2626,6 +2673,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -2726,6 +2774,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -2777,6 +2830,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -2877,6 +2931,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -2928,6 +2987,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -3028,6 +3088,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -3079,6 +3144,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -3179,6 +3245,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -3230,6 +3301,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -3330,6 +3402,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -3381,6 +3458,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -3481,6 +3559,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -3531,7 +3614,7 @@
 			}
 			*availableitems
 			{
-				*weapon_rocketlauncher
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -3632,6 +3715,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -3679,6 +3767,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -3779,6 +3868,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -3838,6 +3932,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -3938,6 +4033,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -3989,6 +4089,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -4089,6 +4190,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -4140,6 +4246,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -4240,6 +4347,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -4291,6 +4403,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -4391,6 +4504,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -4442,6 +4560,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -4542,6 +4661,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -4593,6 +4717,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -4693,6 +4818,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -4743,7 +4873,7 @@
 			}
 			*availableitems
 			{
-				*weapon_rocketlauncher
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -4844,6 +4974,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -4891,6 +5026,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -4991,6 +5127,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -5039,6 +5180,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -5139,6 +5281,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -5190,6 +5337,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -5290,6 +5438,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -5341,6 +5494,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -5441,6 +5595,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -5492,6 +5651,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -5592,6 +5752,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -5643,6 +5808,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -5743,6 +5909,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -5794,6 +5965,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -5894,6 +6066,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -5944,7 +6121,7 @@
 			}
 			*availableitems
 			{
-				*weapon_rocketlauncher
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -6045,6 +6222,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
@@ -6092,6 +6274,7 @@
 			}
 			*availableitems
 			{
+				*weapon_sword_short
 				*weapon_sword_lightshort
 				*weapon_sword_broad
 				*weapon_sword_long
@@ -6192,6 +6375,11 @@
 				*weapon_staff_darkness
 				*weapon_staff_mind
 				*weapon_staff_fire
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
 				*weapon_bomb_2
 				*weapon_bomb_4
 				*weapon_bomb_6
