@@ -352,6 +352,13 @@
 	{
 		*itemslot0 0x106,GUI_ICON_POTIONS32
 	}	
+	*zale
+	{
+		*itemslot0 0x010,GUI_ICON_STAFFS32
+		*itemslot1 0x011,GUI_ICON_STAFFS32
+		*itemslot2 0x009,GUI_ICON_DAGGERS32
+		*itemslot3 0x106,GUI_ICON_POTIONS32
+	}
 }
 
 *challenges
@@ -576,7 +583,7 @@
 		*character paladin+archer+boarrider+engineer
 		{
 			*map Iellon_Outpost_L
-			*award challenge:l_m3,gold:75,character:archer,item:paladin:weapon_crossbow_light
+			*award challenge:l_m3,gold:75,character:archer,item:paladin:weapon_crossbow_light,character:zale
 		}
 	}
 	*l_m3
@@ -587,7 +594,7 @@
 		*music_battle light_01_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+zale
 		{
 			*map Celadia_Village_L
 			*award challenge:l_m4,gold:150
@@ -1618,7 +1625,41 @@
 				*item_potion_health_4 l_m10
 				*item_potion_health_5 l_m12
 			}
-		}					    
+		}
+		*zale
+		{
+			*items
+			{
+				*item_staff_shield
+				//*armour_level0
+			}
+			*availableitems
+			{
+				*weapon_staff_cold l_m2
+				*weapon_staff_cold2 l_m2
+				*weapon_staff_poison l_m2
+				*weapon_staff_poison2 l_m2
+				*weapon_staff_lightning l_m2
+				*weapon_staff_lightning2 l_m2
+				*weapon_staff_darkness l_m2
+				*weapon_staff_darkness2 l_m2
+				*weapon_staff_mind l_m2
+				*weapon_staff_mind2 l_m2	
+				*weapon_staff_fire l_m2
+				*weapon_staff_fire2 l_m2
+				*weapon_dagger_short l_m2
+				*weapon_dagger_long l_m2
+				*weapon_dagger_curved l_m2
+				*weapon_dagger_sacrifice l_m2
+				*weapon_dagger_poison l_m2
+				*item_potion_health_1 l_m2
+				*item_potion_health_2 l_m2
+				*item_potion_health_3 l_m2
+				*item_potion_health_4 l_m2
+				*item_potion_health_5 l_m2
+			}
+		}
+		
 	}
 }
 
