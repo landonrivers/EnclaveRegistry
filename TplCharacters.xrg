@@ -468,8 +468,8 @@
 	{
 		*attrib_health 300
 		*attrib_maxhealth 300
-		*attrib_mana 300
-		*attrib_maxmana 300
+		*attrib_mana 500
+		*attrib_maxmana 500
 		*skill_magic 2.5
 	}
 
