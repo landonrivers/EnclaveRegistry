@@ -457,6 +457,35 @@
 	}
 }
 
+*player_zale
+{
+	*classname player_wizard
+	*character Zale
+	*dialogue Dlg_Zale
+	*model "players\\Zale\\Zale"
+
+	*rpgobject char
+	{
+		*attrib_health 300
+		*attrib_maxhealth 300
+		*attrib_mana 300
+		*attrib_maxmana 300
+		*skill_magic 2.5
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1, Sniper=4
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.0, Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.2, Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.3, Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.5, Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special=0.7, Magic+Summon=0.4, Slash+Crush+Hack+Stab+Unarmed=0.5
+	*protection_factor_other	0, All=1
+}
+
 *template_engineer
 {
 	*classname template_char
