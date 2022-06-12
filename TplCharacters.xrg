@@ -426,8 +426,11 @@
 	*classname player_wizard
 	*model "players\\wizard\\wizardA1"
 
-	*skill_magic 1.5
-	*skill_dagger 0.7
+	*rpgobject char
+	{
+		*skill_magic 1.5
+		*skill_dagger 0.7
+	}
 }
 
 *player_wizardA2
@@ -435,8 +438,11 @@
 	*classname player_wizard
 	*model "players\\wizard\\wizardA2"
 
-	*skill_magic 2.0
-	*skill_dagger 0.7
+	*rpgobject char
+	{
+		*skill_magic 2.0
+		*skill_dagger 0.7
+	}
 }
 
 *player_wizardA3
@@ -444,8 +450,11 @@
 	*classname player_wizard
 	*model "players\\wizard\\wizardA3"
 
-	*skill_magic 2.5
-	*skill_dagger 0.7
+	*rpgobject char
+	{
+		*skill_magic 2.5
+		*skill_dagger 0.7
+	}
 }
 
 *template_engineer
