@@ -2532,6 +2532,17 @@
 
 	*ai_type RANGED_MAGICSTAFF_ZALE
 }
+*weapon_staff_earthspirit1
+{
+	*classname weapon_staff_earthspirit
+	*itemtype 0x10
+	*price 5000
+}
+*weapon_staff_earthspirit2
+{
+	*classname weapon_staff_earthspirit1
+	*itemtype 0x11
+}
 
 //----------------------------------------------------------------------
 //- BOMB ---------------------------------------------------------------
