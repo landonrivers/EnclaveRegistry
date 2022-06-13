@@ -1,6 +1,8 @@
 # EnclaveRegistry
 Registry Files for Enclave PC (2003) - Different branches allow for modding in different ways
 
+This does not contain any model, texture, animation, gui, sound, level, and any other game file. This is simply a registry of references to these files and drives how many of them work in the game engine. Please purchase the game and support the developers.
+
 ## How to use this repo?
 
 Clone this repo to your `registry` folder in your Enclave/Sbz1 directory. Do git checkout on one of the branches in order to swap the way your registry is configured. Every time you make a change to the registry, you must restart enclave.exe to see these changes.
