@@ -150,6 +150,11 @@
 		*position 500,100
 		*iconsurface GUI_Ic2_Challenge
 	}
+	*NorthernWatch //This entry has been added to enable the Northern Watch mission
+	{
+		*position 450,120
+		*iconsurface GUI_Ic2_Challenge
+	}
 }
 
 *campaigns
@@ -753,7 +758,7 @@
 		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
 		{
 			*map Vatar
-			*award special:unlockdarkcampaign,special:quittomenu,character:golem
+			*award special:unlockdarkcampaign,special:quittomenu,character:golem,challenge:l_c_northernwatch
 		}
 	}
 	*d_m1
@@ -1165,6 +1170,19 @@
 			*award gold:800
 			*survival_enemies Ch_bombardier_L3+Ch_bombardier_L3+Ai_lich_L3,Ch_bombardier_L3+Ch_bombardier_L3+Ai_lich_L3+Ai_berserker_L3,Ai_berserker_L3+Ai_berserker_L3+Ch_bombardier_L3+Ch_bombardier_L3+Ai_sorceress_L2,Ai_berserker_L3+Ai_berserker_L3+Ch_bombardier_L3+Ch_bombardier_L3+Ai_sorceress_L3+Ai_sorceress_L3
 			*survival_timelimit 60
+		}
+	}
+	*l_c_northernwatch //This entry has been added to enable the Northern Watch mission
+	{
+		*location NorthernWatch
+		*type mission
+		*music_atmosphere dark_01_a
+		*music_battle dark_01_b
+		*picmips 0,0,0,0,0,0,0,0
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		{
+			*map northern_watch
 		}
 	}
 }
