@@ -1,6 +1,7 @@
 *template_char
 {
 	*classname character
+	*flags nohud
 
 	*phys_width 13
 	*phys_height 28
