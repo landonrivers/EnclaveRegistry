@@ -1645,38 +1645,40 @@
 		// new character zale - available items
 		*zale
 		{
+			*available 1
 			*items
 			{
+				*weapon_staff_earthspirit1
 				*item_staff_shield
 				//*armour_level0
 			}
 			*availableitems
 			{
-				*weapon_staff_cold l_m2
-				*weapon_staff_cold2 l_m2
-				*weapon_staff_poison l_m3
-				*weapon_staff_poison2 l_m3
-				*weapon_staff_lightning l_m7
-				*weapon_staff_lightning2 l_m7
-				*weapon_staff_darkness l_m7
-				*weapon_staff_darkness2 l_m7
-				*weapon_staff_mind l_m10
-				*weapon_staff_mind2 l_m10
-				*weapon_staff_fire l_m10
-				*weapon_staff_fire2 l_m10
+				*weapon_staff_cold
+				*weapon_staff_cold2
+				*weapon_staff_poison
+				*weapon_staff_poison2
+				*weapon_staff_lightning
+				*weapon_staff_lightning2
+				*weapon_staff_darkness
+				*weapon_staff_darkness2
+				*weapon_staff_mind
+				*weapon_staff_mind2
+				*weapon_staff_fire
+				*weapon_staff_fire2
 				// new staff of the earth spirit entries
-				*weapon_staff_earthspirit1 l_sb5
-				*weapon_staff_earthspirit2 l_sb5
-				*weapon_dagger_short l_m2
-				*weapon_dagger_long l_m5
-				*weapon_dagger_curved l_m5
-				*weapon_dagger_sacrifice l_m7
-				*weapon_dagger_poison l_m12
-				*item_potion_health_1 l_m2
-				*item_potion_health_2 l_m5
-				*item_potion_health_3 l_m7
-				*item_potion_health_4 l_m10
-				*item_potion_health_5 l_m12
+				*weapon_staff_earthspirit1
+				*weapon_staff_earthspirit2
+				*weapon_dagger_short
+				*weapon_dagger_long
+				*weapon_dagger_curved
+				*weapon_dagger_sacrifice
+				*weapon_dagger_poison
+				*item_potion_health_1
+				*item_potion_health_2
+				*item_potion_health_3
+				*item_potion_health_4
+				*item_potion_health_5
 			}
 		}				    
 	}
@@ -2141,6 +2143,7 @@
 		// new character mordessa - available items
 		*mordessa
 		{
+			*available 1
 			*items
 			{
 				*item_staff_shield
@@ -2148,31 +2151,31 @@
 			}
 			*availableitems
 			{
-				*weapon_sword_short d_m2
-				*weapon_sword_broad d_m3
-				*weapon_sword_long d_m4
-				*weapon_sword_scimitar d_m5
-				*weapon_sword_dwarven d_m6
-				*weapon_sword_sabre d_m7
-				*weapon_sword_falchion d_m8
-				*weapon_sword_bastard d_m9
-				*weapon_sword_warrior d_m10
-				*weapon_sword_frost2 d_m11
-				*weapon_sword_mordessa d_m13
-				*weapon_sword_fire d_m11
-				*weapon_staff_cold2 d_m4
-				*weapon_staff_poison2 d_m4
-				*weapon_staff_lightning2 d_m7
-				*weapon_staff_darkness2 d_m7
-				*weapon_staff_mind2 d_m10
-				*weapon_staff_fire2 d_m10
+				*weapon_sword_short
+				*weapon_sword_broad
+				*weapon_sword_long
+				*weapon_sword_scimitar
+				*weapon_sword_dwarven
+				*weapon_sword_sabre
+				*weapon_sword_falchion
+				*weapon_sword_bastard
+				*weapon_sword_warrior 
+				*weapon_sword_frost2
+				*weapon_sword_mordessa
+				*weapon_sword_fire
+				*weapon_staff_cold2
+				*weapon_staff_poison2
+				*weapon_staff_lightning2
+				*weapon_staff_darkness2
+				*weapon_staff_mind2
+				*weapon_staff_fire2
 				// new staff of mordessa entry
-				*weapon_staff_mordessa d_sb5
-				*item_potion_health_1 d_m2
-				*item_potion_health_2 d_m5
-				*item_potion_health_3 d_m7
-				*item_potion_health_4 d_m10
-				*item_potion_health_5 d_m12
+				*weapon_staff_mordessa
+				*item_potion_health_1
+				*item_potion_health_2
+				*item_potion_health_3
+				*item_potion_health_4
+				*item_potion_health_5
 			}
 		}					
 	}
