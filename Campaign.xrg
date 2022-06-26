@@ -575,7 +575,7 @@
 		*character paladin
 		{
 			*map Iellon_Dungeon
-			*award challenge:l_m2,item:paladin:weapon_sword_lightshort,item:paladin:item_shield_targa,gold:75
+			*award challenge:l_m2,item:paladin:weapon_sword_lightshort,item:paladin:item_shield_targa,gold:75,character:zale
 		}
 	}
 	*l_m2
@@ -786,7 +786,7 @@
 		*character assassin
 		{
 			*map Zuranas_Mansion
-			*award challenge:d_m2,gold:100,item:assassin:weapon_crossbow_light,item:assassin:weapon_bow_short,item:assassin:weapon_dagger_short
+			*award challenge:d_m2,gold:100,item:assassin:weapon_crossbow_light,item:assassin:weapon_bow_short,item:assassin:weapon_dagger_short,character:mordessa
 		}
 	}
 	*d_m2
