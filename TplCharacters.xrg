@@ -88,11 +88,57 @@
 	*blood_color 64, 32, 0
 }
 
+// New Character - Marcus the Merchant
+*player_marcus
+{
+	*classname template_char
+	*character Marcus
+	*team 0
+	*animlist Anim_Paladin
+	*dialogue Dlg_Lorus
+	*model "players\\MerchantMarcus\\Marcus"
+    *phys_swim_height 49
+
+	//*camera_stand_head_offset 0, 0, 64 // From feet, in worldspace (i.e. not rotated with head) (Fwd, Left, Up).
+	//*camera_crouch_head_offset 0, 0, 24 // (same as above)
+	//*camera_behind_head_offset 0, -15, -70 // From head, in camera space (i.e. rotated along with head) (Right, Down, Fwd).
+
+	*camera_stand_head_offset 	0, 0, 54
+	*camera_crouch_head_offset 	0, 0, 40
+	*camera_behind_head_offset 	0, -18, -92
+	*camera_shoulder_offset 	10, -8, 5 	
+	*camera_face_offset     	5, 5, 5  
+
+	*rpgobject char
+	{
+		*skill_dagger 1.0
+		*skill_sword 1.0
+		*skill_axe 1.0
+		*skill_hammer 1.0
+		*skill_crossbow 1.0
+		*skill_magic 1.0
+		*skill_dagger 0.7
+	}
+
+	*damage_factor_skin			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=1.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_head			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=2.00, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_legs			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.25, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_arms			1, Sniper+Pierce+Fire+Cold+Poison+Magic+Summon+Explosive+Special=0.50, Slash+Crush+Hack+Stab+Unarmed=1
+	*damage_factor_other		1, All=0
+	*protection_factor_skin		0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.1, Slash+Crush+Hack+Stab+Unarmed=0.1
+	*protection_factor_cloth	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.3, Slash+Crush+Hack+Stab+Unarmed=0.3
+	*protection_factor_leather	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.6, Slash+Crush+Hack+Stab+Unarmed=0.6
+	*protection_factor_chain	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.7, Slash+Crush+Hack+Stab+Unarmed=0.7
+	*protection_factor_plate	0, Sniper+Pierce+Fire+Cold+Poison+Explosive+Special+Magic+Summon=0.8, Slash+Crush+Hack+Stab+Unarmed=0.8
+	*protection_factor_other	0, All=1
+}
+
 *template_paladin
 {
 	*classname template_char
 	*character Paladin
-	*model "players\\knight\\knight"
+	//changing model to marcus to use in special stages
+	*model "players\\MerchantMarcus\\Marcus"
 	*team 0
 	*animlist Anim_Paladin
 	*dialogue Dlg_Knight
@@ -158,9 +204,11 @@
 
 	*rpgobject char
 	{
-		*weapon_sword_warrior
-		*weapon_crossbow_heavy
-		*item_shield_kite
+		// disabling default inventory to use in special stages
+		//*weapon_sword_warrior
+		//*weapon_crossbow_heavy
+		//*item_shield_kite
+		*weapon_sword_short
 	}
 
 	*ai_useflags shockwave+magicshield+summon+combo+switchweapon+alwaysblock+scriptmute 

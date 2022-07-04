@@ -351,7 +351,16 @@
 	*Stonegnome
 	{
 		*itemslot0 0x106,GUI_ICON_POTIONS32
-	}	
+	}
+	*Marcus
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+	}
 }
 
 *challenges
@@ -558,7 +567,7 @@
 		*cutscene_select l_sb1
 		*noequip 1
 
-		*character paladin
+		*character paladin+Marcus
 		{
 			*map Iellon_Dungeon
 			*award challenge:l_m2,item:paladin:weapon_sword_lightshort,item:paladin:item_shield_targa,gold:75
@@ -573,7 +582,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*cutscene_win l_cs01
 
-		*character paladin+archer+boarrider+engineer
+		*character paladin+archer+boarrider+engineer+Marcus
 		{
 			*map Iellon_Outpost_L
 			*award challenge:l_m3,gold:75,character:archer,item:paladin:weapon_crossbow_light
@@ -587,7 +596,7 @@
 		*music_battle light_01_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map Celadia_Village_L
 			*award challenge:l_m4,gold:150
@@ -602,7 +611,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*cutscene_win l_sb2
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map Deserted_Temple
 			*award challenge:l_m5,character:druid,gold:200
@@ -617,7 +626,7 @@
 		*music_battle dark_02_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map Divided_City
 			*award challenge:l_m6,character:boarrider,gold:250
@@ -631,7 +640,7 @@
 		*music_battle dark_01_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map Outland_Wastes
 			*award challenge:l_m7,character:engineer,gold:300,item:paladin:weapon_sword_frost2,item:boarrider:weapon_sword_frost2,item:engineer:weapon_sword_frost2
@@ -645,7 +654,7 @@
 		*music_battle dark_03_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map Ark_Amar
 			*award challenge:l_m8,gold:350
@@ -661,7 +670,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*cutscene_win l_sb3
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map Ancestors
 			*award challenge:l_m9,gold:400
@@ -675,7 +684,7 @@
 		*music_battle light_01_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map Sanctuary
 			*award challenge:l_m10,character:wizard,gold:450
@@ -689,7 +698,7 @@
 		*music_battle dark_04_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map Underworld_I
 			*award challenge:l_m11,gold:500
@@ -704,7 +713,7 @@
 		*music_battle dark_04_b
 		*picmips 0,0,0,0,0,0,0,0
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map Underworld_II
 			*award challenge:l_m12,gold:550
@@ -719,7 +728,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*cutscene_win l_sb4,l_cs02
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map Kam-Zara
 			*award challenge:l_m13,gold:600
@@ -734,7 +743,7 @@
 		*picmips 0,0,0,0,0,0,0,0
 		*backplane 12000
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map Ark_Moor_L
 			*award challenge:l_m14,gold:650,item:paladin:weapon_sword_mordessa
@@ -750,7 +759,7 @@
 		*backplane 12000
 		*cutscene_win l_sb5,l_endcredits
 
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map Vatar
 			*award special:unlockdarkcampaign,special:quittomenu,character:golem
@@ -1068,7 +1077,7 @@
 		*music_atmosphere light_01_a
 		*music_battle light_01_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map forbiddenatgard
 			*award challenge:l_c1_2,gold:100
@@ -1083,7 +1092,7 @@
 		*music_atmosphere light_01_a
 		*music_battle light_01_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map forbiddenatgard
 			*award challenge:l_c1_3,gold:200
@@ -1098,7 +1107,7 @@
 		*music_atmosphere light_01_a
 		*music_battle light_01_b
 		*picmips 0,0,0,0,0,0,0,0
-		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+Marcus
 		{
 			*map forbiddenatgard
 			*award gold:300
@@ -1618,7 +1627,77 @@
 				*item_potion_health_4 l_m10
 				*item_potion_health_5 l_m12
 			}
-		}					    
+		}	
+		*Marcus
+		{
+			*available 1
+			*items
+			{
+				*item_staff_shield
+				//*armour_level0
+			}
+			*availableitems
+			{
+				*weapon_sword_lightshort l_m3
+				*weapon_sword_broad l_m3
+				*weapon_sword_long l_m4
+				*weapon_sword_scimitar l_m5
+				*weapon_sword_dwarven l_m6
+				*weapon_sword_sabre l_m7
+				*weapon_sword_falchion l_m8
+				*weapon_sword_bastard l_m9
+				*weapon_sword_warrior l_m10
+				*weapon_sword_frost2 l_m7
+				*weapon_sword_mordessa l_m14
+				*weapon_sword_fire l_m12				
+				*weapon_axe_bearded l_m2
+				*weapon_axe_kama l_m3
+				*weapon_axe_short l_m4
+				*weapon_axe_pike l_m5
+				*weapon_axe_brute l_m6
+				*weapon_axe_battle l_m7
+				*weapon_axe_war l_m8
+				*weapon_axe_great l_m9
+				*weapon_axe_shatter l_m10
+				*weapon_axe_magic l_m12
+				*weapon_hammer_spiked l_m3
+				*weapon_hammer_light l_m3
+				*weapon_hammer_morningstar l_m4
+				*weapon_hammer_heavyclub l_m5
+				*weapon_hammer_mace l_m6
+				*weapon_hammer_maul l_m7
+				*weapon_hammer_battle l_m8
+				*weapon_hammer_chaos l_m9
+				*weapon_hammer_heavymorningstar l_m10
+				*weapon_hammer_magic l_m12
+				*weapon_crossbow_light l_m3
+				*weapon_crossbow_dwarven l_m4
+				*weapon_crossbow_heavy l_m7
+				*weapon_crossbow_repeating l_m9
+				*weapon_crossbow_magic l_m12
+				*item_shield_targa l_m3
+				*item_shield_buckler l_m3
+				*item_shield_spiked l_m3
+				*item_shield_brute l_m4
+				*item_shield_round l_m5
+				*item_shield_kite l_m6
+				*item_shield_blade l_m7
+				*item_shield_chaos l_m8
+				*item_shield_thorn l_m9
+				*item_shield_ancient l_m10
+				*item_shield_magic l_m12
+				*item_bolt_normal_20 l_m3
+				*item_bolt_normal_40 l_m3
+				*item_bolt_normal_60 l_m3
+				*item_bolt_normal_120 l_m3
+				*item_bolt_normal_240 l_m3
+				*item_potion_health_1 l_m3
+				*item_potion_health_2 l_m5
+				*item_potion_health_3 l_m7
+				*item_potion_health_4 l_m10
+				*item_potion_health_5 l_m12
+			}
+		}				    
 	}
 }
 
